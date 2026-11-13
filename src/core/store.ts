@@ -65,6 +65,8 @@ export interface Progress {
   dernier: { route: string; titre: string } | null;
   badges: Record<string, string>;
   notes: Record<string, { texte: string; titre: string; route: string; maj: string }>; // carnet de terrain
+  /** Score des quiz par fiche : dernier essai, meilleur, nombre d'essais. */
+  quizFiches: Record<string, { dernier: number; meilleur: number; total: number; tentatives: number; date: string }>;
 }
 
 export interface Settings {
@@ -106,6 +108,7 @@ export function emptyProgress(): Progress {
     dernier: null,
     badges: {},
     notes: {},
+    quizFiches: {},
   };
 }
 
@@ -117,7 +120,7 @@ export function migrate(raw: unknown): Progress {
   // v0 (hypothétique) -> v1 : champs manquants complétés par défaut.
   const merged: Progress = { ...base, ...data, version: SCHEMA_VERSION } as Progress;
   merged.serie = { ...base.serie, ...(data.serie ?? {}) };
-  for (const key of ['lus', 'vuesFonctions', 'experiences', 'favoris', 'srs', 'quiz', 'brouillons', 'jours', 'defis', 'badges', 'notes'] as const) {
+  for (const key of ['lus', 'vuesFonctions', 'experiences', 'favoris', 'srs', 'quiz', 'brouillons', 'jours', 'defis', 'badges', 'notes', 'quizFiches'] as const) {
     if (!merged[key] || typeof merged[key] !== 'object' || Array.isArray(merged[key])) {
       (merged as unknown as Record<string, unknown>)[key] = {};
     }

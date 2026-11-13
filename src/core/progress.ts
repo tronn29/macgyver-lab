@@ -49,18 +49,48 @@ export function currentStreak(p: Progress, today = dayKey()): { jours: number; e
 
 /* ---- Actions ---- */
 
-export function markRead(fiche: Fiche): boolean {
-  let nouveau = false;
+/**
+ * Lecture d'une fiche, déclarée par l'utilisateur (case « Lu »), jamais automatique.
+ * Cocher : +XP, entrée dans la révision espacée, activité du jour (série).
+ * Décocher : XP retirés et fiche retirée de la révision (son historique de révision repart de zéro).
+ */
+export function setRead(fiche: Fiche, lu: boolean): boolean {
+  let change = false;
   update((p) => {
-    if (!p.lus[fiche.id]) {
+    const deja = Boolean(p.lus[fiche.id]);
+    if (lu && !deja) {
       p.lus[fiche.id] = new Date().toISOString();
       p.xp += XP.ficheLue;
-      nouveau = true;
+      if (!p.srs[fiche.id]) p.srs[fiche.id] = newCard();
+      recordActivity(p);
+      change = true;
+    } else if (!lu && deja) {
+      delete p.lus[fiche.id];
+      delete p.srs[fiche.id];
+      p.xp = Math.max(0, p.xp - XP.ficheLue);
+      change = true;
     }
-    if (!p.srs[fiche.id]) p.srs[fiche.id] = newCard();
+  });
+  return change;
+}
+
+export function isRead(id: string): boolean {
+  return Boolean(getProgress().lus[id]);
+}
+
+/** Enregistre le résultat complet d'un quiz de fiche. */
+export function recordFicheQuiz(ficheId: string, score: number, total: number): void {
+  update((p) => {
+    const prev = p.quizFiches[ficheId];
+    p.quizFiches[ficheId] = {
+      dernier: score,
+      meilleur: Math.max(score, prev?.meilleur ?? 0),
+      total,
+      tentatives: (prev?.tentatives ?? 0) + 1,
+      date: new Date().toISOString(),
+    };
     recordActivity(p);
   });
-  return nouveau;
 }
 
 export function markFonctionVue(id: string): void {

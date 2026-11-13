@@ -214,7 +214,11 @@
     "surpriseDesc": "Ouvrir une fiche au hasard, en priorité parmi celles que tu n'as pas lues",
     "texte": "Texte de la fiche",
     "aRetenir": "À retenir",
-    "voirSchema": "Voir le schéma"
+    "voirSchema": "Voir le schéma",
+    "caseLu": "J'ai lu cette fiche",
+    "caseLuDesc": "Coche quand tu as lu la fiche jusqu'au bout. Elle entre alors dans ta révision espacée et compte pour ta série.",
+    "marqueeLue": "Fiche marquée comme lue : +{xp} XP",
+    "marqueeNonLue": "Fiche marquée comme non lue"
   },
   "quiz": {
     "question": "Question {a} sur {b}",
@@ -228,7 +232,20 @@
       "zero": "Aucune bonne réponse sur {b}",
       "one": "{n} bonne réponse sur {b}",
       "other": "{n} bonnes réponses sur {b}"
-    }
+    },
+    "recommencer": "Recommencer le quiz",
+    "bilanParfait": "Sans faute. La fiche est solidement ancrée.",
+    "bilanPartiel": "Relis les explications ou la fiche, puis recommence pour consolider.",
+    "dernier": "Dernier score : {a}/{b}",
+    "meilleur": "Meilleur : {a}/{b}",
+    "tentatives": {
+      "one": "{n} tentative",
+      "other": "{n} tentatives"
+    },
+    "enregistre": "Score enregistré : {a}/{b}",
+    "tagBonne": "Bonne réponse",
+    "tagBonneChoisie": "Ta réponse, juste",
+    "tagTaReponse": "Ta réponse"
   },
   "arsenal": {
     "kicker": "Arsenal d'objets · Équivalences",

@@ -71,3 +71,20 @@ npx lighthouse http://localhost:4173/ --form-factor=mobile --view
 | Dans « À retenir », l'accroche en bloc laissait la phrase commencer par une minuscule | Accroche gardée en ligne |
 | Une étiquette du nouveau schéma dépassait du cadre (x = 361), et deux étiquettes se chevauchaient | Colonne décalée et rangées espacées ; textes mesurés avec la police réelle : 0 débordement, 0 chevauchement |
 | Image de partage : le texte « À retenir » débordait sur la ligne du bas | Nombre de lignes limité à la place disponible, avec points de suspension |
+
+## Lecture déclarée et quiz : vérifications et corrections
+
+Testé sur téléphone (375 × 812) avec de **vrais appuis** dans le navigateur (et non en appelant le code directement) : cocher et décocher « Lu », la liste « Lues », l'accueil, la progression, la série ; puis le quiz complet (mauvaise réponse, bonne réponse, question suivante au doigt et au clavier, « Terminer », bilan, « Recommencer », sans-faute, rechargement), ainsi que le défi du jour.
+
+| Bug | Cause | Correction |
+|---|---|---|
+| **« Valider » ne faisait rien** (quiz des fiches, du défi du jour et de la révision) | Le bouton était de type `button` : il ne soumettait pas le formulaire. Les tests précédents soumettaient le formulaire par programme et ne pouvaient pas le voir. | Bouton de type `submit`. Nouveau test dans un vrai DOM (happy-dom) qui **clique** les boutons. Vérifié : il échoue sans le correctif et réussit avec. |
+| Pas de « Recommencer » ni de bilan en fin de quiz | Fonction absente | Bilan + « Recommencer le quiz » |
+| Score du quiz non enregistré pour la fiche | Seules les statistiques par catégorie étaient gardées | Dernier score, meilleur score, tentatives, conservés et affichés |
+| La réponse fausse choisie restait en cyan « sélectionné » ; correction perceptible par la seule couleur | Priorité CSS du style « coché » | Style rouge prioritaire + étiquettes « Ta réponse » / « Bonne réponse » |
+| La fiche se marquait lue toute seule à l'ouverture (8 s ou défilement) | Marquage automatique | Remplacé par la case « Lu » |
+| « Voir le schéma » recouvrait la correction du quiz | Visible jusqu'en bas de la fiche | Masqué une fois le texte dépassé |
+| Le masquage du bouton ratait les sauts de défilement | `IntersectionObserver` ne signale que les changements de visibilité | Calcul de position au défilement |
+| Régression pendant la correction : lettre et texte des réponses sur deux lignes | `flex-wrap` ajouté pour l'étiquette | Grille : lettre à gauche, texte à droite, étiquette en dessous |
+
+Tests : 54 (7 nouveaux : case « Lu », score enregistré, quiz cliqué dans un vrai DOM). Contraste de la case « Lu », du quiz corrigé et du score : 0 échec dans les 2 thèmes (minimum 5,4:1).

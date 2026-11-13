@@ -701,3 +701,48 @@
   .schema-fab { display: none !important; }
 }
 @media print { .schema-fab { display: none !important; } }
+
+/* ---------- Case « Lu » (déclarée par l'utilisateur) ---------- */
+.read-box { position: relative; }
+.read-box__input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.read-box__label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  min-height: 3.5rem;
+  padding: var(--sp-4) var(--sp-5);
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--r-md);
+  background: var(--c-surface);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color var(--dur-2), background var(--dur-2);
+}
+.read-box__label:hover { border-color: var(--c-accent); }
+.read-box__mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: 0.1rem;
+  border: 2px solid var(--c-accent);
+  border-radius: var(--r-xs);
+  color: transparent;
+  transition: background var(--dur-2), color var(--dur-2);
+}
+.read-box__text { display: grid; gap: var(--sp-1); }
+.read-box__text strong { font-family: var(--font-head); font-size: var(--fs-lg); font-weight: 600; }
+.read-box__text small { color: var(--c-text-2); font-size: var(--fs-sm); line-height: 1.45; }
+.read-box__input:checked + .read-box__label { border-color: var(--c-success); background: var(--c-success-soft); }
+.read-box__input:checked + .read-box__label .read-box__mark { background: var(--c-success); border-color: var(--c-success); color: var(--c-accent-ink); }
+.read-box__input:focus-visible + .read-box__label { outline: 2px solid var(--c-focus); outline-offset: 3px; }
+
+/* ---------- Quiz : score enregistré et bilan ---------- */
+.quiz-score { display: flex; align-items: center; gap: var(--sp-2); margin: 0; font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--c-accent); }
+.quiz__summary { display: grid; justify-items: start; gap: var(--sp-3); padding: var(--sp-4); border: 1px solid var(--c-border); border-left: 3px solid var(--c-warning); border-radius: var(--r-sm); background: var(--c-surface); }
+.quiz__summary.is-correct { border-left-color: var(--c-success); }
+.quiz__summary:focus { outline: none; }
+.quiz__summary-score { display: flex; align-items: center; gap: var(--sp-2); margin: 0; font-family: var(--font-head); font-size: var(--fs-xl); font-weight: 600; }
+.quiz__summary-score .icon { color: var(--c-orange); }
+.quiz__summary-text { margin: 0; color: var(--c-text-2); }

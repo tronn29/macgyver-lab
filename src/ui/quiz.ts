@@ -18,11 +18,38 @@ export function quizRunner(
     onDone?: (score: number, total: number) => void;
     showFicheLink?: boolean;
     doneLabel?: string;
+    /** Affiche un bilan avec « Recommencer » à la fin (fiches). */
+    restartable?: boolean;
   } = {}
 ): HTMLElement {
   const root = h('div', { class: 'quiz' });
   let index = 0;
   let score = 0;
+
+  const summary = () => {
+    const total = items.length;
+    const parfait = score === total;
+    const restart = btn(t('quiz.recommencer'), {
+      variant: 'primary',
+      icon: 'refresh',
+      onClick: () => {
+        index = 0;
+        score = 0;
+        render();
+        root.querySelector<HTMLElement>('.quiz__legend')?.focus();
+      },
+    });
+    root.replaceChildren(
+      h(
+        'div',
+        { class: ['quiz__summary', parfait ? 'is-correct' : 'is-partial'], role: 'status', tabindex: '-1' },
+        h('p', { class: 'quiz__summary-score' }, icon(parfait ? 'trophy' : 'brain', 22), h('span', null, t('quiz.score', { n: score, b: total }))),
+        h('p', { class: 'quiz__summary-text' }, parfait ? t('quiz.bilanParfait') : t('quiz.bilanPartiel')),
+        restart
+      )
+    );
+    root.querySelector<HTMLElement>('.quiz__summary')?.focus();
+  };
 
   const render = () => {
     const item = items[index];
@@ -38,7 +65,8 @@ export function quizRunner(
         h('label', { for: id, class: 'quiz__label' }, h('span', { class: 'quiz__letter', 'aria-hidden': 'true' }, String.fromCharCode(65 + i)), h('span', null, choix))
       );
     });
-    const validate = btn(t('quiz.valider'), { variant: 'primary', icon: 'check' });
+    // type « submit » : c'est ce bouton qui soumet le formulaire (clic, appui ou touche Entrée)
+    const validate = btn(t('quiz.valider'), { variant: 'primary', icon: 'check', type: 'submit' });
     const form = h(
       'form',
       { class: 'quiz__form', novalidate: true },
@@ -74,8 +102,15 @@ export function quizRunner(
         inp.disabled = true;
         const opt = inp.closest('.quiz__option');
         const v = Number(inp.value);
-        if (v === item.quiz.reponse) opt?.classList.add('is-correct');
-        else if (v === choice) opt?.classList.add('is-wrong');
+        // Couleur + étiquette textuelle : l'information ne repose pas sur la seule couleur (WCAG 1.4.1)
+        const tag = (txt: string, ic: string) => opt?.querySelector('.quiz__label')?.append(h('span', { class: 'quiz__tag' }, icon(ic, 14), txt));
+        if (v === item.quiz.reponse) {
+          opt?.classList.add('is-correct');
+          tag(v === choice ? t('quiz.tagBonneChoisie') : t('quiz.tagBonne'), 'check');
+        } else if (v === choice) {
+          opt?.classList.add('is-wrong');
+          tag(t('quiz.tagTaReponse'), 'x');
+        }
       });
       opts.onAnswer?.(item, correct);
       const last = index === items.length - 1;
@@ -83,8 +118,10 @@ export function quizRunner(
         variant: 'primary',
         iconAfter: last ? 'check' : 'arrow-right',
         onClick: () => {
-          if (last) opts.onDone?.(score, items.length);
-          else {
+          if (last) {
+            opts.onDone?.(score, items.length);
+            if (opts.restartable) summary();
+          } else {
             index += 1;
             render();
             root.querySelector<HTMLElement>('.quiz__legend')?.focus();

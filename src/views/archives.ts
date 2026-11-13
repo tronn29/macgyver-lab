@@ -2,7 +2,7 @@
 import { content } from '../core/content';
 import { h } from '../core/dom';
 import { t } from '../core/i18n';
-import { answerQuiz, markRead, setLast, XP } from '../core/progress';
+import { answerQuiz, isRead, recordFicheQuiz, setLast, setRead, XP } from '../core/progress';
 import type { RouteContext, View } from '../core/router';
 import { setQuery } from '../core/router';
 import { getProgress, getSettings } from '../core/store';
@@ -17,6 +17,7 @@ import { shareFiche } from '../ui/share';
 import { notesPanel } from '../ui/notes';
 import { listenButton, stopSpeech } from '../ui/speech';
 import { navigate } from '../core/router';
+import { play } from '../core/sound';
 import { catIcon, catName, categoryFilter, countByCategory, favButton, ficheCard, notFoundView, pageHeader, relatedLinks } from './common';
 import { openGlossaryForFiche } from './glossaire';
 
@@ -181,7 +182,22 @@ export function ficheDetail(ctx: RouteContext): View {
   const equivalences = (f.liens.equivalences ?? []).map((id) => c.byId.fonction.get(id)).filter(Boolean);
   const pratiques = c.experiencesParFiche.get(f.id) ?? [];
 
-  const sentinel = h('div', { class: 'read-sentinel', 'aria-hidden': 'true' });
+  /* Case « Lu » : c'est toi qui décides quand une fiche est lue (jamais automatique) */
+  const readChip = h('span', { class: 'chip chip--success', hidden: !isRead(f.id) }, icon('check', 14), t('archives.marqueLue'));
+  const readBox = readControl(f, (lu) => (readChip.hidden = !lu));
+
+  /* Score du quiz enregistré */
+  const quizScore = h('p', { class: 'quiz-score', 'aria-live': 'polite' });
+  const paintQuizScore = () => {
+    const s = getProgress().quizFiches[f.id];
+    quizScore.hidden = !s;
+    if (s)
+      quizScore.replaceChildren(
+        icon('chart', 16),
+        h('span', null, `${t('quiz.dernier', { a: s.dernier, b: s.total })} · ${t('quiz.meilleur', { a: s.meilleur, b: s.total })} · ${t('quiz.tentatives', { n: s.tentatives })}`)
+      );
+  };
+  paintQuizScore();
 
   const main = h(
     'div',
@@ -191,7 +207,8 @@ export function ficheDetail(ctx: RouteContext): View {
       : null,
     h('div', { class: 'fiche__tools' }, eliBtn, listenButton(f, () => eliBtn.getAttribute('aria-pressed') === 'true'), termIds.size ? btn(t('archives.glossaire'), { variant: 'ghost', small: true, icon: 'book', onClick: () => openGlossaryForFiche(f, [...termIds]) }) : null),
     enfantPanel,
-    ...(long ? longBody(f, sentinel) : shortBody(f, sentinel)),
+    ...(long ? longBody(f) : shortBody(f)),
+    readBox,
     !long && f.chiffres?.length
       ? h(
           'section',
@@ -215,11 +232,17 @@ export function ficheDetail(ctx: RouteContext): View {
       { class: 'quiz-block panel', 'aria-labelledby': 'quiz-t' },
       h('h2', { class: 'block-title', id: 'quiz-t' }, icon('brain', 20), t('archives.quiz')),
       h('p', { class: 'muted' }, t('archives.quizIntro')),
+      quizScore,
       quizRunner(
         f.quiz.map((q) => ({ fiche: f, quiz: q })),
         {
+          restartable: true,
           onAnswer: (item, correct) => answerQuiz(item.fiche.id, item.fiche.categories, correct, false),
-          onDone: (score, total) => toast(t('quiz.score', { n: score, b: total }), { icon: 'brain', tone: score === total ? 'success' : 'accent' }),
+          onDone: (score, total) => {
+            recordFicheQuiz(f.id, score, total);
+            paintQuizScore();
+            toast(t('quiz.enregistre', { a: score, b: total }), { icon: 'brain', tone: score === total ? 'success' : 'accent' });
+          },
         }
       )
     ),
@@ -255,22 +278,14 @@ export function ficheDetail(ctx: RouteContext): View {
         h('span', { class: 'chip chip--muted' }, icon('clock', 14), t('archives.dureeLecture', { n: minutes })),
         verdictBadge(f.realite.verdict),
         safetyBadge(f.securite.niveau),
-        getProgress().lus[f.id] ? h('span', { class: 'chip chip--success' }, icon('check', 14), t('archives.marqueLue')) : null,
+        readChip,
       ],
     }),
     f.sousTitre ? h('p', { class: 'fiche__subtitle' }, f.sousTitre) : null,
     h('div', { class: ['fiche__layout', long && 'fiche__layout--long'] }, aside, main),
     schemaFab
   );
-  let fabObserver: IntersectionObserver | null = null;
-
-  let observer: IntersectionObserver | null = null;
-  let timer: number | undefined;
-  const doMark = () => {
-    window.clearTimeout(timer);
-    observer?.disconnect();
-    if (markRead(f)) toast(t('archives.nouvelleLue', { xp: XP.ficheLue }), { icon: 'archive', tone: 'success' });
-  };
+  let updateFab: (() => void) | null = null;
 
   return {
     title: f.titre,
@@ -278,26 +293,26 @@ export function ficheDetail(ctx: RouteContext): View {
     node,
     onMount: () => {
       setLast(`#/archives/${f.id}`, f.titre);
-      if ('IntersectionObserver' in window) {
-        fabObserver = new IntersectionObserver(([entry]) => {
-          schemaFab.hidden = entry.isIntersecting || entry.boundingClientRect.top > 0;
+      // Visible seulement pendant la lecture du texte : figure passée au-dessus de l'écran,
+      // case « Lu » pas encore atteinte. Calcul à chaque défilement (une fois par image).
+      let frame = 0;
+      updateFab = () => {
+        cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(() => {
+          const figureAbove = figure.getBoundingClientRect().bottom <= 0;
+          const pastText = readBox.getBoundingClientRect().top < window.innerHeight;
+          schemaFab.hidden = !figureAbove || pastText;
         });
-        fabObserver.observe(figure);
-      }
-      if (getProgress().lus[f.id]) {
-        markRead(f); // compte l'activité du jour
-        return;
-      }
-      timer = window.setTimeout(doMark, long ? Math.max(20000, minutes * 30000) : 8000);
-      if ('IntersectionObserver' in window) {
-        observer = new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && doMark());
-        observer.observe(sentinel);
-      }
+      };
+      window.addEventListener('scroll', updateFab, { passive: true });
+      window.addEventListener('resize', updateFab, { passive: true });
+      updateFab();
     },
     onLeave: () => {
-      window.clearTimeout(timer);
-      observer?.disconnect();
-      fabObserver?.disconnect();
+      if (updateFab) {
+        window.removeEventListener('scroll', updateFab);
+        window.removeEventListener('resize', updateFab);
+      }
       stopSpeech();
     },
   };
@@ -305,7 +320,7 @@ export function ficheDetail(ctx: RouteContext): View {
 
 
 /* ---------- Corps de fiche : format long (v2) ---------- */
-function longBody(f: Fiche & { texte: string[] }, sentinel: HTMLElement): HTMLElement[] {
+function longBody(f: Fiche & { texte: string[] }): HTMLElement[] {
   const paras = f.texte.map((p) => {
     if (isRetenir(p)) return h('div', { class: 'longread__retenir', role: 'note' }, rich(p, 'p'));
     if (isSerieRealite(p))
@@ -317,10 +332,8 @@ function longBody(f: Fiche & { texte: string[] }, sentinel: HTMLElement): HTMLEl
       );
     return rich(p, 'p');
   });
-  // Repère de lecture placé juste avant « À retenir »
-  const last = paras.length - 1;
   return [
-    h('section', { class: 'longread', 'aria-labelledby': 'lr-t' }, h('h2', { class: 'sr-only', id: 'lr-t' }, t('archives.texte')), ...paras.slice(0, last), sentinel, paras[last]),
+    h('section', { class: 'longread', 'aria-labelledby': 'lr-t' }, h('h2', { class: 'sr-only', id: 'lr-t' }, t('archives.texte')), ...paras),
     panel(
       [h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau), h('p', { class: 'panel__text' }, f.securite.note)],
       { class: `safety-panel safety-panel--${f.securite.niveau}` }
@@ -329,7 +342,7 @@ function longBody(f: Fiche & { texte: string[] }, sentinel: HTMLElement): HTMLEl
 }
 
 /* ---------- Corps de fiche : format court (v1), pour les fiches non migrées ---------- */
-function shortBody(f: Fiche, sentinel: HTMLElement): HTMLElement[] {
+function shortBody(f: Fiche): HTMLElement[] {
   return [
     h(
       'section',
@@ -344,6 +357,33 @@ function shortBody(f: Fiche, sentinel: HTMLElement): HTMLElement[] {
       panel([h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau), h('p', { class: 'panel__text' }, f.securite.note)], { class: `safety-panel safety-panel--${f.securite.niveau}` })
     ),
     h('section', { class: 'why', 'aria-labelledby': 'why-t' }, h('h2', { class: 'block-title', id: 'why-t' }, t('archives.pourquoi')), ...(f.pourquoi ?? []).map((p) => rich(p, 'p'))),
-    sentinel,
   ];
+}
+
+/* ---------- Case « Lu » (vraie case à cocher, cochable et décochable) ---------- */
+function readControl(f: Fiche, onChange: (lu: boolean) => void): HTMLElement {
+  const id = `lu-${f.id}`;
+  const input = h('input', { type: 'checkbox', id, class: 'read-box__input', checked: isRead(f.id), 'aria-describedby': `${id}-desc` });
+  const box = h(
+    'div',
+    { class: ['read-box', isRead(f.id) && 'is-checked'] },
+    input,
+    h(
+      'label',
+      { for: id, class: 'read-box__label' },
+      h('span', { class: 'read-box__mark', 'aria-hidden': 'true' }, icon('check', 18)),
+      h('span', { class: 'read-box__text' }, h('strong', null, t('archives.caseLu')), h('small', { id: `${id}-desc` }, t('archives.caseLuDesc')))
+    )
+  );
+  input.addEventListener('change', () => {
+    const lu = input.checked;
+    setRead(f, lu);
+    box.classList.toggle('is-checked', lu);
+    onChange(lu);
+    if (lu) {
+      play('success');
+      toast(t('archives.marqueeLue', { xp: XP.ficheLue }), { icon: 'archive', tone: 'success' });
+    } else toast(t('archives.marqueeNonLue'), { icon: 'archive' });
+  });
+  return box;
 }

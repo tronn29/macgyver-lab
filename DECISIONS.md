@@ -64,3 +64,16 @@ Décisions prises sans consultation, avec leur raison. Chacune peut être revue.
 | **Fiche lue** | Marquée lue en arrivant à « À retenir », ou après un délai proportionnel au temps de lecture (30 s par minute, 20 s au minimum). |
 | **Validateur** | Il exige « À retenir » en dernier et un paragraphe « Dans la série / Dans la réalité », et vérifie la fermeture du gras. Il avertit en cas d'absence de « Peu de gens savent que… », de tiret cadratin ou de liste à puces. La règle de contenu est renforcée : termes de fabrication d'armes ou d'explosifs bloqués dans tout le contenu ; quantités de matière et vocabulaire de montage bloqués dans les sujets sensibles. |
 | **Fiche CO₂ migrée** | Texte fourni repris mot pour mot ; un test le compare au fichier témoin `tests/fixtures/fiche-co2.md`. Les infobulles utilisent la forme `[[id|texte affiché]]`, ce qui ne change pas le texte lu. Schéma redessiné : triangle du feu, quatre types d'extincteurs et ce que chacun retire, détente du CO₂ en neige à −78 °C. Une question de quiz ajoutée sur le choix de l'extincteur. |
+
+## Lecture déclarée et quiz enregistrés
+
+| Décision | Raison |
+|---|---|
+| **Case « J'ai lu cette fiche », jamais de marquage automatique** | C'est toi qui sais si tu as vraiment lu. La case (vraie case à cocher, accessible au clavier) se trouve juste après le texte. L'état apparaît dans l'en-tête de la fiche, sur les cartes de la liste (« Lu » / « Nouveau »), dans le filtre « Lues », sur l'accueil et dans la progression. |
+| **Cocher** | +10 XP, la fiche entre dans la révision espacée et l'action compte pour la série du jour. |
+| **Décocher** | Les 10 XP sont retirés et la fiche sort de la révision (son historique de révision repart de zéro si tu la recoches), pour qu'on ne puisse pas gonfler l'XP en cochant et décochant. La série déjà validée ce jour-là n'est pas retirée : l'activité a bien eu lieu. |
+| **Ouvrir une fiche ne compte plus pour la série** | Seules les actions comptent : cocher « Lu », répondre à un quiz, une expérience, une mission, le défi. |
+| **Score de quiz enregistré par fiche** | Dernier score, meilleur score et nombre de tentatives, affichés au-dessus du quiz et conservés sur l'appareil. Chaque réponse continue d'alimenter les statistiques par catégorie (points faibles). |
+| **Bilan et « Recommencer le quiz »** | À la fin, un bilan donne le score et propose de recommencer depuis la question 1. |
+| **Correction lisible sans la couleur** | La bonne réponse porte l'étiquette « Bonne réponse » (ou « Ta réponse, juste ») et la réponse fausse choisie « Ta réponse ». Le texte double la couleur (WCAG 1.4.1). |
+| **Bouton « Voir le schéma »** | Visible seulement pendant la lecture du texte (schéma passé au-dessus de l'écran, case « Lu » pas encore atteinte). Sa visibilité est calculée à chaque défilement, une fois par image. |
