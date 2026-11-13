@@ -1,74 +1,88 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
-  <!-- Séparateurs des trois zones -->
-  <path class="s-dash" d="M178 14 V140"/>
-  <path class="s-dash" d="M10 150 H350"/>
+  <!-- Séparateurs : en haut, triangle du feu | bouteille et détente ; en bas, les 4 types -->
+  <path class="s-dash" d="M146 12 V98"/>
+  <path class="s-dash" d="M10 104 H350"/>
 
-  <!-- 1 : le triangle du feu -->
+  <!-- 1 : le triangle du feu (3 éléments) -->
   <g>
-    <circle class="s-badge" cx="20" cy="22" r="9"/>
-    <text class="s-badge-text" x="20" y="22">1</text>
-    <text class="s-label" x="34" y="26">Triangle du feu</text>
-    <polygon class="s-line" points="90,42 30,126 150,126"/>
-    <path class="s-fill-hot s-pulse" d="M90 76 C100 88 106 98 101 110 C98 117 82 117 79 110 C74 98 80 88 90 76 Z"/>
-    <path class="s-hot" d="M90 76 C100 88 106 98 101 110 C98 117 82 117 79 110 C74 98 80 88 90 76 Z"/>
-    <text class="s-small" x="56" y="82" text-anchor="end">Oxygène</text>
-    <text class="s-small s-text-hot" x="124" y="82">Chaleur</text>
-    <text class="s-small" x="90" y="141" text-anchor="middle">Combustible</text>
+    <circle class="s-badge" cx="18" cy="18" r="9"/>
+    <text class="s-badge-text" x="18" y="18">1</text>
+    <text class="s-label" x="32" y="22">Triangle du feu</text>
+    <polygon class="s-line" points="74,34 36,88 112,88"/>
+    <path class="s-fill-hot s-pulse" d="M74 54 C81 63 85 70 81 78 C79 83 69 83 67 78 C63 70 67 63 74 54 Z"/>
+    <path class="s-hot" d="M74 54 C81 63 85 70 81 78 C79 83 69 83 67 78 C63 70 67 63 74 54 Z"/>
+    <text class="s-tiny" x="10" y="54">Oxygène</text>
+    <text class="s-tiny s-text-hot" x="98" y="54">Chaleur</text>
+    <text class="s-tiny" x="74" y="99" text-anchor="middle">Combustible</text>
   </g>
 
-  <!-- 2 : quatre extincteurs, ce que chacun retire au feu -->
+  <!-- 3 : bouteille sous pression, détente, neige carbonique -->
   <g>
-    <circle class="s-badge" cx="196" cy="22" r="9"/>
-    <text class="s-badge-text" x="196" y="22">2</text>
-    <text class="s-label" x="210" y="26">Ce qu'ils retirent</text>
+    <circle class="s-badge" cx="160" cy="18" r="9"/>
+    <text class="s-badge-text" x="160" y="18">3</text>
+    <text class="s-label" x="174" y="22">Bouteille et détente</text>
 
-    <rect class="s-solid" x="194" y="46" width="20" height="48" rx="6"/>
-    <rect class="s-solid" x="200" y="38" width="8" height="9" rx="2"/>
-    <rect class="s-fill-cold" x="197" y="66" width="14" height="25" rx="4"/>
+    <rect class="s-solid" x="156" y="36" width="54" height="26" rx="9"/>
+    <rect class="s-fill-cold" x="160" y="49" width="46" height="10" rx="3"/>
+    <circle class="s-fill-cold" cx="166" cy="43" r="2.2"/>
+    <circle class="s-fill-cold" cx="174" cy="42" r="2.2"/>
+    <circle class="s-fill-cold" cx="182" cy="43" r="2.2"/>
+    <circle class="s-fill-cold" cx="190" cy="42" r="2.2"/>
+    <circle class="s-fill-cold" cx="198" cy="43" r="2.2"/>
+    <rect class="s-solid" x="210" y="43" width="8" height="12" rx="2"/>
+    <polygon class="s-solid" points="218,46 248,38 248,62 218,54"/>
+    <text class="s-tiny" x="156" y="76">57 bar · 20 °C</text>
+    <text class="s-tiny" x="156" y="90">CO₂ comprimé</text>
 
-    <rect class="s-solid" x="236" y="46" width="20" height="48" rx="6"/>
-    <rect class="s-solid" x="242" y="38" width="8" height="9" rx="2"/>
-    <rect class="s-fill-muted" x="239" y="62" width="14" height="29" rx="4"/>
-
-    <rect class="s-solid" x="278" y="46" width="20" height="48" rx="6"/>
-    <rect class="s-solid" x="284" y="38" width="8" height="9" rx="2"/>
-    <rect class="s-fill-accent" x="281" y="60" width="14" height="31" rx="4"/>
-
-    <rect class="s-solid" x="320" y="46" width="20" height="48" rx="6"/>
-    <rect class="s-solid" x="326" y="38" width="8" height="9" rx="2"/>
-    <rect class="s-fill-cold" x="323" y="70" width="14" height="21" rx="4"/>
-
-    <text class="s-tiny" x="204" y="106" text-anchor="middle">Eau</text>
-    <text class="s-tiny" x="246" y="106" text-anchor="middle">Poudre</text>
-    <text class="s-tiny" x="288" y="106" text-anchor="middle">Mousse</text>
-    <text class="s-tiny" x="330" y="106" text-anchor="middle">CO₂</text>
-
-    <text class="s-tiny s-text-hot" x="204" y="122" text-anchor="middle">chaleur</text>
-    <text class="s-tiny s-text-accent" x="246" y="138" text-anchor="middle">réaction</text>
-    <text class="s-tiny s-text-cold" x="288" y="122" text-anchor="middle">oxygène</text>
-    <text class="s-tiny s-text-cold" x="330" y="138" text-anchor="middle">oxygène</text>
+    <text class="s-tiny" x="254" y="37">détente</text>
+    <path class="s-cold s-flow" d="M252 44 C266 42 278 42 292 44" marker-end="url(#mg-arrow-cold)"/>
+    <path class="s-cold s-flow" d="M252 56 C266 58 278 58 292 56" marker-end="url(#mg-arrow-cold)"/>
+    <circle class="s-fill-cold s-diffuse" cx="266" cy="50" r="7"/>
+    <circle class="s-fill-cold s-diffuse s-delay-1" cx="280" cy="48" r="8"/>
+    <text class="s-small s-text-cold" x="298" y="54">−78,5 °C</text>
+    <text class="s-tiny" x="254" y="76">neige carbonique</text>
+    <text class="s-tiny" x="254" y="90">(glace sèche)</text>
   </g>
 
-  <!-- 3 : la détente du CO₂ à la sortie du cornet -->
+  <!-- 2 : les 4 types d'extincteurs, ce que chacun retire et où on le trouve -->
   <g>
-    <circle class="s-badge" cx="20" cy="166" r="9"/>
-    <text class="s-badge-text" x="20" y="166">3</text>
-    <text class="s-label" x="34" y="170">Détente du CO₂</text>
+    <circle class="s-badge" cx="18" cy="118" r="9"/>
+    <text class="s-badge-text" x="18" y="118">2</text>
+    <text class="s-label" x="32" y="122">4 extincteurs : ce qu'ils retirent, où</text>
 
-    <rect class="s-solid" x="18" y="180" width="72" height="28" rx="10"/>
-    <rect class="s-fill-cold" x="22" y="193" width="64" height="12" rx="4"/>
-    <rect class="s-solid" x="90" y="187" width="10" height="14" rx="2"/>
-    <polygon class="s-solid" points="100,190 148,180 148,208 100,198"/>
-    <text class="s-tiny" x="18" y="226">CO₂ liquide comprimé</text>
+    <rect class="s-solid" x="43" y="136" width="18" height="30" rx="5"/>
+    <rect class="s-solid" x="48" y="130" width="8" height="7" rx="2"/>
+    <rect class="s-fill-cold" x="46" y="148" width="12" height="15" rx="3"/>
 
-    <path class="s-cold s-flow" d="M152 186 C174 182 192 182 214 184" marker-end="url(#mg-arrow-cold)"/>
-    <path class="s-cold s-flow" d="M152 202 C174 206 192 206 214 204" marker-end="url(#mg-arrow-cold)"/>
-    <circle class="s-fill-cold s-diffuse" cx="180" cy="194" r="11"/>
-    <circle class="s-fill-cold s-diffuse s-delay-1" cx="200" cy="190" r="12"/>
-    <circle class="s-fill-cold s-diffuse s-delay-2" cx="194" cy="200" r="9"/>
+    <rect class="s-solid" x="129" y="136" width="18" height="30" rx="5"/>
+    <rect class="s-solid" x="134" y="130" width="8" height="7" rx="2"/>
+    <rect class="s-fill-muted" x="132" y="146" width="12" height="17" rx="3"/>
 
-    <text class="s-label s-text-cold" x="226" y="190">−78 °C</text>
-    <text class="s-tiny" x="226" y="204">neige de glace sèche</text>
-    <text class="s-tiny" x="166" y="226">se détend, absorbe la chaleur</text>
+    <rect class="s-solid" x="215" y="136" width="18" height="30" rx="5"/>
+    <rect class="s-solid" x="220" y="130" width="8" height="7" rx="2"/>
+    <rect class="s-fill-accent" x="218" y="144" width="12" height="19" rx="3"/>
+
+    <rect class="s-solid" x="301" y="136" width="18" height="30" rx="5"/>
+    <rect class="s-solid" x="306" y="130" width="8" height="7" rx="2"/>
+    <rect class="s-fill-cold" x="304" y="152" width="12" height="11" rx="3"/>
+
+    <text class="s-small" x="52" y="181" text-anchor="middle">Eau</text>
+    <text class="s-small" x="138" y="181" text-anchor="middle">Poudre</text>
+    <text class="s-small" x="224" y="181" text-anchor="middle">Mousse</text>
+    <text class="s-small" x="310" y="181" text-anchor="middle">CO₂</text>
+
+    <text class="s-tiny s-text-hot" x="52" y="196" text-anchor="middle">− chaleur</text>
+    <text class="s-tiny s-text-accent" x="138" y="196" text-anchor="middle">− réaction</text>
+    <text class="s-tiny s-text-cold" x="224" y="196" text-anchor="middle">− oxygène</text>
+    <text class="s-tiny s-text-cold" x="310" y="196" text-anchor="middle">− oxygène</text>
+
+    <text class="s-tiny" x="52" y="211" text-anchor="middle">couloirs,</text>
+    <text class="s-tiny" x="52" y="226" text-anchor="middle">écoles</text>
+    <text class="s-tiny" x="138" y="211" text-anchor="middle">garages,</text>
+    <text class="s-tiny" x="138" y="226" text-anchor="middle">véhicules</text>
+    <text class="s-tiny" x="224" y="211" text-anchor="middle">ateliers,</text>
+    <text class="s-tiny" x="224" y="226" text-anchor="middle">carburants</text>
+    <text class="s-tiny" x="310" y="211" text-anchor="middle">tableaux</text>
+    <text class="s-tiny" x="310" y="226" text-anchor="middle">électriques</text>
   </g>
 </svg>

@@ -114,7 +114,7 @@
 .back-link:hover { color: var(--c-accent); }
 .page-head__row { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-3); }
 .page-head__text { display: grid; gap: var(--sp-2); min-width: 0; }
-.page-head__title { display: flex; align-items: center; gap: var(--sp-3); overflow-wrap: anywhere; }
+.page-head__title { display: flex; align-items: center; gap: var(--sp-3); min-width: 0; }
 .page-head__title:focus { outline: none; }
 .page-head__icon { display: grid; place-items: center; flex: none; width: 3rem; height: 3rem; border-radius: var(--r-sm); color: var(--c-accent); background: var(--c-accent-soft); border: 1px solid var(--c-border-strong); }
 .page-head__actions { display: flex; gap: var(--sp-1); flex: none; }
@@ -183,3 +183,13 @@
   .toasts { bottom: var(--sp-6); left: calc(50% + var(--rail-w) / 2); }
 }
 @media (max-width: 360px) { .brand__name { font-size: 1rem; } .topbar { gap: var(--sp-2); } }
+
+/* En-tête de page : les actions (favori, partage) se rangent sur la ligne du sur-titre,
+   le titre prend toute la largeur (évite les mots coupés sur petit écran). */
+.page-head__row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; column-gap: var(--sp-3); row-gap: var(--sp-2); }
+.page-head__text { display: contents; }
+.page-head__text > .hud-label { grid-column: 1; grid-row: 1; align-self: center; }
+.page-head__actions { grid-column: 2; grid-row: 1; margin-top: calc(-1 * var(--sp-2)); }
+.page-head__title { grid-column: 1 / -1; grid-row: 2; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+/* Sans sur-titre : le titre reste à gauche des actions */
+.page-head__row:not(:has(.hud-label)) .page-head__title { grid-column: 1; grid-row: 1; }

@@ -746,3 +746,29 @@
 .quiz__summary-score { display: flex; align-items: center; gap: var(--sp-2); margin: 0; font-family: var(--font-head); font-size: var(--fs-xl); font-weight: 600; }
 .quiz__summary-score .icon { color: var(--c-orange); }
 .quiz__summary-text { margin: 0; color: var(--c-text-2); }
+
+/* ---------- Données clés : prononciation et équivalent concret ---------- */
+.figures__item { display: flex; flex-direction: column; }
+.figures__item dt { order: 2; }
+.figures__item .figures__val { order: 1; }
+.figures__item .figures__concret { order: 3; margin: var(--sp-2) 0 0; font-family: var(--font-body); font-weight: 400; font-size: var(--fs-sm); color: var(--c-text); line-height: 1.5; }
+.figures__dit { display: block; margin-top: 0.15rem; font-family: var(--font-body); font-size: var(--fs-sm); font-weight: 500; color: var(--c-text-2); }
+
+/* ---------- Échelle de repères graduée ---------- */
+.echelle__list { list-style: none; display: grid; gap: var(--sp-2); margin-top: var(--sp-2); }
+.echelle__item {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, auto) 1fr;
+  gap: var(--sp-3);
+  align-items: start;
+  padding: var(--sp-3);
+  border: 1px solid var(--c-border);
+  border-left: 4px solid color-mix(in srgb, var(--c-accent) calc(100% - var(--niveau) * 100%), var(--c-orange));
+  border-radius: var(--r-sm);
+  background: var(--c-surface);
+}
+.echelle__val { font-family: var(--font-mono); font-weight: 700; color: var(--c-accent); white-space: nowrap; }
+.echelle__body { display: grid; gap: var(--sp-1); }
+.echelle__dit { font-size: var(--fs-sm); color: var(--c-text-2); }
+.echelle__desc { color: var(--c-text); }
+@media (max-width: 420px) { .echelle__item { grid-template-columns: 1fr; gap: var(--sp-1); } }

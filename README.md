@@ -68,4 +68,5 @@ Aucun compte, aucun traceur, aucune requête vers un tiers (polices incluses). L
 - [AUDIT.md](AUDIT.md) : bugs trouvés et corrigés, tests, mesures Lighthouse
 - [FONCTIONNALITES.md](FONCTIONNALITES.md) : inventaire, améliorations, ajouts
 - [TACHES.md](TACHES.md) : liste des tâches
-- [CONTENU.md](CONTENU.md) : guide pour ajouter du contenu
+- [CONTENU.md](CONTENU.md) : guide pour ajouter du contenu (format, guide de style, règle des ordres de grandeur)
+- [ORDRES-DE-GRANDEUR.md](ORDRES-DE-GRANDEUR.md) : liste des ordres de grandeur avec leur prononciation et leur équivalent concret

@@ -53,20 +53,43 @@ Une fiche se lit comme un texte qui coule, de A à Z, et non plus comme une list
 - **Compatibilité** : une fiche sans `texte` garde l'ancien format (`principe` en 3 lignes + `pourquoi`). Tu peux migrer les fiches une par une : ajoute `texte`, puis supprime `principe`, `pourquoi` et `chiffres`, qui ne sont plus affichés.
 - **Ce qui reste affiché** : titre, schéma, temps de lecture (calculé automatiquement, inutile de remplir `duree`), étiquette « Série ou réalité ? », niveau de sécurité, liens, quiz, infobulles, mode enfant (`enfant`), lecture vocale et carnet.
 - Le paragraphe « Dans la série… Dans la réalité… » s'affiche dans un encadré orange avec l'étiquette « Série ou réalité ? ». Le paragraphe « À retenir » s'affiche dans un encadré final.
+- **Données clés et échelle** : `chiffres` (avec `dit` et `concret`) s'affichent dans le format court ; `echelle` s'affiche dans les deux formats, après le texte.
 - **Contrôlé par le validateur** : 4 à 20 paragraphes ; le dernier commence par `**À retenir :**` ; un paragraphe contient « Dans la série » et « Dans la réalité » ; gras bien fermé. Il avertit aussi s'il manque l'accroche « Peu de gens savent que… », s'il trouve un tiret cadratin ou une liste à puces.
 
 ### Guide de style (toutes les futures fiches)
 
-- **Voix MacGyver** : tu tutoies le lecteur, comme un coéquipier qui t'explique sur le terrain. Tournures typiques : « Peu de gens savent que… », « Si tu mets ça et ça… », « Pour faire ça, il faut… ».
-- **Français correct, sans argot.** Pas de tiret cadratin (—) : utilise une virgule, deux-points ou une nouvelle phrase.
-- **Partir de zéro, expliquer de A à Z** : ce qu'est l'objet ou le phénomène, comment il marche, ses types ou variantes et ce que chacun fait. Un lecteur qui ne sait rien doit tout comprendre.
-- **Chaque paragraphe** ouvre sur une phrase d'accroche en gras qui dit l'idée, puis la développe.
-- **Comparaisons avec le quotidien** : couvercle sur une casserole, bombe aérosol qui se refroidit, frigo…
-- **Une accroche « Peu de gens savent que… »** pour le fait surprenant de la fiche.
-- **Un paragraphe « Dans la série / Dans la réalité »** : ce que montre la fiction, ce qui se passe vraiment, et **un exemple concret où ça marcherait vraiment**.
-- **Un « À retenir » final** : le principe en mots simples, avec des exemples du quotidien que le lecteur a déjà vécus.
-- **Viser 350 à 600 mots** (2 à 3 minutes de lecture). Le temps affiché est calculé sur 200 mots par minute.
-- **Infobulles** : balise 3 à 6 termes du glossaire, de préférence avec `[[id|texte affiché]]` pour ne pas changer la phrase.
+Chaque fiche part de zéro et explique de A à Z, **sans être trop longue** (viser 500 à 900 mots, soit 3 à 5 minutes de lecture ; la fiche de référence CO₂ en fait 860). Elle doit :
+
+1. **Annoncer les comptes explicitement** : « il existe 4 types », « un feu a besoin de 3 choses », « il suffit d'en retirer 1 ». Un lecteur retient mieux un nombre annoncé.
+2. **Expliquer le pourquoi physique, pas seulement le quoi** : pourquoi un gaz qui se détend se refroidit, pourquoi une température s'arrête à une valeur précise, pourquoi tel matériau casse et pas un autre.
+3. **Dire où on trouve les objets dans la vie réelle** : « on le trouve près des tableaux électriques, dans les salles informatiques ».
+4. **Utiliser des comparaisons du quotidien** (un couvercle sur une casserole, une foule dans un métro bondé, la bombe aérosol qui glace la main) et des accroches de terrain : « Peu de gens savent que… », « Si tu mets ça et ça… », « Pour faire ça, il faut… ».
+5. **Voix MacGyver** : tu tutoies le lecteur ; français correct, sans argot ; **pas de tiret cadratin (—) ni demi-cadratin (–)**.
+6. **Donner chaque ordre de grandeur avec sa prononciation entre parenthèses et son équivalent concret** (voir la règle ci-dessous).
+7. **Un paragraphe « Dans la série / Dans la réalité »** avec un **cas concret où ça marcherait vraiment**.
+8. **Finir par « À retenir »**, qui résume en mots simples, avec des exemples du quotidien.
+9. **Infobulles** : balise 3 à 8 termes du glossaire avec `[[id|texte affiché]]`, pour ne pas changer la phrase.
+
+### Règle des ordres de grandeur (toutes les fiches)
+
+Chaque valeur chiffrée avec unité, chaque valeur de symbole et chaque formule est **suivie de sa prononciation entre parenthèses**, puis d'une **explication de ce qu'elle représente dans la vie réelle** :
+
+> Dans la bouteille, il est à environ 57 bar (cinquante-sept bars), soit presque soixante fois la pression de l'air autour de toi.
+
+> μ = 0,3 (mu égale zéro virgule trois) : une valeur facile à avoir sur un tronc moyen.
+
+- **Nombres** en toutes lettres ; décimales avec « virgule » ; négatifs avec « moins » ; `≈` se dit « environ » ; `×7` « fois sept » ; `10⁻⁸` « dix puissance moins huit » ; intervalle `0,4 à 0,6` « zéro virgule quatre à zéro virgule six ».
+- **Unités** en toutes lettres et accordées : degrés Celsius, bars, mètres, volts, ampères, watts, newtons, ohms, pour cent, mètres par seconde…
+- **Symboles** : μ (mu), Δ (delta), Ω (ohm), ω (oméga), F₁ (F un), v² (v au carré), ½ (un demi).
+- **Données clés** (`chiffres`) : remplis `dit` (la prononciation) et `concret` (l'équivalent concret).
+- **Échelle de repères** (`echelle`) : pour graduer une grandeur (ex. : coefficient de frottement), chaque niveau a `valeur`, `dit` et `description`.
+- **Exceptions** : les étiquettes des schémas SVG restent courtes (pas de prononciation dans le dessin) ; dans les choix de quiz, la prononciation suffit, l'équivalent concret va dans l'explication.
+
+Le validateur affiche un **avertissement** (sans bloquer la construction) pour chaque valeur détectée sans parenthèse de prononciation, et pour chaque donnée clé sans `dit` ou `concret`.
+
+### Règle de contenu (inchangée)
+
+Jamais de plans, de quantités ou de montages pour des armes, des explosifs ou des dispositifs dangereux. Les sujets sensibles restent au niveau du principe (`principeSeul`).
 
 ## 4. Schémas SVG
 

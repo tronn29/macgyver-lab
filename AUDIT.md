@@ -88,3 +88,19 @@ Testé sur téléphone (375 × 812) avec de **vrais appuis** dans le navigateur 
 | Régression pendant la correction : lettre et texte des réponses sur deux lignes | `flex-wrap` ajouté pour l'étiquette | Grille : lettre à gauche, texte à droite, étiquette en dessous |
 
 Tests : 54 (7 nouveaux : case « Lu », score enregistré, quiz cliqué dans un vrai DOM). Contraste de la case « Lu », du quiz corrigé et du score : 0 échec dans les 2 thèmes (minimum 5,4:1).
+
+## Contenu et style (révision 3) : vérifications et corrections
+
+- Validateur : contenu valide, **0 avertissement** d'ordre de grandeur sur les 22 fiches (170 ordres de grandeur, liste dans `ORDRES-DE-GRANDEUR.md`).
+- Tests : 60 (nouveaux : détecteur d'ordres de grandeur, fiche CO₂ sans valeur non prononcée, quiz CO₂ couvrant les comptes et le pourquoi physique, étiquette et sécurité conservées). Le test du texte mot pour mot utilise le nouveau texte.
+- Affichage vérifié sur téléphone en portrait (375 × 812 et un écran très étroit de 268 px) et en paysage (812 × 375) : fiche CO₂, cabestan (échelle), poulie (données clés). Les 22 fiches s'affichent sans erreur ni débordement horizontal.
+- Contraste : 0 échec dans les 2 thèmes sur 5 fiches représentatives. Titres sans saut.
+- Schéma CO₂ : 31 textes mesurés avec la police réelle : aucun débordement, aucun chevauchement.
+
+| Défaut trouvé | Correction |
+|---|---|
+| Sur un écran étroit, les boutons favori et partage serraient le titre, coupé en plein mot (« Extincte / ur ») | Les boutons passent sur la ligne du sur-titre ; le titre prend toute la largeur, avec césure en français |
+| L'équivalent concret des données clés s'affichait en police à chasse fixe | Police de texte |
+| Glace sèche : « le CO₂ froid est 1,5 fois plus dense que l'air » (vrai seulement à température égale) | Formulation corrigée |
+| Deux tirets demi-cadratins dans des intervalles de valeurs | Remplacés par « à » |
+| Étiquettes du schéma CO₂ trop serrées (environ 1 unité de chevauchement) | Interlignes élargis |

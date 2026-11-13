@@ -213,7 +213,7 @@
         },
         "chiffres": {
           "type": "array",
-          "maxItems": 4,
+          "maxItems": 6,
           "items": {
             "type": "object",
             "required": [
@@ -227,6 +227,16 @@
               },
               "label": {
                 "type": "string"
+              },
+              "dit": {
+                "type": "string",
+                "minLength": 2,
+                "description": "Prononciation de la valeur, en toutes lettres (ex. : « cinquante-sept bars »)."
+              },
+              "concret": {
+                "type": "string",
+                "minLength": 10,
+                "description": "Ce que cette valeur représente dans la vie réelle, avec une comparaison du quotidien."
               }
             }
           }
@@ -275,12 +285,56 @@
             "$ref": "#/definitions/quiz"
           },
           "minItems": 1,
-          "maxItems": 3
+          "maxItems": 8
         },
         "motsCles": {
           "type": "array",
           "items": {
             "type": "string"
+          }
+        },
+        "echelle": {
+          "type": "object",
+          "required": [
+            "intro",
+            "niveaux"
+          ],
+          "additionalProperties": false,
+          "description": "Échelle de repères (ex. : coefficient de frottement), affichée sous forme de liste graduée.",
+          "properties": {
+            "titre": {
+              "type": "string"
+            },
+            "intro": {
+              "type": "string",
+              "minLength": 10
+            },
+            "niveaux": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 10,
+              "items": {
+                "type": "object",
+                "required": [
+                  "valeur",
+                  "dit",
+                  "description"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "valeur": {
+                    "type": "string"
+                  },
+                  "dit": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string",
+                    "minLength": 5
+                  }
+                }
+              }
+            }
           }
         }
       },

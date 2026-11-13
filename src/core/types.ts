@@ -56,7 +56,10 @@ export interface Fiche {
   principe?: string[];
   pourquoi?: string[];
   enfant: string;
-  chiffres?: { valeur: string; label: string }[];
+  /** Données clés : valeur, sa prononciation (dit) et son équivalent concret. */
+  chiffres?: { valeur: string; label: string; dit?: string; concret?: string }[];
+  /** Échelle de repères graduée (ex. : coefficient de frottement). */
+  echelle?: { titre?: string; intro: string; niveaux: { valeur: string; dit: string; description: string }[] };
   realite: { verdict: Verdict; explication: string };
   securite: Securite;
   liens: { fiches?: string[]; equivalences?: string[]; pratique?: string[] };

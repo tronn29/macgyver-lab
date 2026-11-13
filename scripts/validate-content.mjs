@@ -12,6 +12,7 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import Ajv from 'ajv';
+import { ficheTextFields, findMagnitudes } from './magnitudes.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -293,6 +294,23 @@ for (const f of data.theorie.filter((x) => x.principeSeul))
   for (const [path, text] of strings({ texte: f.texte, principe: f.principe, pourquoi: f.pourquoi, enfant: f.enfant }))
     if (QUANTITE.test(text) || MONTAGE.test(text))
       err(`${f.__file} [${f.id}] ${path}`, `sujet sensible : quantité ou montage interdit (« ${(text.match(QUANTITE) ?? text.match(MONTAGE))[0]} »)`);
+
+/* ---------- 6 ter. Ordres de grandeur : prononciation et équivalent concret (avertissements) ----------
+ * Règle (CONTENU.md) : chaque valeur avec unité ou symbole est suivie de sa prononciation entre
+ * parenthèses et d'un équivalent concret. Ne bloque pas la construction. */
+let sansPrononciation = 0;
+for (const f of data.theorie) {
+  for (const [path, text] of ficheTextFields(f))
+    for (const m of findMagnitudes(text))
+      if (!m.prononcee) {
+        sansPrononciation += 1;
+        warn(`${f.__file} [${f.id}] ${path}`, `« ${m.valeur} » sans prononciation entre parenthèses`);
+      }
+  (f.chiffres ?? []).forEach((c, i) => {
+    if (!c.dit) warn(`${f.__file} [${f.id}] chiffres[${i}]`, `« ${c.valeur} » : ajoute "dit" (prononciation)`);
+    if (!c.concret) warn(`${f.__file} [${f.id}] chiffres[${i}]`, `« ${c.valeur} » : ajoute "concret" (équivalent dans la vie réelle)`);
+  });
+}
 
 /* ---------- 7. SVG orphelins ---------- */
 for (const f of readdirSync(SCHEMAS)) if (f.endsWith('.svg') && !usedSvgs.has(f)) warn(`schemas/${f}`, "schéma non utilisé par aucune fiche ni expérience");

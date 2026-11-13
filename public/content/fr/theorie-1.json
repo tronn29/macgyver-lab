@@ -2,7 +2,7 @@
   {
     "id": "detente-co2-froid",
     "titre": "Extincteur au CO₂ et froid",
-    "sousTitre": "Comment un extincteur coupe un feu, et pourquoi le CO₂ givre en sortant",
+    "sousTitre": "Le triangle du feu, les quatre types d'extincteurs, et pourquoi le CO₂ sort glacé",
     "categories": [
       "thermique",
       "pression"
@@ -10,23 +10,26 @@
     "niveau": 2,
     "schema": {
       "fichier": "detente-co2-froid.svg",
-      "alt": "Schéma en trois parties. 1 : le triangle du feu, dont les trois côtés sont le combustible, l'oxygène et la chaleur, avec une flamme au centre. 2 : quatre extincteurs côte à côte avec ce que chacun retire au feu : l'eau retire la chaleur, la poudre casse la réaction, la mousse et le CO₂ retirent l'oxygène. 3 : une bouteille de CO₂ liquide comprimé ; à la sortie du cornet, le gaz se détend, absorbe la chaleur et forme de la neige de glace sèche à −78 °C.",
-      "legende": "Le triangle du feu, les quatre types d'extincteurs et la détente du CO₂."
+      "alt": "Schéma en trois zones. 1 : le triangle du feu, avec ses trois côtés : l'oxygène, la chaleur et le combustible, et une flamme au centre. 2 : les quatre extincteurs côte à côte, avec ce que chacun retire et où on le trouve : l'eau retire la chaleur (couloirs, écoles), la poudre casse la réaction (garages, véhicules), la mousse retire l'oxygène (ateliers, carburants), le CO₂ retire l'oxygène (tableaux électriques). 3 : une bouteille de CO₂ comprimé à 57 bar (cinquante-sept bars) et 20 °C (vingt degrés Celsius), molécules serrées ; à la sortie du cornet, le gaz se détend et forme de la neige carbonique, ou glace sèche, à −78,5 °C (moins soixante-dix-huit virgule cinq degrés Celsius).",
+      "legende": "Le triangle du feu, les quatre types d'extincteurs (ce qu'ils retirent, où on les trouve), et la détente du CO₂."
     },
     "texte": [
-      "**Un extincteur n'éteint pas un feu, il lui retire ce dont il a besoin.** Un feu a besoin de trois choses : un combustible (ce qui brûle), de l'[[comburant|oxygène]] et de la chaleur. Il suffit d'en supprimer une seule pour qu'il s'arrête. Un extincteur, c'est simplement une bouteille sous pression qui contient un produit capable de couper l'une des trois, et chaque type de produit en coupe une différente.",
-      "**L'extincteur à eau** retire la chaleur : il refroidit ce qui brûle. Il est bon pour le bois, le papier, le tissu. Il est dangereux sur un feu électrique (l'eau [[conducteur|conduit le courant]]) et sur une huile qui brûle (elle s'étale et projette).",
-      "**L'extincteur à poudre** casse la réaction du feu : la poudre l'empêche de s'entretenir. Il éteint presque tout, mais le nuage de poudre abîme l'électronique.",
-      "**L'extincteur à mousse** retire l'oxygène : il recouvre un liquide en feu d'une couche qui l'isole de l'air, comme un couvercle sur une casserole.",
-      "**L'extincteur au CO₂** retire aussi l'oxygène : le gaz carbonique est plus lourd que l'air, il s'étale sur le feu et repousse l'oxygène. Il ne laisse aucun résidu, donc il convient à l'électrique et à l'informatique. Sa portée est courte, et il est dangereux dans une pièce fermée, car il prive aussi les personnes d'oxygène.",
-      "**Peu de gens savent que le CO₂ est stocké sous forme liquide.** Dans la bouteille, il est comprimé à plusieurs dizaines de fois [[pression-atmospherique|la pression de l'air]]. Quand il sort, il [[detente|se détend]] d'un coup et se refroidit violemment : une partie se transforme en [[neige-carbonique|neige de glace sèche]] à environ -78 °C. C'est pour ça que le cornet givre et peut brûler la peau par le froid.",
-      "**Dans la série**, MacGyver projette ce froid sur des barreaux de prison, et ils cassent. **Dans la réalité**, ça ne marche pas sur un barreau épais : le froid n'a pas le temps de le traverser, et l'acier reste solide. Ça marche en revanche sur des matières qui deviennent cassantes au froid : un tuyau en plastique rigide, un joint en caoutchouc, un petit cadenas bon marché en zinc, ou une pièce fine déjà abîmée. Un acier ordinaire devient aussi [[fragilite|fragile]], mais seulement à des températures très basses sur toute son épaisseur : c'est ce qui a fait casser des coques de navires dans les mers glaciales.",
-      "**À retenir :** quand un gaz se détend, ses molécules s'écartent les unes des autres. Pour s'écarter, elles ont besoin d'énergie, et elles la prennent sous forme de chaleur dans ce qui les entoure. Ce qui les entoure se refroidit donc. Tu l'as déjà vu : quand tu utilises une bombe aérosol longtemps, elle devient glacée dans ta main. Le frigo fonctionne pareil : un liquide se détend à l'intérieur, absorbe la chaleur de la nourriture, puis est recomprimé dehors pour la rejeter."
+      "**Un extincteur n'éteint pas un feu, il lui retire ce dont il a besoin.** Un feu a besoin de trois choses, pas une de plus : un combustible (ce qui brûle), de l'[[comburant|oxygène]] et de la chaleur. C'est ce qu'on appelle le triangle du feu. Il suffit d'en supprimer une seule pour qu'il s'arrête. Un extincteur, c'est simplement une bouteille sous pression qui contient un produit capable de couper l'une des trois, et chaque type de produit en coupe une différente.",
+      "**Il existe quatre grands types d'extincteurs**, et tu les croises tous les jours sans les regarder. Chacun est fait pour une famille de feux : les solides (bois, papier, tissu), les liquides (essence, huile, solvants) et les feux d'origine électrique.",
+      "**L'extincteur à eau** retire la chaleur : il refroidit ce qui brûle. On le trouve dans les couloirs, les écoles, les bureaux. Il est bon pour les solides, mais dangereux sur un feu électrique (l'eau [[conducteur|conduit le courant]]) et sur une huile qui brûle (elle s'étale et projette).",
+      "**L'extincteur à poudre** casse la réaction du feu : la poudre empêche la flamme de s'entretenir. On le trouve dans les garages, les ateliers, les véhicules. Il éteint presque tout, mais il crée un nuage irrespirable et la poudre abîme l'électronique.",
+      "**L'extincteur à mousse** retire l'oxygène : il recouvre un liquide en feu d'une couche qui l'isole de l'air, comme un couvercle sur une casserole. On le trouve dans les ateliers et les zones de stockage de carburants.",
+      "**L'extincteur au CO₂ (C O deux, le gaz carbonique)** retire aussi l'oxygène : le gaz est plus lourd que l'air, il s'étale sur le feu et repousse l'oxygène. On le trouve près des tableaux électriques, dans les salles informatiques et les laboratoires. Il ne laisse aucun résidu, donc il est idéal pour l'électrique. Sa portée est de quelques mètres, et il est dangereux dans une pièce fermée, car il prive aussi les personnes d'oxygène.",
+      "**Peu de gens savent que le CO₂ est stocké comprimé, en partie liquide.** Dans la bouteille, il est à environ 57 bar (cinquante-sept bars), soit presque soixante fois [[pression-atmospherique|la pression de l'air]] autour de toi, et à température ambiante, environ 20 °C (vingt degrés Celsius). Ses molécules sont serrées, comme une foule dans un métro bondé.",
+      "**Pourquoi il sort glacé.** Quand tu ouvres la vanne, la pression retombe et le gaz [[detente|se détend]] : ses molécules s'écartent. Pour s'écarter, elles dépensent de l'énergie de deux façons : elles repoussent l'air autour d'elles, comme un piston, et elles s'arrachent à l'attraction qu'elles exercent les unes sur les autres. Cette énergie, elles la prennent dans leur propre agitation. Or l'agitation des molécules, c'est exactement ce que mesure [[temperature|la température]] : moins elles s'agitent, plus c'est froid. Le gaz n'était pas chaud dans la bouteille, mais en sortant il dépense son énergie pour s'étendre, et il se refroidit.",
+      "**Pourquoi -78 °C (moins soixante-dix-huit degrés Celsius), et pas plus bas ?** À la pression de l'air, le CO₂ n'existe pas sous forme liquide : en refroidissant, il passe directement de gaz à solide, une neige blanche qu'on appelle [[neige-carbonique|neige carbonique]] ou glace sèche. Cette neige [[sublimation|redevient gaz]] à -78,5 °C (moins soixante-dix-huit virgule cinq). Tant qu'il en reste, elle absorbe la chaleur de l'air pour redevenir gaz, et sa température reste bloquée à ce niveau, exactement comme de l'eau qui bout reste à 100 °C (cent degrés Celsius) tant qu'il en reste dans la casserole. Pour te donner une idée : un congélateur est à -18 °C (moins dix-huit degrés), et le record de froid mesuré sur Terre, en Antarctique, est d'environ -89 °C (moins quatre-vingt-neuf). Ce jet est donc presque aussi froid que le pire endroit de la planète, et il brûle la peau par le froid, d'où le cornet qui givre.",
+      "**Dans la série**, MacGyver vide l'extincteur dans une poubelle, y ajoute un liquide, puis étale le mélange sur les barreaux avec un balai, et ils cassent. L'idée est bonne sur le papier : un jet de gaz seul glisse et s'envole, alors qu'une bouillie de neige froide colle au métal et garde le froid plus longtemps en contact. **Dans la réalité**, ça ne suffit pas sur un barreau épais : le froid doit traverser toute l'épaisseur (ce qui prend du temps, pendant que le métal se réchauffe sans cesse), puis il faut un choc sec pour le casser. Ça marche en revanche sur des matières qui deviennent cassantes au froid : un tuyau en plastique rigide (PVC, P V C), un joint ou un tuyau en caoutchouc, un petit objet en zinc moulé, ou une pièce fine déjà fissurée. Même l'acier ordinaire devient [[fragilite|fragile]] quand il est très froid sur toute son épaisseur : c'est ce qui a fait casser des coques de navires dans des mers glaciales.",
+      "**À retenir :** un feu a besoin de trois choses (combustible, oxygène, chaleur), il suffit d'en retirer une, et il existe quatre types d'extincteurs pour le faire. Et quand un gaz se détend, ses molécules s'écartent et dépensent leur énergie, donc il se refroidit. C'est le principe de la bombe aérosol qui devient glacée dans ta main, et du frigo : un liquide se détend à l'intérieur, absorbe la chaleur de la nourriture, puis est recomprimé dehors pour la rejeter."
     ],
     "enfant": "Quand tu appuies sur l'extincteur, le gaz qui était serré très fort dans la bouteille s'échappe d'un coup. Pour s'étaler, il a besoin d'énergie et il la vole sous forme de chaleur à tout ce qui l'entoure. Résultat : tout devient glacé, comme quand tu souffles fort sur ta soupe pour la refroidir, mais en beaucoup plus puissant.",
     "realite": {
       "verdict": "partiel",
-      "explication": "Le froid ne traverse pas un barreau épais : l'acier reste solide. Ça marche en revanche sur un plastique rigide, un joint en caoutchouc, un petit cadenas en zinc ou une pièce fine déjà abîmée."
+      "explication": "La bouillie de neige carbonique colle au métal, mais le froid n'a pas le temps de traverser un barreau épais, et il faudrait encore un choc sec. Ça marche en revanche sur un tuyau en PVC, un joint en caoutchouc, un petit objet en zinc moulé ou une pièce fine déjà fissurée."
     },
     "securite": {
       "niveau": "orange",
@@ -47,25 +50,47 @@
     },
     "quiz": [
       {
-        "question": "Pourquoi le jet d'un extincteur au CO₂ est-il glacé ?",
+        "question": "De combien d'éléments un feu a-t-il besoin pour brûler ?",
         "choix": [
-          "Parce que la bouteille est stockée au réfrigérateur",
-          "Parce que le gaz qui se détend absorbe de la chaleur autour de lui",
-          "Parce que le CO₂ est naturellement froid",
-          "Parce que le métal de la bouteille refroidit le gaz"
+          "Deux : un combustible et de la chaleur",
+          "Trois : un combustible, de l'oxygène et de la chaleur",
+          "Quatre : un combustible, de l'oxygène, de la chaleur et du vent"
         ],
         "reponse": 1,
-        "explication": "En se vaporisant et en se détendant, le CO₂ prend de l'énergie à son environnement : la température chute jusqu'à −78 °C."
+        "explication": "C'est le triangle du feu : combustible, oxygène et chaleur. Il suffit d'en retirer un seul pour que le feu s'arrête."
       },
       {
-        "question": "Un barreau d'acier épais refroidi au CO₂ va-t-il casser facilement ?",
+        "question": "Combien existe-t-il de grands types d'extincteurs ?",
         "choix": [
-          "Oui, d'un seul coup",
-          "Non, son cœur reste trop chaud",
-          "Oui, il fond"
+          "Deux",
+          "Trois",
+          "Quatre",
+          "Six"
+        ],
+        "reponse": 2,
+        "explication": "Quatre : à eau (retire la chaleur), à poudre (casse la réaction), à mousse et au CO₂ (retirent l'oxygène)."
+      },
+      {
+        "question": "Pourquoi un gaz qui se détend se refroidit-il ?",
+        "choix": [
+          "Parce qu'il était stocké au froid",
+          "Parce que ses molécules dépensent leur énergie d'agitation pour s'écarter et repousser l'air",
+          "Parce qu'il se mélange à l'air froid de la pièce",
+          "Parce que la bouteille en métal lui prend sa chaleur"
         ],
         "reponse": 1,
-        "explication": "Le froid ne pénètre que la surface pendant les quelques secondes de jet : un barreau épais garde l'essentiel de sa résistance."
+        "explication": "Pour s'écarter, les molécules repoussent l'air et s'arrachent à leur attraction mutuelle. Elles prennent cette énergie dans leur propre agitation, et la température mesure justement cette agitation : elle baisse."
+      },
+      {
+        "question": "Pourquoi le jet de CO₂ se bloque-t-il vers -78,5 °C (moins soixante-dix-huit virgule cinq degrés Celsius) ?",
+        "choix": [
+          "Parce que l'extincteur est réglé à cette température",
+          "Parce que la neige carbonique redevient gaz à cette température et absorbe la chaleur tant qu'il en reste",
+          "Parce que l'air ne peut pas descendre plus bas",
+          "Parce que le CO₂ gèle en eau à cette température"
+        ],
+        "reponse": 1,
+        "explication": "À la pression de l'air, la neige carbonique passe directement à l'état de gaz à -78,5 °C (moins soixante-dix-huit virgule cinq degrés Celsius). Tant qu'il en reste, sa température ne bouge pas, comme l'eau qui bout reste à 100 °C (cent degrés Celsius)."
       },
       {
         "question": "Quel extincteur choisir pour un feu sur un ordinateur ?",
@@ -76,6 +101,16 @@
         ],
         "reponse": 1,
         "explication": "Le CO₂ chasse l'oxygène sans laisser de résidu et ne conduit pas le courant. L'eau conduit le courant et la mousse est faite pour les liquides en feu."
+      },
+      {
+        "question": "Un barreau d'acier épais refroidi au CO₂ va-t-il casser facilement ?",
+        "choix": [
+          "Oui, d'un seul coup",
+          "Non, le froid n'a pas le temps de traverser toute son épaisseur",
+          "Oui, il fond"
+        ],
+        "reponse": 1,
+        "explication": "Le froid ne pénètre que la surface, pendant que le métal se réchauffe sans cesse, et il faudrait en plus un choc sec : un barreau épais garde l'essentiel de sa résistance."
       }
     ],
     "motsCles": [
@@ -93,7 +128,12 @@
       "triangle du feu",
       "feu électrique",
       "aérosol",
-      "frigo"
+      "frigo",
+      "quatre types",
+      "tableau électrique",
+      "PVC",
+      "antarctique",
+      "congélateur"
     ]
   },
   {
@@ -125,15 +165,21 @@
     "chiffres": [
       {
         "valeur": "9 × 10⁻⁶ /°C",
-        "label": "dilatation du verre ordinaire : 9 µm par mètre et par degré"
+        "label": "dilatation du verre ordinaire : 9 µm (neuf micromètres) par mètre et par degré",
+        "dit": "neuf fois dix puissance moins six par degré Celsius",
+        "concret": "Une vitre d'un mètre de long qui passe de vingt à soixante-dix degrés s'allonge de presque un demi-millimètre, l'épaisseur de quatre ou cinq feuilles de papier empilées."
       },
       {
         "valeur": "3,3 × 10⁻⁶ /°C",
-        "label": "dilatation du verre borosilicate, près de 3 fois moins"
+        "label": "dilatation du verre borosilicate, près de 3 fois moins (trois fois moins)",
+        "dit": "trois virgule trois fois dix puissance moins six par degré Celsius",
+        "concret": "La même vitre d'un mètre, chauffée de cinquante degrés, ne s'allonge que d'un sixième de millimètre environ : c'est pour cela qu'un plat à four en verre borosilicate supporte de passer du froid au chaud."
       },
       {
         "valeur": "≈ 1 W/(m·K)",
-        "label": "conductivité thermique du verre, environ 50 fois moins que l'acier"
+        "label": "conductivité thermique du verre, environ 50 fois (cinquante fois) moins que l'acier",
+        "dit": "environ un watt par mètre et par kelvin",
+        "concret": "Le verre laisse passer la chaleur environ cinquante fois moins bien que l'acier : une casserole en métal devient chaude partout en un instant, alors que la face extérieure d'un verre reste froide plusieurs secondes après qu'on y a versé de l'eau bouillante."
       }
     ],
     "realite": {
@@ -206,28 +252,34 @@
       "legende": "Le CO₂ solide se sublime ; le froid condense l'humidité de l'air en brouillard."
     },
     "principe": [
-      "La glace sèche est du CO₂ solide, à −78,5 °C.",
+      "La glace sèche est du CO₂ solide, à −78,5 °C (moins soixante-dix-huit virgule cinq degrés Celsius), bien plus froide qu'un congélateur.",
       "À pression ambiante, elle passe directement de solide à gaz : c'est la sublimation.",
       "Le gaz très froid condense l'humidité de l'air en un brouillard qui rampe au sol."
     ],
     "pourquoi": [
-      "Le CO₂ ne peut exister à l'état liquide qu'au-dessus d'environ 5,2 bar. À la [[pression-atmospherique|pression atmosphérique]], il saute donc l'étape liquide : sa [[sublimation]] se produit à −78,5 °C. D'où son nom de glace « sèche » : elle ne laisse jamais de flaque.",
-      "Pour se sublimer, chaque kilogramme absorbe environ 570 kJ de [[chaleur-latente|chaleur latente]], prise à l'air, à l'eau ou à la main qui la touche. Plongée dans de l'eau tiède, elle reçoit beaucoup de chaleur d'un coup : elle se sublime très vite et produit un bouillonnement de bulles de CO₂ glacé.",
-      "Le brouillard blanc n'est pas du CO₂, qui est un gaz invisible. C'est la vapeur d'eau de l'air qui, brutalement refroidie, subit une [[condensation]] en fines gouttelettes. Comme le CO₂ froid est environ 1,5 fois plus dense que l'air, ce brouillard descend et s'étale au ras du sol."
+      "Le CO₂ ne peut exister à l'état liquide qu'au-dessus d'environ 5,2 bar (cinq virgule deux bars), soit environ cinq fois la pression de l'air autour de toi. À la [[pression-atmospherique|pression atmosphérique]], il saute donc l'étape liquide : sa [[sublimation]] se produit à −78,5 °C (moins soixante-dix-huit virgule cinq degrés Celsius), alors qu'un congélateur est à −18 °C (moins dix-huit degrés Celsius). D'où son nom de glace « sèche » : elle ne laisse jamais de flaque.",
+      "Pour se sublimer, chaque kilogramme absorbe environ 570 kJ (cinq cent soixante-dix kilojoules) de [[chaleur-latente|chaleur latente]], prise à l'air, à l'eau ou à la main qui la touche : presque deux fois ce qu'il faut pour faire fondre un kilo de glaçons. Plongée dans de l'eau tiède, elle reçoit beaucoup de chaleur d'un coup : elle se sublime très vite et produit un bouillonnement de bulles de CO₂ glacé.",
+      "Le brouillard blanc n'est pas du CO₂, qui est un gaz invisible. C'est la vapeur d'eau de l'air qui, brutalement refroidie, subit une [[condensation]] en fines gouttelettes. Comme le CO₂ est environ 1,5 fois (un virgule cinq fois) plus dense que l'air à la même température, et encore plus quand il sort glacé, ce brouillard descend et s'étale au ras du sol : un litre de ce gaz pèse au moins une fois et demie ce que pèse un litre d'air."
     ],
     "enfant": "La glace sèche ressemble à de la glace normale, mais c'est du gaz carbonique gelé, le même que celui des bulles de soda. Quand elle se réchauffe, elle ne fond pas en eau : elle se transforme directement en gaz invisible, comme un glaçon qui disparaîtrait sans laisser de flaque. La fumée blanche, c'est l'air humide qui a tellement froid qu'il forme un petit nuage.",
     "chiffres": [
       {
         "valeur": "−78,5 °C",
-        "label": "température de sublimation à pression ambiante"
+        "label": "température de sublimation à pression ambiante",
+        "dit": "moins soixante-dix-huit virgule cinq degrés Celsius",
+        "concret": "Environ soixante degrés de moins qu'un congélateur de cuisine, réglé vers moins dix-huit degrés : assez froid pour brûler la peau au simple contact."
       },
       {
         "valeur": "≈ 570 kJ/kg",
-        "label": "chaleur absorbée pour sublimer 1 kg de glace sèche"
+        "label": "chaleur absorbée pour sublimer 1 kg (un kilogramme) de glace sèche",
+        "dit": "environ cinq cent soixante-dix kilojoules par kilogramme",
+        "concret": "Presque deux fois l'énergie qu'il faut pour faire fondre un kilo de glaçons : c'est pour cela qu'un bloc de glace sèche refroidit si fort tout ce qui le touche."
       },
       {
         "valeur": "≈ 550 L",
-        "label": "de gaz à 20 °C libérés par 1 kg de glace sèche"
+        "label": "de gaz à 20 °C (vingt degrés Celsius) libérés par 1 kg (un kilogramme) de glace sèche",
+        "dit": "environ cinq cent cinquante litres",
+        "concret": "De quoi remplir environ trois baignoires, alors que le bloc de départ tient dans un bol : le gaz prend plus de huit cents fois plus de place que le solide."
       }
     ],
     "realite": {
@@ -317,15 +369,21 @@
     "chiffres": [
       {
         "valeur": "≈ 0,5 mm",
-        "label": "écart entre deux crêtes du bout des doigts"
+        "label": "écart entre deux crêtes du bout des doigts",
+        "dit": "environ zéro virgule cinq millimètre",
+        "concret": "À peu près l'épaisseur de cinq feuilles de papier empilées : sur un seul centimètre de doigt, on compte une vingtaine de crêtes."
       },
       {
         "valeur": "≈ 99 %",
-        "label": "d'eau dans la sueur, le reste étant surtout des sels"
+        "label": "d'eau dans la sueur, le reste étant surtout des sels",
+        "dit": "environ quatre-vingt-dix-neuf pour cent",
+        "concret": "Sur cent gouttes de sueur, quatre-vingt-dix-neuf sont de l'eau : c'est pour cela qu'une trace sèche vite et qu'une vieille trace garde surtout les sels et le gras."
       },
       {
         "valeur": "3",
-        "label": "grandes familles de motifs : arcs, boucles et tourbillons"
+        "label": "grandes familles de motifs : arcs, boucles et tourbillons",
+        "dit": "trois",
+        "concret": "Les boucles sont les plus fréquentes (environ six empreintes sur dix), puis les tourbillons (environ trois sur dix), et les arcs sont rares (environ une sur vingt) : regarde tes doigts, tu as sûrement des boucles."
       }
     ],
     "realite": {
@@ -402,7 +460,7 @@
       "Les jumelles de vision nocturne, elles, amplifient la faible lumière de la nuit."
     ],
     "pourquoi": [
-      "Tout corps émet un [[rayonnement]] électromagnétique qui dépend de sa [[temperature|température]]. Vers 30 °C, il est surtout émis dans l'[[infrarouge]] lointain, autour de 10 µm de [[longueur-onde|longueur d'onde]] : vingt fois plus que la lumière verte. Notre œil n'y est pas sensible.",
+      "Tout corps émet un [[rayonnement]] électromagnétique qui dépend de sa [[temperature|température]]. Vers 30 °C (trente degrés Celsius), à peu près la température de ta peau, il est surtout émis dans l'[[infrarouge]] lointain, autour de 10 µm (dix micromètres) de [[longueur-onde|longueur d'onde]], soit un centième de millimètre : vingt fois plus que la lumière verte. Notre œil n'y est pas sensible.",
       "Une caméra thermique utilise un capteur dont chaque point chauffe très légèrement sous ce rayonnement. Elle voit donc dans le noir complet, sans aucune lumière. Mais le verre ordinaire bloque l'infrarouge lointain : impossible de voir à travers une vitre, qui renvoie plutôt l'image thermique de ce qui est devant elle. Les lentilles de ces caméras sont en germanium.",
       "Les jumelles de vision nocturne classiques fonctionnent autrement : elles amplifient des milliers de fois la faible lumière des étoiles ou de la ville, et le proche infrarouge. Il leur faut un minimum de lumière. Les caméras de surveillance, elles, éclairent la scène avec des diodes en proche infrarouge, que le capteur voit mais pas nous."
     ],
@@ -410,15 +468,21 @@
     "chiffres": [
       {
         "valeur": "≈ 9,4 µm",
-        "label": "longueur d'onde où un corps à 37 °C rayonne le plus"
+        "label": "longueur d'onde où un corps à 37 °C (trente-sept degrés Celsius) rayonne le plus",
+        "dit": "environ neuf virgule quatre micromètres",
+        "concret": "Un peu moins d'un centième de millimètre : environ sept fois moins que l'épaisseur d'un cheveu, mais près de vingt fois la longueur d'onde de la lumière verte que tes yeux voient."
       },
       {
-        "valeur": "0,4 – 0,8 µm",
-        "label": "domaine de la lumière visible, pour comparaison"
+        "valeur": "0,4 à 0,8 µm",
+        "label": "domaine de la lumière visible, pour comparaison",
+        "dit": "zéro virgule quatre à zéro virgule huit micromètre",
+        "concret": "Du violet, le plus court, au rouge, le plus long : il faudrait aligner une centaine d'ondes de lumière rouge pour couvrir l'épaisseur d'un cheveu."
       },
       {
         "valeur": "≈ 850 nm",
-        "label": "lumière des diodes infrarouges des caméras de surveillance"
+        "label": "lumière des diodes infrarouges des caméras de surveillance",
+        "dit": "environ huit cent cinquante nanomètres",
+        "concret": "Juste au-delà du rouge le plus sombre que tu peux voir : c'est pour cela que les diodes d'une caméra de surveillance laissent souvent deviner une faible lueur rouge dans le noir."
       }
     ],
     "realite": {
@@ -453,7 +517,7 @@
           "Parce que la caméra a besoin de lumière"
         ],
         "reponse": 1,
-        "explication": "Le verre ordinaire est transparent à la lumière visible mais opaque à l'infrarouge thermique, vers 10 µm. La caméra ne voit que la vitre elle-même, ou le reflet thermique de ce qui est devant."
+        "explication": "Le verre ordinaire est transparent à la lumière visible mais opaque à l'infrarouge thermique, vers 10 µm (dix micromètres), soit un centième de millimètre. La caméra ne voit que la vitre elle-même, ou le reflet thermique de ce qui est devant."
       },
       {
         "question": "Une caméra thermique a-t-elle besoin de lumière pour fonctionner ?",
@@ -502,22 +566,28 @@
     ],
     "pourquoi": [
       "Le courant qui circule dans un fil enroulé crée un [[champ-magnetique|champ magnétique]] qui traverse toutes les spires. Si ce champ varie, il fait apparaître une tension dans la bobine elle-même : c'est l'[[induction]], ici appelée auto-induction. Selon la [[loi-de-lenz|loi de Lenz]], cette tension s'oppose toujours à la variation qui l'a produite.",
-      "Tant que le courant reste constant, il ne se passe rien de particulier. Mais si l'on ouvre un interrupteur, le courant devrait tomber à zéro presque instantanément. La [[tension]] induite est proportionnelle à la vitesse de variation du courant (u = L · di/dt) : plus la coupure est rapide, plus elle grimpe, jusqu'à dépasser de très loin la tension d'alimentation. L'énergie magnétique stockée cherche un chemin et ionise l'air entre les contacts : c'est l'étincelle de rupture.",
+      "Tant que le courant reste constant, il ne se passe rien de particulier. Mais si l'on ouvre un interrupteur, le courant devrait tomber à zéro presque instantanément. La [[tension]] induite est proportionnelle à la vitesse de variation du courant, ce qu'on écrit u = L · di/dt (u égale L fois d i sur d t) : plus la coupure est rapide, plus elle grimpe, jusqu'à dépasser de très loin la tension d'alimentation, un peu comme un vélo lancé qu'il faut freiner d'autant plus brutalement qu'on veut l'arrêter vite. L'énergie magnétique stockée cherche un chemin et ionise l'air entre les contacts : c'est l'étincelle de rupture.",
       "Ce phénomène use les contacts des interrupteurs et des relais et peut détruire les composants électroniques. Les concepteurs placent donc une diode dite « de roue libre » aux bornes des bobines : à la coupure, elle offre au courant un chemin pour s'éteindre doucement en circulant dans la bobine, et le pic disparaît."
     ],
     "enfant": "Imagine de l'eau qui coule très vite dans un long tuyau : si tu fermes le robinet d'un coup, le tuyau cogne, car l'eau lancée ne peut pas s'arrêter net. Une bobine fait pareil avec l'électricité : le courant refuse de s'arrêter d'un coup et pousse si fort qu'il saute dans l'air en faisant une petite étincelle. C'est pour cela qu'on ne joue jamais avec ces appareils.",
     "chiffres": [
       {
         "valeur": "u = L · di/dt",
-        "label": "la tension induite grandit avec la rapidité de la coupure"
+        "label": "la tension induite grandit avec la rapidité de la coupure",
+        "dit": "u égale L fois d i sur d t",
+        "concret": "C'est comme un vélo lancé : plus tu veux l'arrêter vite, plus le freinage est brutal ; une coupure dix fois plus rapide donne une tension dix fois plus forte."
       },
       {
         "valeur": "≈ 3 kV/mm",
-        "label": "champ électrique nécessaire pour qu'une étincelle traverse l'air sec"
+        "label": "champ électrique nécessaire pour qu'une étincelle traverse l'air sec",
+        "dit": "environ trois kilovolts par millimètre",
+        "concret": "Trois mille volts pour franchir un seul millimètre d'air : c'est l'ordre de grandeur de la petite décharge d'électricité statique qui saute de ton doigt à une poignée de porte après avoir marché sur une moquette."
       },
       {
         "valeur": "1831",
-        "label": "année de la découverte de l'induction électromagnétique"
+        "label": "année de la découverte de l'induction électromagnétique",
+        "dit": "mille huit cent trente et un",
+        "concret": "Il y a près de deux siècles, bien avant l'ampoule électrique : c'est le physicien anglais Michael Faraday qui l'a mise en évidence cette année-là."
       }
     ],
     "realite": {
@@ -590,28 +660,34 @@
       "legende": "Rayon doublé, vitesse doublée, énergie quadruplée."
     },
     "principe": [
-      "L'énergie de mouvement vaut E = ½ m v² : doubler la vitesse la multiplie par quatre.",
+      "L'énergie de mouvement vaut E = ½ m v² (E égale un demi fois m fois v au carré) : doubler la vitesse la multiplie par quatre.",
       "Au bout d'un bras plus long, un objet en rotation va plus vite.",
       "Au lâcher, il part tout droit, tangentiellement au cercle, pas vers l'extérieur."
     ],
     "pourquoi": [
       "L'[[energie-cinetique|énergie cinétique]] dépend de la masse, mais surtout du carré de la vitesse. Un objet deux fois plus rapide transporte quatre fois plus d'énergie ; trois fois plus rapide, neuf fois plus. C'est pourquoi, lors d'un choc, la vitesse compte bien plus que le poids.",
-      "En rotation, la vitesse d'un point vaut v = ω × r : pour une même vitesse de rotation ω, un point deux fois plus éloigné de l'axe va deux fois plus vite. Un lance-balle pour chien, une raquette ou une crosse allongent ainsi le [[bras-levier|bras de levier]] du bras humain : le poignet ne tourne pas plus vite, mais l'extrémité file beaucoup plus vite.",
+      "En rotation, la vitesse d'un point vaut v = ω × r (v égale oméga fois r), où r est sa distance à l'axe : pour une même vitesse de rotation ω (oméga), un point deux fois plus éloigné de l'axe va deux fois plus vite, comme le cheval du bord d'un manège qui file plus vite que celui du centre. Un lance-balle pour chien, une raquette ou une crosse allongent ainsi le [[bras-levier|bras de levier]] du bras humain : le poignet ne tourne pas plus vite, mais l'extrémité file beaucoup plus vite.",
       "Pendant la rotation, la ficelle exerce une [[force-centripete|force centripète]] qui oblige l'objet à tourner. Dès qu'on le libère, cette force disparaît : il continue en ligne droite, tangente au cercle, et non vers l'extérieur comme on le croit souvent."
     ],
     "enfant": "Quand tu fais tourner une balle au bout d'une ficelle, la balle va bien plus vite que ta main, car elle parcourt un grand cercle pendant que ta main en fait un tout petit. Si tu lâches, la balle part tout droit, comme une voiture qui ne prendrait pas le virage. Et plus elle va vite, plus elle a d'énergie : deux fois plus vite, c'est quatre fois plus d'énergie.",
     "chiffres": [
       {
         "valeur": "× 4",
-        "label": "énergie cinétique quand la vitesse double"
+        "label": "énergie cinétique quand la vitesse double",
+        "dit": "fois quatre",
+        "concret": "Une voiture lancée à cent kilomètres par heure emporte quatre fois plus d'énergie qu'à cinquante : à freinage égal, il lui faut environ quatre fois plus de distance pour s'arrêter."
       },
       {
         "valeur": "v = ω × r",
-        "label": "la vitesse d'un point en rotation croît avec sa distance à l'axe"
+        "label": "la vitesse d'un point en rotation croît avec sa distance à l'axe",
+        "dit": "v égale oméga fois r",
+        "concret": "Sur un manège, le cheval du bord, deux fois plus loin du centre que celui placé à mi-chemin, file deux fois plus vite, alors qu'ils font un tour dans le même temps."
       },
       {
         "valeur": "≈ 20 J",
-        "label": "énergie d'une balle de tennis (58 g) lancée à 94 km/h"
+        "label": "énergie d'une balle de tennis de 58 g (cinquante-huit grammes) lancée à 94 km/h (quatre-vingt-quatorze kilomètres par heure)",
+        "dit": "environ vingt joules",
+        "concret": "À peu près l'énergie qu'il faut pour soulever une bouteille d'eau de deux litres du sol jusqu'à un mètre de haut."
       }
     ],
     "realite": {
@@ -641,7 +717,7 @@
           "8"
         ],
         "reponse": 2,
-        "explication": "L'énergie dépend du carré de la vitesse : 2² = 4."
+        "explication": "L'énergie dépend du carré de la vitesse : 2² = 4 (deux au carré égale quatre). Deux fois plus vite, c'est quatre fois plus d'énergie, et une distance de freinage environ quatre fois plus longue."
       },
       {
         "question": "Dans quelle direction part un objet qu'on lâche pendant qu'il tourne ?",
@@ -685,26 +761,32 @@
     "principe": [
       "Deux métaux différents plantés dans un citron forment une pile.",
       "Le zinc s'oxyde et libère des électrons qui passent par le fil jusqu'au cuivre.",
-      "Un citron donne environ 0,9 V et un courant très faible : on les met en série."
+      "Un citron donne environ 0,9 V (zéro virgule neuf volt), moins qu'une pile de télécommande, et un courant très faible : on les met en série."
     ],
     "pourquoi": [
       "Le zinc (une vis ou un clou galvanisé) a davantage tendance à céder des électrons que le cuivre (un fil ou une pièce cuivrée). Chaque métal sert d'[[electrode|électrode]]. Le jus acide du citron joue le rôle d'[[electrolyte|électrolyte]] : il contient des ions mobiles qui ferment le circuit à l'intérieur du fruit.",
       "Sur le zinc, le métal subit une [[oxydation]] : des atomes de zinc deviennent des ions Zn²⁺ et laissent deux électrons dans l'électrode. Ces électrons traversent le fil jusqu'au cuivre, où ils sont captés par les ions hydrogène de l'acide, qui forment de petites bulles de dihydrogène. L'énergie ne vient pas du citron mais de la transformation du zinc, qui s'use peu à peu.",
-      "La tension dépend surtout du couple de métaux (environ 0,9 V pour zinc et cuivre), pas de la taille du fruit. Le courant reste très faible car la [[resistance|résistance]] interne du citron est élevée : quelques citrons en série font briller une LED, mais aucun ne peut recharger un téléphone."
+      "La tension dépend surtout du couple de métaux, pas de la taille du fruit : environ 0,9 V (zéro virgule neuf volt) pour zinc et cuivre, un peu plus de la moitié d'une pile de télécommande. Le courant reste très faible car la [[resistance|résistance]] interne du citron est élevée : quelques citrons en série font briller une LED, mais aucun ne peut recharger un téléphone."
     ],
     "enfant": "Dans une pile au citron, le clou en zinc est comme un enfant qui donne ses billes : il lâche de minuscules grains d'électricité, les électrons. Ils courent dans le fil jusqu'à la pièce en cuivre, qui les attrape. Le jus de citron sert de chemin de retour pour que la ronde continue. Un seul citron est trop faible, mais plusieurs ensemble peuvent allumer une petite LED.",
     "chiffres": [
       {
         "valeur": "≈ 0,9 V",
-        "label": "tension d'un citron avec une électrode de zinc et une de cuivre"
+        "label": "tension d'un citron avec une électrode de zinc et une de cuivre",
+        "dit": "environ zéro virgule neuf volt",
+        "concret": "Un peu plus de la moitié d'une pile de télécommande, qui donne un virgule cinq volt : il faut deux citrons en série pour dépasser une seule pile, et avec beaucoup moins de courant."
       },
       {
         "valeur": "< 1 mA",
-        "label": "courant typique, des centaines de fois moins qu'une lampe de poche"
+        "label": "courant typique, des centaines de fois moins qu'une lampe de poche",
+        "dit": "moins d'un milliampère",
+        "concret": "Un téléphone qui se recharge tire plus de mille fois plus de courant : c'est pour cela qu'un citron ne pourra jamais remplacer un chargeur."
       },
       {
         "valeur": "≈ 1,8 V",
-        "label": "seuil d'allumage d'une LED rouge : au moins 2 à 3 citrons en série"
+        "label": "seuil d'allumage d'une LED rouge : au moins 2 à 3 (deux à trois) citrons en série",
+        "dit": "environ un virgule huit volt",
+        "concret": "Un peu plus qu'une pile de télécommande, qui donne un virgule cinq volt : deux citrons sont tout juste à la limite, et un troisième aide car la tension baisse dès que le courant passe."
       }
     ],
     "realite": {
@@ -784,7 +866,7 @@
       "Les rayons du soleil se rejoignent au foyer, où la chaleur se concentre."
     ],
     "pourquoi": [
-      "La lumière va environ 1,33 fois moins vite dans l'eau que dans l'air. Quand un rayon arrive en biais sur une surface courbe, il change de direction : c'est la [[refraction|réfraction]]. Sur une surface bombée, les rayons du bord sont plus déviés que ceux du centre, et tous se rabattent vers une même zone : le [[foyer]].",
+      "La lumière va environ 1,33 fois (un virgule trente-trois fois) moins vite dans l'eau que dans l'air : elle y perd environ un quart de sa vitesse. Quand un rayon arrive en biais sur une surface courbe, il change de direction : c'est la [[refraction|réfraction]]. Sur une surface bombée, les rayons du bord sont plus déviés que ceux du centre, et tous se rabattent vers une même zone : le [[foyer]].",
       "Une bouteille cylindrique se comporte comme une [[lentille-convergente|lentille convergente]] dans un seul sens : elle concentre la lumière en une ligne brillante, parallèle à la bouteille. Un récipient sphérique, comme un ballon de verre ou une boule à neige, concentre en un point, bien plus chaud. Pour un cylindre d'eau, le foyer se trouve à environ un rayon de bouteille derrière la paroi.",
       "Une cible sombre absorbe mieux la lumière qu'une cible claire et chauffe donc plus vite. Cette concentration est aussi un danger : une bouteille d'eau ou une boule de verre laissée au soleil près d'une matière sèche peut déclencher un départ de feu."
     ],
@@ -792,15 +874,21 @@
     "chiffres": [
       {
         "valeur": "1,33",
-        "label": "indice de réfraction de l'eau : la lumière y va 1,33 fois moins vite"
+        "label": "indice de réfraction de l'eau : la lumière y va 1,33 fois (un virgule trente-trois fois) moins vite",
+        "dit": "un virgule trente-trois",
+        "concret": "La lumière perd environ un quart de sa vitesse en entrant dans l'eau : c'est ce qui fait paraître cassée une paille plongée dans un verre."
       },
       {
         "valeur": "≈ 1 rayon",
-        "label": "distance du foyer derrière une bouteille cylindrique pleine d'eau"
+        "label": "distance du foyer derrière une bouteille cylindrique pleine d'eau",
+        "dit": "environ un rayon",
+        "concret": "Pour une bouteille de huit centimètres de diamètre, la ligne brillante se forme environ quatre centimètres derrière la paroi, à peu près la largeur de deux doigts."
       },
       {
         "valeur": "≈ 1 000 W/m²",
-        "label": "puissance du soleil au sol par beau temps"
+        "label": "puissance du soleil au sol par beau temps",
+        "dit": "environ mille watts par mètre carré",
+        "concret": "Un mètre carré en plein soleil, la surface d'une serviette de plage, reçoit à peu près la puissance d'un petit radiateur électrique d'appoint."
       }
     ],
     "realite": {
@@ -889,15 +977,21 @@
     "chiffres": [
       {
         "valeur": "≈ 47 µT",
-        "label": "intensité du champ magnétique terrestre en France"
+        "label": "intensité du champ magnétique terrestre en France",
+        "dit": "environ quarante-sept microteslas",
+        "concret": "Environ cent fois plus faible qu'un aimant de frigo à son contact : assez pour faire tourner une aiguille qui flotte, beaucoup trop peu pour soulever un trombone."
       },
       {
         "valeur": "≈ 100 ×",
-        "label": "un aimant de frigo est environ cent fois plus intense à son contact"
+        "label": "un aimant de frigo est environ cent fois plus intense à son contact",
+        "dit": "environ cent fois",
+        "concret": "C'est pour cela qu'un aimant de frigo posé juste à côté de ton aiguille l'attire aussitôt et lui fait oublier le nord : de près, le champ de la Terre ne fait pas le poids."
       },
       {
         "valeur": "< 4°",
-        "label": "écart actuel entre nord magnétique et nord géographique en France métropolitaine"
+        "label": "écart actuel entre nord magnétique et nord géographique en France métropolitaine",
+        "dit": "moins de quatre degrés",
+        "concret": "Sur un kilomètre de marche, un écart de quatre degrés ne te décale que d'environ soixante-dix mètres sur le côté : à pied, c'est presque négligeable."
       }
     ],
     "realite": {
@@ -975,27 +1069,33 @@
     },
     "principe": [
       "Les UV-A du soleil traversent le plastique PET et détruisent les microbes.",
-      "Au-delà de 50 °C, la chaleur s'ajoute aux UV : la désinfection va trois fois plus vite.",
-      "Il faut une eau claire et 6 h de plein soleil, ou 2 jours si le ciel est très couvert."
+      "Au-delà de 50 °C (cinquante degrés Celsius), plus chaud qu'un bain, la chaleur s'ajoute aux UV : la désinfection va trois fois plus vite.",
+      "Il faut une eau claire et 6 h (six heures, une journée d'école) de plein soleil, ou 2 jours (deux jours) si le ciel est très couvert."
     ],
     "pourquoi": [
-      "Le [[rayonnement]] solaire contient des [[uv]] de type A, de longueur d'onde 320 à 400 nm. Le plastique PET les laisse passer, contrairement aux bouteilles colorées ou au verre épais. Ces rayons abîment l'ADN et les protéines des bactéries et des virus, et forment dans l'eau des molécules d'oxygène très réactives qui achèvent les microbes.",
-      "Une bouteille posée au soleil, idéalement sur une tôle ou une surface sombre, chauffe aussi. Au-dessus d'environ 50 °C, chaleur et UV agissent ensemble et la désinfection est trois fois plus rapide. Inutile d'atteindre l'ébullition : c'est une sorte de [[pasteurisation]] douce, renforcée par la lumière.",
-      "La méthode a des limites. Une eau trouble arrête les UV : il faut d'abord la laisser décanter ou la filtrer. Les bouteilles doivent être petites (2 L au plus) pour que la lumière traverse toute l'eau. Surtout, le soleil ne retire ni les produits chimiques, ni les métaux, ni le sel."
+      "Le [[rayonnement]] solaire contient des [[uv]] de type A, de longueur d'onde 320 à 400 nm (trois cent vingt à quatre cents nanomètres), juste un peu plus courte que celle du violet, la dernière couleur que tes yeux voient. Le plastique PET les laisse passer, contrairement aux bouteilles colorées ou au verre épais. Ces rayons abîment l'ADN et les protéines des bactéries et des virus, et forment dans l'eau des molécules d'oxygène très réactives qui achèvent les microbes.",
+      "Une bouteille posée au soleil, idéalement sur une tôle ou une surface sombre, chauffe aussi. Au-dessus d'environ 50 °C (cinquante degrés Celsius), une eau trop chaude pour y laisser la main longtemps, chaleur et UV agissent ensemble et la désinfection est trois fois plus rapide. Inutile d'atteindre l'ébullition : c'est une sorte de [[pasteurisation]] douce, renforcée par la lumière.",
+      "La méthode a des limites. Une eau trouble arrête les UV : il faut d'abord la laisser décanter ou la filtrer. Les bouteilles doivent être petites, 2 L (deux litres) au plus, la taille d'une grande bouteille de soda, pour que la lumière traverse toute l'eau. Surtout, le soleil ne retire ni les produits chimiques, ni les métaux, ni le sel."
     ],
     "enfant": "Les microbes qui peuvent rendre malade n'aiment pas du tout le soleil. Si on remplit une bouteille transparente d'eau bien claire et qu'on la laisse toute une journée au grand soleil, une lumière invisible, les ultraviolets, abîme les microbes, un peu comme un énorme coup de soleil. Mais attention : le soleil n'enlève ni la boue ni les produits chimiques.",
     "chiffres": [
       {
         "valeur": "6 h",
-        "label": "de plein soleil, ou 2 jours de suite si le ciel est très nuageux"
+        "label": "de plein soleil, ou 2 jours (deux jours) de suite si le ciel est très nuageux",
+        "dit": "six heures",
+        "concret": "De neuf heures du matin à trois heures de l'après-midi, à peu près la durée d'une journée d'école : pose la bouteille le matin, elle est prête dans l'après-midi."
       },
       {
-        "valeur": "320 – 400 nm",
-        "label": "longueur d'onde des UV-A qui traversent le plastique PET"
+        "valeur": "320 à 400 nm",
+        "label": "longueur d'onde des UV-A qui traversent le plastique PET",
+        "dit": "trois cent vingt à quatre cents nanomètres",
+        "concret": "Des rayons un peu plus courts que la lumière violette, donc invisibles, mais assez énergétiques pour abîmer la peau : c'est pour cela qu'une crème solaire doit aussi protéger des UV-A."
       },
       {
         "valeur": "≥ 50 °C",
-        "label": "température à partir de laquelle la désinfection va trois fois plus vite"
+        "label": "température à partir de laquelle la désinfection va trois fois plus vite",
+        "dit": "au moins cinquante degrés Celsius",
+        "concret": "Plus chaud que l'eau d'un bain, vers trente-huit degrés : une bouteille posée au soleil sur une tôle sombre l'atteint facilement, et tu ne pourrais pas y laisser ta main longtemps."
       }
     ],
     "realite": {

@@ -208,13 +208,26 @@ export function ficheDetail(ctx: RouteContext): View {
     h('div', { class: 'fiche__tools' }, eliBtn, listenButton(f, () => eliBtn.getAttribute('aria-pressed') === 'true'), termIds.size ? btn(t('archives.glossaire'), { variant: 'ghost', small: true, icon: 'book', onClick: () => openGlossaryForFiche(f, [...termIds]) }) : null),
     enfantPanel,
     ...(long ? longBody(f) : shortBody(f)),
+    f.echelle ? echelleBlock(f.echelle) : null,
     readBox,
     !long && f.chiffres?.length
       ? h(
           'section',
           { class: 'figures', 'aria-labelledby': 'fig-t' },
           h('h2', { class: 'block-title', id: 'fig-t' }, t('archives.chiffres')),
-          h('dl', { class: 'figures__grid' }, ...f.chiffres.map((ch) => h('div', { class: 'figures__item' }, h('dt', null, ch.label), h('dd', null, ch.valeur))))
+          h(
+            'dl',
+            { class: 'figures__grid' },
+            ...f.chiffres.map((ch) =>
+              h(
+                'div',
+                { class: 'figures__item' },
+                h('dt', null, ch.label),
+                h('dd', { class: 'figures__val' }, ch.valeur, ch.dit ? h('span', { class: 'figures__dit' }, ` (${ch.dit})`) : null),
+                ch.concret ? h('dd', { class: 'figures__concret' }, ch.concret) : null
+              )
+            )
+          )
         )
       : null,
     h(
@@ -386,4 +399,26 @@ function readControl(f: Fiche, onChange: (lu: boolean) => void): HTMLElement {
     } else toast(t('archives.marqueeNonLue'), { icon: 'archive' });
   });
   return box;
+}
+
+/* ---------- Échelle de repères (format court et long) ---------- */
+function echelleBlock(e: NonNullable<Fiche['echelle']>): HTMLElement {
+  return h(
+    'section',
+    { class: 'echelle panel', 'aria-labelledby': 'echelle-t' },
+    h('h2', { class: 'block-title', id: 'echelle-t' }, icon('gauge', 20), e.titre ?? t('archives.echelle')),
+    rich(e.intro, 'p', 'panel__text'),
+    h(
+      'ol',
+      { class: 'echelle__list' },
+      ...e.niveaux.map((n, i) =>
+        h(
+          'li',
+          { class: 'echelle__item', style: `--niveau: ${(i / Math.max(1, e.niveaux.length - 1)).toFixed(2)}` },
+          h('span', { class: 'echelle__val' }, n.valeur),
+          h('span', { class: 'echelle__body' }, h('span', { class: 'echelle__dit' }, `(${n.dit})`), rich(n.description, 'span', 'echelle__desc'))
+        )
+      )
+    )
+  );
 }

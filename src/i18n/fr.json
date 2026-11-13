@@ -218,7 +218,8 @@
     "caseLu": "J'ai lu cette fiche",
     "caseLuDesc": "Coche quand tu as lu la fiche jusqu'au bout. Elle entre alors dans ta révision espacée et compte pour ta série.",
     "marqueeLue": "Fiche marquée comme lue : +{xp} XP",
-    "marqueeNonLue": "Fiche marquée comme non lue"
+    "marqueeNonLue": "Fiche marquée comme non lue",
+    "echelle": "Repères"
   },
   "quiz": {
     "question": "Question {a} sur {b}",

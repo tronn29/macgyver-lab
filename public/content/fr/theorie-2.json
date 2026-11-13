@@ -3,7 +3,9 @@
     "id": "levier",
     "titre": "Le levier",
     "sousTitre": "Soulever lourd avec peu de force, grâce à une barre et un point d'appui",
-    "categories": ["mecanique"],
+    "categories": [
+      "mecanique"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -17,15 +19,30 @@
       "Ce qu'on gagne en force, on le paie en distance : la main parcourt plus de chemin que la charge."
     ],
     "pourquoi": [
-      "L'effet de rotation d'une force s'appelle le [[moment-force|moment d'une force]] : c'est la force multipliée par sa distance au pivot, le [[bras-levier|bras de levier]]. Le levier est en équilibre quand les deux moments sont égaux : F₁ × d₁ = F₂ × d₂.",
-      "Si le bras côté main est dix fois plus long que le bras côté charge, une force dix fois plus faible suffit : c'est l'[[avantage-mecanique|avantage mécanique]]. En contrepartie, la main descend de 10 cm pour soulever la charge de 1 cm. Le travail fourni reste le même.",
+      "L'effet de rotation d'une force s'appelle le [[moment-force|moment d'une force]] : c'est la force multipliée par sa distance au pivot, le [[bras-levier|bras de levier]]. Le levier est en équilibre quand les deux moments sont égaux : F₁ × d₁ = F₂ × d₂ (F un fois d un égale F deux fois d deux). Concrètement, sur une balançoire, un enfant assis deux fois plus loin du pivot équilibre un camarade deux fois plus lourd.",
+      "Si le bras côté main est dix fois plus long que le bras côté charge, une force dix fois plus faible suffit : c'est l'[[avantage-mecanique|avantage mécanique]]. En contrepartie, la main descend de 10 cm (dix centimètres), à peu près la largeur d'une main d'adulte, pour soulever la charge de 1 cm (un centimètre), à peine la largeur d'un ongle. Le travail fourni reste le même.",
       "On distingue trois genres de levier : pivot au milieu (pied-de-biche, ciseaux, balançoire), charge au milieu (brouette, décapsuleur, casse-noix) et effort au milieu (pince à épiler, avant-bras). Ce dernier perd de la force, mais gagne en vitesse et en amplitude."
     ],
     "enfant": "Sur une balançoire, un enfant léger peut soulever un adulte s'il s'assoit tout au bout et que l'adulte se rapproche du milieu. Plus tu es loin du point où la planche pivote, plus ta force compte. C'est pour ça qu'on pousse une porte près de la poignée, et pas près des gonds : essaie, tu verras la différence.",
     "chiffres": [
-      { "valeur": "F₁ × d₁ = F₂ × d₂", "label": "condition d'équilibre d'un levier" },
-      { "valeur": "÷ 10", "label": "effort divisé par 10 avec un bras 10 fois plus long que l'autre" },
-      { "valeur": "≈ × 7 à 10", "label": "force du biceps par rapport au poids tenu dans la main (levier du troisième genre)" }
+      {
+        "valeur": "F₁ × d₁ = F₂ × d₂",
+        "label": "condition d'équilibre d'un levier",
+        "dit": "F un fois d un égale F deux fois d deux",
+        "concret": "Sur une balançoire, un enfant de vingt kilos assis à deux mètres du pivot équilibre exactement un grand frère de quarante kilos assis à un mètre."
+      },
+      {
+        "valeur": "÷ 10",
+        "label": "effort divisé par dix avec un bras dix fois plus long que l'autre",
+        "dit": "divisé par dix",
+        "concret": "Avec un pied-de-biche dont le bras long fait dix fois le bras court, soulever un adulte de quatre-vingt-dix kilos demande le même effort que porter un pack de six bouteilles d'eau d'un litre et demi, soit environ neuf kilos."
+      },
+      {
+        "valeur": "≈ × 7 à 10",
+        "label": "force du biceps par rapport au poids tenu dans la main (levier du troisième genre)",
+        "dit": "environ fois sept à dix",
+        "concret": "Pour tenir un sac de courses de cinq kilos, avant-bras à l'horizontale, ton biceps tire comme s'il soulevait trente-cinq à cinquante kilos, car il s'attache tout près du coude."
+      }
     ],
     "realite": {
       "verdict": "vrai",
@@ -36,8 +53,14 @@
       "note": "Ne jamais placer les mains ou les pieds sous la charge : si la barre glisse ou casse, tout retombe d'un coup. Choisir un point d'appui dur et stable."
     },
     "liens": {
-      "fiches": ["poulie-palan", "frottement-cabestan", "energie-cinetique-fronde"],
-      "equivalences": ["faire-levier"]
+      "fiches": [
+        "poulie-palan",
+        "frottement-cabestan",
+        "energie-cinetique-fronde"
+      ],
+      "equivalences": [
+        "faire-levier"
+      ]
     },
     "quiz": [
       {
@@ -62,13 +85,26 @@
         "explication": "La roue est le pivot, les mains soulèvent au bout des bras et la charge est entre les deux : c'est un levier du deuxième genre, dit inter-résistant."
       }
     ],
-    "motsCles": ["pied-de-biche", "barre", "pivot", "point d'appui", "brouette", "balançoire", "décapsuleur", "clé", "moment", "bras de levier"]
+    "motsCles": [
+      "pied-de-biche",
+      "barre",
+      "pivot",
+      "point d'appui",
+      "brouette",
+      "balançoire",
+      "décapsuleur",
+      "clé",
+      "moment",
+      "bras de levier"
+    ]
   },
   {
     "id": "poulie-palan",
     "titre": "Poulie et palan",
     "sousTitre": "Partager le poids d'une charge entre plusieurs brins de corde",
-    "categories": ["mecanique"],
+    "categories": [
+      "mecanique"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -83,14 +119,29 @@
     ],
     "pourquoi": [
       "Une corde tendue transmet la même force sur toute sa longueur, si l'on néglige le [[frottement]]. Avec une poulie fixe, la main tire donc avec une force égale au poids de la charge. Le gain est le confort : on tire vers le bas en s'aidant de son propre poids.",
-      "Avec une poulie mobile accrochée à la charge, celle-ci est suspendue à deux brins qui tirent chacun vers le haut. Chaque brin ne porte que la moitié du poids : la main n'a plus à fournir que P / 2. C'est l'[[avantage-mecanique|avantage mécanique]] du palan.",
-      "Rien n'est gratuit : pour monter la charge de 1 m, chaque brin porteur doit raccourcir de 1 m, donc la main tire 2 m de corde. L'[[energie-potentielle|énergie potentielle]] gagnée par la charge est égale au travail fourni, moins les pertes par frottement dans chaque poulie."
+      "Avec une poulie mobile accrochée à la charge, celle-ci est suspendue à deux brins qui tirent chacun vers le haut. Chaque brin ne porte que la moitié du poids : la main n'a plus à fournir que P / 2 (P divisé par deux), où P est le poids de la charge : pour monter un sac de vingt-cinq kilos, tu tires comme si tu tenais douze kilos et demi. C'est l'[[avantage-mecanique|avantage mécanique]] du palan.",
+      "Rien n'est gratuit : pour monter la charge de 1 m (un mètre), à peu près la hauteur d'une poignée de porte, chaque brin porteur doit raccourcir de 1 m (un mètre), donc la main tire 2 m (deux mètres) de corde, environ la hauteur de la porte entière. L'[[energie-potentielle|énergie potentielle]] gagnée par la charge est égale au travail fourni, moins les pertes par frottement dans chaque poulie."
     ],
     "enfant": "Imagine que tu portes un gros sac avec un copain : chacun tient une poignée, et le sac te paraît deux fois moins lourd. Dans un palan, ce sont les brins de corde qui se partagent le poids. Plus il y a de brins qui tiennent la charge, plus c'est léger pour toi, mais plus tu dois tirer de corde.",
     "chiffres": [
-      { "valeur": "F = P / n", "label": "effort idéal avec n brins porteurs" },
-      { "valeur": "4 m", "label": "de corde à tirer pour monter une charge de 1 m avec 4 brins porteurs" },
-      { "valeur": "≈ 90 à 95 %", "label": "rendement typique d'une poulie, le reste est perdu en frottement" }
+      {
+        "valeur": "F = P / n",
+        "label": "effort idéal avec n brins porteurs",
+        "dit": "F égale P divisé par n",
+        "concret": "Avec quatre brins porteurs, un moteur de cent kilos se soulève, en théorie, avec l'effort qu'il faut pour porter vingt-cinq kilos, à peu près une grosse valise de voyage."
+      },
+      {
+        "valeur": "4 m",
+        "label": "de corde à tirer pour monter une charge de 1 m (un mètre) avec quatre brins porteurs",
+        "dit": "quatre mètres",
+        "concret": "Pour lever la charge de la hauteur d'une poignée de porte, ta main tire à peu près la longueur d'une petite voiture citadine en corde."
+      },
+      {
+        "valeur": "≈ 90 à 95 %",
+        "label": "rendement typique d'une poulie, le reste est perdu en frottement",
+        "dit": "environ quatre-vingt-dix à quatre-vingt-quinze pour cent",
+        "concret": "Sur cent unités d'énergie fournies par tes bras, quatre-vingt-dix à quatre-vingt-quinze montent vraiment la charge ; le reste part en chaleur dans l'axe, comme dans une roue de vélo un peu mal graissée."
+      }
     ],
     "realite": {
       "verdict": "vrai",
@@ -101,39 +152,58 @@
       "note": "Ne jamais passer sous une charge suspendue. Vérifier la solidité de la corde et du point d'accroche. Une corde qui file entre les mains peut les brûler : porter des gants."
     },
     "liens": {
-      "fiches": ["levier", "frottement-cabestan"],
-      "equivalences": ["faire-levier", "attacher"]
+      "fiches": [
+        "levier",
+        "frottement-cabestan"
+      ],
+      "equivalences": [
+        "faire-levier",
+        "attacher"
+      ]
     },
     "quiz": [
       {
-        "question": "Avec une seule poulie fixe, quelle force faut-il pour soulever une charge de 20 kg ?",
+        "question": "Avec une seule poulie fixe, quelle force faut-il pour soulever une charge de 20 kg (vingt kilogrammes) ?",
         "choix": [
-          "Le poids de 10 kg",
-          "Le poids de 20 kg",
-          "Le poids de 40 kg"
+          "Le poids de 10 kg (dix kilogrammes)",
+          "Le poids de 20 kg (vingt kilogrammes)",
+          "Le poids de 40 kg (quarante kilogrammes)"
         ],
         "reponse": 1,
-        "explication": "Une poulie fixe change seulement la direction de la force : il faut toujours tirer avec une force égale au poids de la charge."
+        "explication": "Une poulie fixe change seulement la direction de la force : il faut toujours tirer avec une force égale au poids de la charge, ici à peu près le poids d'un enfant de six ans."
       },
       {
-        "question": "Un palan à 4 brins porteurs divise l'effort par 4. Que faut-il donner en échange ?",
+        "question": "Un palan à quatre brins porteurs divise l'effort par quatre. Que faut-il donner en échange ?",
         "choix": [
-          "Tirer 4 fois plus de corde",
-          "Tirer 4 fois plus vite",
+          "Tirer quatre fois plus de corde",
+          "Tirer quatre fois plus vite",
           "Rien, c'est de l'énergie gratuite",
-          "Une corde 4 fois plus épaisse"
+          "Une corde quatre fois plus épaisse"
         ],
         "reponse": 0,
-        "explication": "Le travail, c'est-à-dire la force multipliée par la distance, se conserve : une force 4 fois plus petite doit agir sur une distance 4 fois plus grande."
+        "explication": "Le travail, c'est-à-dire la force multipliée par la distance, se conserve : une force quatre fois plus petite doit agir sur une distance quatre fois plus grande. Pour monter un sac d'un mètre, tu tires quatre mètres de corde, la longueur d'une petite voiture."
       }
     ],
-    "motsCles": ["poulie", "palan", "moufle", "mouflage", "corde", "treuil", "charge", "soulever", "brins", "réa"]
+    "motsCles": [
+      "poulie",
+      "palan",
+      "moufle",
+      "mouflage",
+      "corde",
+      "treuil",
+      "charge",
+      "soulever",
+      "brins",
+      "réa"
+    ]
   },
   {
     "id": "pression-atmospherique",
     "titre": "La pression atmosphérique",
     "sousTitre": "Le poids invisible de l'air qui nous entoure",
-    "categories": ["pression"],
+    "categories": [
+      "pression"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -142,32 +212,52 @@
       "legende": "Ce n'est pas le vide qui aspire : c'est l'air extérieur qui pousse."
     },
     "principe": [
-      "L'air pèse : il appuie sur chaque centimètre carré comme une masse d'environ 1 kg.",
+      "L'air pèse : il appuie sur chaque centimètre carré comme une masse d'environ 1 kg (un kilogramme), une bouteille d'eau d'un litre.",
       "On ne le sent pas, car la pression est la même dedans et dehors.",
       "Si l'on retire l'air d'un côté, cette poussée invisible écrase, plaque ou fait monter les liquides."
     ],
     "pourquoi": [
-      "Au niveau de la mer, la [[pression-atmospherique|pression atmosphérique]] vaut environ 1 013 hPa : sur un mètre carré, l'air pousse autant qu'une masse de 10 tonnes posée dessus. Notre corps et les objets ne s'écrasent pas, car leur intérieur pousse aussi fort vers l'extérieur.",
+      "Au niveau de la mer, la [[pression-atmospherique|pression atmosphérique]] vaut environ 1 013 hPa (mille treize hectopascals) : sur un mètre carré, l'air pousse autant qu'une masse de 10 tonnes (dix tonnes) posée dessus, à peu près le poids de sept voitures citadines. Notre corps et les objets ne s'écrasent pas, car leur intérieur pousse aussi fort vers l'extérieur.",
       "Dans une canette contenant un peu d'eau bouillante, la vapeur chasse l'air. Retournée dans l'eau froide, la vapeur subit une [[condensation]] brutale : il ne reste presque que du [[vide]] à l'intérieur, et l'air extérieur l'écrase en un instant. Une ventouse tient de la même façon : on chasse l'air dessous, et c'est l'air extérieur qui la plaque.",
-      "Avec une paille, on n'aspire pas vraiment le liquide : on diminue la pression dans la paille, et l'air pousse sur la surface du verre pour faire monter la boisson. Même avec un vide parfait, cette poussée ne peut soulever l'eau que d'environ 10 m."
+      "Avec une paille, on n'aspire pas vraiment le liquide : on diminue la pression dans la paille, et l'air pousse sur la surface du verre pour faire monter la boisson. Même avec un vide parfait, cette poussée ne peut soulever l'eau que d'environ 10 m (dix mètres), la hauteur d'un immeuble de trois étages."
     ],
     "enfant": "Au-dessus de toi, il y a une immense couche d'air haute de plusieurs dizaines de kilomètres, qui appuie sur tout. Tu ne la sens pas, parce qu'elle pousse de tous les côtés à la fois, comme l'eau autour de toi dans une piscine. Mais si tu aspires l'air d'une bouteille en plastique, l'air du dehors l'écrase aussitôt.",
     "chiffres": [
-      { "valeur": "1 013 hPa", "label": "pression moyenne de l'air au niveau de la mer" },
-      { "valeur": "≈ 10 t", "label": "masse équivalente à la poussée de l'air sur 1 m²" },
-      { "valeur": "≈ 10,3 m", "label": "hauteur d'eau maximale qu'on peut faire monter par aspiration, même avec un vide parfait" }
+      {
+        "valeur": "1 013 hPa",
+        "label": "pression moyenne de l'air au niveau de la mer",
+        "dit": "mille treize hectopascals",
+        "concret": "C'est la pression « normale » des bulletins météo : sur la surface d'un ongle, environ un centimètre carré, l'air appuie comme une bouteille d'eau d'un litre."
+      },
+      {
+        "valeur": "≈ 10 t",
+        "label": "masse équivalente à la poussée de l'air sur 1 m² (un mètre carré)",
+        "dit": "environ dix tonnes",
+        "concret": "Sur un carré d'un mètre de côté, la taille d'une petite table, l'air appuie comme sept voitures citadines empilées ; tu ne le sens pas, car il pousse aussi fort par en dessous et sur les côtés."
+      },
+      {
+        "valeur": "≈ 10,3 m",
+        "label": "hauteur d'eau maximale qu'on peut faire monter par aspiration, même avec un vide parfait",
+        "dit": "environ dix virgule trois mètres",
+        "concret": "La hauteur d'un immeuble de trois étages : aucune paille ni pompe aspirante placée en haut ne peut faire monter l'eau plus haut."
+      }
     ],
     "realite": {
       "verdict": "vrai",
-      "explication": "La pression de l'air suffit largement à écraser une canette ou à faire tenir une ventouse. Mais à l'écran, une ventouse tient sur n'importe quoi : dans la réalité, il faut une surface lisse et étanche, et la moindre fuite la décolle. Et aucune pompe aspirante ne peut faire monter l'eau de plus d'environ 10 m."
+      "explication": "La pression de l'air suffit largement à écraser une canette ou à faire tenir une ventouse. Mais à l'écran, une ventouse tient sur n'importe quoi : dans la réalité, il faut une surface lisse et étanche, et la moindre fuite la décolle. Et aucune pompe aspirante ne peut faire monter l'eau de plus d'environ 10 m (dix mètres), soit trois étages d'immeuble."
     },
     "securite": {
       "niveau": "orange",
       "note": "La vapeur et la canette chaude brûlent : on les manipule avec une pince. Ne jamais faire le vide dans un récipient en verre, qui peut imploser en projetant des éclats."
     },
     "liens": {
-      "fiches": ["siphon", "detente-co2-froid"],
-      "pratique": ["fusee-a-eau"]
+      "fiches": [
+        "siphon",
+        "detente-co2-froid"
+      ],
+      "pratique": [
+        "fusee-a-eau"
+      ]
     },
     "quiz": [
       {
@@ -192,13 +282,27 @@
         "explication": "En refroidissant, la vapeur redevient quelques gouttes d'eau : l'intérieur est presque vide, et l'air extérieur, bien plus fort, écrase la canette."
       }
     ],
-    "motsCles": ["pression", "air", "canette", "ventouse", "paille", "vide", "baromètre", "aspiration", "atmosphère", "hectopascal"]
+    "motsCles": [
+      "pression",
+      "air",
+      "canette",
+      "ventouse",
+      "paille",
+      "vide",
+      "baromètre",
+      "aspiration",
+      "atmosphère",
+      "hectopascal"
+    ]
   },
   {
     "id": "frottement-cabestan",
     "titre": "Frottement et effet cabestan",
     "sousTitre": "Pourquoi quelques tours de corde retiennent une charge énorme",
-    "categories": ["mecanique", "materiaux"],
+    "categories": [
+      "mecanique",
+      "materiaux"
+    ],
     "duree": 2,
     "niveau": 2,
     "schema": {
@@ -213,14 +317,60 @@
     ],
     "pourquoi": [
       "Le [[frottement]] entre la corde et le poteau s'oppose au glissement. Plus la corde est tendue, plus elle est plaquée contre le poteau, et plus elle frotte. Chaque petit morceau de corde enroulée retient donc une fraction de la tension qui le traverse : l'effet se cumule tour après tour.",
-      "On obtient la formule du cabestan : T = t × e^(μθ), où t est la force de la main, T celle de la charge, μ le [[coefficient-frottement|coefficient de frottement]] et θ l'angle d'enroulement en radians. Avec μ = 0,3, un tour complet multiplie la retenue par environ 6,6, deux tours par 43 et trois tours par 286.",
+      "On obtient la formule du cabestan : T = t × e^(μθ) (T égale t fois e puissance mu thêta), où t est la force de la main, T celle de la charge, μ le [[coefficient-frottement|coefficient de frottement]] et θ l'angle d'enroulement en radians. Autrement dit, chaque tour multiplie la force retenue au lieu de simplement s'y ajouter. Avec μ = 0,3 (mu égale zéro virgule trois), il faut tirer avec trois dixièmes du poids d'un objet pour le faire glisser à plat : pour un sac de dix kilos, l'effort de soulever trois kilos. Un tour complet multiplie alors la retenue par environ 6,6 (six virgule six), deux tours par 43 (quarante-trois) et trois tours par 286 (deux cent quatre-vingt-six) : avec trois tours, retenir l'équivalent de deux kilos suffit à tenir plus d'une demi-tonne, davantage qu'un piano à queue.",
       "Étonnamment, le diamètre du poteau n'apparaît pas dans la formule : seuls comptent le frottement et l'angle total d'enroulement. Les marins l'exploitent sur les bittes d'amarrage, et les grimpeurs dans leurs descendeurs."
     ],
+    "echelle": {
+      "titre": "Échelle de frottement : une corde sur un tronc",
+      "intro": "Le coefficient de frottement μ (mu) mesure à quel point deux surfaces s'accrochent : plus il est grand, plus ça accroche. Quelques repères pour une corde sur un tronc :",
+      "niveaux": [
+        {
+          "valeur": "μ = 0,1",
+          "dit": "mu égale zéro virgule un",
+          "description": "très glissant. Une corde mouillée sur du métal poli, ou sur de la glace. C'est rare sur un tronc."
+        },
+        {
+          "valeur": "μ = 0,2",
+          "dit": "mu égale zéro virgule deux",
+          "description": "glissant. Une écorce lisse et mouillée, de la mousse, une corde synthétique très lisse."
+        },
+        {
+          "valeur": "μ = 0,3",
+          "dit": "mu égale zéro virgule trois",
+          "description": "une valeur facile à avoir sur un tronc moyen."
+        },
+        {
+          "valeur": "μ = 0,4 à 0,6",
+          "dit": "mu entre zéro virgule quatre et zéro virgule six",
+          "description": "une écorce rugueuse et sèche avec une corde classique."
+        },
+        {
+          "valeur": "μ = 2",
+          "dit": "mu égale deux",
+          "description": "irréaliste ici. Un μ au-dessus de 1 n'existe presque que pour du caoutchouc sur une surface adhérente."
+        }
+      ]
+    },
     "enfant": "Enroule une ficelle plusieurs fois autour d'un bâton et demande à quelqu'un de tirer fort d'un côté : toi, tu n'as presque rien à tenir de l'autre. À chaque tour, la ficelle frotte et retient une grosse partie de la force, un peu comme une file de copains qui tiendraient chacun un bout de la corde.",
     "chiffres": [
-      { "valeur": "T = t × e^(μθ)", "label": "formule du cabestan" },
-      { "valeur": "≈ × 6,6", "label": "gain par tour complet pour un coefficient de frottement de 0,3" },
-      { "valeur": "≈ × 286", "label": "gain après 3 tours, avec le même coefficient" }
+      {
+        "valeur": "T = t × e^(μθ)",
+        "label": "formule du cabestan",
+        "dit": "T égale t fois e puissance mu thêta",
+        "concret": "Comme une feuille de papier qu'on plie en deux encore et encore, dont l'épaisseur double à chaque pli, la force retenue est multipliée par le même nombre à chaque tour ajouté."
+      },
+      {
+        "valeur": "≈ × 6,6",
+        "label": "gain par tour complet pour un coefficient de frottement de 0,3 (zéro virgule trois)",
+        "dit": "environ fois six virgule six",
+        "concret": "Avec un seul tour, ta main qui retient l'équivalent de dix kilos tient une charge de soixante-six kilos, le poids d'un adulte."
+      },
+      {
+        "valeur": "≈ × 286",
+        "label": "gain après trois tours, avec le même coefficient",
+        "dit": "environ fois deux cent quatre-vingt-six",
+        "concret": "Avec trois tours, retenir l'équivalent de deux kilos, un peu plus qu'une bouteille d'eau d'un litre et demi, suffit à tenir plus d'une demi-tonne."
+      }
     ],
     "realite": {
       "verdict": "vrai",
@@ -231,20 +381,26 @@
       "note": "Une corde qui file peut brûler les mains et coincer les doigts contre le poteau : garder les mains loin de l'enroulement et porter des gants. Ne jamais retenir une personne de cette façon sans formation."
     },
     "liens": {
-      "fiches": ["levier", "poulie-palan"],
-      "equivalences": ["attacher", "lubrifier"]
+      "fiches": [
+        "levier",
+        "poulie-palan"
+      ],
+      "equivalences": [
+        "attacher",
+        "lubrifier"
+      ]
     },
     "quiz": [
       {
-        "question": "Si un tour de corde multiplie la force retenue par 6, que donnent deux tours ?",
+        "question": "Si un tour de corde multiplie la force retenue par 6 (six), que donnent deux tours ?",
         "choix": [
-          "× 12",
-          "× 36",
-          "× 8",
-          "× 6, le deuxième tour ne sert à rien"
+          "× 12 (fois douze)",
+          "× 36 (fois trente-six)",
+          "× 8 (fois huit)",
+          "× 6 (fois six), le deuxième tour ne sert à rien"
         ],
         "reponse": 1,
-        "explication": "L'effet est multiplicatif : 6 × 6 = 36. C'est une croissance exponentielle."
+        "explication": "L'effet est multiplicatif : deux tours donnent 6 × 6 (six fois six), soit × 36 (fois trente-six). C'est une croissance exponentielle : si ta main retient l'équivalent d'un kilo, deux tours tiennent trente-six kilos, à peu près le poids d'un enfant de dix ans."
       },
       {
         "question": "Qu'est-ce qui diminue le plus l'effet cabestan ?",
@@ -257,13 +413,27 @@
         "explication": "Le gain dépend du coefficient de frottement et du nombre de tours, pas du diamètre du poteau ni de la longueur de corde. Une corde glissante perd une grande partie de son efficacité."
       }
     ],
-    "motsCles": ["corde", "poteau", "cabestan", "bitte d'amarrage", "arbre", "frottement", "tours", "amarrer", "freiner", "retenir"]
+    "motsCles": [
+      "corde",
+      "poteau",
+      "cabestan",
+      "bitte d'amarrage",
+      "arbre",
+      "frottement",
+      "tours",
+      "amarrer",
+      "freiner",
+      "retenir"
+    ]
   },
   {
     "id": "conducteurs-isolants",
     "titre": "Conducteurs et isolants",
     "sousTitre": "Pourquoi le courant traverse le cuivre mais pas le plastique",
-    "categories": ["electricite", "materiaux"],
+    "categories": [
+      "electricite",
+      "materiaux"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -278,14 +448,29 @@
     ],
     "pourquoi": [
       "Dans un métal comme le cuivre, chaque atome libère environ un électron qui se promène librement entre les atomes. Dès qu'une tension est appliquée, ces électrons dérivent tous dans le même sens : c'est le [[courant]]. Un bon [[conducteur]] oppose donc une très faible résistance.",
-      "Dans un [[isolant]], les électrons sont solidement attachés à leurs atomes. Il faut une tension énorme pour les arracher : l'air sec ne « claque » qu'à environ 3 000 V par millimètre, en produisant une étincelle.",
+      "Dans un [[isolant]], les électrons sont solidement attachés à leurs atomes. Il faut une tension énorme pour les arracher : l'air sec ne « claque » qu'à environ 3 000 V (trois mille volts) par millimètre, en produisant une étincelle : il faut donc à peu près treize fois la tension d'une prise de courant pour qu'une étincelle traverse un seul millimètre d'air.",
       "Entre les deux, quelques cas utiles à connaître. Le graphite d'une mine de crayon conduit. L'eau pure conduit très mal, mais l'eau salée ou l'eau du robinet conduisent grâce à leurs ions dissous : c'est un [[electrolyte]]. Le bois sec isole, le bois humide beaucoup moins."
     ],
     "enfant": "Imagine un couloir rempli de billes qui roulent librement : si tu pousses d'un côté, elles avancent toutes. C'est un métal, où le courant passe. Dans le plastique, chaque bille est collée au sol : tu peux pousser, rien ne bouge. C'est pour ça que les fils électriques sont en cuivre à l'intérieur et entourés de plastique.",
     "chiffres": [
-      { "valeur": "1,7 × 10⁻⁸ Ω·m", "label": "résistivité du cuivre, l'un des meilleurs conducteurs" },
-      { "valeur": "≈ 3 kV/mm", "label": "tension de claquage de l'air sec" },
-      { "valeur": "≈ 100 kΩ → 1 kΩ", "label": "résistance du corps humain, peau sèche puis mouillée (ordre de grandeur)" }
+      {
+        "valeur": "1,7 × 10⁻⁸ Ω·m",
+        "label": "résistivité du cuivre, l'un des meilleurs conducteurs",
+        "dit": "un virgule sept fois dix puissance moins huit ohm-mètre",
+        "concret": "Un mètre de fil de rallonge électrique en cuivre n'oppose qu'environ un centième d'ohm : le courant le traverse presque sans perte, alors qu'un fil de verre de même taille ne laisserait rien passer."
+      },
+      {
+        "valeur": "≈ 3 kV/mm",
+        "label": "tension de claquage de l'air sec",
+        "dit": "environ trois kilovolts par millimètre",
+        "concret": "Pour qu'une étincelle saute à travers un seul millimètre d'air sec, il faut environ treize fois la tension d'une prise de courant : la petite décharge de quelques millimètres que tu ressens en touchant une poignée de porte correspond donc à plusieurs milliers de volts."
+      },
+      {
+        "valeur": "≈ 100 kΩ → 1 kΩ",
+        "label": "résistance du corps humain, peau sèche puis mouillée (ordre de grandeur)",
+        "dit": "environ cent kilohms, puis un kilohm",
+        "concret": "Sous la tension d'une prise, deux cent trente volts, la peau sèche ne laisse passer qu'environ deux milliampères, un simple picotement ; mouillée, elle en laisse passer environ deux cents, largement de quoi arrêter le cœur."
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -293,12 +478,21 @@
     },
     "securite": {
       "niveau": "orange",
-      "note": "Ne jamais bricoler une installation branchée au secteur : 230 V peuvent tuer. Les expériences se font uniquement avec des piles. L'eau et l'humidité rendent conducteurs des matériaux qui semblaient isolants."
+      "note": "Ne jamais bricoler une installation branchée au secteur : 230 V (deux cent trente volts), la tension d'une simple prise murale, peuvent tuer. Les expériences se font uniquement avec des piles. L'eau et l'humidité rendent conducteurs des matériaux qui semblaient isolants."
     },
     "liens": {
-      "fiches": ["pile-citron", "electroaimant", "bobine-pic-tension"],
-      "equivalences": ["isoler-electricite", "conduire-electricite"],
-      "pratique": ["pile-citron-xp"]
+      "fiches": [
+        "pile-citron",
+        "electroaimant",
+        "bobine-pic-tension"
+      ],
+      "equivalences": [
+        "isoler-electricite",
+        "conduire-electricite"
+      ],
+      "pratique": [
+        "pile-citron-xp"
+      ]
     },
     "quiz": [
       {
@@ -324,13 +518,27 @@
         "explication": "Les ions du sel dissous transportent les charges : l'eau de mer conduit environ un million de fois mieux que l'eau pure."
       }
     ],
-    "motsCles": ["conducteur", "isolant", "cuivre", "plastique", "fil électrique", "graphite", "mine de crayon", "papier aluminium", "ruban adhésif", "électrons"]
+    "motsCles": [
+      "conducteur",
+      "isolant",
+      "cuivre",
+      "plastique",
+      "fil électrique",
+      "graphite",
+      "mine de crayon",
+      "papier aluminium",
+      "ruban adhésif",
+      "électrons"
+    ]
   },
   {
     "id": "electroaimant",
     "titre": "L'électroaimant",
     "sousTitre": "Un aimant qui s'allume et s'éteint avec le courant",
-    "categories": ["magnetisme", "electricite"],
+    "categories": [
+      "magnetisme",
+      "electricite"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -346,13 +554,28 @@
     "pourquoi": [
       "Tout [[courant]] électrique produit un [[champ-magnetique|champ magnétique]] qui tourne autour du fil. Un fil droit donne un champ faible ; enroulé en dizaines de spires, les champs s'additionnent et la bobine se comporte comme un barreau aimanté, avec un [[pole-magnetique|pôle nord]] et un pôle sud.",
       "Le fil doit être émaillé, c'est-à-dire recouvert d'un fin vernis isolant : sinon, le courant passerait d'une spire à l'autre sans faire le tour du clou. Le clou en acier, matériau [[ferromagnetique]], aligne ses petits domaines magnétiques sur le champ de la bobine et le renforce considérablement.",
-      "Avec une pile de 1,5 V et quelques dizaines de spires, on soulève des trombones. Mais quelques mètres de fil fin ne présentent qu'environ 1 Ω : la pile est presque en court-circuit, débite un courant de l'ordre de l'ampère, chauffe et se vide en quelques minutes."
+      "Avec une pile de 1,5 V (un virgule cinq volt), celle d'une télécommande, et quelques dizaines de spires, on soulève des trombones. Mais quelques mètres de fil fin ne présentent qu'environ 1 Ω (un ohm), presque comme si l'on reliait directement les deux bornes de la pile : elle est presque en court-circuit, débite un courant de l'ordre de l'ampère, chauffe et se vide en quelques minutes."
     ],
     "enfant": "Quand l'électricité tourne en rond dans le fil enroulé autour du clou, elle transforme le clou en aimant, comme si elle le réveillait. Dès que tu débranches la pile, le clou se rendort et lâche les trombones. C'est comme une petite grue magnétique qu'on allume et qu'on éteint.",
     "chiffres": [
-      { "valeur": "1,5 V", "label": "une seule pile ordinaire suffit, jamais le secteur" },
-      { "valeur": "30 à 100 spires", "label": "sur un clou, de quoi soulever quelques trombones" },
-      { "valeur": "≈ 1 Ω", "label": "résistance de quelques mètres de fil fin : la pile débite fort et chauffe vite" }
+      {
+        "valeur": "1,5 V",
+        "label": "une seule pile ordinaire suffit, jamais le secteur",
+        "dit": "un virgule cinq volt",
+        "concret": "C'est la tension d'une pile bâton ordinaire, celle d'une télécommande : environ cent cinquante fois moins qu'une prise de courant."
+      },
+      {
+        "valeur": "30 à 100 spires",
+        "label": "sur un clou, de quoi soulever quelques trombones",
+        "dit": "trente à cent spires",
+        "concret": "Sur un clou épais comme un crayon, cent spires représentent à peu près un mètre et demi de fil, assez pour soulever quelques trombones."
+      },
+      {
+        "valeur": "≈ 1 Ω",
+        "label": "résistance de quelques mètres de fil fin : la pile débite fort et chauffe vite",
+        "dit": "environ un ohm",
+        "concret": "C'est presque comme relier directement les deux bornes de la pile avec un trombone : elle débite autour d'un ampère et devient chaude au toucher en moins d'une minute."
+      }
     ],
     "realite": {
       "verdict": "vrai",
@@ -360,12 +583,22 @@
     },
     "securite": {
       "niveau": "orange",
-      "note": "La pile en quasi court-circuit chauffe : on ne la branche que quelques secondes, et seulement une pile ordinaire de 1,5 V. Jamais de batterie au lithium, de batterie de voiture ni de prise secteur : courts-circuits violents, brûlures, risque d'incendie."
+      "note": "La pile en quasi court-circuit chauffe : on ne la branche que quelques secondes, et seulement une pile ordinaire de 1,5 V (un virgule cinq volt), comme celle d'une télécommande. Jamais de batterie au lithium, de batterie de voiture ni de prise secteur : courts-circuits violents, brûlures, risque d'incendie."
     },
     "liens": {
-      "fiches": ["boussole-improvisee", "bobine-pic-tension", "conducteurs-isolants"],
-      "equivalences": ["aimanter", "conduire-electricite"],
-      "pratique": ["boussole-aiguille", "levitation-trombone"]
+      "fiches": [
+        "boussole-improvisee",
+        "bobine-pic-tension",
+        "conducteurs-isolants"
+      ],
+      "equivalences": [
+        "aimanter",
+        "conduire-electricite"
+      ],
+      "pratique": [
+        "boussole-aiguille",
+        "levitation-trombone"
+      ]
     },
     "quiz": [
       {
@@ -390,13 +623,27 @@
         "explication": "Sans courant, la bobine ne produit plus de champ. Un clou en acier garde parfois une faible aimantation résiduelle, mais il lâche l'essentiel."
       }
     ],
-    "motsCles": ["électroaimant", "bobine", "clou", "fil émaillé", "pile", "aimant", "spires", "trombone", "solénoïde", "champ magnétique"]
+    "motsCles": [
+      "électroaimant",
+      "bobine",
+      "clou",
+      "fil émaillé",
+      "pile",
+      "aimant",
+      "spires",
+      "trombone",
+      "solénoïde",
+      "champ magnétique"
+    ]
   },
   {
     "id": "siphon",
     "titre": "Le siphon",
     "sousTitre": "Faire passer un liquide par-dessus un bord, sans pompe",
-    "categories": ["fluides", "pression"],
+    "categories": [
+      "fluides",
+      "pression"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -407,17 +654,27 @@
     "principe": [
       "Un tuyau plein de liquide peut le faire passer par-dessus un bord, puis vers un point plus bas.",
       "La sortie doit être plus basse que la surface de départ : c'est la gravité qui entraîne le liquide.",
-      "La pression de l'air empêche la colonne de se rompre, tant que le sommet reste à moins d'environ 10 m."
+      "La pression de l'air empêche la colonne de se rompre, tant que le sommet reste à moins d'environ 10 m (dix mètres), trois étages d'immeuble."
     ],
     "pourquoi": [
       "Dans un siphon amorcé, le liquide forme une colonne continue. Côté sortie, la colonne descend plus bas que la surface du récipient de départ : son poids l'entraîne vers le bas, et le reste du liquide suit. Le débit augmente avec la différence de hauteur et avec le diamètre du tuyau.",
-      "Au sommet du tuyau, la [[pression]] est inférieure à celle de l'air. C'est la [[pression-atmospherique|pression atmosphérique]], qui appuie sur la surface du récipient, qui pousse le liquide à remonter et empêche la colonne de se casser. Pour l'eau, elle ne peut pas compenser plus d'environ 10 m de hauteur.",
+      "Au sommet du tuyau, la [[pression]] est inférieure à celle de l'air. C'est la [[pression-atmospherique|pression atmosphérique]], qui appuie sur la surface du récipient, qui pousse le liquide à remonter et empêche la colonne de se casser. Pour l'eau, elle ne peut pas compenser plus d'environ 10 m (dix mètres) de hauteur, soit à peu près un immeuble de trois étages.",
       "Il faut d'abord amorcer, c'est-à-dire remplir complètement le tuyau. Une grosse bulle d'air au sommet coupe la colonne et le siphon se désamorce. L'écoulement s'arrête quand les deux surfaces arrivent au même niveau."
     ],
     "enfant": "Pense à un collier de perles posé sur le bord d'une table : si le bout qui pend dehors est plus long, il tombe et entraîne tout le collier, même la partie qui doit remonter. Dans un siphon, l'eau du tuyau fait pareil : le côté le plus long descend et tire l'eau par-dessus le bord.",
     "chiffres": [
-      { "valeur": "≈ 10 m", "label": "hauteur maximale du sommet au-dessus de l'eau, au niveau de la mer" },
-      { "valeur": "≈ 4,4 m/s", "label": "vitesse de sortie théorique pour 1 m de dénivelé, sans frottement" }
+      {
+        "valeur": "≈ 10 m",
+        "label": "hauteur maximale du sommet au-dessus de l'eau, au niveau de la mer",
+        "dit": "environ dix mètres",
+        "concret": "Exactement la hauteur du plus haut plongeoir olympique, ou d'un immeuble de trois étages : un siphon franchit sans peine un mur de jardin, jamais le toit d'un tel immeuble."
+      },
+      {
+        "valeur": "≈ 4,4 m/s",
+        "label": "vitesse de sortie théorique pour 1 m (un mètre) de dénivelé, sans frottement",
+        "dit": "environ quatre virgule quatre mètres par seconde",
+        "concret": "Environ seize kilomètres à l'heure, l'allure d'un cycliste tranquille : en théorie, l'eau sort du tuyau aussi vite que si elle tombait d'un mètre de haut."
+      }
     ],
     "realite": {
       "verdict": "vrai",
@@ -428,7 +685,10 @@
       "note": "Ne jamais amorcer à la bouche un siphon d'essence, de produit ménager ou d'eau sale. Remplir le tuyau par immersion ou avec une poire d'amorçage."
     },
     "liens": {
-      "fiches": ["pression-atmospherique", "capillarite-filtration"]
+      "fiches": [
+        "pression-atmospherique",
+        "capillarite-filtration"
+      ]
     },
     "quiz": [
       {
@@ -443,23 +703,36 @@
         "explication": "Le liquide coule tant que la sortie est plus basse que la surface du récipient de départ. Il s'arrête quand les niveaux s'égalisent."
       },
       {
-        "question": "Pourquoi un siphon d'eau ne marche-t-il pas si son sommet est à 15 m au-dessus de l'eau ?",
+        "question": "Pourquoi un siphon d'eau ne marche-t-il pas si son sommet est à 15 m (quinze mètres) au-dessus de l'eau, la hauteur d'un immeuble de cinq étages ?",
         "choix": [
           "Le tuyau est trop long",
-          "La pression de l'air ne peut pas soutenir plus d'environ 10 m d'eau",
+          "La pression de l'air ne peut pas soutenir plus d'environ 10 m (dix mètres) d'eau",
           "L'eau devient trop lourde pour couler"
         ],
         "reponse": 1,
-        "explication": "Au-delà d'environ 10 m, la pression au sommet tomberait au niveau de celle de la vapeur d'eau : des bulles se forment et la colonne se rompt."
+        "explication": "Au-delà d'environ 10 m (dix mètres), soit trois étages d'immeuble, la pression au sommet tomberait au niveau de celle de la vapeur d'eau : des bulles se forment et la colonne se rompt."
       }
     ],
-    "motsCles": ["siphon", "tuyau", "vider", "transvaser", "aquarium", "bidon", "amorcer", "cuve", "écoulement"]
+    "motsCles": [
+      "siphon",
+      "tuyau",
+      "vider",
+      "transvaser",
+      "aquarium",
+      "bidon",
+      "amorcer",
+      "cuve",
+      "écoulement"
+    ]
   },
   {
     "id": "capillarite-filtration",
     "titre": "Capillarité et filtration",
     "sousTitre": "Faire voyager l'eau dans une mèche, puis la clarifier",
-    "categories": ["fluides", "materiaux"],
+    "categories": [
+      "fluides",
+      "materiaux"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -479,9 +752,24 @@
     ],
     "enfant": "Trempe le coin d'un essuie-tout dans de l'eau colorée : l'eau grimpe toute seule dans le papier, comme si elle escaladait de minuscules tunnels. Une mèche fait pareil pour passer d'un verre à l'autre. Et un filtre, c'est comme une passoire très fine : il arrête la boue, mais les microbes sont si petits qu'ils passent quand même.",
     "chiffres": [
-      { "valeur": "≈ 15 cm", "label": "montée de l'eau dans un tube de 0,2 mm de diamètre" },
-      { "valeur": "500 à 1 500 m²", "label": "surface d'un seul gramme de charbon actif" },
-      { "valeur": "≈ 1 µm", "label": "taille typique d'une bactérie, assez petite pour traverser un filtre improvisé" }
+      {
+        "valeur": "≈ 15 cm",
+        "label": "montée de l'eau dans un tube de 0,2 mm (zéro virgule deux millimètre) de diamètre",
+        "dit": "environ quinze centimètres",
+        "concret": "À peu près la longueur d'un stylo : dans un tube à peine deux ou trois fois plus large qu'un cheveu, l'eau grimpe seule sur toute cette hauteur."
+      },
+      {
+        "valeur": "500 à 1 500 m²",
+        "label": "surface d'un seul gramme de charbon actif",
+        "dit": "cinq cents à mille cinq cents mètres carrés",
+        "concret": "Une simple pincée de charbon actif d'un gramme cache, dans ses pores, la surface de deux à six courts de tennis."
+      },
+      {
+        "valeur": "≈ 1 µm",
+        "label": "taille typique d'une bactérie, assez petite pour traverser un filtre improvisé",
+        "dit": "environ un micromètre",
+        "concret": "Cinquante à cent fois plus fin qu'un cheveu : il faudrait en aligner mille pour couvrir un seul millimètre de règle."
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -489,12 +777,19 @@
     },
     "securite": {
       "niveau": "orange",
-      "note": "Une eau claire n'est pas une eau potable. Après filtration, toujours la faire bouillir (au moins 1 minute à gros bouillons) ou la désinfecter. Un filtre improvisé ne retire ni le sel ni la plupart des produits chimiques."
+      "note": "Une eau claire n'est pas une eau potable. Après filtration, toujours la faire bouillir au moins 1 minute (une minute) à gros bouillons, le temps de compter lentement jusqu'à soixante, ou la désinfecter. Un filtre improvisé ne retire ni le sel ni la plupart des produits chimiques."
     },
     "liens": {
-      "fiches": ["eau-solaire", "siphon"],
-      "equivalences": ["filtrer-eau"],
-      "pratique": ["distillateur-solaire"]
+      "fiches": [
+        "eau-solaire",
+        "siphon"
+      ],
+      "equivalences": [
+        "filtrer-eau"
+      ],
+      "pratique": [
+        "distillateur-solaire"
+      ]
     },
     "quiz": [
       {
@@ -518,13 +813,27 @@
         "explication": "Le filtre retient les particules visibles, pas les microbes invisibles. L'ébullition ou les UV les détruisent."
       }
     ],
-    "motsCles": ["capillarité", "mèche", "tissu", "filtre", "sable", "charbon", "eau potable", "essuie-tout", "purifier", "clarifier"]
+    "motsCles": [
+      "capillarité",
+      "mèche",
+      "tissu",
+      "filtre",
+      "sable",
+      "charbon",
+      "eau potable",
+      "essuie-tout",
+      "purifier",
+      "clarifier"
+    ]
   },
   {
     "id": "isolation-thermique",
     "titre": "Isolation thermique",
     "sousTitre": "Garder la chaleur en bloquant ses trois chemins",
-    "categories": ["thermique", "materiaux"],
+    "categories": [
+      "thermique",
+      "materiaux"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -538,15 +847,30 @@
       "Une couverture de survie renvoie vers le corps le rayonnement infrarouge qu'il émet."
     ],
     "pourquoi": [
-      "La [[conduction]] fait passer la chaleur par contact, de proche en proche : un sol froid ou des vêtements mouillés la volent très vite, car l'eau conduit environ 25 fois mieux que l'air. La [[convection]], elle, emporte la chaleur avec l'air qui bouge : c'est l'effet du vent.",
+      "La [[conduction]] fait passer la chaleur par contact, de proche en proche : un sol froid ou des vêtements mouillés la volent très vite, car l'eau conduit environ 25 fois (vingt-cinq fois) mieux que l'air : une eau à vingt degrés te refroidit bien plus vite qu'un air à la même température. La [[convection]], elle, emporte la chaleur avec l'air qui bouge : c'est l'effet du vent.",
       "Un bon isolant enferme l'air dans de minuscules cellules où il ne peut pas circuler : il ne reste alors que la très faible conduction de l'air. C'est le secret de la laine, du duvet, de la mousse et même du papier journal froissé glissé sous un vêtement.",
       "Tout corps chaud émet aussi un [[rayonnement]] infrarouge. Un film métallisé, très réfléchissant et de faible [[emissivite|émissivité]], renvoie ce rayonnement vers le corps et en émet lui-même très peu. Mais il est très fin : plaqué contre un sol froid, il laisse passer la chaleur par conduction."
     ],
     "enfant": "Ton manteau d'hiver ne fabrique pas de chaleur : il garde celle de ton corps en emprisonnant plein de petites poches d'air immobile, comme une doudoune. La couverture dorée des secouristes, elle, agit comme un miroir : elle te renvoie la chaleur invisible que ton corps envoie dans toutes les directions.",
     "chiffres": [
-      { "valeur": "0,025 W/(m·K)", "label": "conductivité thermique de l'air immobile" },
-      { "valeur": "≈ × 25", "label": "l'eau conduit la chaleur environ 25 fois mieux que l'air" },
-      { "valeur": "≈ 90 %", "label": "part du rayonnement infrarouge renvoyée par une couverture de survie" }
+      {
+        "valeur": "0,025 W/(m·K)",
+        "label": "conductivité thermique de l'air immobile",
+        "dit": "zéro virgule zéro vingt-cinq watt par mètre et par kelvin",
+        "concret": "Environ seize mille fois moins que le cuivre d'une casserole et vingt-quatre fois moins que l'eau : c'est pour ça que l'air piégé dans une doudoune isole si bien."
+      },
+      {
+        "valeur": "≈ × 25",
+        "label": "l'eau conduit la chaleur environ 25 fois (vingt-cinq fois) mieux que l'air",
+        "dit": "environ fois vingt-cinq",
+        "concret": "C'est pourquoi des vêtements mouillés te refroidissent si vite : une eau à vingt degrés te glace, alors qu'un air à vingt degrés paraît doux."
+      },
+      {
+        "valeur": "≈ 90 %",
+        "label": "part du rayonnement infrarouge renvoyée par une couverture de survie",
+        "dit": "environ quatre-vingt-dix pour cent",
+        "concret": "Sur dix rayons infrarouges que ton corps émet vers la couverture, elle en renvoie à peu près neuf vers toi, comme un miroir pour la chaleur."
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -557,9 +881,18 @@
       "note": "Face au froid, la priorité est de s'isoler du sol et de rester au sec. Ne jamais couvrir le visage avec une couverture de survie, qui ne laisse pas passer l'air. Elle conduit l'électricité : la tenir éloignée des lignes électriques."
     },
     "liens": {
-      "fiches": ["infrarouge-vision", "miroir-concentration", "detente-co2-froid"],
-      "equivalences": ["isoler-chaleur", "chauffer"],
-      "pratique": ["infrarouge-camera"]
+      "fiches": [
+        "infrarouge-vision",
+        "miroir-concentration",
+        "detente-co2-froid"
+      ],
+      "equivalences": [
+        "isoler-chaleur",
+        "chauffer"
+      ],
+      "pratique": [
+        "infrarouge-camera"
+      ]
     },
     "quiz": [
       {
@@ -584,13 +917,26 @@
         "explication": "Son film métallisé renvoie l'essentiel du rayonnement infrarouge. Contre un sol froid, il faut au contraire une couche épaisse qui emprisonne de l'air."
       }
     ],
-    "motsCles": ["isolation", "couverture de survie", "laine", "duvet", "doudoune", "froid", "hypothermie", "chaleur", "mousse", "vêtements"]
+    "motsCles": [
+      "isolation",
+      "couverture de survie",
+      "laine",
+      "duvet",
+      "doudoune",
+      "froid",
+      "hypothermie",
+      "chaleur",
+      "mousse",
+      "vêtements"
+    ]
   },
   {
     "id": "combustion-poussieres",
     "titre": "Poussières et combustion rapide",
     "sousTitre": "Pourquoi une matière finement divisée brûle beaucoup plus vite",
-    "categories": ["chimie"],
+    "categories": [
+      "chimie"
+    ],
     "duree": 2,
     "niveau": 2,
     "principeSeul": true,
@@ -606,13 +952,23 @@
     ],
     "pourquoi": [
       "Une [[combustion]] est une réaction entre un combustible et un [[comburant]], le plus souvent l'oxygène de l'air. Elle ne peut avoir lieu que là où les deux se rencontrent : à la surface du combustible. C'est pourquoi une bûche brûle lentement, des copeaux plus vite et la sciure plus vite encore.",
-      "En divisant la matière, on augmente sa [[surface-specifique|surface spécifique]] : un cube de 1 cm réduit en grains de 10 µm offre mille fois plus de surface. Chaque grain, minuscule, s'échauffe presque instantanément et réagit avec l'oxygène qui l'entoure de toutes parts.",
+      "En divisant la matière, on augmente sa [[surface-specifique|surface spécifique]] : un cube de 1 cm (un centimètre) de côté, la taille d'un petit dé à jouer, réduit en grains de 10 µm (dix micromètres), cinq à dix fois plus fins qu'un cheveu, offre mille fois plus de surface. Chaque grain, minuscule, s'échauffe presque instantanément et réagit avec l'oxygène qui l'entoure de toutes parts.",
       "C'est pourquoi les silos à grains, les minoteries, les sucreries et les ateliers de menuiserie sont des zones à risque : une poussière en suspension, au contact d'une étincelle, peut s'enflammer brutalement. L'industrie s'en protège par l'aspiration et le nettoyage des dépôts, le contrôle de l'humidité et des équipements conçus pour ne produire aucune étincelle."
     ],
     "enfant": "Une grosse bûche ne s'allume pas avec une seule allumette, alors que de petites brindilles prennent feu facilement. Plus les morceaux sont petits, plus ils touchent l'air de partout et plus ils brûlent vite. C'est pour ça que, dans les usines où il y a beaucoup de farine ou de sciure, on aspire la poussière en permanence.",
     "chiffres": [
-      { "valeur": "6 cm² → 0,6 m²", "label": "surface d'un cube de 1 cm une fois réduit en grains de 10 µm" },
-      { "valeur": "× 1 000", "label": "augmentation de la surface exposée à l'air" }
+      {
+        "valeur": "6 cm² → 0,6 m²",
+        "label": "surface d'un cube de 1 cm (un centimètre) une fois réduit en grains de 10 µm (dix micromètres)",
+        "dit": "six centimètres carrés, puis zéro virgule six mètre carré",
+        "concret": "On passe de la surface d'un timbre-poste à celle du plateau d'une petite table, sans rien changer à la matière."
+      },
+      {
+        "valeur": "× 1 000",
+        "label": "augmentation de la surface exposée à l'air",
+        "dit": "fois mille",
+        "concret": "Comme passer d'un timbre-poste à une petite table : autant de surface en plus au contact de l'oxygène, d'où l'importance d'aspirer les poussières au lieu de les laisser se déposer."
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -623,7 +979,10 @@
       "note": "Sujet présenté uniquement pour comprendre un risque industriel et domestique. Ne jamais disperser de poudre près d'une flamme, et ne jamais jeter de farine sur un feu de cuisine : risque de graves brûlures. Aucune expérience associée."
     },
     "liens": {
-      "fiches": ["capillarite-filtration", "miroir-concentration"]
+      "fiches": [
+        "capillarite-filtration",
+        "miroir-concentration"
+      ]
     },
     "quiz": [
       {
@@ -648,13 +1007,27 @@
         "explication": "Supprimer les dépôts évite qu'une poussière se retrouve en suspension près d'une source d'inflammation. Souffler, au contraire, la met en suspension."
       }
     ],
-    "motsCles": ["poussière", "farine", "sciure", "silo", "combustion", "surface", "oxygène", "prévention", "menuiserie", "risque industriel"]
+    "motsCles": [
+      "poussière",
+      "farine",
+      "sciure",
+      "silo",
+      "combustion",
+      "surface",
+      "oxygène",
+      "prévention",
+      "menuiserie",
+      "risque industriel"
+    ]
   },
   {
     "id": "miroir-concentration",
     "titre": "Concentrer la lumière",
     "sousTitre": "Un miroir creux qui rassemble le soleil en un point brûlant",
-    "categories": ["lumiere", "thermique"],
+    "categories": [
+      "lumiere",
+      "thermique"
+    ],
     "duree": 2,
     "niveau": 2,
     "schema": {
@@ -668,15 +1041,30 @@
       "Le fond bien poli d'une canette peut ainsi faire rougeoyer un amadou très sec."
     ],
     "pourquoi": [
-      "Un miroir creux en forme de parabole réfléchit tous les rayons parallèles à son axe vers un seul point, le [[foyer]]. Pour un miroir sphérique, ce point se trouve à mi-chemin entre le miroir et son centre de courbure : f = R / 2.",
-      "Au sol, par beau temps, le soleil apporte environ 1 000 W par mètre carré sous forme de [[rayonnement]]. Un fond de canette de 5 cm de diamètre en capte près de 2 W, qu'il concentre sur quelques millimètres carrés : la température y grimpe assez pour amorcer une [[combustion]] dans un matériau sombre et très sec.",
+      "Un miroir creux en forme de parabole réfléchit tous les rayons parallèles à son axe vers un seul point, le [[foyer]]. Pour un miroir sphérique, ce point se trouve à mi-chemin entre le miroir et son centre de courbure : f = R / 2 (f égale R divisé par deux). Si le miroir est découpé dans une sphère de quarante centimètres de rayon, le foyer se trouve à vingt centimètres devant lui, à peu près la longueur d'une main d'adulte.",
+      "Au sol, par beau temps, le soleil apporte environ 1 000 W (mille watts) par mètre carré sous forme de [[rayonnement]], autant qu'un petit radiateur électrique sur chaque mètre carré. Un fond de canette de 5 cm (cinq centimètres) de diamètre, à peu près deux pièces de deux euros côte à côte, en capte près de 2 W (deux watts), la puissance d'une petite lampe de poche à LED, qu'il concentre sur quelques millimètres carrés : la température y grimpe assez pour amorcer une [[combustion]] dans un matériau sombre et très sec.",
       "Plus le miroir est grand et bien poli, plus il concentre d'énergie. Un matériau sombre absorbe mieux la lumière qu'un matériau clair, qui la renvoie. Les fours solaires et les centrales solaires à tour reposent sur le même principe, en beaucoup plus grand."
     ],
     "enfant": "Lâche des billes sur les bords d'un saladier : elles roulent toutes vers le fond, au même endroit. Un miroir creux fait pareil avec la lumière du soleil : il envoie tous les rayons vers un même petit point. Tout ce soleil réuni au même endroit devient si chaud qu'il peut faire fumer une feuille sèche.",
     "chiffres": [
-      { "valeur": "≈ 1 000 W/m²", "label": "puissance du soleil au sol par temps clair" },
-      { "valeur": "≈ 2 W", "label": "captés par un fond de canette de 5 cm de diamètre" },
-      { "valeur": "f = R / 2", "label": "distance du foyer pour un miroir sphérique" }
+      {
+        "valeur": "≈ 1 000 W/m²",
+        "label": "puissance du soleil au sol par temps clair",
+        "dit": "environ mille watts par mètre carré",
+        "concret": "Sur chaque mètre carré, le soleil de midi apporte autant de puissance qu'un petit radiateur électrique allumé."
+      },
+      {
+        "valeur": "≈ 2 W",
+        "label": "captés par un fond de canette de 5 cm (cinq centimètres) de diamètre",
+        "dit": "environ deux watts",
+        "concret": "À peu près la puissance d'une petite lampe de poche à LED : c'est peu, mais concentré sur une tache de quelques millimètres, cela suffit à faire rougeoyer un amadou très sec."
+      },
+      {
+        "valeur": "f = R / 2",
+        "label": "distance du foyer pour un miroir sphérique",
+        "dit": "f égale R divisé par deux",
+        "concret": "Si le miroir est découpé dans une sphère de quarante centimètres de rayon, le foyer se trouve à vingt centimètres devant lui, à peu près la longueur d'une main d'adulte."
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -687,9 +1075,19 @@
       "note": "Ne jamais regarder le foyer ni le reflet du soleil dans le miroir : risque de lésions des yeux. Le foyer peut enflammer des herbes sèches : respecter les interdictions de feu, garder de l'eau à portée et ne jamais laisser un miroir ou une bouteille d'eau au soleil près de matières inflammables."
     },
     "liens": {
-      "fiches": ["lentille-bouteille", "eau-solaire", "isolation-thermique"],
-      "equivalences": ["faire-lentille", "chauffer", "signaler"],
-      "pratique": ["loupe-goutte-eau"]
+      "fiches": [
+        "lentille-bouteille",
+        "eau-solaire",
+        "isolation-thermique"
+      ],
+      "equivalences": [
+        "faire-lentille",
+        "chauffer",
+        "signaler"
+      ],
+      "pratique": [
+        "loupe-goutte-eau"
+      ]
     },
     "quiz": [
       {
@@ -714,6 +1112,17 @@
         "explication": "Une surface sombre transforme la lumière reçue en chaleur ; une surface blanche en renvoie la plus grande partie."
       }
     ],
-    "motsCles": ["miroir", "canette", "soleil", "feu", "foyer", "parabole", "concave", "amadou", "survie", "four solaire"]
+    "motsCles": [
+      "miroir",
+      "canette",
+      "soleil",
+      "feu",
+      "foyer",
+      "parabole",
+      "concave",
+      "amadou",
+      "survie",
+      "four solaire"
+    ]
   }
 ]

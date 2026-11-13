@@ -77,3 +77,17 @@ Décisions prises sans consultation, avec leur raison. Chacune peut être revue.
 | **Bilan et « Recommencer le quiz »** | À la fin, un bilan donne le score et propose de recommencer depuis la question 1. |
 | **Correction lisible sans la couleur** | La bonne réponse porte l'étiquette « Bonne réponse » (ou « Ta réponse, juste ») et la réponse fausse choisie « Ta réponse ». Le texte double la couleur (WCAG 1.4.1). |
 | **Bouton « Voir le schéma »** | Visible seulement pendant la lecture du texte (schéma passé au-dessus de l'écran, case « Lu » pas encore atteinte). Sa visibilité est calculée à chaque défilement, une fois par image. |
+
+## Contenu et style des fiches (révision 3)
+
+| Décision | Raison |
+|---|---|
+| **Fiche CO₂ : texte fourni repris mot pour mot** | 11 paragraphes, 860 mots (5 min de lecture). Le test compare toujours le texte affiché au fichier témoin `tests/fixtures/fiche-co2.md`, mis à jour. Les infobulles (`[[id|texte affiché]]`) ne changent pas le texte lu. |
+| **Quiz CO₂ : 6 questions** | Ajout : nombre d'éléments du feu (3), nombre de types d'extincteurs (4), pourquoi un gaz qui se détend se refroidit, pourquoi la température se bloque à −78,5 °C. Conservées : l'extincteur pour un ordinateur, le barreau épais. La question « Pourquoi le jet est glacé ? » est fusionnée avec celle sur la détente. Le format accepte désormais jusqu'à 8 questions par fiche. |
+| **Schéma CO₂ redessiné en 3 zones** | 1 : triangle du feu. 2 : les 4 extincteurs, chacun avec ce qu'il retire (« − chaleur », « − réaction », « − oxygène ») et où on le trouve. 3 : bouteille à 57 bar et 20 °C avec molécules serrées, détente, neige carbonique à −78,5 °C. Textes mesurés avec la police réelle : rien ne déborde ni ne se chevauche. |
+| **Prononciation dans le texte, pas dans les schémas** | Dans les fiches, chaque ordre de grandeur est suivi de sa prononciation entre parenthèses et d'un équivalent concret. Les étiquettes des schémas restent courtes pour rester lisibles ; leur texte alternatif, lu par les lecteurs d'écran, donne les valeurs prononcées. |
+| **Données clés : champs `dit` et `concret`** | Plutôt que d'alourdir l'étiquette, chaque donnée clé a sa prononciation (affichée sous la valeur) et son équivalent concret (une phrase). |
+| **Quiz : prononciation seulement dans les choix** | Les choix restent courts ; l'équivalent concret est dans l'explication. |
+| **Bloc `echelle`** | Un nouveau bloc gradué (valeur, prononciation, description), affiché dans les deux formats de fiche. Il sert à l'échelle des coefficients de frottement du cabestan et pourra servir à d'autres grandeurs. Une barre de couleur passe du cyan à l'orange pour situer chaque niveau. |
+| **Avertissement du validateur, sans blocage** | Le module `scripts/magnitudes.mjs` repère les valeurs avec unité, les valeurs de symbole (μ = 0,3), les facteurs (×6,6) et les puissances de dix. Il avertit si la valeur n'est pas suivie d'une parenthèse de prononciation, ou si une donnée clé n'a pas `dit` ou `concret`. Les valeurs d'un même intervalle (« 0,4 à 0,6 ») partagent la même parenthèse. Les tests vérifient le détecteur et la fiche CO₂ (zéro manque), sans faire échouer la publication sur les autres fiches. |
+| **Longueur cible des fiches** | 500 à 900 mots (3 à 5 minutes), alignée sur la fiche de référence. |
