@@ -41,7 +41,9 @@ Variante sans Git : `npm run build`, puis glisse le dossier `dist/` sur https://
 ### Option B — GitHub Pages
 1. Pousse le projet sur GitHub (branche `main`).
 2. Dans le dépôt : *Settings → Pages → Source : GitHub Actions*.
-3. Le workflow `.github/workflows/deploy.yml` teste, construit et publie à chaque push. L'adresse sera `https://<ton-compte>.github.io/<depot>/`.
+3. Le workflow `.github/workflows/deploy.yml` teste, construit et publie à chaque push. L'adresse sera `https://<ton-compte>.github.io/<depot>/`, ici **https://tronn29.github.io/macgyver-lab/**.
+
+Le fonctionnement sous ce sous-chemin a été vérifié : liens, service worker (portée `/macgyver-lab/`), manifeste, icônes et mode hors connexion.
 
 L'appli utilise des chemins relatifs et un routage par ancre (`#/…`) : elle fonctionne dans un sous-dossier sans configuration.
 
