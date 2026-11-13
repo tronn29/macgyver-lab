@@ -118,3 +118,30 @@ describe('validateur de contenu', () => {
     expect(r.status).toBe(1);
   });
 });
+
+describe('fiche empreintes digitales (format long)', () => {
+  const f = c.byId.fiche.get('empreintes-poussiere')!;
+
+  it('affiche le texte fourni, mot pour mot', () => {
+    const attendu = readFileSync(join(__dirname, 'fixtures', 'empreintes-poussiere.md'), 'utf8').trim();
+    expect(isLongFormat(f)).toBe(true);
+    const affiche = f.texte!.map((p) => p.replace(/\[\[[a-z0-9-]+\|([^\]]+)\]\]/g, '$1')).join('\n\n');
+    expect(affiche).toBe(attendu);
+    expect(f.principe).toBeUndefined();
+    expect(f.pourquoi).toBeUndefined();
+  });
+
+  it("l'étiquette indique : anciens capteurs oui, capteurs modernes non", () => {
+    expect(f.realite.verdict).toBe('partiel');
+    expect(f.realite.nuance).toMatch(/anciens capteurs/i);
+    expect(f.realite.nuance).toMatch(/plus sur les capteurs modernes/i);
+    expect(f.securite.niveau).toBe('vert');
+  });
+
+  it('le quiz couvre optique contre capacitif, et pouls, conductivité, température', () => {
+    const qs = f.quiz.map((q) => `${q.question} => ${q.choix[q.reponse]}`);
+    expect(qs.some((q) => /optique/i.test(q) && /capacitif/i.test(q) && /champ électrique/i.test(q))).toBe(true);
+    expect(qs.some((q) => /pouls/i.test(q) && /température/i.test(q))).toBe(true);
+    expect(qs.some((q) => /conduit|conductivité/i.test(q))).toBe(true);
+  });
+});

@@ -772,3 +772,8 @@
 .echelle__dit { font-size: var(--fs-sm); color: var(--c-text-2); }
 .echelle__desc { color: var(--c-text); }
 @media (max-width: 420px) { .echelle__item { grid-template-columns: 1fr; gap: var(--sp-1); } }
+
+/* Précision de l'étiquette « Série ou réalité ? » */
+.verdict-nuance { flex-basis: 100%; margin: 0; font-size: var(--fs-sm); font-weight: 600; color: var(--c-text); line-height: 1.4; }
+.verdict-nuance--head { order: 0; flex-basis: auto; align-self: center; color: var(--c-text-2); font-weight: 500; }
+.longread__serie-head .verdict-nuance { flex-basis: 100%; }

@@ -1,78 +1,80 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
-  <!-- Étape 1 : les crêtes du doigt touchent la vitre -->
-  <g>
-    <circle class="s-badge" cx="24" cy="30" r="9"/>
-    <text class="s-badge-text" x="24" y="30">1</text>
-    <text class="s-label" x="38" y="34">Contact</text>
+  <!-- Séparateurs : en haut, révéler puis relever ; en bas, capteur optique | capteur capacitif -->
+  <path class="s-dash" d="M178 12 V96"/>
+  <path class="s-dash" d="M10 104 H350"/>
+  <path class="s-dash" d="M178 110 V232"/>
 
-    <path class="s-line" d="M64 46 V60" marker-end="url(#mg-arrow)"/>
-    <path class="s-solid" d="M18 118 Q24 108 30 118 Q36 108 42 118 Q48 108 54 118 Q60 108 66 118 Q72 108 78 118 Q84 108 90 118 Q96 108 102 118 Q108 108 110 116 L110 80 Q64 62 18 80 Z"/>
-    <rect class="s-fill-cold" x="12" y="120" width="104" height="8"/>
-    <path class="s-line" d="M12 120 H116"/>
-    <text class="s-tiny" x="64" y="146" text-anchor="middle">crêtes de la peau</text>
+  <!-- 1 : le film gras laissé par les crêtes retient la poudre -->
+  <g>
+    <circle class="s-badge" cx="18" cy="18" r="9"/>
+    <text class="s-badge-text" x="18" y="18">1</text>
+    <text class="s-label" x="32" y="22">Révéler</text>
+    <path class="s-solid" d="M18 56 Q24 49 30 56 Q36 49 42 56 Q48 49 54 56 Q60 49 66 56 Q72 49 78 56 Q84 49 90 56 Q96 49 102 56 Q107 49 112 54 L112 40 Q65 28 18 40 Z"/>
+    <circle class="s-solid s-float" cx="48" cy="63" r="1.6"/>
+    <circle class="s-solid s-float s-delay-1" cx="80" cy="64" r="1.6"/>
+    <ellipse class="s-fill-accent" cx="30" cy="72" rx="3.5" ry="2"/>
+    <ellipse class="s-fill-accent" cx="42" cy="72" rx="3.5" ry="2"/>
+    <ellipse class="s-fill-accent" cx="54" cy="72" rx="3.5" ry="2"/>
+    <ellipse class="s-fill-accent" cx="66" cy="72" rx="3.5" ry="2"/>
+    <ellipse class="s-fill-accent" cx="78" cy="72" rx="3.5" ry="2"/>
+    <ellipse class="s-fill-accent" cx="90" cy="72" rx="3.5" ry="2"/>
+    <ellipse class="s-fill-accent" cx="102" cy="72" rx="3.5" ry="2"/>
+    <path class="s-line" d="M28 70 H32 M40 70 H44 M52 70 H56 M64 70 H68 M76 70 H80 M88 70 H92 M100 70 H104"/>
+    <rect class="s-fill-cold" x="12" y="74" width="106" height="6"/>
+    <path class="s-line" d="M12 74 H118"/>
+    <text class="s-tiny" x="65" y="92" text-anchor="middle">film gras + poudre</text>
   </g>
 
-  <!-- Étape 2 : dépôt d'un film gras sous chaque crête -->
+  <!-- 2 : l'empreinte révélée, relevée sur un adhésif -->
   <g>
-    <circle class="s-badge" cx="138" cy="30" r="9"/>
-    <text class="s-badge-text" x="138" y="30">2</text>
-    <text class="s-label" x="152" y="34">Dépôt</text>
-
-    <text class="s-tiny" x="180" y="84" text-anchor="middle">film gras</text>
-    <text class="s-tiny" x="180" y="98" text-anchor="middle">invisible</text>
-    <path class="s-leader" d="M180 102 V114" marker-end="url(#mg-dot)"/>
-    <ellipse class="s-fill-accent" cx="138" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="150" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="162" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="174" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="186" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="198" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="210" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="222" cy="117" rx="4" ry="2.5"/>
-    <rect class="s-fill-cold" x="126" y="120" width="106" height="8"/>
-    <path class="s-line" d="M126 120 H232"/>
-    <path class="s-dim" d="M138 138 H150" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
-    <text class="s-tiny" x="146" y="152" text-anchor="middle">≈ 0,5 mm</text>
+    <circle class="s-badge" cx="196" cy="18" r="9"/>
+    <text class="s-badge-text" x="196" y="18">2</text>
+    <text class="s-label" x="210" y="22">Relever</text>
+    <path class="s-line" d="M228 80 Q228 36 250 36 Q272 36 272 80"/>
+    <path class="s-line" d="M234 80 Q234 44 250 44 Q266 44 266 80"/>
+    <path class="s-line" d="M240 80 Q240 52 250 52 Q260 52 260 80"/>
+    <path class="s-line" d="M245 80 Q245 60 250 60 Q255 60 255 80"/>
+    <path class="s-line" d="M280 58 H294" marker-end="url(#mg-arrow)"/>
+    <rect class="s-ghost" x="300" y="38" width="46" height="40" rx="3"/>
+    <path class="s-thin" d="M310 74 Q310 50 323 50 Q336 50 336 74 M316 74 Q316 58 323 58 Q330 58 330 74"/>
+    <text class="s-tiny" x="250" y="92" text-anchor="middle">empreinte</text>
+    <text class="s-tiny" x="323" y="92" text-anchor="middle">adhésif</text>
   </g>
 
-  <!-- Étape 3 : la poudre ne tient que sur le film gras -->
+  <!-- 3 : ancien capteur optique : une photo du relief -->
   <g>
-    <circle class="s-badge" cx="254" cy="30" r="9"/>
-    <text class="s-badge-text" x="254" y="30">3</text>
-    <text class="s-label" x="268" y="34">Poudre</text>
-
-    <circle class="s-solid s-float" cx="262" cy="66" r="1.8"/>
-    <circle class="s-solid s-float s-delay-1" cx="282" cy="82" r="1.8"/>
-    <circle class="s-solid s-float s-delay-2" cx="302" cy="60" r="1.8"/>
-    <circle class="s-solid s-float s-delay-3" cx="322" cy="78" r="1.8"/>
-    <circle class="s-solid s-float" cx="292" cy="98" r="1.8"/>
-    <circle class="s-solid s-float s-delay-2" cx="334" cy="96" r="1.8"/>
-
-    <ellipse class="s-fill-accent" cx="254" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="266" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="278" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="290" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="302" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="314" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="326" cy="117" rx="4" ry="2.5"/>
-    <ellipse class="s-fill-accent" cx="338" cy="117" rx="4" ry="2.5"/>
-    <path class="s-line" d="M251 114 H257 M263 114 H269 M275 114 H281 M287 114 H293 M299 114 H305 M311 114 H317 M323 114 H329 M335 114 H341"/>
-    <rect class="s-fill-cold" x="242" y="120" width="106" height="8"/>
-    <path class="s-line" d="M242 120 H348"/>
-    <text class="s-tiny" x="295" y="146" text-anchor="middle">poudre retenue</text>
+    <circle class="s-badge" cx="18" cy="118" r="9"/>
+    <text class="s-badge-text" x="18" y="118">3</text>
+    <text class="s-label" x="32" y="122">Capteur optique</text>
+    <path class="s-line" d="M44 148 Q49 142 54 148 Q59 142 64 148 Q69 142 74 148 Q79 142 84 148 Q89 142 94 148"/>
+    <polygon class="s-solid" points="34,150 106,150 92,174 48,174"/>
+    <circle class="s-fill-hot s-pulse" cx="28" cy="198" r="4"/>
+    <rect class="s-solid" x="100" y="192" width="16" height="11" rx="2"/>
+    <path class="s-accent" d="M32 195 L60 174 L88 194" marker-end="url(#mg-arrow-accent)"/>
+    <text class="s-tiny" x="70" y="216" text-anchor="middle">photo du relief</text>
+    <text class="s-tiny s-text-hot" x="70" y="230" text-anchor="middle">faux doigt : trompé</text>
   </g>
 
-  <!-- Résultat : le motif apparaît -->
+  <!-- 4 : capteur capacitif : un champ électrique qui « sent » la peau vivante -->
   <g>
-    <rect class="s-callout" x="14" y="168" width="210" height="44" rx="4"/>
-    <text class="s-tiny" x="119" y="186" text-anchor="middle">Grains très fins : collent au</text>
-    <text class="s-tiny" x="119" y="200" text-anchor="middle">film gras, pas au verre sec</text>
-    <path class="s-leader" d="M224 190 H270" marker-end="url(#mg-dot)"/>
-
-    <ellipse class="s-thin s-draw" pathLength="1" cx="300" cy="184" rx="28" ry="30"/>
-    <ellipse class="s-thin s-draw s-delay-1" pathLength="1" cx="300" cy="186" rx="20" ry="22"/>
-    <ellipse class="s-thin s-draw s-delay-2" pathLength="1" cx="300" cy="188" rx="12" ry="14"/>
-    <ellipse class="s-thin s-draw s-delay-3" pathLength="1" cx="300" cy="190" rx="5" ry="6"/>
-    <text class="s-tiny" x="300" y="228" text-anchor="middle">motif révélé</text>
+    <circle class="s-badge" cx="196" cy="118" r="9"/>
+    <text class="s-badge-text" x="196" y="118">4</text>
+    <text class="s-label" x="210" y="122">Capteur capacitif</text>
+    <text class="s-tiny" x="210" y="137">+ pouls, température</text>
+    <path class="s-line" d="M216 160 Q222 153 228 160 Q234 153 240 160 Q246 153 252 160 Q258 153 264 160 Q270 153 276 160 Q282 153 288 160 Q294 153 300 160 Q306 153 312 160 Q318 153 324 160 Q330 153 336 160"/>
+    <path class="s-cold s-flow" d="M228 164 V180 M252 164 V180 M276 164 V180 M300 164 V180 M324 164 V180"/>
+    <rect class="s-solid" x="218" y="182" width="8" height="8" rx="1"/>
+    <rect class="s-solid" x="230" y="182" width="8" height="8" rx="1"/>
+    <rect class="s-solid" x="242" y="182" width="8" height="8" rx="1"/>
+    <rect class="s-solid" x="254" y="182" width="8" height="8" rx="1"/>
+    <rect class="s-solid" x="266" y="182" width="8" height="8" rx="1"/>
+    <rect class="s-solid" x="278" y="182" width="8" height="8" rx="1"/>
+    <rect class="s-solid" x="290" y="182" width="8" height="8" rx="1"/>
+    <rect class="s-solid" x="302" y="182" width="8" height="8" rx="1"/>
+    <rect class="s-solid" x="314" y="182" width="8" height="8" rx="1"/>
+    <rect class="s-solid" x="326" y="182" width="8" height="8" rx="1"/>
+    <text class="s-tiny" x="276" y="204" text-anchor="middle">champ électrique</text>
+    <text class="s-tiny s-text-cold" x="276" y="218" text-anchor="middle">peau vivante : lue</text>
+    <text class="s-tiny s-text-hot" x="276" y="232" text-anchor="middle">adhésif : invisible</text>
   </g>
 </svg>

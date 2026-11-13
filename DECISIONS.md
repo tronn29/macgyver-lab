@@ -91,3 +91,16 @@ Décisions prises sans consultation, avec leur raison. Chacune peut être revue.
 | **Bloc `echelle`** | Un nouveau bloc gradué (valeur, prononciation, description), affiché dans les deux formats de fiche. Il sert à l'échelle des coefficients de frottement du cabestan et pourra servir à d'autres grandeurs. Une barre de couleur passe du cyan à l'orange pour situer chaque niveau. |
 | **Avertissement du validateur, sans blocage** | Le module `scripts/magnitudes.mjs` repère les valeurs avec unité, les valeurs de symbole (μ = 0,3), les facteurs (×6,6) et les puissances de dix. Il avertit si la valeur n'est pas suivie d'une parenthèse de prononciation, ou si une donnée clé n'a pas `dit` ou `concret`. Les valeurs d'un même intervalle (« 0,4 à 0,6 ») partagent la même parenthèse. Les tests vérifient le détecteur et la fiche CO₂ (zéro manque), sans faire échouer la publication sur les autres fiches. |
 | **Longueur cible des fiches** | 500 à 900 mots (3 à 5 minutes), alignée sur la fiche de référence. |
+
+## Fiche empreintes digitales (format long)
+
+| Décision | Raison |
+|---|---|
+| **Texte fourni repris mot pour mot** | 4 paragraphes au format long. Un test le compare au fichier témoin `tests/fixtures/empreintes-poussiere.md`. Infobulles ajoutées sans changer le texte lu : « optiques » (capteur d'image), « capacitifs » (nouveau terme du glossaire : *capteur capacitif*), « conductivité » (conducteur). |
+| **Titre élargi : « Empreintes digitales, poudre et capteurs »** | La fiche parle maintenant autant des lecteurs que de la poudre. L'identifiant (`empreintes-poussiere`) ne change pas, donc la progression, les liens et les favoris sont conservés. |
+| **Étiquette « Série ou réalité ? » : verdict « partiel » + nuance** | Nouveau champ facultatif `realite.nuance`, une précision courte affichée avec l'étiquette dans l'en-tête et dans l'encadré « Dans la série / Dans la réalité » : « Marchait sur les anciens capteurs optiques, plus sur les capteurs modernes ». Il servira à toute fiche dont la réponse dépend de l'époque ou du cas. |
+| **Anciennes données clés retirées** | Le format long n'affiche pas les données clés, et le texte fourni ne contient aucun ordre de grandeur. Le texte ne produit donc aucun avertissement. |
+| **Quiz de 5 questions** | Poudre et film gras ; capteur optique contre capteur capacitif ; pourquoi un adhésif ne trompe plus un téléphone (conductivité) ; ce que vérifient les capteurs récents (pouls, circulation sous l'ongle, température) ; quels lecteurs un moule pouvait tromper. |
+| **Schéma redessiné en 4 zones** | 1 : film gras et poudre. 2 : empreinte relevée sur adhésif. 3 : capteur optique (lampe, prisme, caméra : « faux doigt : trompé »). 4 : capteur capacitif (électrodes, champ électrique : « peau vivante : lue », « adhésif : invisible », « + pouls, température »). Textes mesurés avec la police réelle : rien ne déborde ni ne se chevauche. |
+| **Sécurité verte conservée** | Relever ses propres empreintes avec du cacao ou du talc est sans danger. |
+| **Règle de contenu** | La fiche explique pourquoi un faux doigt ne fonctionne plus, sans mode d'emploi pour en fabriquer un ni pour contourner un capteur. |

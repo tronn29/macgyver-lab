@@ -60,7 +60,7 @@ export interface Fiche {
   chiffres?: { valeur: string; label: string; dit?: string; concret?: string }[];
   /** Échelle de repères graduée (ex. : coefficient de frottement). */
   echelle?: { titre?: string; intro: string; niveaux: { valeur: string; dit: string; description: string }[] };
-  realite: { verdict: Verdict; explication: string };
+  realite: { verdict: Verdict; explication: string; /** Précision courte affichée avec l'étiquette. */ nuance?: string };
   securite: Securite;
   liens: { fiches?: string[]; equivalences?: string[]; pratique?: string[] };
   quiz: Quiz[];

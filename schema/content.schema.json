@@ -258,6 +258,12 @@
             },
             "explication": {
               "$ref": "#/definitions/texte"
+            },
+            "nuance": {
+              "type": "string",
+              "minLength": 5,
+              "maxLength": 90,
+              "description": "Précision courte affichée avec l'étiquette « Série ou réalité ? » (ex. : « Marchait sur les anciens capteurs, plus sur les modernes »)."
             }
           }
         },

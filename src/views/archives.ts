@@ -290,6 +290,7 @@ export function ficheDetail(ctx: RouteContext): View {
       meta: [
         h('span', { class: 'chip chip--muted' }, icon('clock', 14), t('archives.dureeLecture', { n: minutes })),
         verdictBadge(f.realite.verdict),
+        f.realite.nuance ? h('span', { class: 'verdict-nuance verdict-nuance--head' }, f.realite.nuance) : null,
         safetyBadge(f.securite.niveau),
         readChip,
       ],
@@ -340,7 +341,13 @@ function longBody(f: Fiche & { texte: string[] }): HTMLElement[] {
       return h(
         'div',
         { class: 'longread__serie' },
-        h('div', { class: 'longread__serie-head' }, h('span', { class: 'hud-label hud-label--orange' }, t('verdict.titre')), verdictBadge(f.realite.verdict)),
+        h(
+          'div',
+          { class: 'longread__serie-head' },
+          h('span', { class: 'hud-label hud-label--orange' }, t('verdict.titre')),
+          verdictBadge(f.realite.verdict),
+          f.realite.nuance ? h('span', { class: 'verdict-nuance' }, f.realite.nuance) : null
+        ),
         rich(p, 'p')
       );
     return rich(p, 'p');
@@ -366,7 +373,15 @@ function shortBody(f: Fiche): HTMLElement[] {
     h(
       'div',
       { class: 'fiche__badges' },
-      panel([h('h2', { class: 'block-title' }, t('verdict.titre')), verdictBadge(f.realite.verdict), h('p', { class: 'panel__text' }, f.realite.explication)], { class: `reality reality--${f.realite.verdict}` }),
+      panel(
+        [
+          h('h2', { class: 'block-title' }, t('verdict.titre')),
+          verdictBadge(f.realite.verdict),
+          f.realite.nuance ? h('p', { class: 'verdict-nuance' }, f.realite.nuance) : null,
+          h('p', { class: 'panel__text' }, f.realite.explication),
+        ],
+        { class: `reality reality--${f.realite.verdict}` }
+      ),
       panel([h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau), h('p', { class: 'panel__text' }, f.securite.note)], { class: `safety-panel safety-panel--${f.securite.niveau}` })
     ),
     h('section', { class: 'why', 'aria-labelledby': 'why-t' }, h('h2', { class: 'block-title', id: 'why-t' }, t('archives.pourquoi')), ...(f.pourquoi ?? []).map((p) => rich(p, 'p'))),

@@ -342,53 +342,29 @@
   },
   {
     "id": "empreintes-poussiere",
-    "titre": "Empreintes digitales et poussière",
-    "sousTitre": "Comment une poudre fine révèle une trace invisible",
+    "titre": "Empreintes digitales, poudre et capteurs",
+    "sousTitre": "Comment une poudre révèle une empreinte, et pourquoi elle ne trompe plus un téléphone",
     "categories": [
       "materiaux",
       "chimie"
     ],
-    "duree": 2,
     "niveau": 1,
     "schema": {
       "fichier": "empreintes-poussiere.svg",
-      "alt": "Schéma en trois vues en coupe : un doigt dont les crêtes touchent une vitre ; les petits dépôts gras laissés sous chaque crête, espacés d'environ 0,5 mm ; des grains de poudre qui tombent et restent collés uniquement sur ces dépôts. En bas, le motif en boucles de l'empreinte révélée.",
-      "legende": "La poudre colle au film gras laissé par les crêtes, pas au verre sec."
+      "alt": "Schéma en quatre zones. 1 : un doigt au-dessus d'une vitre ; sous chaque crête reste une trace de film gras, sur laquelle colle la poudre. 2 : l'empreinte révélée, en boucles, est transférée sur un morceau d'adhésif. 3 : un ancien capteur optique : une lampe éclaire le doigt posé sur un prisme et une caméra photographie le relief ; un faux doigt qui reproduit le dessin le trompe. 4 : un capteur capacitif : une rangée d'électrodes sous le doigt mesure un champ électrique qui dépend de la peau vivante ; certains vérifient aussi le pouls et la température ; un adhésif lui reste invisible.",
+      "legende": "La poudre révèle le dessin ; un capteur optique ne lit que ce dessin, un capteur capacitif mesure la peau vivante."
     },
-    "principe": [
-      "Les doigts déposent un film de sueur et de gras qui reproduit leurs crêtes.",
-      "Une poudre très fine colle à ce film, mais pas à la surface sèche autour.",
-      "Le contraste fait apparaître le dessin : arcs, boucles ou tourbillons."
+    "texte": [
+      "**Une empreinte digitale, c'est une signature laissée par de la graisse.** Ta peau sécrète en permanence un film d'huile, invisible à l'œil. Quand tu touches une surface lisse, ce film se dépose en suivant le relief de tes crêtes digitales. Une poudre fine adhère à ce film et pas au reste de la surface, ce qui révèle le dessin : c'est la technique de la police scientifique depuis plus d'un siècle.",
+      "**Peu de gens savent qu'un vieux lecteur ne lisait que ce dessin.** Les tout premiers capteurs, [[capteur-image|optiques]], prenaient une simple photo du doigt et comparaient les lignes. N'importe quelle surface qui reproduit fidèlement ce relief, même un moule en gélatine ou en silicone, pouvait les tromper, et c'est de là que viennent toutes les scènes de films où un faux doigt déverrouille une porte.",
+      "**Dans la série**, MacGyver relève une empreinte à la poudre, la transfère sur un adhésif, et trompe un lecteur avec. **Dans la réalité d'aujourd'hui**, ça ne marche quasiment plus. Depuis une quinzaine d'années, les capteurs des téléphones sont [[capteur-capacitif|capacitifs]] : ils ne photographient pas le dessin, ils mesurent un champ électrique qui varie selon la [[conducteur|conductivité]] de chaque point du doigt. Un papier, un adhésif ou un plastique ne conduisent pas comme de la peau vivante, donc le capteur ne voit rien de cohérent. Les capteurs récents vont plus loin encore : certains vérifient un pouls sous la peau, la façon dont le sang circule sous l'ongle, ou la température, ce qu'aucune surface morte ne reproduit.",
+      "**À retenir :** une empreinte relevée aujourd'hui reste un problème légal (elle peut identifier quelqu'un sur une scène), mais ce n'est plus un problème technique pour déverrouiller un appareil moderne. C'est l'inverse d'il y a vingt ans, où le dessin seul suffisait."
     ],
-    "pourquoi": [
-      "La peau du bout des doigts forme des crêtes où débouchent des pores de sueur. En touchant un objet, on dépose une trace faite d'eau, de sels et de corps gras (le sébum, attrapé en se touchant le visage ou les cheveux). Cette trace, dite latente, est presque invisible à l'œil nu.",
-      "Une poudre fine comme le cacao, le talc ou le graphite a une grande [[surface-specifique|surface spécifique]] : ses grains sont si petits que les forces d'adhésion l'emportent sur leur poids. Ils restent accrochés au film humide et gras, notamment par de minuscules ponts de liquide dus à la [[capillarite]], tandis qu'un léger souffle les chasse des zones sèches.",
-      "Il faut une poudre qui contraste avec le support : sombre sur fond clair, claire sur fond sombre. La méthode marche bien sur les surfaces lisses et non poreuses (verre, plastique, métal poli) et sur une trace récente. Sur le papier, la trace est absorbée : il faut des révélateurs chimiques."
-    ],
-    "enfant": "Le bout de tes doigts est couvert de petites lignes, comme les sillons d'un champ. Quand tu touches une vitre, ces lignes laissent une trace de gras invisible, comme un tampon sans encre. Si on saupoudre du cacao très fin, il colle seulement là où il y a du gras : le dessin de ton doigt apparaît, comme un message secret.",
-    "chiffres": [
-      {
-        "valeur": "≈ 0,5 mm",
-        "label": "écart entre deux crêtes du bout des doigts",
-        "dit": "environ zéro virgule cinq millimètre",
-        "concret": "À peu près l'épaisseur de cinq feuilles de papier empilées : sur un seul centimètre de doigt, on compte une vingtaine de crêtes."
-      },
-      {
-        "valeur": "≈ 99 %",
-        "label": "d'eau dans la sueur, le reste étant surtout des sels",
-        "dit": "environ quatre-vingt-dix-neuf pour cent",
-        "concret": "Sur cent gouttes de sueur, quatre-vingt-dix-neuf sont de l'eau : c'est pour cela qu'une trace sèche vite et qu'une vieille trace garde surtout les sels et le gras."
-      },
-      {
-        "valeur": "3",
-        "label": "grandes familles de motifs : arcs, boucles et tourbillons",
-        "dit": "trois",
-        "concret": "Les boucles sont les plus fréquentes (environ six empreintes sur dix), puis les tourbillons (environ trois sur dix), et les arcs sont rares (environ une sur vingt) : regarde tes doigts, tu as sûrement des boucles."
-      }
-    ],
+    "enfant": "Le bout de tes doigts est couvert de petites lignes, comme les sillons d'un champ. Quand tu touches une vitre, elles laissent une trace de gras invisible, comme un tampon sans encre, et une poudre fine la fait apparaître. Les vieux lecteurs d'empreintes regardaient seulement ce dessin, comme on regarde un tampon. Les téléphones d'aujourd'hui, eux, sentent si ton doigt est vivant : ils mesurent l'électricité de ta peau, et parfois ton cœur qui bat. Un dessin collé sur un bout de scotch ne les trompe plus.",
     "realite": {
       "verdict": "partiel",
-      "explication": "Révéler une empreinte avec une poudre fine puis la relever avec du ruban adhésif fonctionne vraiment, sur une surface lisse et une trace fraîche. Mais à l'écran, l'identification est instantanée et certaine ; en réalité, beaucoup de traces sont partielles ou brouillées, et les comparer demande du temps, une base de données et un expert."
+      "nuance": "Marchait sur les anciens capteurs optiques, plus sur les capteurs modernes",
+      "explication": "Relever une empreinte à la poudre et la transférer sur un adhésif fonctionne vraiment. Ça trompait les tout premiers capteurs optiques, qui ne lisaient que le dessin, mais plus les capteurs capacitifs des téléphones, qui mesurent la peau vivante, ni les capteurs récents qui vérifient le pouls ou la température."
     },
     "securite": {
       "niveau": "vert",
@@ -405,26 +381,58 @@
     },
     "quiz": [
       {
-        "question": "Pourquoi le cacao colle-t-il aux traces de doigts et pas au reste de la vitre ?",
+        "question": "Pourquoi une poudre fine révèle-t-elle une empreinte sur une vitre ?",
         "choix": [
-          "Il est attiré par la chaleur du doigt",
-          "Il adhère au film gras et humide laissé par la peau",
-          "Il réagit chimiquement avec le verre",
-          "Il est aimanté par la sueur"
+          "Elle colle au film d'huile laissé par les crêtes du doigt, pas au verre propre",
+          "Elle réagit chimiquement avec le verre",
+          "Elle est attirée par l'électricité statique du doigt",
+          "Elle change de couleur au contact de la peau"
         ],
-        "reponse": 1,
-        "explication": "Les grains très fins s'accrochent au film de sueur et de sébum déposé par les crêtes ; sur le verre sec, ils ne tiennent pas et partent au moindre souffle."
+        "reponse": 0,
+        "explication": "La peau dépose un film d'huile invisible qui suit le relief des crêtes. La poudre adhère à ce film et pas au reste de la surface : le dessin apparaît."
       },
       {
-        "question": "Sur quelle surface la poudre révèle-t-elle le mieux une empreinte ?",
+        "question": "Quelle est la différence entre un capteur d'empreintes optique et un capteur capacitif ?",
         "choix": [
-          "Un papier buvard",
-          "Un tissu en coton",
-          "Un verre propre et lisse",
-          "Du bois brut"
+          "L'optique photographie le dessin du doigt ; le capacitif mesure un champ électrique qui dépend de la conductivité de chaque point de la peau",
+          "L'optique mesure la chaleur du doigt ; le capacitif prend une photo",
+          "Aucune : ce sont deux noms pour le même capteur",
+          "Le capacitif a besoin d'une poudre pour lire l'empreinte"
         ],
-        "reponse": 2,
-        "explication": "Sur une surface lisse et non poreuse, la trace reste en surface. Les matériaux poreux l'absorbent."
+        "reponse": 0,
+        "explication": "Le capteur optique ne voit qu'une image du relief, que n'importe quelle copie fidèle peut reproduire. Le capacitif mesure comment la peau vivante modifie un champ électrique, ce que ne fait pas un papier ou un plastique."
+      },
+      {
+        "question": "Pourquoi une empreinte transférée sur un adhésif ne trompe-t-elle plus un téléphone récent ?",
+        "choix": [
+          "Parce que l'adhésif ne conduit pas l'électricité comme de la peau vivante",
+          "Parce que l'adhésif est trop transparent",
+          "Parce que le téléphone efface les empreintes chaque nuit",
+          "Parce que l'adhésif est trop froid"
+        ],
+        "reponse": 0,
+        "explication": "Le capteur capacitif mesure la conductivité point par point. Un adhésif, un papier ou un plastique ne conduisent pas comme la peau : le capteur ne voit rien de cohérent."
+      },
+      {
+        "question": "Que vérifient en plus certains capteurs récents pour savoir que le doigt est vivant ?",
+        "choix": [
+          "Le pouls, la circulation du sang sous l'ongle ou la température",
+          "La couleur de l'ongle seulement",
+          "La longueur du doigt",
+          "L'heure de la dernière utilisation"
+        ],
+        "reponse": 0,
+        "explication": "En plus de la conductivité, certains capteurs détectent un pouls sous la peau, la façon dont le sang circule sous l'ongle, ou la température : aucune surface morte ne reproduit ces signes de vie."
+      },
+      {
+        "question": "Quels lecteurs un moule en gélatine qui reproduit le relief pouvait-il tromper ?",
+        "choix": [
+          "Les tout premiers capteurs optiques, qui ne lisaient que le dessin",
+          "Les capteurs capacitifs des téléphones actuels",
+          "Tous les capteurs, anciens comme récents"
+        ],
+        "reponse": 0,
+        "explication": "Un capteur optique compare seulement les lignes de la photo du doigt : une copie fidèle du relief suffisait. C'est l'inverse aujourd'hui."
       }
     ],
     "motsCles": [
@@ -437,7 +445,14 @@
       "ruban adhésif",
       "enquête",
       "vitre",
-      "verre"
+      "verre",
+      "capteur",
+      "téléphone",
+      "déverrouiller",
+      "biométrie",
+      "capacitif",
+      "optique",
+      "lecteur d'empreintes"
     ]
   },
   {
