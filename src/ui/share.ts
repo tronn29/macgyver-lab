@@ -5,6 +5,8 @@
  */
 import { t } from '../core/i18n';
 import type { Fiche } from '../core/types';
+import { ficheBody, isLongFormat } from '../core/fiche';
+import { plain } from './richtext';
 import { toast } from './components';
 import { fetchSvg, sanitizeSvg, ensureSchemaDefs } from './schema';
 
@@ -171,13 +173,29 @@ export async function renderFicheImage(f: Fiche): Promise<Blob> {
   }
   y += 640;
 
-  // Principe en 3 lignes
+  // Format long : « À retenir » ; format court : principe en 3 lignes
   ctx.font = mono;
   ctx.fillStyle = accent;
-  ctx.fillText(t('archives.principe').toUpperCase(), 90, y);
-  y += 50;
+  if (isLongFormat(f)) {
+    ctx.fillText(t('archives.aRetenir').toUpperCase(), 90, y);
+    y += 50;
+    ctx.fillStyle = text;
+    ctx.font = body;
+    const retenir = plain(f.texte[f.texte.length - 1]).replace(/^À retenir\s*:\s*/i, '');
+    // Pas de débordement sur la ligne « Série ou réalité ? » du bas
+    const maxLines = Math.max(1, Math.floor((H - 150 - y) / 44));
+    const lines = wrapText(ctx, retenir, W - 180);
+    const shown = lines.slice(0, maxLines);
+    if (lines.length > maxLines) shown[maxLines - 1] = `${shown[maxLines - 1].replace(/[\s,.;:]*\S*$/, '')}…`;
+    for (const line of shown) {
+      ctx.fillText(line, 90, y);
+      y += 44;
+    }
+  }
+  if (!isLongFormat(f)) ctx.fillText(t('archives.principe').toUpperCase(), 90, y);
+  if (!isLongFormat(f)) y += 50;
   ctx.font = body;
-  f.principe.forEach((p, i) => {
+  (isLongFormat(f) ? [] : f.principe ?? []).forEach((p, i) => {
     ctx.fillStyle = orange;
     ctx.font = mono;
     ctx.fillText(`0${i + 1}`, 90, y);
@@ -217,7 +235,7 @@ export async function shareFiche(f: Fiche): Promise<void> {
     const nav = navigator as Navigator & { canShare?: (d: ShareData) => boolean };
     if (nav.canShare?.({ files: [file] })) {
       try {
-        await nav.share({ files: [file], title: f.titre, text: f.principe.join(' ') });
+        await nav.share({ files: [file], title: f.titre, text: plain(ficheBody(f)[0] ?? '') });
         return;
       } catch (err) {
         if ((err as DOMException).name === 'AbortError') return;

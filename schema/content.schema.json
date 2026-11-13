@@ -4,209 +4,596 @@
   "title": "MacGyver Lab — format du contenu",
   "description": "Chaque fichier de contenu est un tableau d'éléments d'une collection. Voir CONTENU.md.",
   "definitions": {
-    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "maxLength": 48 },
-    "idList": { "type": "array", "items": { "$ref": "#/definitions/id" }, "uniqueItems": true },
-    "texte": { "type": "string", "minLength": 1 },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 48
+    },
+    "idList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/id"
+      },
+      "uniqueItems": true
+    },
+    "texte": {
+      "type": "string",
+      "minLength": 1
+    },
     "categorieId": {
       "type": "string",
-      "enum": ["electricite", "magnetisme", "chimie", "mecanique", "lumiere", "thermique", "pression", "materiaux", "fluides"]
+      "enum": [
+        "electricite",
+        "magnetisme",
+        "chimie",
+        "mecanique",
+        "lumiere",
+        "thermique",
+        "pression",
+        "materiaux",
+        "fluides"
+      ]
     },
     "securite": {
       "type": "object",
-      "required": ["niveau", "note"],
+      "required": [
+        "niveau",
+        "note"
+      ],
       "additionalProperties": false,
       "properties": {
-        "niveau": { "enum": ["vert", "orange", "rouge"] },
-        "note": { "$ref": "#/definitions/texte" }
+        "niveau": {
+          "enum": [
+            "vert",
+            "orange",
+            "rouge"
+          ]
+        },
+        "note": {
+          "$ref": "#/definitions/texte"
+        }
       }
     },
     "schemaSvg": {
       "type": "object",
-      "required": ["fichier", "alt"],
+      "required": [
+        "fichier",
+        "alt"
+      ],
       "additionalProperties": false,
       "properties": {
-        "fichier": { "type": "string", "pattern": "^[a-z0-9-]+\\.svg$" },
-        "alt": { "type": "string", "minLength": 20 },
-        "legende": { "type": "string" }
+        "fichier": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+\\.svg$"
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 20
+        },
+        "legende": {
+          "type": "string"
+        }
       }
     },
     "quiz": {
       "type": "object",
-      "required": ["question", "choix", "reponse", "explication"],
+      "required": [
+        "question",
+        "choix",
+        "reponse",
+        "explication"
+      ],
       "additionalProperties": false,
       "properties": {
-        "question": { "$ref": "#/definitions/texte" },
-        "choix": { "type": "array", "items": { "type": "string" }, "minItems": 2, "maxItems": 4 },
-        "reponse": { "type": "integer", "minimum": 0, "maximum": 3 },
-        "explication": { "$ref": "#/definitions/texte" }
+        "question": {
+          "$ref": "#/definitions/texte"
+        },
+        "choix": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "maxItems": 4
+        },
+        "reponse": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "explication": {
+          "$ref": "#/definitions/texte"
+        }
       }
     },
-
     "categorie": {
       "type": "object",
-      "required": ["id", "nom", "icone"],
+      "required": [
+        "id",
+        "nom",
+        "icone"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/definitions/categorieId" },
-        "nom": { "$ref": "#/definitions/texte" },
-        "icone": { "type": "string" },
-        "description": { "type": "string" }
+        "id": {
+          "$ref": "#/definitions/categorieId"
+        },
+        "nom": {
+          "$ref": "#/definitions/texte"
+        },
+        "icone": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
       }
     },
-
     "fiche": {
       "type": "object",
-      "required": ["id", "titre", "categories", "duree", "schema", "principe", "pourquoi", "enfant", "realite", "securite", "liens", "quiz"],
+      "required": [
+        "id",
+        "titre",
+        "categories",
+        "schema",
+        "enfant",
+        "realite",
+        "securite",
+        "liens",
+        "quiz"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/definitions/id" },
-        "titre": { "$ref": "#/definitions/texte" },
-        "sousTitre": { "type": "string" },
-        "categories": { "type": "array", "items": { "$ref": "#/definitions/categorieId" }, "minItems": 1, "maxItems": 3 },
-        "duree": { "type": "integer", "minimum": 1, "maximum": 5 },
-        "niveau": { "type": "integer", "minimum": 1, "maximum": 3 },
-        "principeSeul": { "type": "boolean", "description": "Sujet sensible : la fiche reste au niveau du principe." },
-        "schema": { "$ref": "#/definitions/schemaSvg" },
-        "principe": { "type": "array", "items": { "type": "string", "minLength": 5 }, "minItems": 3, "maxItems": 3 },
-        "pourquoi": { "type": "array", "items": { "type": "string", "minLength": 10 }, "minItems": 1, "maxItems": 4 },
-        "enfant": { "type": "string", "minLength": 20 },
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "titre": {
+          "$ref": "#/definitions/texte"
+        },
+        "sousTitre": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/categorieId"
+          },
+          "minItems": 1,
+          "maxItems": 3
+        },
+        "duree": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Facultatif : le temps de lecture affiché est calculé à partir du texte."
+        },
+        "niveau": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "principeSeul": {
+          "type": "boolean",
+          "description": "Sujet sensible : la fiche reste au niveau du principe."
+        },
+        "schema": {
+          "$ref": "#/definitions/schemaSvg"
+        },
+        "texte": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "minLength": 40
+          },
+          "description": "Format long : paragraphes en texte enrichi (**gras**, [[terme]] ou [[terme|texte affiché]]). Le premier passage en gras d'un paragraphe sert d'accroche. Un paragraphe « Dans la série… Dans la réalité… » est obligatoire, et le dernier commence par « **À retenir :** »."
+        },
+        "principe": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 5
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "pourquoi": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 10
+          },
+          "minItems": 1,
+          "maxItems": 4
+        },
+        "enfant": {
+          "type": "string",
+          "minLength": 20
+        },
         "chiffres": {
           "type": "array",
           "maxItems": 4,
           "items": {
             "type": "object",
-            "required": ["valeur", "label"],
+            "required": [
+              "valeur",
+              "label"
+            ],
             "additionalProperties": false,
-            "properties": { "valeur": { "type": "string" }, "label": { "type": "string" } }
+            "properties": {
+              "valeur": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            }
           }
         },
         "realite": {
           "type": "object",
-          "required": ["verdict", "explication"],
+          "required": [
+            "verdict",
+            "explication"
+          ],
           "additionalProperties": false,
           "properties": {
-            "verdict": { "enum": ["vrai", "partiel", "faux"] },
-            "explication": { "$ref": "#/definitions/texte" }
+            "verdict": {
+              "enum": [
+                "vrai",
+                "partiel",
+                "faux"
+              ]
+            },
+            "explication": {
+              "$ref": "#/definitions/texte"
+            }
           }
         },
-        "securite": { "$ref": "#/definitions/securite" },
+        "securite": {
+          "$ref": "#/definitions/securite"
+        },
         "liens": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "fiches": { "$ref": "#/definitions/idList" },
-            "equivalences": { "$ref": "#/definitions/idList" },
-            "pratique": { "$ref": "#/definitions/idList" }
+            "fiches": {
+              "$ref": "#/definitions/idList"
+            },
+            "equivalences": {
+              "$ref": "#/definitions/idList"
+            },
+            "pratique": {
+              "$ref": "#/definitions/idList"
+            }
           }
         },
-        "quiz": { "type": "array", "items": { "$ref": "#/definitions/quiz" }, "minItems": 1, "maxItems": 3 },
-        "motsCles": { "type": "array", "items": { "type": "string" } }
-      }
+        "quiz": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/quiz"
+          },
+          "minItems": 1,
+          "maxItems": 3
+        },
+        "motsCles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "texte"
+          ],
+          "description": "Format long (v2) : texte en paragraphes."
+        },
+        {
+          "required": [
+            "principe",
+            "pourquoi"
+          ],
+          "description": "Format court (v1), pour les fiches non migrées."
+        }
+      ]
     },
-
     "objet": {
       "type": "object",
-      "required": ["id", "nom", "icone"],
+      "required": [
+        "id",
+        "nom",
+        "icone"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/definitions/id" },
-        "nom": { "$ref": "#/definitions/texte" },
-        "alias": { "type": "array", "items": { "type": "string" } },
-        "lieux": { "type": "array", "items": { "type": "string" } },
-        "icone": { "type": "string" },
-        "proprietes": { "type": "array", "items": { "type": "string" } }
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "nom": {
+          "$ref": "#/definitions/texte"
+        },
+        "alias": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lieux": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "icone": {
+          "type": "string"
+        },
+        "proprietes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
-
     "fonction": {
       "type": "object",
-      "required": ["id", "titre", "icone", "categorie", "resume", "principe", "objets"],
+      "required": [
+        "id",
+        "titre",
+        "icone",
+        "categorie",
+        "resume",
+        "principe",
+        "objets"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/definitions/id" },
-        "titre": { "$ref": "#/definitions/texte" },
-        "icone": { "type": "string" },
-        "categorie": { "$ref": "#/definitions/categorieId" },
-        "resume": { "$ref": "#/definitions/texte" },
-        "principe": { "$ref": "#/definitions/texte" },
-        "fiches": { "$ref": "#/definitions/idList" },
-        "securite": { "$ref": "#/definitions/securite" },
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "titre": {
+          "$ref": "#/definitions/texte"
+        },
+        "icone": {
+          "type": "string"
+        },
+        "categorie": {
+          "$ref": "#/definitions/categorieId"
+        },
+        "resume": {
+          "$ref": "#/definitions/texte"
+        },
+        "principe": {
+          "$ref": "#/definitions/texte"
+        },
+        "fiches": {
+          "$ref": "#/definitions/idList"
+        },
+        "securite": {
+          "$ref": "#/definitions/securite"
+        },
         "objets": {
           "type": "array",
           "minItems": 3,
           "items": {
             "type": "object",
-            "required": ["objet", "comment", "pourquoi", "efficacite"],
+            "required": [
+              "objet",
+              "comment",
+              "pourquoi",
+              "efficacite"
+            ],
             "additionalProperties": false,
             "properties": {
-              "objet": { "$ref": "#/definitions/id" },
-              "comment": { "$ref": "#/definitions/texte" },
-              "pourquoi": { "$ref": "#/definitions/texte" },
-              "efficacite": { "type": "integer", "minimum": 1, "maximum": 3 },
-              "limite": { "type": "string" }
+              "objet": {
+                "$ref": "#/definitions/id"
+              },
+              "comment": {
+                "$ref": "#/definitions/texte"
+              },
+              "pourquoi": {
+                "$ref": "#/definitions/texte"
+              },
+              "efficacite": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "limite": {
+                "type": "string"
+              }
             }
           }
         }
       }
     },
-
     "experience": {
       "type": "object",
-      "required": ["id", "titre", "categories", "duree", "difficulte", "securite", "schema", "materiel", "etapes", "precautions", "resultat", "explication"],
+      "required": [
+        "id",
+        "titre",
+        "categories",
+        "duree",
+        "difficulte",
+        "securite",
+        "schema",
+        "materiel",
+        "etapes",
+        "precautions",
+        "resultat",
+        "explication"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/definitions/id" },
-        "titre": { "$ref": "#/definitions/texte" },
-        "sousTitre": { "type": "string" },
-        "categories": { "type": "array", "items": { "$ref": "#/definitions/categorieId" }, "minItems": 1, "maxItems": 3 },
-        "duree": { "type": "integer", "minimum": 1, "maximum": 240 },
-        "difficulte": { "type": "integer", "minimum": 1, "maximum": 3 },
-        "adulte": { "type": "boolean", "description": "Présence d'un adulte recommandée." },
-        "securite": { "$ref": "#/definitions/securite" },
-        "schema": { "$ref": "#/definitions/schemaSvg" },
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "titre": {
+          "$ref": "#/definitions/texte"
+        },
+        "sousTitre": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/categorieId"
+          },
+          "minItems": 1,
+          "maxItems": 3
+        },
+        "duree": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 240
+        },
+        "difficulte": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "adulte": {
+          "type": "boolean",
+          "description": "Présence d'un adulte recommandée."
+        },
+        "securite": {
+          "$ref": "#/definitions/securite"
+        },
+        "schema": {
+          "$ref": "#/definitions/schemaSvg"
+        },
         "materiel": {
           "type": "array",
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["nom"],
+            "required": [
+              "nom"
+            ],
             "additionalProperties": false,
             "properties": {
-              "nom": { "$ref": "#/definitions/texte" },
-              "quantite": { "type": "string" },
-              "objet": { "$ref": "#/definitions/id" }
+              "nom": {
+                "$ref": "#/definitions/texte"
+              },
+              "quantite": {
+                "type": "string"
+              },
+              "objet": {
+                "$ref": "#/definitions/id"
+              }
             }
           }
         },
-        "etapes": { "type": "array", "items": { "type": "string", "minLength": 5 }, "minItems": 2 },
-        "precautions": { "type": "array", "items": { "type": "string", "minLength": 5 }, "minItems": 1 },
-        "resultat": { "$ref": "#/definitions/texte" },
-        "explication": { "type": "array", "items": { "type": "string", "minLength": 10 }, "minItems": 1, "maxItems": 4 },
-        "pourAllerPlusLoin": { "type": "string" },
-        "fiches": { "$ref": "#/definitions/idList" }
+        "etapes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 5
+          },
+          "minItems": 2
+        },
+        "precautions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 5
+          },
+          "minItems": 1
+        },
+        "resultat": {
+          "$ref": "#/definitions/texte"
+        },
+        "explication": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 10
+          },
+          "minItems": 1,
+          "maxItems": 4
+        },
+        "pourAllerPlusLoin": {
+          "type": "string"
+        },
+        "fiches": {
+          "$ref": "#/definitions/idList"
+        }
       }
     },
-
     "mission": {
       "type": "object",
-      "required": ["id", "titre", "difficulte", "categories", "duree", "briefing", "zones", "objets", "solutions", "indices"],
+      "required": [
+        "id",
+        "titre",
+        "difficulte",
+        "categories",
+        "duree",
+        "briefing",
+        "zones",
+        "objets",
+        "solutions",
+        "indices"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/definitions/id" },
-        "titre": { "$ref": "#/definitions/texte" },
-        "code": { "type": "string", "description": "Nom de code affiché sur le dossier (ex. : OP-01 BRUME)." },
-        "difficulte": { "enum": ["facile", "moyen", "difficile"] },
-        "categories": { "type": "array", "items": { "$ref": "#/definitions/categorieId" }, "minItems": 1, "maxItems": 3 },
-        "duree": { "type": "integer", "minimum": 2, "maximum": 30, "description": "Durée du compte à rebours optionnel, en minutes." },
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "titre": {
+          "$ref": "#/definitions/texte"
+        },
+        "code": {
+          "type": "string",
+          "description": "Nom de code affiché sur le dossier (ex. : OP-01 BRUME)."
+        },
+        "difficulte": {
+          "enum": [
+            "facile",
+            "moyen",
+            "difficile"
+          ]
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/categorieId"
+          },
+          "minItems": 1,
+          "maxItems": 3
+        },
+        "duree": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 30,
+          "description": "Durée du compte à rebours optionnel, en minutes."
+        },
         "briefing": {
           "type": "object",
-          "required": ["lieu", "contexte", "objectif"],
+          "required": [
+            "lieu",
+            "contexte",
+            "objectif"
+          ],
           "additionalProperties": false,
           "properties": {
-            "lieu": { "$ref": "#/definitions/texte" },
-            "contexte": { "$ref": "#/definitions/texte" },
-            "objectif": { "$ref": "#/definitions/texte" },
-            "contraintes": { "type": "array", "items": { "type": "string" } }
+            "lieu": {
+              "$ref": "#/definitions/texte"
+            },
+            "contexte": {
+              "$ref": "#/definitions/texte"
+            },
+            "objectif": {
+              "$ref": "#/definitions/texte"
+            },
+            "contraintes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           }
         },
         "zones": {
@@ -215,9 +602,19 @@
           "maxItems": 6,
           "items": {
             "type": "object",
-            "required": ["id", "nom"],
+            "required": [
+              "id",
+              "nom"
+            ],
             "additionalProperties": false,
-            "properties": { "id": { "$ref": "#/definitions/id" }, "nom": { "$ref": "#/definitions/texte" } }
+            "properties": {
+              "id": {
+                "$ref": "#/definitions/id"
+              },
+              "nom": {
+                "$ref": "#/definitions/texte"
+              }
+            }
           }
         },
         "objets": {
@@ -226,25 +623,49 @@
           "maxItems": 30,
           "items": {
             "type": "object",
-            "required": ["objet", "zone"],
+            "required": [
+              "objet",
+              "zone"
+            ],
             "additionalProperties": false,
             "properties": {
-              "objet": { "$ref": "#/definitions/id" },
-              "zone": { "$ref": "#/definitions/id" },
-              "etat": { "type": "string", "description": "Précision visible lors du scan (ex. : « à moitié vide »)." }
+              "objet": {
+                "$ref": "#/definitions/id"
+              },
+              "zone": {
+                "$ref": "#/definitions/id"
+              },
+              "etat": {
+                "type": "string",
+                "description": "Précision visible lors du scan (ex. : « à moitié vide »)."
+              }
             }
           }
         },
-        "leurres": { "$ref": "#/definitions/idList" },
-        "objetCle": { "$ref": "#/definitions/id" },
+        "leurres": {
+          "$ref": "#/definitions/idList"
+        },
+        "objetCle": {
+          "$ref": "#/definitions/id"
+        },
         "pieceManquante": {
           "type": "object",
-          "required": ["nom", "remplacements", "explication"],
+          "required": [
+            "nom",
+            "remplacements",
+            "explication"
+          ],
           "additionalProperties": false,
           "properties": {
-            "nom": { "$ref": "#/definitions/texte" },
-            "remplacements": { "$ref": "#/definitions/idList" },
-            "explication": { "$ref": "#/definitions/texte" }
+            "nom": {
+              "$ref": "#/definitions/texte"
+            },
+            "remplacements": {
+              "$ref": "#/definitions/idList"
+            },
+            "explication": {
+              "$ref": "#/definitions/texte"
+            }
           }
         },
         "solutions": {
@@ -252,22 +673,53 @@
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["id", "titre", "objets", "motsCles", "etapes", "explication"],
+            "required": [
+              "id",
+              "titre",
+              "objets",
+              "motsCles",
+              "etapes",
+              "explication"
+            ],
             "additionalProperties": false,
             "properties": {
-              "id": { "$ref": "#/definitions/id" },
-              "titre": { "$ref": "#/definitions/texte" },
-              "objets": { "$ref": "#/definitions/idList" },
-              "optionnels": { "$ref": "#/definitions/idList" },
-              "principes": { "$ref": "#/definitions/idList" },
+              "id": {
+                "$ref": "#/definitions/id"
+              },
+              "titre": {
+                "$ref": "#/definitions/texte"
+              },
+              "objets": {
+                "$ref": "#/definitions/idList"
+              },
+              "optionnels": {
+                "$ref": "#/definitions/idList"
+              },
+              "principes": {
+                "$ref": "#/definitions/idList"
+              },
               "motsCles": {
                 "type": "array",
                 "minItems": 1,
-                "items": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1
+                },
                 "description": "Groupes de synonymes. Chaque groupe trouvé dans le texte du joueur valide une idée clé."
               },
-              "etapes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-              "explication": { "$ref": "#/definitions/texte" }
+              "etapes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "explication": {
+                "$ref": "#/definitions/texte"
+              }
             }
           }
         },
@@ -275,66 +727,170 @@
           "type": "array",
           "minItems": 3,
           "maxItems": 3,
-          "items": { "type": "string", "minLength": 5 },
+          "items": {
+            "type": "string",
+            "minLength": 5
+          },
           "description": "1 : piste de principe. 2 : piste d'objets. 3 : piste de méthode."
         },
-        "fiches": { "$ref": "#/definitions/idList" },
-        "equivalences": { "$ref": "#/definitions/idList" }
+        "fiches": {
+          "$ref": "#/definitions/idList"
+        },
+        "equivalences": {
+          "$ref": "#/definitions/idList"
+        }
       }
     },
-
     "terme": {
       "type": "object",
-      "required": ["id", "terme", "definition"],
+      "required": [
+        "id",
+        "terme",
+        "definition"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/definitions/id" },
-        "terme": { "$ref": "#/definitions/texte" },
-        "definition": { "$ref": "#/definitions/texte" },
-        "fiches": { "$ref": "#/definitions/idList" }
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "terme": {
+          "$ref": "#/definitions/texte"
+        },
+        "definition": {
+          "$ref": "#/definitions/texte"
+        },
+        "fiches": {
+          "$ref": "#/definitions/idList"
+        }
       }
     },
-
     "parcours": {
       "type": "object",
-      "required": ["id", "titre", "description", "icone", "etapes"],
+      "required": [
+        "id",
+        "titre",
+        "description",
+        "icone",
+        "etapes"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/definitions/id" },
-        "titre": { "$ref": "#/definitions/texte" },
-        "description": { "$ref": "#/definitions/texte" },
-        "icone": { "type": "string" },
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "titre": {
+          "$ref": "#/definitions/texte"
+        },
+        "description": {
+          "$ref": "#/definitions/texte"
+        },
+        "icone": {
+          "type": "string"
+        },
         "etapes": {
           "type": "array",
           "minItems": 2,
           "items": {
             "type": "object",
-            "required": ["type", "id"],
+            "required": [
+              "type",
+              "id"
+            ],
             "additionalProperties": false,
             "properties": {
-              "type": { "enum": ["fiche", "equivalence", "pratique", "mission"] },
-              "id": { "$ref": "#/definitions/id" }
+              "type": {
+                "enum": [
+                  "fiche",
+                  "equivalence",
+                  "pratique",
+                  "mission"
+                ]
+              },
+              "id": {
+                "$ref": "#/definitions/id"
+              }
             }
           }
         }
       }
     },
-
     "index": {
       "type": "object",
-      "required": ["version", "categories", "theorie", "objets", "equivalences", "pratique", "missions", "glossaire", "parcours"],
+      "required": [
+        "version",
+        "categories",
+        "theorie",
+        "objets",
+        "equivalences",
+        "pratique",
+        "missions",
+        "glossaire",
+        "parcours"
+      ],
       "additionalProperties": false,
       "properties": {
-        "version": { "type": "string" },
-        "langue": { "type": "string" },
-        "categories": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-        "theorie": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-        "objets": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-        "equivalences": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-        "pratique": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-        "missions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-        "glossaire": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-        "parcours": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+        "version": {
+          "type": "string"
+        },
+        "langue": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "theorie": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "objets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "equivalences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "pratique": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "missions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "glossaire": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "parcours": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
       }
     }
   }

@@ -211,7 +211,10 @@
     "fiche": "Fiche",
     "introuvable": "Fiche introuvable",
     "surprise": "Surprends-moi",
-    "surpriseDesc": "Ouvrir une fiche au hasard, en priorité parmi celles que tu n'as pas lues"
+    "surpriseDesc": "Ouvrir une fiche au hasard, en priorité parmi celles que tu n'as pas lues",
+    "texte": "Texte de la fiche",
+    "aRetenir": "À retenir",
+    "voirSchema": "Voir le schéma"
   },
   "quiz": {
     "question": "Question {a} sur {b}",

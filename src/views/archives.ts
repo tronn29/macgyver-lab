@@ -11,7 +11,8 @@ import { btn, emptyState, iconBtn, panel, safetyBadge, segmented, toast, verdict
 import { icon } from '../ui/icons';
 import { quizRunner } from '../ui/quiz';
 import { parseRich, rich } from '../ui/richtext';
-import { schemaFigure } from '../ui/schema';
+import { openSchemaZoom, schemaFigure } from '../ui/schema';
+import { ficheBody, isLongFormat, isRetenir, isSerieRealite, readingMinutes } from '../core/fiche';
 import { shareFiche } from '../ui/share';
 import { notesPanel } from '../ui/notes';
 import { listenButton, stopSpeech } from '../ui/speech';
@@ -169,9 +170,12 @@ export function ficheDetail(ctx: RouteContext): View {
     if (on) enfantPanel.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   });
 
+  const long = isLongFormat(f);
+  const minutes = readingMinutes(f);
+
   /* Glossaire de la fiche */
   const termIds = new Set<string>();
-  for (const para of f.pourquoi) parseRich(para).forEach((s) => s.type === 'term' && s.id && termIds.add(s.id));
+  for (const para of ficheBody(f)) parseRich(para.replace(/\*\*/g, '')).forEach((s) => s.type === 'term' && s.id && termIds.add(s.id));
 
   const fichesLiees = (c.fichesParFiche.get(f.id) ?? []).slice(0, 6);
   const equivalences = (f.liens.equivalences ?? []).map((id) => c.byId.fonction.get(id)).filter(Boolean);
@@ -187,36 +191,8 @@ export function ficheDetail(ctx: RouteContext): View {
       : null,
     h('div', { class: 'fiche__tools' }, eliBtn, listenButton(f, () => eliBtn.getAttribute('aria-pressed') === 'true'), termIds.size ? btn(t('archives.glossaire'), { variant: 'ghost', small: true, icon: 'book', onClick: () => openGlossaryForFiche(f, [...termIds]) }) : null),
     enfantPanel,
-    h(
-      'section',
-      { class: 'principle', 'aria-labelledby': 'principe-t' },
-      h('h2', { class: 'block-title', id: 'principe-t' }, t('archives.principe')),
-      h('ol', { class: 'principle__list' }, ...f.principe.map((line, i) => h('li', null, h('span', { class: 'principle__n', 'aria-hidden': 'true' }, `0${i + 1}`), h('span', null, line))))
-    ),
-    h(
-      'div',
-      { class: 'fiche__badges' },
-      panel(
-        [
-          h('h2', { class: 'block-title' }, t('verdict.titre')),
-          verdictBadge(f.realite.verdict),
-          h('p', { class: 'panel__text' }, f.realite.explication),
-        ],
-        { class: `reality reality--${f.realite.verdict}` }
-      ),
-      panel(
-        [h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau), h('p', { class: 'panel__text' }, f.securite.note)],
-        { class: `safety-panel safety-panel--${f.securite.niveau}` }
-      )
-    ),
-    h(
-      'section',
-      { class: 'why', 'aria-labelledby': 'why-t' },
-      h('h2', { class: 'block-title', id: 'why-t' }, t('archives.pourquoi')),
-      ...f.pourquoi.map((p) => rich(p, 'p'))
-    ),
-    sentinel,
-    f.chiffres?.length
+    ...(long ? longBody(f, sentinel) : shortBody(f, sentinel)),
+    !long && f.chiffres?.length
       ? h(
           'section',
           { class: 'figures', 'aria-labelledby': 'fig-t' },
@@ -256,10 +232,15 @@ export function ficheDetail(ctx: RouteContext): View {
     )
   );
 
-  const aside = h(
-    'div',
-    { class: 'fiche__visual' },
-    schemaFigure({ ...f.schema, titre: f.titre })
+  const figure = schemaFigure({ ...f.schema, titre: f.titre });
+  const aside = h('div', { class: 'fiche__visual' }, figure);
+
+  /* Schéma toujours à portée sur téléphone : bouton flottant quand la figure est sortie de l'écran */
+  const schemaFab = h(
+    'button',
+    { type: 'button', class: 'schema-fab', hidden: true, onclick: () => openSchemaZoom({ ...f.schema, titre: f.titre }) },
+    icon('expand', 18),
+    h('span', null, t('archives.voirSchema'))
   );
 
   const node = h(
@@ -271,15 +252,17 @@ export function ficheDetail(ctx: RouteContext): View {
       back: { href: '#/archives', label: t('archives.titre') },
       actions: [favButton('fiche', f.id, f.titre), iconBtn('share', t('commun.partager'), () => void shareFiche(f))],
       meta: [
-        h('span', { class: 'chip chip--muted' }, icon('clock', 14), t('archives.dureeLecture', { n: f.duree })),
+        h('span', { class: 'chip chip--muted' }, icon('clock', 14), t('archives.dureeLecture', { n: minutes })),
         verdictBadge(f.realite.verdict),
         safetyBadge(f.securite.niveau),
         getProgress().lus[f.id] ? h('span', { class: 'chip chip--success' }, icon('check', 14), t('archives.marqueLue')) : null,
       ],
     }),
     f.sousTitre ? h('p', { class: 'fiche__subtitle' }, f.sousTitre) : null,
-    h('div', { class: 'fiche__layout' }, aside, main)
+    h('div', { class: ['fiche__layout', long && 'fiche__layout--long'] }, aside, main),
+    schemaFab
   );
+  let fabObserver: IntersectionObserver | null = null;
 
   let observer: IntersectionObserver | null = null;
   let timer: number | undefined;
@@ -295,11 +278,17 @@ export function ficheDetail(ctx: RouteContext): View {
     node,
     onMount: () => {
       setLast(`#/archives/${f.id}`, f.titre);
+      if ('IntersectionObserver' in window) {
+        fabObserver = new IntersectionObserver(([entry]) => {
+          schemaFab.hidden = entry.isIntersecting || entry.boundingClientRect.top > 0;
+        });
+        fabObserver.observe(figure);
+      }
       if (getProgress().lus[f.id]) {
         markRead(f); // compte l'activité du jour
         return;
       }
-      timer = window.setTimeout(doMark, 8000);
+      timer = window.setTimeout(doMark, long ? Math.max(20000, minutes * 30000) : 8000);
       if ('IntersectionObserver' in window) {
         observer = new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && doMark());
         observer.observe(sentinel);
@@ -308,8 +297,53 @@ export function ficheDetail(ctx: RouteContext): View {
     onLeave: () => {
       window.clearTimeout(timer);
       observer?.disconnect();
+      fabObserver?.disconnect();
       stopSpeech();
     },
   };
 }
 
+
+/* ---------- Corps de fiche : format long (v2) ---------- */
+function longBody(f: Fiche & { texte: string[] }, sentinel: HTMLElement): HTMLElement[] {
+  const paras = f.texte.map((p) => {
+    if (isRetenir(p)) return h('div', { class: 'longread__retenir', role: 'note' }, rich(p, 'p'));
+    if (isSerieRealite(p))
+      return h(
+        'div',
+        { class: 'longread__serie' },
+        h('div', { class: 'longread__serie-head' }, h('span', { class: 'hud-label hud-label--orange' }, t('verdict.titre')), verdictBadge(f.realite.verdict)),
+        rich(p, 'p')
+      );
+    return rich(p, 'p');
+  });
+  // Repère de lecture placé juste avant « À retenir »
+  const last = paras.length - 1;
+  return [
+    h('section', { class: 'longread', 'aria-labelledby': 'lr-t' }, h('h2', { class: 'sr-only', id: 'lr-t' }, t('archives.texte')), ...paras.slice(0, last), sentinel, paras[last]),
+    panel(
+      [h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau), h('p', { class: 'panel__text' }, f.securite.note)],
+      { class: `safety-panel safety-panel--${f.securite.niveau}` }
+    ),
+  ];
+}
+
+/* ---------- Corps de fiche : format court (v1), pour les fiches non migrées ---------- */
+function shortBody(f: Fiche, sentinel: HTMLElement): HTMLElement[] {
+  return [
+    h(
+      'section',
+      { class: 'principle', 'aria-labelledby': 'principe-t' },
+      h('h2', { class: 'block-title', id: 'principe-t' }, t('archives.principe')),
+      h('ol', { class: 'principle__list' }, ...(f.principe ?? []).map((line, i) => h('li', null, h('span', { class: 'principle__n', 'aria-hidden': 'true' }, `0${i + 1}`), h('span', null, line))))
+    ),
+    h(
+      'div',
+      { class: 'fiche__badges' },
+      panel([h('h2', { class: 'block-title' }, t('verdict.titre')), verdictBadge(f.realite.verdict), h('p', { class: 'panel__text' }, f.realite.explication)], { class: `reality reality--${f.realite.verdict}` }),
+      panel([h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau), h('p', { class: 'panel__text' }, f.securite.note)], { class: `safety-panel safety-panel--${f.securite.niveau}` })
+    ),
+    h('section', { class: 'why', 'aria-labelledby': 'why-t' }, h('h2', { class: 'block-title', id: 'why-t' }, t('archives.pourquoi')), ...(f.pourquoi ?? []).map((p) => rich(p, 'p'))),
+    sentinel,
+  ];
+}

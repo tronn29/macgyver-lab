@@ -566,19 +566,17 @@ a.chip:hover, button.chip:hover { border-color: var(--c-accent); color: var(--c-
 
 /* ---- Termes du glossaire et infobulle ---- */
 .term {
-  display: inline;
-  padding: 0;
-  border: 0;
-  border-bottom: 1px dashed var(--c-accent);
-  background: none;
   color: var(--c-accent);
-  font: inherit;
   font-weight: 600;
-  line-height: inherit;
-  text-align: inherit;
+  text-decoration: underline dashed 1px;
+  text-decoration-color: var(--c-accent);
+  text-underline-offset: 0.22em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  border-radius: 2px;
   cursor: help;
 }
-.term:hover, .term[aria-expanded='true'] { background: var(--c-accent-soft); border-bottom-style: solid; }
+.term:hover, .term[aria-expanded='true'] { background: var(--c-accent-soft); text-decoration-style: solid; }
 .tip {
   position: absolute;
   z-index: 950;

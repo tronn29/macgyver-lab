@@ -1,10 +1,13 @@
 /*
- * Texte enrichi du contenu : [[id]] ou [[id|texte]] devient un terme du glossaire
- * avec infobulle accessible (clic, clavier, Échap ; survol sur ordinateur).
+ * Texte enrichi du contenu :
+ *   **gras**            → <strong> (une phrase d'accroche en début de paragraphe est mise en valeur)
+ *   [[id]] / [[id|txt]] → terme du glossaire avec infobulle accessible (clic, clavier, Échap ; survol sur ordinateur)
+ * Les termes peuvent se trouver dans un passage en gras.
  */
 import { content } from '../core/content';
 import { h, nextId } from '../core/dom';
 import { t } from '../core/i18n';
+import { splitBold } from '../core/fiche';
 import { icon } from './icons';
 
 const RE = /\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g;
@@ -30,7 +33,7 @@ export function parseRich(text: string): Segment[] {
 
 /** Texte brut (sans balisage) pour la recherche, le partage, etc. */
 export function plain(text: string): string {
-  return parseRich(text)
+  return parseRich(text.replace(/\*\*/g, ''))
     .map((s) => {
       if (s.type === 'text') return s.text;
       if (s.text) return s.text;
@@ -54,31 +57,48 @@ function displayName(terme: string): string {
   return base.charAt(0).toLowerCase() + base.slice(1);
 }
 
-export function rich(text: string, tag: 'p' | 'span' | 'li' = 'p', className?: string): HTMLElement {
-  const el = h(tag, { class: className });
+function appendTerms(target: Node, text: string): void {
   for (const seg of parseRich(text)) {
     if (seg.type === 'text') {
-      el.append(seg.text);
+      target.appendChild(document.createTextNode(seg.text));
       continue;
     }
     const term = safeTerm(seg.id ?? '');
     if (!term) {
-      el.append(seg.text || seg.id || '');
+      target.appendChild(document.createTextNode(seg.text || seg.id || ''));
       continue;
     }
-    el.append(termButton(term.id, seg.text || displayName(term.terme)));
+    target.appendChild(termButton(term.id, seg.text || displayName(term.terme)));
   }
+}
+
+export function rich(text: string, tag: 'p' | 'span' | 'li' = 'p', className?: string): HTMLElement {
+  const el = h(tag, { class: className });
+  splitBold(text).forEach((chunk, i) => {
+    if (!chunk.bold) {
+      appendTerms(el, chunk.text);
+      return;
+    }
+    // Phrase d'accroche : passage en gras qui ouvre le paragraphe
+    const strong = h('strong', { class: i === 0 ? 'hook' : undefined });
+    appendTerms(strong, chunk.text);
+    el.appendChild(strong);
+  });
   return el;
 }
 
-export function termButton(id: string, text: string): HTMLButtonElement {
-  return h('button', { type: 'button', class: 'term', 'data-term': id, 'aria-expanded': 'false', 'aria-haspopup': 'dialog' }, text);
+/**
+ * Terme du glossaire : un lien (il se coupe en fin de ligne comme du texte et mène au glossaire
+ * sans script) qui ouvre une infobulle au clic, au clavier (Entrée) ou au survol.
+ */
+export function termButton(id: string, text: string): HTMLAnchorElement {
+  return h('a', { href: `#/glossaire?terme=${id}`, class: 'term', 'data-term': id, 'aria-expanded': 'false', 'aria-haspopup': 'dialog' }, text);
 }
 
 /* ---- Infobulle unique, partagée ---- */
 
 let tip: HTMLElement | null = null;
-let owner: HTMLButtonElement | null = null;
+let owner: HTMLElement | null = null;
 let hoverTimer: number | undefined;
 
 function hideTip(returnFocus = false): void {
@@ -89,7 +109,7 @@ function hideTip(returnFocus = false): void {
   owner = null;
 }
 
-function showTip(btn: HTMLButtonElement): void {
+function showTip(btn: HTMLElement): void {
   const term = safeTerm(btn.dataset.term ?? '');
   if (!term) return;
   if (!tip) {
@@ -137,7 +157,7 @@ function position(btn: HTMLElement): void {
 export function initGlossaryTips(): void {
   document.addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
-    const btn = target.closest<HTMLButtonElement>('button.term');
+    const btn = target.closest<HTMLElement>('.term[data-term]');
     if (btn) {
       e.preventDefault();
       if (owner === btn && tip && !tip.hidden) hideTip();
@@ -155,14 +175,14 @@ export function initGlossaryTips(): void {
   const fine = window.matchMedia('(hover: hover) and (pointer: fine)');
   document.addEventListener('mouseover', (e) => {
     if (!fine.matches) return;
-    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('button.term');
+    const btn = (e.target as HTMLElement).closest<HTMLElement>('.term[data-term]');
     if (!btn) return;
     window.clearTimeout(hoverTimer);
     hoverTimer = window.setTimeout(() => showTip(btn), 350);
   });
   document.addEventListener('mouseout', (e) => {
     if (!fine.matches) return;
-    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('button.term');
+    const btn = (e.target as HTMLElement).closest<HTMLElement>('.term[data-term]');
     if (!btn) return;
     window.clearTimeout(hoverTimer);
     hoverTimer = window.setTimeout(() => {

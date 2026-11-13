@@ -2,6 +2,7 @@
 import { h } from '../core/dom';
 import { t } from '../core/i18n';
 import type { Fiche } from '../core/types';
+import { isLongFormat } from '../core/fiche';
 import { icon } from './icons';
 import { plain } from './richtext';
 
@@ -12,8 +13,14 @@ export function speechAvailable(): boolean {
 function ficheScript(f: Fiche, enfant: boolean): string[] {
   const parts = [f.titre + '.'];
   if (enfant) parts.push(f.enfant);
-  parts.push(`${t('archives.principe')}.`, ...f.principe);
-  if (!enfant) parts.push(`${t('archives.pourquoi')}.`, ...f.pourquoi.map(plain));
+  if (isLongFormat(f)) {
+    // Format long : le texte complet (il contient déjà « Dans la série / Dans la réalité » et « À retenir »)
+    if (!enfant) parts.push(...f.texte.map(plain));
+    else parts.push(plain(f.texte[f.texte.length - 1]));
+    return parts;
+  }
+  parts.push(`${t('archives.principe')}.`, ...(f.principe ?? []));
+  if (!enfant) parts.push(`${t('archives.pourquoi')}.`, ...(f.pourquoi ?? []).map(plain));
   parts.push(`${t('verdict.titre')} ${t(`verdict.${f.realite.verdict}`)}.`, f.realite.explication);
   return parts;
 }

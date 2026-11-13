@@ -6,6 +6,7 @@
  */
 import { normalize } from './dom';
 import type { Content } from './types';
+import { ficheBody, stripMarkup } from './fiche';
 
 export type ResultType = 'fiche' | 'fonction' | 'objet' | 'experience' | 'mission' | 'terme';
 
@@ -41,13 +42,14 @@ export function buildIndex(c: Content): SearchDoc[] {
       type: 'fiche',
       id: f.id,
       titre: f.titre,
-      sousTitre: f.sousTitre ?? f.principe[0],
+      sousTitre: f.sousTitre ?? stripMarkup(ficheBody(f)[0] ?? ''),
       fields: [
         { text: f.titre, weight: 10 },
         { text: (f.motsCles ?? []).join(' '), weight: 6 },
         { text: f.categories.map((id) => c.byId.categorie.get(id)?.nom ?? id).join(' '), weight: 3 },
-        { text: `${f.sousTitre ?? ''} ${f.principe.join(' ')}`, weight: 2 },
-        { text: f.pourquoi.join(' ').replace(/\[\[([^\]|]+)(\|([^\]]+))?\]\]/g, '$3 $1'), weight: 1 },
+        { text: `${f.sousTitre ?? ''} ${(f.principe ?? []).join(' ')}`, weight: 2 },
+        // Corps du texte (format long ou court), balisage retiré, identifiants des termes conservés
+        { text: ficheBody(f).map((p) => stripMarkup(p, (id) => id.replace(/-/g, ' '))).join(' '), weight: 1 },
       ],
     });
   }

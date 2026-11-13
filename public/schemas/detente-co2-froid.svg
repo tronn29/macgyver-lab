@@ -1,58 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
-  <!-- Étape 1 : bouteille de CO₂ sous pression et diffuseur -->
+  <!-- Séparateurs des trois zones -->
+  <path class="s-dash" d="M178 14 V140"/>
+  <path class="s-dash" d="M10 150 H350"/>
+
+  <!-- 1 : le triangle du feu -->
   <g>
-    <rect class="s-solid" x="18" y="70" width="44" height="120" rx="14"/>
-    <rect class="s-solid" x="32" y="52" width="16" height="20" rx="3"/>
-    <path class="s-line" d="M48 60 H78 L92 54 V66 L78 62"/>
-    <text class="s-small" x="40" y="132" text-anchor="middle">CO₂</text>
-    <text class="s-small" x="40" y="146" text-anchor="middle">liquide</text>
-    <text class="s-tiny" x="40" y="206" text-anchor="middle">≈ 57 bar</text>
-    <circle class="s-badge" cx="40" cy="30" r="9"/>
-    <text class="s-badge-text" x="40" y="30">1</text>
-    <text class="s-label" x="54" y="34">Détente</text>
+    <circle class="s-badge" cx="20" cy="22" r="9"/>
+    <text class="s-badge-text" x="20" y="22">1</text>
+    <text class="s-label" x="34" y="26">Triangle du feu</text>
+    <polygon class="s-line" points="90,42 30,126 150,126"/>
+    <path class="s-fill-hot s-pulse" d="M90 76 C100 88 106 98 101 110 C98 117 82 117 79 110 C74 98 80 88 90 76 Z"/>
+    <path class="s-hot" d="M90 76 C100 88 106 98 101 110 C98 117 82 117 79 110 C74 98 80 88 90 76 Z"/>
+    <text class="s-small" x="56" y="82" text-anchor="end">Oxygène</text>
+    <text class="s-small s-text-hot" x="124" y="82">Chaleur</text>
+    <text class="s-small" x="90" y="141" text-anchor="middle">Combustible</text>
   </g>
 
-  <!-- Jet qui se détend : le gaz se diffuse et refroidit -->
+  <!-- 2 : quatre extincteurs, ce que chacun retire au feu -->
   <g>
-    <path class="s-cold s-flow" d="M94 60 C120 60 136 70 156 86" marker-end="url(#mg-arrow-cold)"/>
-    <path class="s-cold s-flow" d="M94 58 C122 52 142 50 166 52" marker-end="url(#mg-arrow-cold)"/>
-    <circle class="s-fill-cold s-diffuse" cx="130" cy="64" r="16"/>
-    <circle class="s-fill-cold s-diffuse s-delay-1" cx="150" cy="70" r="20"/>
-    <circle class="s-fill-cold s-diffuse s-delay-2" cx="140" cy="58" r="12"/>
+    <circle class="s-badge" cx="196" cy="22" r="9"/>
+    <text class="s-badge-text" x="196" y="22">2</text>
+    <text class="s-label" x="210" y="26">Ce qu'ils retirent</text>
+
+    <rect class="s-solid" x="194" y="46" width="20" height="48" rx="6"/>
+    <rect class="s-solid" x="200" y="38" width="8" height="9" rx="2"/>
+    <rect class="s-fill-cold" x="197" y="66" width="14" height="25" rx="4"/>
+
+    <rect class="s-solid" x="236" y="46" width="20" height="48" rx="6"/>
+    <rect class="s-solid" x="242" y="38" width="8" height="9" rx="2"/>
+    <rect class="s-fill-muted" x="239" y="62" width="14" height="29" rx="4"/>
+
+    <rect class="s-solid" x="278" y="46" width="20" height="48" rx="6"/>
+    <rect class="s-solid" x="284" y="38" width="8" height="9" rx="2"/>
+    <rect class="s-fill-accent" x="281" y="60" width="14" height="31" rx="4"/>
+
+    <rect class="s-solid" x="320" y="46" width="20" height="48" rx="6"/>
+    <rect class="s-solid" x="326" y="38" width="8" height="9" rx="2"/>
+    <rect class="s-fill-cold" x="323" y="70" width="14" height="21" rx="4"/>
+
+    <text class="s-tiny" x="204" y="106" text-anchor="middle">Eau</text>
+    <text class="s-tiny" x="246" y="106" text-anchor="middle">Poudre</text>
+    <text class="s-tiny" x="288" y="106" text-anchor="middle">Mousse</text>
+    <text class="s-tiny" x="330" y="106" text-anchor="middle">CO₂</text>
+
+    <text class="s-tiny s-text-hot" x="204" y="122" text-anchor="middle">chaleur</text>
+    <text class="s-tiny s-text-accent" x="246" y="138" text-anchor="middle">réaction</text>
+    <text class="s-tiny s-text-cold" x="288" y="122" text-anchor="middle">oxygène</text>
+    <text class="s-tiny s-text-cold" x="330" y="138" text-anchor="middle">oxygène</text>
   </g>
 
-  <!-- Étape 2 : chute de température -->
+  <!-- 3 : la détente du CO₂ à la sortie du cornet -->
   <g>
-    <circle class="s-badge" cx="196" cy="30" r="9"/>
-    <text class="s-badge-text" x="196" y="30">2</text>
-    <text class="s-label" x="210" y="34">Refroidissement</text>
-    <rect class="s-solid" x="190" y="52" width="12" height="70" rx="6"/>
-    <circle class="s-solid" cx="196" cy="130" r="11"/>
-    <rect class="s-fill-cold" x="193" y="96" width="6" height="30" rx="3"/>
-    <circle class="s-fill-cold" cx="196" cy="130" r="7"/>
-    <path class="s-thin" d="M204 62 H210 M204 76 H210 M204 90 H210 M204 104 H210"/>
-    <text class="s-tiny" x="214" y="65">+20 °C</text>
-    <text class="s-tiny s-text-cold" x="214" y="107">−78 °C</text>
-    <path class="s-cold" d="M254 66 V100" marker-end="url(#mg-arrow-cold)"/>
-  </g>
+    <circle class="s-badge" cx="20" cy="166" r="9"/>
+    <text class="s-badge-text" x="20" y="166">3</text>
+    <text class="s-label" x="34" y="170">Détente du CO₂</text>
 
-  <!-- Étape 3 : le métal froid se contracte -->
-  <g>
-    <circle class="s-badge" cx="40" cy="226" r="9" transform="translate(0 -6)"/>
-    <text class="s-badge-text" x="40" y="220">3</text>
-    <text class="s-label" x="54" y="224">Contraction du métal</text>
+    <rect class="s-solid" x="18" y="180" width="72" height="28" rx="10"/>
+    <rect class="s-fill-cold" x="22" y="193" width="64" height="12" rx="4"/>
+    <rect class="s-solid" x="90" y="187" width="10" height="14" rx="2"/>
+    <polygon class="s-solid" points="100,190 148,180 148,208 100,198"/>
+    <text class="s-tiny" x="18" y="226">CO₂ liquide comprimé</text>
 
-    <rect class="s-solid" x="200" y="160" width="140" height="22" rx="2"/>
-    <rect class="s-fill-cold s-pulse" x="246" y="160" width="48" height="22"/>
-    <path class="s-cold" d="M236 150 H262" marker-end="url(#mg-arrow-cold)"/>
-    <path class="s-cold" d="M304 150 H278" marker-end="url(#mg-arrow-cold)"/>
-    <path class="s-hot" d="M268 182 L264 192 L272 197 L267 204"/>
-    <path class="s-dim" d="M200 210 H340" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
-    <text class="s-tiny" x="270" y="225" text-anchor="middle">barreau : ΔL = α · L · ΔT</text>
+    <path class="s-cold s-flow" d="M152 186 C174 182 192 182 214 184" marker-end="url(#mg-arrow-cold)"/>
+    <path class="s-cold s-flow" d="M152 202 C174 206 192 206 214 204" marker-end="url(#mg-arrow-cold)"/>
+    <circle class="s-fill-cold s-diffuse" cx="180" cy="194" r="11"/>
+    <circle class="s-fill-cold s-diffuse s-delay-1" cx="200" cy="190" r="12"/>
+    <circle class="s-fill-cold s-diffuse s-delay-2" cx="194" cy="200" r="9"/>
 
-    <rect class="s-callout" x="108" y="150" width="84" height="44" rx="4"/>
-    <text class="s-tiny" x="150" y="166" text-anchor="middle">Métal fin :</text>
-    <text class="s-tiny s-text-hot" x="150" y="180" text-anchor="middle">fragilisé</text>
-    <path class="s-leader" d="M192 172 H246" marker-end="url(#mg-dot)"/>
+    <text class="s-label s-text-cold" x="226" y="190">−78 °C</text>
+    <text class="s-tiny" x="226" y="204">neige de glace sèche</text>
+    <text class="s-tiny" x="166" y="226">se détend, absorbe la chaleur</text>
   </g>
 </svg>

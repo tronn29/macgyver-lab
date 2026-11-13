@@ -2,6 +2,7 @@
 /*
  * Validateur du contenu MacGyver Lab.
  *   npm run validate
+ *   node scripts/validate-content.mjs [langue] [--dir dossier-de-contenu]
  * Vérifie : format (schema/content.schema.json), identifiants en double, liens cassés,
  * termes du glossaire, schémas SVG (présence, éléments et classes autorisés),
  * règles des missions et règle de sécurité des sujets sensibles.
@@ -13,8 +14,10 @@ import { fileURLToPath } from 'node:url';
 import Ajv from 'ajv';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const LANG = process.argv[2] ?? 'fr';
-const CONTENT = join(ROOT, 'public', 'content', LANG);
+const args = process.argv.slice(2);
+const dirIdx = args.indexOf('--dir');
+const LANG = args.find((a, i) => !a.startsWith('--') && i !== dirIdx + 1) ?? 'fr';
+const CONTENT = dirIdx >= 0 ? args[dirIdx + 1] : join(ROOT, 'public', 'content', LANG);
 const SCHEMAS = join(ROOT, 'public', 'schemas');
 
 const errors = [];
@@ -111,6 +114,7 @@ function checkRich(where, text) {
     if (m[2] !== undefined && !m[2].trim()) err(where, `texte affiché vide pour [[${m[1]}]]`);
   }
   if (/\[\[[^\]]*$/.test(text) || /\[[^[]*\]\]/.test(text.replace(TERM_RE, ''))) err(where, 'balise de glossaire mal fermée');
+  if ((text.match(/\*\*/g) ?? []).length % 2) err(where, 'gras mal fermé : nombre impair de « ** »');
 }
 
 /* ---------- 5. Schémas SVG ---------- */
@@ -139,6 +143,19 @@ function checkSvg(where, file) {
   if (open !== close) err(`schemas/${file}`, `balises <g>/<text>/<svg> déséquilibrées (${open} ouvertes, ${close} fermées)`);
 }
 
+/* ---------- 5 bis. Format long des fiches (guide de style, CONTENU.md) ---------- */
+function checkLongFormat(where, texte) {
+  const last = texte[texte.length - 1] ?? '';
+  if (!/^\*\*\s*À retenir/.test(last.trim())) err(where, 'le dernier paragraphe doit commencer par « **À retenir :** »');
+  if (!texte.some((p) => /Dans la série/.test(p) && /Dans la réalité/.test(p)))
+    err(where, 'il manque le paragraphe « Dans la série… Dans la réalité… »');
+  if (!texte.some((p) => /Peu de gens savent/i.test(p))) warn(where, 'accroche « Peu de gens savent que… » absente');
+  texte.forEach((p, i) => {
+    if (/[—–]/.test(p)) warn(where, `paragraphe ${i + 1} : tiret cadratin ou demi-cadratin (le guide de style les exclut)`);
+    if (/^\s*[-*•]\s/m.test(p.replace(/\*\*/g, ''))) warn(where, `paragraphe ${i + 1} : liste à puces dans le texte (préférer un texte qui coule)`);
+  });
+}
+
 /* ---------- 6. Contrôles par collection ---------- */
 for (const c of data.categories) checkIcon(`categories [${c.id}]`, c.icone);
 
@@ -154,7 +171,8 @@ for (const f of data.theorie) {
   }
   for (const id of f.liens?.equivalences ?? []) ref(w, 'equivalences', id, 'équivalence');
   for (const id of f.liens?.pratique ?? []) ref(w, 'pratique', id, 'expérience');
-  [...(f.pourquoi ?? []), f.enfant, f.realite?.explication, ...(f.principe ?? [])].forEach((t) => checkRich(w, t));
+  [...(f.texte ?? []), ...(f.pourquoi ?? []), f.enfant, f.realite?.explication, ...(f.principe ?? [])].forEach((t) => checkRich(w, t));
+  if (f.texte) checkLongFormat(w, f.texte);
   (f.quiz ?? []).forEach((q, i) => {
     if (q.reponse >= q.choix.length) err(w, `quiz ${i + 1} : « reponse » hors des choix`);
     if (new Set(q.choix).size !== q.choix.length) err(w, `quiz ${i + 1} : choix en double`);
@@ -249,6 +267,32 @@ for (const p of data.parcours) {
   checkIcon(w, p.icone);
   for (const e of p.etapes ?? []) ref(w, STEP_COL[e.type], e.id, `étape ${e.type}`);
 }
+
+/* ---------- 6 bis. Règle de contenu (non négociable) ----------
+ * Bloque les termes de fabrication d'armes, d'explosifs ou de dispositifs dangereux, partout.
+ * Pour un sujet sensible (principeSeul), bloque aussi toute quantité de matière et tout vocabulaire de montage. */
+const INTERDITS = [
+  /d[ée]tonateur/i, /poudre noire/i, /thermite/i, /napalm/i, /molotov/i, /nitrate d'ammonium/i, /chlorate de (potassium|sodium)/i,
+  /peroxyde d'ac[ée]tone/i, /\btatp\b/i, /m[èe]che lente/i, /explosif artisanal/i, /engin explosif/i, /arme artisanale/i,
+  /fabriquer (une|un|des) (arme|bombe|explosif|grenade|fumig[èe]ne)/i, /fabrication (d'une|d'un|de) (arme|bombe|explosif|grenade)/i,
+  /taser artisanal/i, /canon (de|à) (pomme de terre|patate)/i, /pistolet [àa] (clous|bille) improvis/i,
+];
+const QUANTITE = /\b\d+(?:[.,]\d+)?\s?(?:mg|g|kg|grammes?|kilos?|ml|mL|cl|L|litres?|cuill[èe]res?)\b/;
+const MONTAGE = /\b(sch[ée]ma de montage|liste des composants|branche[rz]? (le|la|les) (fil|borne)|r[ée]sistance de \d|condensateur de \d|enroule[rz]? \d+ (tours|spires))/i;
+
+function* strings(value, path = '') {
+  if (typeof value === 'string') yield [path, value];
+  else if (Array.isArray(value)) for (let i = 0; i < value.length; i++) yield* strings(value[i], `${path}[${i}]`);
+  else if (value && typeof value === 'object') for (const [k, v] of Object.entries(value)) if (k !== '__file') yield* strings(v, path ? `${path}.${k}` : k);
+}
+for (const col of Object.keys(COLLECTIONS))
+  for (const it of data[col])
+    for (const [path, text] of strings(it))
+      for (const re of INTERDITS) if (re.test(text)) err(`${it.__file} [${it.id}] ${path}`, `contenu interdit (règle de contenu) : « ${text.match(re)[0]} »`);
+for (const f of data.theorie.filter((x) => x.principeSeul))
+  for (const [path, text] of strings({ texte: f.texte, principe: f.principe, pourquoi: f.pourquoi, enfant: f.enfant }))
+    if (QUANTITE.test(text) || MONTAGE.test(text))
+      err(`${f.__file} [${f.id}] ${path}`, `sujet sensible : quantité ou montage interdit (« ${(text.match(QUANTITE) ?? text.match(MONTAGE))[0]} »)`);
 
 /* ---------- 7. SVG orphelins ---------- */
 for (const f of readdirSync(SCHEMAS)) if (f.endsWith('.svg') && !usedSvgs.has(f)) warn(`schemas/${f}`, "schéma non utilisé par aucune fiche ni expérience");

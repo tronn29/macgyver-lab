@@ -8,6 +8,7 @@ import type { CategorieId, Experience, Fiche, Fonction, Mission, Objet } from '.
 import { chip, difficultyBadge, label, safetyBadge, toast, verdictBadge } from '../ui/components';
 import { icon } from '../ui/icons';
 import { play } from '../core/sound';
+import { readingMinutes } from '../core/fiche';
 
 export function catName(id: string): string {
   return content().byId.categorie.get(id)?.nom ?? id;
@@ -88,7 +89,7 @@ export function ficheCard(f: Fiche, opts: { compact?: boolean } = {}): HTMLEleme
       { class: 'card__foot' },
       verdictBadge(f.realite.verdict),
       safetyBadge(f.securite.niveau, true),
-      h('span', { class: 'card__meta' }, icon('clock', 14), t('commun.minutes', { n: f.duree }))
+      h('span', { class: 'card__meta' }, icon('clock', 14), t('commun.minutes', { n: readingMinutes(f) }))
     )
   );
 }

@@ -54,3 +54,20 @@ Pour relancer une mesure :
 npm run build && npm run preview
 npx lighthouse http://localhost:4173/ --form-factor=mobile --view
 ```
+
+## Format long des fiches (v2) : vérifications et corrections
+
+- Tests : 47 au total. Les 13 nouveaux vérifient :
+  - que le texte de la fiche CO₂ est identique au texte fourni ;
+  - la structure du texte et la compatibilité avec l'ancien format ;
+  - le temps de lecture et la recherche dans le texte long ;
+  - que le validateur bloque 6 cas fautifs (« À retenir » absent, paragraphe série/réalité absent, gras mal fermé, terme de fabrication dangereux, quantité dans un sujet sensible, sujet sensible relié à une expérience).
+- Affichage vérifié sur téléphone en portrait (375 × 812) et en paysage (812 × 375), pour une fiche migrée et une fiche non migrée. Les 22 fiches et 5 pages annexes s'affichent sans erreur.
+- Contraste : 0 échec, dans les 2 thèmes et pour les 2 formats. Titres sans saut, un seul `h1`.
+
+| Défaut trouvé | Correction |
+|---|---|
+| Un terme du glossaire de plusieurs mots (bouton) ne se coupait pas en fin de ligne et laissait un trou dans le texte | Les termes sont devenus des liens vers le glossaire. Ils se coupent comme du texte et ouvrent la même infobulle au clic, au clavier et au survol. |
+| Dans « À retenir », l'accroche en bloc laissait la phrase commencer par une minuscule | Accroche gardée en ligne |
+| Une étiquette du nouveau schéma dépassait du cadre (x = 361), et deux étiquettes se chevauchaient | Colonne décalée et rangées espacées ; textes mesurés avec la police réelle : 0 débordement, 0 chevauchement |
+| Image de partage : le texte « À retenir » débordait sur la ligne du bas | Nombre de lignes limité à la place disponible, avec points de suspension |

@@ -2,43 +2,48 @@
   {
     "id": "detente-co2-froid",
     "titre": "Extincteur au CO₂ et froid",
-    "sousTitre": "Quand un gaz qui se détend refroidit tout ce qu'il touche",
-    "categories": ["thermique", "pression"],
-    "duree": 2,
+    "sousTitre": "Comment un extincteur coupe un feu, et pourquoi le CO₂ givre en sortant",
+    "categories": [
+      "thermique",
+      "pression"
+    ],
     "niveau": 2,
     "schema": {
       "fichier": "detente-co2-froid.svg",
-      "alt": "Schéma en trois étapes : le CO₂ liquide sort de la bouteille sous forte pression et se détend en un jet froid ; un thermomètre passe de +20 °C à −78 °C ; un barreau métallique refroidi se contracte et peut se fissurer s'il est fin.",
-      "legende": "Détente du gaz, chute de température, puis contraction du métal."
+      "alt": "Schéma en trois parties. 1 : le triangle du feu, dont les trois côtés sont le combustible, l'oxygène et la chaleur, avec une flamme au centre. 2 : quatre extincteurs côte à côte avec ce que chacun retire au feu : l'eau retire la chaleur, la poudre casse la réaction, la mousse et le CO₂ retirent l'oxygène. 3 : une bouteille de CO₂ liquide comprimé ; à la sortie du cornet, le gaz se détend, absorbe la chaleur et forme de la neige de glace sèche à −78 °C.",
+      "legende": "Le triangle du feu, les quatre types d'extincteurs et la détente du CO₂."
     },
-    "principe": [
-      "Dans la bouteille, le CO₂ est liquide car il est comprimé à près de 57 bar.",
-      "En sortant, il se détend brutalement : il absorbe de la chaleur et chute vers −78 °C.",
-      "Le métal refroidi se contracte et devient plus cassant, surtout s'il est fin."
-    ],
-    "pourquoi": [
-      "Pour passer de l'état liquide à l'état gazeux, le CO₂ a besoin d'énergie : c'est la [[chaleur-latente|chaleur latente]] de vaporisation. Il la prend à l'air et aux objets autour, qui se refroidissent. La [[detente]] rapide du gaz accentue encore la chute de température.",
-      "Une partie du CO₂ gèle même en flocons de neige carbonique, à −78,5 °C. Projetés sur une pièce métallique, ces flocons la refroidissent très vite : le métal subit une [[contraction]] et une [[contrainte-thermique]].",
-      "Beaucoup d'aciers deviennent plus fragiles à très basse température : ils cassent net au lieu de se déformer. Mais un barreau épais garde un cœur trop « chaud » pour que l'effet suffise."
+    "texte": [
+      "**Un extincteur n'éteint pas un feu, il lui retire ce dont il a besoin.** Un feu a besoin de trois choses : un combustible (ce qui brûle), de l'[[comburant|oxygène]] et de la chaleur. Il suffit d'en supprimer une seule pour qu'il s'arrête. Un extincteur, c'est simplement une bouteille sous pression qui contient un produit capable de couper l'une des trois, et chaque type de produit en coupe une différente.",
+      "**L'extincteur à eau** retire la chaleur : il refroidit ce qui brûle. Il est bon pour le bois, le papier, le tissu. Il est dangereux sur un feu électrique (l'eau [[conducteur|conduit le courant]]) et sur une huile qui brûle (elle s'étale et projette).",
+      "**L'extincteur à poudre** casse la réaction du feu : la poudre l'empêche de s'entretenir. Il éteint presque tout, mais le nuage de poudre abîme l'électronique.",
+      "**L'extincteur à mousse** retire l'oxygène : il recouvre un liquide en feu d'une couche qui l'isole de l'air, comme un couvercle sur une casserole.",
+      "**L'extincteur au CO₂** retire aussi l'oxygène : le gaz carbonique est plus lourd que l'air, il s'étale sur le feu et repousse l'oxygène. Il ne laisse aucun résidu, donc il convient à l'électrique et à l'informatique. Sa portée est courte, et il est dangereux dans une pièce fermée, car il prive aussi les personnes d'oxygène.",
+      "**Peu de gens savent que le CO₂ est stocké sous forme liquide.** Dans la bouteille, il est comprimé à plusieurs dizaines de fois [[pression-atmospherique|la pression de l'air]]. Quand il sort, il [[detente|se détend]] d'un coup et se refroidit violemment : une partie se transforme en [[neige-carbonique|neige de glace sèche]] à environ -78 °C. C'est pour ça que le cornet givre et peut brûler la peau par le froid.",
+      "**Dans la série**, MacGyver projette ce froid sur des barreaux de prison, et ils cassent. **Dans la réalité**, ça ne marche pas sur un barreau épais : le froid n'a pas le temps de le traverser, et l'acier reste solide. Ça marche en revanche sur des matières qui deviennent cassantes au froid : un tuyau en plastique rigide, un joint en caoutchouc, un petit cadenas bon marché en zinc, ou une pièce fine déjà abîmée. Un acier ordinaire devient aussi [[fragilite|fragile]], mais seulement à des températures très basses sur toute son épaisseur : c'est ce qui a fait casser des coques de navires dans les mers glaciales.",
+      "**À retenir :** quand un gaz se détend, ses molécules s'écartent les unes des autres. Pour s'écarter, elles ont besoin d'énergie, et elles la prennent sous forme de chaleur dans ce qui les entoure. Ce qui les entoure se refroidit donc. Tu l'as déjà vu : quand tu utilises une bombe aérosol longtemps, elle devient glacée dans ta main. Le frigo fonctionne pareil : un liquide se détend à l'intérieur, absorbe la chaleur de la nourriture, puis est recomprimé dehors pour la rejeter."
     ],
     "enfant": "Quand tu appuies sur l'extincteur, le gaz qui était serré très fort dans la bouteille s'échappe d'un coup. Pour s'étaler, il a besoin d'énergie et il la vole sous forme de chaleur à tout ce qui l'entoure. Résultat : tout devient glacé, comme quand tu souffles fort sur ta soupe pour la refroidir, mais en beaucoup plus puissant.",
-    "chiffres": [
-      { "valeur": "57 bar", "label": "pression dans la bouteille à 20 °C" },
-      { "valeur": "−78,5 °C", "label": "température de la neige carbonique" },
-      { "valeur": "≈ 0,1 mm", "label": "contraction d'un barreau d'acier de 1 m refroidi de 100 °C" }
-    ],
     "realite": {
       "verdict": "partiel",
-      "explication": "Le froid fragilise bien le métal, mais un barreau épais ne casse pas : il faudrait le refroidir à cœur longtemps et le frapper fort. Les petites pièces fines, elles, peuvent céder."
+      "explication": "Le froid ne traverse pas un barreau épais : l'acier reste solide. Ça marche en revanche sur un plastique rigide, un joint en caoutchouc, un petit cadenas en zinc ou une pièce fine déjà abîmée."
     },
     "securite": {
       "niveau": "orange",
       "note": "Le jet de CO₂ provoque des brûlures par le froid et chasse l'oxygène dans une pièce fermée. Un extincteur sert à éteindre un feu, pas à jouer."
     },
     "liens": {
-      "fiches": ["choc-thermique", "glace-seche", "isolation-thermique"],
-      "equivalences": ["isoler-chaleur"],
-      "pratique": ["brouillard-glace-seche"]
+      "fiches": [
+        "choc-thermique",
+        "glace-seche",
+        "isolation-thermique"
+      ],
+      "equivalences": [
+        "isoler-chaleur"
+      ],
+      "pratique": [
+        "brouillard-glace-seche"
+      ]
     },
     "quiz": [
       {
@@ -54,18 +59,51 @@
       },
       {
         "question": "Un barreau d'acier épais refroidi au CO₂ va-t-il casser facilement ?",
-        "choix": ["Oui, d'un seul coup", "Non, son cœur reste trop chaud", "Oui, il fond"],
+        "choix": [
+          "Oui, d'un seul coup",
+          "Non, son cœur reste trop chaud",
+          "Oui, il fond"
+        ],
         "reponse": 1,
         "explication": "Le froid ne pénètre que la surface pendant les quelques secondes de jet : un barreau épais garde l'essentiel de sa résistance."
+      },
+      {
+        "question": "Quel extincteur choisir pour un feu sur un ordinateur ?",
+        "choix": [
+          "L'extincteur à eau",
+          "L'extincteur au CO₂",
+          "L'extincteur à mousse"
+        ],
+        "reponse": 1,
+        "explication": "Le CO₂ chasse l'oxygène sans laisser de résidu et ne conduit pas le courant. L'eau conduit le courant et la mousse est faite pour les liquides en feu."
       }
     ],
-    "motsCles": ["extincteur", "CO2", "dioxyde de carbone", "froid", "cadenas", "barreau", "neige carbonique", "détente"]
+    "motsCles": [
+      "extincteur",
+      "CO2",
+      "dioxyde de carbone",
+      "froid",
+      "cadenas",
+      "barreau",
+      "neige carbonique",
+      "détente",
+      "eau",
+      "poudre",
+      "mousse",
+      "triangle du feu",
+      "feu électrique",
+      "aérosol",
+      "frigo"
+    ]
   },
   {
     "id": "choc-thermique",
     "titre": "Choc thermique",
     "sousTitre": "Quand un brusque écart de température fait éclater un matériau",
-    "categories": ["thermique", "materiaux"],
+    "categories": [
+      "thermique",
+      "materiaux"
+    ],
     "duree": 2,
     "niveau": 2,
     "schema": {
@@ -85,9 +123,18 @@
     ],
     "enfant": "Imagine deux amis qui marchent bras dessus, bras dessous. Si l'un se met soudain à faire de grands pas pendant que l'autre fait des petits pas, ils tirent l'un sur l'autre jusqu'à se lâcher. Dans un verre, l'eau bouillante fait grandir l'intérieur pendant que l'extérieur reste petit : le verre tire tellement sur lui-même qu'il se fend.",
     "chiffres": [
-      { "valeur": "9 × 10⁻⁶ /°C", "label": "dilatation du verre ordinaire : 9 µm par mètre et par degré" },
-      { "valeur": "3,3 × 10⁻⁶ /°C", "label": "dilatation du verre borosilicate, près de 3 fois moins" },
-      { "valeur": "≈ 1 W/(m·K)", "label": "conductivité thermique du verre, environ 50 fois moins que l'acier" }
+      {
+        "valeur": "9 × 10⁻⁶ /°C",
+        "label": "dilatation du verre ordinaire : 9 µm par mètre et par degré"
+      },
+      {
+        "valeur": "3,3 × 10⁻⁶ /°C",
+        "label": "dilatation du verre borosilicate, près de 3 fois moins"
+      },
+      {
+        "valeur": "≈ 1 W/(m·K)",
+        "label": "conductivité thermique du verre, environ 50 fois moins que l'acier"
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -98,8 +145,15 @@
       "note": "Le verre qui éclate projette des éclats coupants et le liquide chaud brûle. Ne pose jamais un plat en verre brûlant sur une surface froide ou mouillée : laisse-le refroidir lentement."
     },
     "liens": {
-      "fiches": ["detente-co2-froid", "isolation-thermique", "glace-seche"],
-      "equivalences": ["chauffer", "isoler-chaleur"]
+      "fiches": [
+        "detente-co2-froid",
+        "isolation-thermique",
+        "glace-seche"
+      ],
+      "equivalences": [
+        "chauffer",
+        "isoler-chaleur"
+      ]
     },
     "quiz": [
       {
@@ -115,18 +169,35 @@
       },
       {
         "question": "Quel matériau résiste le mieux au choc thermique ?",
-        "choix": ["Le verre ordinaire d'une bouteille", "Le verre borosilicate de laboratoire", "La glace d'un glaçon"],
+        "choix": [
+          "Le verre ordinaire d'une bouteille",
+          "Le verre borosilicate de laboratoire",
+          "La glace d'un glaçon"
+        ],
         "reponse": 1,
         "explication": "Il se dilate environ trois fois moins que le verre ordinaire : pour un même écart de température, les contraintes internes sont trois fois plus faibles."
       }
     ],
-    "motsCles": ["verre", "vitre", "bouteille", "fissure", "éclater", "eau bouillante", "plat à four", "borosilicate", "céramique"]
+    "motsCles": [
+      "verre",
+      "vitre",
+      "bouteille",
+      "fissure",
+      "éclater",
+      "eau bouillante",
+      "plat à four",
+      "borosilicate",
+      "céramique"
+    ]
   },
   {
     "id": "glace-seche",
     "titre": "Glace sèche et sublimation",
     "sousTitre": "Un solide qui devient gaz sans jamais fondre",
-    "categories": ["thermique", "chimie"],
+    "categories": [
+      "thermique",
+      "chimie"
+    ],
     "duree": 2,
     "niveau": 2,
     "schema": {
@@ -146,9 +217,18 @@
     ],
     "enfant": "La glace sèche ressemble à de la glace normale, mais c'est du gaz carbonique gelé, le même que celui des bulles de soda. Quand elle se réchauffe, elle ne fond pas en eau : elle se transforme directement en gaz invisible, comme un glaçon qui disparaîtrait sans laisser de flaque. La fumée blanche, c'est l'air humide qui a tellement froid qu'il forme un petit nuage.",
     "chiffres": [
-      { "valeur": "−78,5 °C", "label": "température de sublimation à pression ambiante" },
-      { "valeur": "≈ 570 kJ/kg", "label": "chaleur absorbée pour sublimer 1 kg de glace sèche" },
-      { "valeur": "≈ 550 L", "label": "de gaz à 20 °C libérés par 1 kg de glace sèche" }
+      {
+        "valeur": "−78,5 °C",
+        "label": "température de sublimation à pression ambiante"
+      },
+      {
+        "valeur": "≈ 570 kJ/kg",
+        "label": "chaleur absorbée pour sublimer 1 kg de glace sèche"
+      },
+      {
+        "valeur": "≈ 550 L",
+        "label": "de gaz à 20 °C libérés par 1 kg de glace sèche"
+      }
     ],
     "realite": {
       "verdict": "vrai",
@@ -159,31 +239,63 @@
       "note": "Brûlures par le froid au contact : manipule-la toujours avec des gants épais ou une pince. Le CO₂ libéré peut provoquer une asphyxie dans une pièce fermée ou une voiture. Ne l'enferme jamais dans un récipient hermétique : la pression peut le faire éclater."
     },
     "liens": {
-      "fiches": ["detente-co2-froid", "pression-atmospherique", "isolation-thermique"],
-      "equivalences": ["isoler-chaleur"],
-      "pratique": ["brouillard-glace-seche", "canon-vortex"]
+      "fiches": [
+        "detente-co2-froid",
+        "pression-atmospherique",
+        "isolation-thermique"
+      ],
+      "equivalences": [
+        "isoler-chaleur"
+      ],
+      "pratique": [
+        "brouillard-glace-seche",
+        "canon-vortex"
+      ]
     },
     "quiz": [
       {
         "question": "Que devient la glace sèche quand elle se réchauffe à l'air libre ?",
-        "choix": ["Elle fond en eau", "Elle fond en CO₂ liquide", "Elle devient directement un gaz", "Elle s'enflamme"],
+        "choix": [
+          "Elle fond en eau",
+          "Elle fond en CO₂ liquide",
+          "Elle devient directement un gaz",
+          "Elle s'enflamme"
+        ],
         "reponse": 2,
         "explication": "À pression ambiante, le CO₂ ne peut pas être liquide : il passe directement de solide à gaz, c'est la sublimation."
       },
       {
         "question": "De quoi est fait le brouillard blanc au-dessus de la glace sèche ?",
-        "choix": ["De CO₂ devenu visible", "De gouttelettes d'eau venues de l'air", "De fumée de combustion", "De cristaux de sel"],
+        "choix": [
+          "De CO₂ devenu visible",
+          "De gouttelettes d'eau venues de l'air",
+          "De fumée de combustion",
+          "De cristaux de sel"
+        ],
         "reponse": 1,
         "explication": "Le CO₂ est invisible. Le gaz très froid refroidit l'air humide, dont la vapeur d'eau se condense en minuscules gouttelettes."
       }
     ],
-    "motsCles": ["glace sèche", "carboglace", "neige carbonique", "CO2", "dioxyde de carbone", "brouillard", "fumée", "sublimation", "froid"]
+    "motsCles": [
+      "glace sèche",
+      "carboglace",
+      "neige carbonique",
+      "CO2",
+      "dioxyde de carbone",
+      "brouillard",
+      "fumée",
+      "sublimation",
+      "froid"
+    ]
   },
   {
     "id": "empreintes-poussiere",
     "titre": "Empreintes digitales et poussière",
     "sousTitre": "Comment une poudre fine révèle une trace invisible",
-    "categories": ["materiaux", "chimie"],
+    "categories": [
+      "materiaux",
+      "chimie"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -203,9 +315,18 @@
     ],
     "enfant": "Le bout de tes doigts est couvert de petites lignes, comme les sillons d'un champ. Quand tu touches une vitre, ces lignes laissent une trace de gras invisible, comme un tampon sans encre. Si on saupoudre du cacao très fin, il colle seulement là où il y a du gras : le dessin de ton doigt apparaît, comme un message secret.",
     "chiffres": [
-      { "valeur": "≈ 0,5 mm", "label": "écart entre deux crêtes du bout des doigts" },
-      { "valeur": "≈ 99 %", "label": "d'eau dans la sueur, le reste étant surtout des sels" },
-      { "valeur": "3", "label": "grandes familles de motifs : arcs, boucles et tourbillons" }
+      {
+        "valeur": "≈ 0,5 mm",
+        "label": "écart entre deux crêtes du bout des doigts"
+      },
+      {
+        "valeur": "≈ 99 %",
+        "label": "d'eau dans la sueur, le reste étant surtout des sels"
+      },
+      {
+        "valeur": "3",
+        "label": "grandes familles de motifs : arcs, boucles et tourbillons"
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -216,8 +337,13 @@
       "note": "Sans danger avec du cacao, du talc ou de la farine. Évite de respirer les poudres très fines et travaille loin du visage."
     },
     "liens": {
-      "fiches": ["capillarite-filtration", "combustion-poussieres"],
-      "pratique": ["empreintes-cacao"]
+      "fiches": [
+        "capillarite-filtration",
+        "combustion-poussieres"
+      ],
+      "pratique": [
+        "empreintes-cacao"
+      ]
     },
     "quiz": [
       {
@@ -233,18 +359,36 @@
       },
       {
         "question": "Sur quelle surface la poudre révèle-t-elle le mieux une empreinte ?",
-        "choix": ["Un papier buvard", "Un tissu en coton", "Un verre propre et lisse", "Du bois brut"],
+        "choix": [
+          "Un papier buvard",
+          "Un tissu en coton",
+          "Un verre propre et lisse",
+          "Du bois brut"
+        ],
         "reponse": 2,
         "explication": "Sur une surface lisse et non poreuse, la trace reste en surface. Les matériaux poreux l'absorbent."
       }
     ],
-    "motsCles": ["empreinte", "trace de doigt", "poudre", "cacao", "talc", "farine", "ruban adhésif", "enquête", "vitre", "verre"]
+    "motsCles": [
+      "empreinte",
+      "trace de doigt",
+      "poudre",
+      "cacao",
+      "talc",
+      "farine",
+      "ruban adhésif",
+      "enquête",
+      "vitre",
+      "verre"
+    ]
   },
   {
     "id": "infrarouge-vision",
     "titre": "Infrarouge et vision nocturne",
     "sousTitre": "Voir la chaleur ou amplifier la lumière : deux techniques différentes",
-    "categories": ["lumiere"],
+    "categories": [
+      "lumiere"
+    ],
     "duree": 2,
     "niveau": 2,
     "schema": {
@@ -264,9 +408,18 @@
     ],
     "enfant": "Ton corps est comme un petit radiateur : il envoie de la chaleur tout autour de lui, même dans le noir. Nos yeux ne voient pas cette « lumière de chaleur », mais une caméra thermique, si. Sur son écran, tu apparais comme une silhouette brillante, et un bol de soupe chaude brille bien plus qu'un verre d'eau fraîche.",
     "chiffres": [
-      { "valeur": "≈ 9,4 µm", "label": "longueur d'onde où un corps à 37 °C rayonne le plus" },
-      { "valeur": "0,4 – 0,8 µm", "label": "domaine de la lumière visible, pour comparaison" },
-      { "valeur": "≈ 850 nm", "label": "lumière des diodes infrarouges des caméras de surveillance" }
+      {
+        "valeur": "≈ 9,4 µm",
+        "label": "longueur d'onde où un corps à 37 °C rayonne le plus"
+      },
+      {
+        "valeur": "0,4 – 0,8 µm",
+        "label": "domaine de la lumière visible, pour comparaison"
+      },
+      {
+        "valeur": "≈ 850 nm",
+        "label": "lumière des diodes infrarouges des caméras de surveillance"
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -277,9 +430,18 @@
       "note": "Sans danger : une caméra thermique ne fait que capter. Ne fixe pas de près des diodes infrarouges puissantes : l'œil ne se protège pas d'une lumière qu'il ne voit pas."
     },
     "liens": {
-      "fiches": ["isolation-thermique", "miroir-concentration", "lentille-bouteille"],
-      "equivalences": ["isoler-chaleur", "signaler"],
-      "pratique": ["infrarouge-camera"]
+      "fiches": [
+        "isolation-thermique",
+        "miroir-concentration",
+        "lentille-bouteille"
+      ],
+      "equivalences": [
+        "isoler-chaleur",
+        "signaler"
+      ],
+      "pratique": [
+        "infrarouge-camera"
+      ]
     },
     "quiz": [
       {
@@ -295,18 +457,36 @@
       },
       {
         "question": "Une caméra thermique a-t-elle besoin de lumière pour fonctionner ?",
-        "choix": ["Oui, comme un appareil photo", "Non, elle capte le rayonnement émis par les objets", "Seulement la lumière de la Lune"],
+        "choix": [
+          "Oui, comme un appareil photo",
+          "Non, elle capte le rayonnement émis par les objets",
+          "Seulement la lumière de la Lune"
+        ],
         "reponse": 1,
         "explication": "Les objets émettent eux-mêmes leur rayonnement infrarouge : la caméra fonctionne dans le noir absolu."
       }
     ],
-    "motsCles": ["infrarouge", "IR", "caméra thermique", "vision nocturne", "jumelles", "chaleur", "thermographie", "nuit", "surveillance", "télécommande"]
+    "motsCles": [
+      "infrarouge",
+      "IR",
+      "caméra thermique",
+      "vision nocturne",
+      "jumelles",
+      "chaleur",
+      "thermographie",
+      "nuit",
+      "surveillance",
+      "télécommande"
+    ]
   },
   {
     "id": "bobine-pic-tension",
     "titre": "Bobine et pic de tension",
     "sousTitre": "Pourquoi couper le courant dans une bobine fait jaillir une étincelle",
-    "categories": ["electricite", "magnetisme"],
+    "categories": [
+      "electricite",
+      "magnetisme"
+    ],
     "duree": 2,
     "niveau": 3,
     "principeSeul": true,
@@ -327,9 +507,18 @@
     ],
     "enfant": "Imagine de l'eau qui coule très vite dans un long tuyau : si tu fermes le robinet d'un coup, le tuyau cogne, car l'eau lancée ne peut pas s'arrêter net. Une bobine fait pareil avec l'électricité : le courant refuse de s'arrêter d'un coup et pousse si fort qu'il saute dans l'air en faisant une petite étincelle. C'est pour cela qu'on ne joue jamais avec ces appareils.",
     "chiffres": [
-      { "valeur": "u = L · di/dt", "label": "la tension induite grandit avec la rapidité de la coupure" },
-      { "valeur": "≈ 3 kV/mm", "label": "champ électrique nécessaire pour qu'une étincelle traverse l'air sec" },
-      { "valeur": "1831", "label": "année de la découverte de l'induction électromagnétique" }
+      {
+        "valeur": "u = L · di/dt",
+        "label": "la tension induite grandit avec la rapidité de la coupure"
+      },
+      {
+        "valeur": "≈ 3 kV/mm",
+        "label": "champ électrique nécessaire pour qu'une étincelle traverse l'air sec"
+      },
+      {
+        "valeur": "1831",
+        "label": "année de la découverte de l'induction électromagnétique"
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -340,8 +529,14 @@
       "note": "Fiche de compréhension du principe uniquement. Les surtensions de bobine peuvent provoquer électrocution, brûlures et incendie. Ne démonte aucun appareil électrique et ne réalise aucun montage."
     },
     "liens": {
-      "fiches": ["electroaimant", "conducteurs-isolants", "boussole-improvisee"],
-      "equivalences": ["isoler-electricite"]
+      "fiches": [
+        "electroaimant",
+        "conducteurs-isolants",
+        "boussole-improvisee"
+      ],
+      "equivalences": [
+        "isoler-electricite"
+      ]
     },
     "quiz": [
       {
@@ -367,13 +562,26 @@
         "explication": "Elle offre un chemin au courant à la coupure : il décroît progressivement au lieu de s'arrêter net, et la surtension n'apparaît pas."
       }
     ],
-    "motsCles": ["bobine", "inductance", "relais", "électroaimant", "étincelle", "interrupteur", "surtension", "diode", "induction", "Lenz"]
+    "motsCles": [
+      "bobine",
+      "inductance",
+      "relais",
+      "électroaimant",
+      "étincelle",
+      "interrupteur",
+      "surtension",
+      "diode",
+      "induction",
+      "Lenz"
+    ]
   },
   {
     "id": "energie-cinetique-fronde",
     "titre": "Énergie cinétique et fronde",
     "sousTitre": "Comment un bras plus long transforme un geste en vitesse",
-    "categories": ["mecanique"],
+    "categories": [
+      "mecanique"
+    ],
     "duree": 2,
     "niveau": 2,
     "schema": {
@@ -393,9 +601,18 @@
     ],
     "enfant": "Quand tu fais tourner une balle au bout d'une ficelle, la balle va bien plus vite que ta main, car elle parcourt un grand cercle pendant que ta main en fait un tout petit. Si tu lâches, la balle part tout droit, comme une voiture qui ne prendrait pas le virage. Et plus elle va vite, plus elle a d'énergie : deux fois plus vite, c'est quatre fois plus d'énergie.",
     "chiffres": [
-      { "valeur": "× 4", "label": "énergie cinétique quand la vitesse double" },
-      { "valeur": "v = ω × r", "label": "la vitesse d'un point en rotation croît avec sa distance à l'axe" },
-      { "valeur": "≈ 20 J", "label": "énergie d'une balle de tennis (58 g) lancée à 94 km/h" }
+      {
+        "valeur": "× 4",
+        "label": "énergie cinétique quand la vitesse double"
+      },
+      {
+        "valeur": "v = ω × r",
+        "label": "la vitesse d'un point en rotation croît avec sa distance à l'axe"
+      },
+      {
+        "valeur": "≈ 20 J",
+        "label": "énergie d'une balle de tennis (58 g) lancée à 94 km/h"
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -406,13 +623,23 @@
       "note": "Un objet lancé en rotation peut blesser gravement, notamment aux yeux, et partir dans une direction imprévue. Comprendre le principe ne demande aucun lancer : ne fabrique rien et ne vise jamais une personne ou un animal."
     },
     "liens": {
-      "fiches": ["levier", "poulie-palan"],
-      "equivalences": ["faire-levier"]
+      "fiches": [
+        "levier",
+        "poulie-palan"
+      ],
+      "equivalences": [
+        "faire-levier"
+      ]
     },
     "quiz": [
       {
         "question": "Si la vitesse d'un objet double, son énergie cinétique est multipliée par…",
-        "choix": ["2", "3", "4", "8"],
+        "choix": [
+          "2",
+          "3",
+          "4",
+          "8"
+        ],
         "reponse": 2,
         "explication": "L'énergie dépend du carré de la vitesse : 2² = 4."
       },
@@ -428,13 +655,26 @@
         "explication": "Sans la force centripète de la ficelle, plus rien ne courbe sa trajectoire : il garde la direction qu'il avait à cet instant, tangente au cercle."
       }
     ],
-    "motsCles": ["fronde", "rotation", "lancer", "vitesse", "énergie cinétique", "force centripète", "lance-balle", "levier", "tangente"]
+    "motsCles": [
+      "fronde",
+      "rotation",
+      "lancer",
+      "vitesse",
+      "énergie cinétique",
+      "force centripète",
+      "lance-balle",
+      "levier",
+      "tangente"
+    ]
   },
   {
     "id": "pile-citron",
     "titre": "Pile au citron",
     "sousTitre": "Deux métaux différents et un jus acide : de l'électricité chimique",
-    "categories": ["electricite", "chimie"],
+    "categories": [
+      "electricite",
+      "chimie"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -454,9 +694,18 @@
     ],
     "enfant": "Dans une pile au citron, le clou en zinc est comme un enfant qui donne ses billes : il lâche de minuscules grains d'électricité, les électrons. Ils courent dans le fil jusqu'à la pièce en cuivre, qui les attrape. Le jus de citron sert de chemin de retour pour que la ronde continue. Un seul citron est trop faible, mais plusieurs ensemble peuvent allumer une petite LED.",
     "chiffres": [
-      { "valeur": "≈ 0,9 V", "label": "tension d'un citron avec une électrode de zinc et une de cuivre" },
-      { "valeur": "< 1 mA", "label": "courant typique, des centaines de fois moins qu'une lampe de poche" },
-      { "valeur": "≈ 1,8 V", "label": "seuil d'allumage d'une LED rouge : au moins 2 à 3 citrons en série" }
+      {
+        "valeur": "≈ 0,9 V",
+        "label": "tension d'un citron avec une électrode de zinc et une de cuivre"
+      },
+      {
+        "valeur": "< 1 mA",
+        "label": "courant typique, des centaines de fois moins qu'une lampe de poche"
+      },
+      {
+        "valeur": "≈ 1,8 V",
+        "label": "seuil d'allumage d'une LED rouge : au moins 2 à 3 citrons en série"
+      }
     ],
     "realite": {
       "verdict": "partiel",
@@ -467,9 +716,16 @@
       "note": "Sans danger. Ne mange pas le citron après l'expérience, car il contient des ions métalliques, et lave-toi les mains."
     },
     "liens": {
-      "fiches": ["conducteurs-isolants", "electroaimant"],
-      "equivalences": ["conduire-electricite"],
-      "pratique": ["pile-citron-xp"]
+      "fiches": [
+        "conducteurs-isolants",
+        "electroaimant"
+      ],
+      "equivalences": [
+        "conduire-electricite"
+      ],
+      "pratique": [
+        "pile-citron-xp"
+      ]
     },
     "quiz": [
       {
@@ -485,18 +741,36 @@
       },
       {
         "question": "Que se passe-t-il si on plante deux clous en zinc au lieu d'un zinc et d'un cuivre ?",
-        "choix": ["La tension double", "Il n'y a presque plus de tension", "Le citron chauffe", "La LED brille plus fort"],
+        "choix": [
+          "La tension double",
+          "Il n'y a presque plus de tension",
+          "Le citron chauffe",
+          "La LED brille plus fort"
+        ],
         "reponse": 1,
         "explication": "Deux électrodes identiques ont la même tendance à céder leurs électrons : aucune différence, donc pratiquement aucune tension."
       }
     ],
-    "motsCles": ["pile", "citron", "batterie", "clou galvanisé", "zinc", "cuivre", "pièce", "LED", "électricité", "pomme de terre"]
+    "motsCles": [
+      "pile",
+      "citron",
+      "batterie",
+      "clou galvanisé",
+      "zinc",
+      "cuivre",
+      "pièce",
+      "LED",
+      "électricité",
+      "pomme de terre"
+    ]
   },
   {
     "id": "lentille-bouteille",
     "titre": "Lentille avec une bouteille d'eau",
     "sousTitre": "Une bouteille ronde pleine d'eau concentre la lumière comme une loupe",
-    "categories": ["lumiere"],
+    "categories": [
+      "lumiere"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -516,9 +790,18 @@
     ],
     "enfant": "La lumière, c'est comme une troupe de coureurs : quand ils entrent dans l'eau, ils ralentissent et changent un peu de direction. Une bouteille ronde pleine d'eau fait tourner tous les rayons du soleil vers le même endroit, comme un entonnoir à lumière. Là où ils se rejoignent, ça chauffe très fort, comme sous une loupe.",
     "chiffres": [
-      { "valeur": "1,33", "label": "indice de réfraction de l'eau : la lumière y va 1,33 fois moins vite" },
-      { "valeur": "≈ 1 rayon", "label": "distance du foyer derrière une bouteille cylindrique pleine d'eau" },
-      { "valeur": "≈ 1 000 W/m²", "label": "puissance du soleil au sol par beau temps" }
+      {
+        "valeur": "1,33",
+        "label": "indice de réfraction de l'eau : la lumière y va 1,33 fois moins vite"
+      },
+      {
+        "valeur": "≈ 1 rayon",
+        "label": "distance du foyer derrière une bouteille cylindrique pleine d'eau"
+      },
+      {
+        "valeur": "≈ 1 000 W/m²",
+        "label": "puissance du soleil au sol par beau temps"
+      }
     ],
     "realite": {
       "verdict": "vrai",
@@ -529,31 +812,62 @@
       "note": "Ne regarde jamais le soleil à travers une lentille et ne vise pas la peau : brûlure immédiate. Fais l'essai sur un sol minéral, loin de toute matière inflammable, avec de l'eau à portée de main."
     },
     "liens": {
-      "fiches": ["miroir-concentration", "infrarouge-vision", "eau-solaire"],
-      "equivalences": ["faire-lentille", "chauffer"],
-      "pratique": ["loupe-goutte-eau"]
+      "fiches": [
+        "miroir-concentration",
+        "infrarouge-vision",
+        "eau-solaire"
+      ],
+      "equivalences": [
+        "faire-lentille",
+        "chauffer"
+      ],
+      "pratique": [
+        "loupe-goutte-eau"
+      ]
     },
     "quiz": [
       {
         "question": "Comment appelle-t-on le changement de direction de la lumière quand elle passe de l'air à l'eau ?",
-        "choix": ["La réflexion", "La réfraction", "La diffraction", "L'évaporation"],
+        "choix": [
+          "La réflexion",
+          "La réfraction",
+          "La diffraction",
+          "L'évaporation"
+        ],
         "reponse": 1,
         "explication": "La lumière change de vitesse en changeant de milieu, ce qui la dévie : c'est la réfraction."
       },
       {
         "question": "Une bouteille cylindrique pleine d'eau concentre la lumière du soleil…",
-        "choix": ["En un point", "En une ligne parallèle à la bouteille", "Elle la disperse sans la concentrer"],
+        "choix": [
+          "En un point",
+          "En une ligne parallèle à la bouteille",
+          "Elle la disperse sans la concentrer"
+        ],
         "reponse": 1,
         "explication": "Un cylindre n'est courbé que dans un sens : il rabat les rayons en une ligne. Seule une forme sphérique les concentre en un point."
       }
     ],
-    "motsCles": ["loupe", "bouteille", "lentille", "feu", "soleil", "allumer un feu", "réfraction", "concentrer", "verre", "eau"]
+    "motsCles": [
+      "loupe",
+      "bouteille",
+      "lentille",
+      "feu",
+      "soleil",
+      "allumer un feu",
+      "réfraction",
+      "concentrer",
+      "verre",
+      "eau"
+    ]
   },
   {
     "id": "boussole-improvisee",
     "titre": "Boussole improvisée",
     "sousTitre": "Une aiguille aimantée qui flotte s'aligne sur le champ magnétique terrestre",
-    "categories": ["magnetisme"],
+    "categories": [
+      "magnetisme"
+    ],
     "duree": 2,
     "niveau": 1,
     "schema": {
@@ -573,9 +887,18 @@
     ],
     "enfant": "Notre planète est comme un aimant géant caché sous nos pieds. Si tu transformes une aiguille en petit aimant en la frottant avec un aimant de frigo, puis que tu la poses sur une feuille qui flotte dans un bol d'eau, elle tourne toute seule et se place nord-sud, comme une flèche qui cherche son chemin.",
     "chiffres": [
-      { "valeur": "≈ 47 µT", "label": "intensité du champ magnétique terrestre en France" },
-      { "valeur": "≈ 100 ×", "label": "un aimant de frigo est environ cent fois plus intense à son contact" },
-      { "valeur": "< 4°", "label": "écart actuel entre nord magnétique et nord géographique en France métropolitaine" }
+      {
+        "valeur": "≈ 47 µT",
+        "label": "intensité du champ magnétique terrestre en France"
+      },
+      {
+        "valeur": "≈ 100 ×",
+        "label": "un aimant de frigo est environ cent fois plus intense à son contact"
+      },
+      {
+        "valeur": "< 4°",
+        "label": "écart actuel entre nord magnétique et nord géographique en France métropolitaine"
+      }
     ],
     "realite": {
       "verdict": "vrai",
@@ -586,9 +909,17 @@
       "note": "Sans danger. Manipule l'aiguille avec précaution et tiens les aimants puissants à l'écart des cartes bancaires, des stimulateurs cardiaques et des appareils électroniques."
     },
     "liens": {
-      "fiches": ["electroaimant", "bobine-pic-tension"],
-      "equivalences": ["aimanter"],
-      "pratique": ["boussole-aiguille", "levitation-trombone"]
+      "fiches": [
+        "electroaimant",
+        "bobine-pic-tension"
+      ],
+      "equivalences": [
+        "aimanter"
+      ],
+      "pratique": [
+        "boussole-aiguille",
+        "levitation-trombone"
+      ]
     },
     "quiz": [
       {
@@ -614,13 +945,27 @@
         "explication": "Le frottement sur la laine produit de l'électricité statique, pas du magnétisme. Chauffer l'acier au rouge détruit au contraire son aimantation."
       }
     ],
-    "motsCles": ["boussole", "compas", "aiguille", "aimant", "nord", "orientation", "bouchon", "feuille", "survie", "champ magnétique"]
+    "motsCles": [
+      "boussole",
+      "compas",
+      "aiguille",
+      "aimant",
+      "nord",
+      "orientation",
+      "bouchon",
+      "feuille",
+      "survie",
+      "champ magnétique"
+    ]
   },
   {
     "id": "eau-solaire",
     "titre": "Purifier l'eau avec le soleil",
     "sousTitre": "La méthode SODIS : UV-A et chaleur dans une bouteille transparente",
-    "categories": ["lumiere", "fluides"],
+    "categories": [
+      "lumiere",
+      "fluides"
+    ],
     "duree": 2,
     "niveau": 2,
     "schema": {
@@ -640,9 +985,18 @@
     ],
     "enfant": "Les microbes qui peuvent rendre malade n'aiment pas du tout le soleil. Si on remplit une bouteille transparente d'eau bien claire et qu'on la laisse toute une journée au grand soleil, une lumière invisible, les ultraviolets, abîme les microbes, un peu comme un énorme coup de soleil. Mais attention : le soleil n'enlève ni la boue ni les produits chimiques.",
     "chiffres": [
-      { "valeur": "6 h", "label": "de plein soleil, ou 2 jours de suite si le ciel est très nuageux" },
-      { "valeur": "320 – 400 nm", "label": "longueur d'onde des UV-A qui traversent le plastique PET" },
-      { "valeur": "≥ 50 °C", "label": "température à partir de laquelle la désinfection va trois fois plus vite" }
+      {
+        "valeur": "6 h",
+        "label": "de plein soleil, ou 2 jours de suite si le ciel est très nuageux"
+      },
+      {
+        "valeur": "320 – 400 nm",
+        "label": "longueur d'onde des UV-A qui traversent le plastique PET"
+      },
+      {
+        "valeur": "≥ 50 °C",
+        "label": "température à partir de laquelle la désinfection va trois fois plus vite"
+      }
     ],
     "realite": {
       "verdict": "vrai",
@@ -653,9 +1007,17 @@
       "note": "En cas de doute, faire bouillir l'eau reste la méthode la plus sûre. N'utilise que des bouteilles PET propres et intactes, jamais pour une eau trouble, salée ou polluée par des produits chimiques."
     },
     "liens": {
-      "fiches": ["capillarite-filtration", "lentille-bouteille"],
-      "equivalences": ["filtrer-eau", "chauffer"],
-      "pratique": ["distillateur-solaire"]
+      "fiches": [
+        "capillarite-filtration",
+        "lentille-bouteille"
+      ],
+      "equivalences": [
+        "filtrer-eau",
+        "chauffer"
+      ],
+      "pratique": [
+        "distillateur-solaire"
+      ]
     },
     "quiz": [
       {
@@ -681,6 +1043,17 @@
         "explication": "Les UV et la chaleur agissent sur les microbes vivants, pas sur les substances dissoutes : produits chimiques, métaux et sel restent dans l'eau."
       }
     ],
-    "motsCles": ["eau potable", "purifier", "désinfecter", "SODIS", "bouteille", "soleil", "UV", "microbes", "survie", "plastique PET"]
+    "motsCles": [
+      "eau potable",
+      "purifier",
+      "désinfecter",
+      "SODIS",
+      "bouteille",
+      "soleil",
+      "UV",
+      "microbes",
+      "survie",
+      "plastique PET"
+    ]
   }
 ]

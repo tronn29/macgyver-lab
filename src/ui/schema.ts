@@ -117,7 +117,7 @@ export function schemaFigure(opts: SchemaOptions): HTMLElement {
   return fig;
 }
 
-function openSchemaZoom(opts: SchemaOptions): void {
+export function openSchemaZoom(opts: SchemaOptions): void {
   const big = schemaFigure({ ...opts, zoomable: false, legende: undefined });
   big.classList.add('schema--zoom');
   openDialog({

@@ -45,12 +45,16 @@ export interface Fiche {
   titre: string;
   sousTitre?: string;
   categories: CategorieId[];
-  duree: number;
+  /** Ancien champ indicatif ; le temps affiché est calculé (voir core/fiche.ts). */
+  duree?: number;
   niveau?: number;
   principeSeul?: boolean;
   schema: SchemaSvg;
-  principe: string[];
-  pourquoi: string[];
+  /** Format long (v2) : paragraphes en texte enrichi. S'il est présent, il remplace principe et pourquoi. */
+  texte?: string[];
+  /** Format court (v1), conservé pour les fiches non migrées. */
+  principe?: string[];
+  pourquoi?: string[];
   enfant: string;
   chiffres?: { valeur: string; label: string }[];
   realite: { verdict: Verdict; explication: string };

@@ -49,3 +49,18 @@ Décisions prises sans consultation, avec leur raison. Chacune peut être revue.
 - *Énergie cinétique et fronde* reste au niveau de la physique (½mv², vitesse tangentielle), sans dimensions ni fabrication.
 - Le canon à anneaux utilise la brume d'un humidificateur, jamais de fumée. La fusée à eau est limitée à 3 bar et doit être faite avec un adulte.
 - Missions : solutions sans flamme en espace clos, sans électricité du secteur, sans forcer de mécanisme dangereux.
+
+## Format long des fiches Théorie (v2)
+
+| Décision | Raison |
+|---|---|
+| **Nouveau champ `texte` : liste de paragraphes en texte enrichi** | Un texte qui coule se retient mieux qu'une liste de points. On réutilise le balisage existant (`[[terme]]`) et on ajoute `**gras**`. Le gras qui ouvre un paragraphe devient sa phrase d'accroche (mise en couleur). |
+| **Compatibilité par la présence du champ** | Une fiche avec `texte` s'affiche au format long ; sans `texte`, l'ancien format (principe en 3 lignes + pourquoi) reste affiché. Le schéma JSON accepte l'un ou l'autre (`anyOf`), ce qui permet de migrer fiche par fiche. |
+| **Blocs masqués dans le format long** | « Principe en 3 lignes », « Pourquoi ça marche », « Données clés » et l'explication séparée de « Série ou réalité ? » ne s'affichent plus : le texte les contient. L'étiquette « Série ou réalité ? » (verdict) reste dans l'en-tête et en tête du paragraphe « Dans la série / Dans la réalité », affiché dans un encadré orange. Le niveau de sécurité garde son panneau, avec sa note, après le texte. |
+| **« À retenir » en encadré final** | Le dernier paragraphe est obligatoire et conclut ; il est mis en valeur pour la révision. Il sert aussi à l'image de partage et au mode enfant de la lecture vocale. |
+| **Temps de lecture calculé** | 200 mots par minute sur le texte affiché, arrondi à la minute supérieure, affiché en haut de la fiche et sur les cartes. `duree` devient facultatif. |
+| **Mise en page de lecture** | Corps de 17 à 18 px, interligne de 1,75, largeur de ligne limitée à environ 40 caractères em (65 à 75 signes), paragraphes espacés de 1,4 ligne. |
+| **Schéma à portée sans quitter le texte** | Sur ordinateur et en paysage, le schéma reste épinglé à gauche du texte. Sur téléphone en portrait, un bouton flottant « Voir le schéma » apparaît dès que la figure est sortie de l'écran, et ouvre le schéma agrandi. Il disparaît quand la figure est visible. |
+| **Fiche lue** | Marquée lue en arrivant à « À retenir », ou après un délai proportionnel au temps de lecture (30 s par minute, 20 s au minimum). |
+| **Validateur** | Il exige « À retenir » en dernier et un paragraphe « Dans la série / Dans la réalité », et vérifie la fermeture du gras. Il avertit en cas d'absence de « Peu de gens savent que… », de tiret cadratin ou de liste à puces. La règle de contenu est renforcée : termes de fabrication d'armes ou d'explosifs bloqués dans tout le contenu ; quantités de matière et vocabulaire de montage bloqués dans les sujets sensibles. |
+| **Fiche CO₂ migrée** | Texte fourni repris mot pour mot ; un test le compare au fichier témoin `tests/fixtures/fiche-co2.md`. Les infobulles utilisent la forme `[[id|texte affiché]]`, ce qui ne change pas le texte lu. Schéma redessiné : triangle du feu, quatre types d'extincteurs et ce que chacun retire, détente du CO₂ en neige à −78 °C. Une question de quiz ajoutée sur le choix de l'extincteur. |
