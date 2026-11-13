@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Soleil -->
+  <g>
+    <circle class="s-fill-hot" cx="36" cy="34" r="12"/>
+    <circle class="s-hot" cx="36" cy="34" r="12"/>
+    <path class="s-hot" d="M52 46 L80 84" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot" d="M40 54 L58 90" marker-end="url(#mg-arrow-hot)"/>
+  </g>
+
+  <!-- Encadré : le sel reste -->
+  <g>
+    <rect class="s-callout" x="80" y="18" width="136" height="40" rx="4"/>
+    <text class="s-tiny" x="148" y="34" text-anchor="middle">Le sel ne s'évapore</text>
+    <text class="s-tiny s-text-hot" x="148" y="48" text-anchor="middle">pas : il reste</text>
+    <path class="s-leader" d="M118 58 L112 120" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Saladier, eau salée et verre central -->
+  <g>
+    <path class="s-fill-cold" d="M80 160 H280 Q262 196 180 198 Q98 196 80 160 Z"/>
+    <path class="s-line" d="M60 100 Q66 196 180 200 Q294 196 300 100"/>
+    <path class="s-solid" d="M160 120 V194 H200 V120"/>
+    <rect class="s-fill-cold" x="161" y="180" width="38" height="14"/>
+  </g>
+
+  <!-- Film tendu et caillou -->
+  <g>
+    <path class="s-line" d="M56 100 L180 128 L304 100"/>
+    <ellipse class="s-solid" cx="180" cy="121" rx="9" ry="5"/>
+  </g>
+
+  <!-- Évaporation, gouttes sous le film, chute dans le verre -->
+  <g>
+    <path class="s-hot s-flow" d="M112 156 Q116 148 112 140 Q108 132 112 124" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot s-flow s-delay-1" d="M240 156 Q244 148 240 140 Q236 132 240 124" marker-end="url(#mg-arrow-hot)"/>
+    <circle class="s-fill-cold" cx="140" cy="123" r="2.5"/>
+    <circle class="s-fill-cold" cx="220" cy="123" r="2.5"/>
+    <circle class="s-fill-cold" cx="268" cy="112" r="2.5"/>
+    <path class="s-cold s-flow" d="M150 126 L168 130" marker-end="url(#mg-arrow-cold)"/>
+    <path class="s-cold s-flow" d="M210 126 L192 130" marker-end="url(#mg-arrow-cold)"/>
+    <circle class="s-fill-cold s-float" cx="180" cy="142" r="2.5"/>
+    <circle class="s-fill-cold s-float s-delay-2" cx="180" cy="158" r="2.5"/>
+  </g>
+
+  <!-- Étape 1 : eau salée -->
+  <g>
+    <circle class="s-badge" cx="24" cy="206" r="9"/>
+    <text class="s-badge-text" x="24" y="206">1</text>
+    <text class="s-label" x="38" y="210">Eau salée</text>
+    <path class="s-leader" d="M108 204 L128 184" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 2 : film étanche -->
+  <g>
+    <circle class="s-badge" cx="232" cy="30" r="9"/>
+    <text class="s-badge-text" x="232" y="30">2</text>
+    <text class="s-label" x="246" y="34">Film étanche</text>
+    <text class="s-tiny" x="246" y="48">caillou au centre</text>
+    <path class="s-leader" d="M246 54 L190 116" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 3 : eau douce -->
+  <g>
+    <circle class="s-badge" cx="232" cy="216" r="9"/>
+    <text class="s-badge-text" x="232" y="216">3</text>
+    <text class="s-label" x="246" y="220">Eau douce</text>
+    <path class="s-leader" d="M223 212 L198 190" marker-end="url(#mg-dot)"/>
+  </g>
+</svg>

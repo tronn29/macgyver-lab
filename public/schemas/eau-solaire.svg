@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Étape 1 : les UV-A du soleil traversent le plastique PET -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">UV-A</text>
+
+    <circle class="s-fill-hot" cx="40" cy="74" r="15"/>
+    <circle class="s-hot" cx="40" cy="74" r="15"/>
+    <path class="s-hot" d="M40 50 V55 M40 93 V98 M16 74 H21 M59 74 H64 M23 57 L27 61 M57 57 L53 61 M23 91 L27 87"/>
+
+    <path class="s-accent s-flow" d="M60 92 L114 124" marker-end="url(#mg-arrow)"/>
+    <path class="s-accent s-flow s-delay-1" d="M70 84 L164 124" marker-end="url(#mg-arrow)"/>
+    <path class="s-accent s-flow s-delay-2" d="M80 76 L214 124" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny s-text-accent" x="204" y="84">320 – 400 nm</text>
+  </g>
+
+  <!-- La bouteille PET couchée sur une tôle sombre -->
+  <g>
+    <rect class="s-fill-cold" x="90" y="130" width="182" height="26" rx="6"/>
+    <rect class="s-fill-hot s-pulse" x="90" y="130" width="182" height="26" rx="6"/>
+    <path class="s-line" d="M96 128 H262 Q270 128 274 136 H292 V150 H274 Q270 158 262 158 H96 Q88 158 88 150 V136 Q88 128 96 128 Z"/>
+    <rect class="s-solid" x="292" y="134" width="10" height="18" rx="2"/>
+
+    <circle class="s-line" cx="130" cy="143" r="4"/>
+    <circle class="s-line" cx="180" cy="145" r="4"/>
+    <circle class="s-line" cx="232" cy="141" r="4"/>
+    <path class="s-hot" d="M125 138 L135 148 M135 138 L125 148 M175 140 L185 150 M185 140 L175 150 M227 136 L237 146 M237 136 L227 146"/>
+
+    <rect class="s-fill-muted" x="80" y="160" width="236" height="8"/>
+    <text class="s-tiny" x="110" y="182" text-anchor="middle">tôle sombre</text>
+  </g>
+
+  <!-- Étape 2 : la chaleur accélère la désinfection -->
+  <g>
+    <circle class="s-badge-hot" cx="270" cy="30" r="9"/>
+    <text class="s-badge-text" x="270" y="30">2</text>
+    <text class="s-label" x="284" y="34">Chaleur</text>
+
+    <rect class="s-solid" x="326" y="88" width="8" height="52" rx="4"/>
+    <circle class="s-solid" cx="330" cy="144" r="7"/>
+    <rect class="s-fill-hot" x="328" y="106" width="4" height="36"/>
+    <circle class="s-fill-hot" cx="330" cy="144" r="4"/>
+    <path class="s-thin" d="M334 106 H340"/>
+    <text class="s-tiny s-text-hot" x="320" y="110" text-anchor="end">50 °C</text>
+  </g>
+
+  <!-- Étape 3 : durée, et limites de la méthode -->
+  <g>
+    <circle class="s-badge" cx="24" cy="214" r="9"/>
+    <text class="s-badge-text" x="24" y="214">3</text>
+    <text class="s-label" x="38" y="218">6 h de soleil</text>
+
+    <rect class="s-callout" x="200" y="190" width="150" height="38" rx="4"/>
+    <text class="s-tiny" x="275" y="205" text-anchor="middle">Ne retire pas :</text>
+    <text class="s-tiny s-text-hot" x="275" y="219" text-anchor="middle">chimie, métaux, sel</text>
+    <path class="s-leader" d="M226 190 L214 156" marker-end="url(#mg-dot)"/>
+  </g>
+</svg>

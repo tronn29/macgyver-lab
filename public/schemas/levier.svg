@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- 1 : moment d'une force -->
+  <g>
+    <circle class="s-badge" cx="24" cy="26" r="9"/>
+    <text class="s-badge-text" x="24" y="26">1</text>
+    <text class="s-label" x="38" y="30">Moment d'une force</text>
+    <rect class="s-callout" x="222" y="14" width="126" height="26" rx="4"/>
+    <text class="s-small s-text-accent" x="285" y="31" text-anchor="middle">F₁ × d₁ = F₂ × d₂</text>
+  </g>
+
+  <!-- Levier principal : charge sur le bras court, effort sur le bras long -->
+  <g>
+    <rect class="s-solid" x="44" y="58" width="44" height="34" rx="2"/>
+    <text class="s-tiny" x="66" y="79" text-anchor="middle">charge</text>
+    <rect class="s-solid" x="36" y="92" width="292" height="8" rx="2"/>
+    <polygon class="s-solid" points="120,100 104,128 136,128"/>
+    <circle class="s-fill-accent s-pulse" cx="120" cy="104" r="7"/>
+    <path class="s-thin" d="M92 128 H148 M98 128 l-6 6 M110 128 l-6 6 M122 128 l-6 6 M134 128 l-6 6 M146 128 l-6 6"/>
+    <path class="s-line" d="M66 102 V124" marker-end="url(#mg-arrow)"/>
+    <text class="s-small" x="74" y="122">F₂</text>
+    <path class="s-accent s-flow" d="M316 44 V88" marker-end="url(#mg-arrow)"/>
+    <text class="s-label s-text-accent" x="306" y="62" text-anchor="end">F₁</text>
+    <text class="s-tiny" x="306" y="76" text-anchor="end">effort</text>
+    <path class="s-dash" d="M316 102 V146"/>
+    <path class="s-dim" d="M66 144 H120" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <text class="s-small" x="93" y="140" text-anchor="middle">d₂</text>
+    <path class="s-dim" d="M120 144 H316" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <text class="s-small" x="220" y="140" text-anchor="middle">d₁ (bras de levier)</text>
+  </g>
+
+  <path class="s-thin" d="M16 154 H344"/>
+
+  <!-- Trois genres de levier -->
+  <g>
+    <circle class="s-badge" cx="32" cy="166" r="8"/>
+    <text class="s-badge-text" x="32" y="166">1</text>
+    <text class="s-small" x="44" y="170">pied-de-biche</text>
+    <path class="s-line" d="M28 196 H104"/>
+    <polygon class="s-solid" points="66,197 60,207 72,207"/>
+    <rect class="s-solid" x="30" y="184" width="14" height="12"/>
+    <path class="s-accent" d="M100 178 V192" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny" x="66" y="226" text-anchor="middle">pivot au milieu</text>
+  </g>
+  <g>
+    <circle class="s-badge" cx="146" cy="166" r="8"/>
+    <text class="s-badge-text" x="146" y="166">2</text>
+    <text class="s-small" x="158" y="170">brouette</text>
+    <path class="s-line" d="M142 196 H218"/>
+    <polygon class="s-solid" points="146,197 140,207 152,207"/>
+    <rect class="s-solid" x="173" y="184" width="14" height="12"/>
+    <path class="s-accent" d="M214 214 V200" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny" x="180" y="226" text-anchor="middle">charge au milieu</text>
+  </g>
+  <g>
+    <circle class="s-badge" cx="260" cy="166" r="8"/>
+    <text class="s-badge-text" x="260" y="166">3</text>
+    <text class="s-small" x="272" y="170">avant-bras</text>
+    <path class="s-line" d="M256 196 H332"/>
+    <polygon class="s-solid" points="260,197 254,207 266,207"/>
+    <rect class="s-solid" x="316" y="184" width="14" height="12"/>
+    <path class="s-accent" d="M290 214 V200" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny" x="294" y="226" text-anchor="middle">effort au milieu</text>
+  </g>
+</svg>

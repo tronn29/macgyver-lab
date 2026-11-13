@@ -1,0 +1,387 @@
+[
+  {
+    "id": "detente",
+    "terme": "Détente (d'un gaz)",
+    "definition": "Augmentation du volume d'un gaz, accompagnée d'une baisse de sa pression. Quand elle est rapide, le gaz se refroidit : c'est pourquoi une bombe d'air sec devient froide dans la main quand on l'utilise.",
+    "fiches": ["detente-co2-froid", "glace-seche"]
+  },
+  {
+    "id": "pression",
+    "terme": "Pression",
+    "definition": "Force exercée sur une surface, divisée par l'aire de cette surface ; elle se mesure en pascals (Pa) ou en bars (1 bar = 100 000 Pa). Un pneu de vélo gonflé à 3 bar pousse sur chaque centimètre carré de sa paroi avec une force d'environ 30 N.",
+    "fiches": ["pression-atmospherique", "detente-co2-froid"]
+  },
+  {
+    "id": "temperature",
+    "terme": "Température",
+    "definition": "Grandeur qui traduit l'agitation des particules d'un corps : plus elles bougent vite, plus la température est élevée. Elle s'exprime en degrés Celsius (°C) ou en kelvins (K), et 0 °C correspond à 273,15 K.",
+    "fiches": ["isolation-thermique", "choc-thermique"]
+  },
+  {
+    "id": "sublimation",
+    "terme": "Sublimation",
+    "definition": "Passage direct de l'état solide à l'état gazeux, sans passer par l'état liquide. À la pression atmosphérique, la glace sèche (CO₂ solide) se sublime à −78,5 °C sans jamais laisser de flaque.",
+    "fiches": ["glace-seche"]
+  },
+  {
+    "id": "dilatation",
+    "terme": "Dilatation",
+    "definition": "Augmentation du volume d'un corps quand sa température monte. Les rails de chemin de fer et les ponts comportent des joints pour pouvoir se dilater sans se déformer en été.",
+    "fiches": ["choc-thermique"]
+  },
+  {
+    "id": "contraction",
+    "terme": "Contraction (thermique)",
+    "definition": "Diminution du volume d'un corps quand sa température baisse. Un ballon gonflé que l'on sort par une nuit d'hiver se ratatine légèrement, car l'air qu'il contient se contracte.",
+    "fiches": ["detente-co2-froid", "choc-thermique"]
+  },
+  {
+    "id": "conduction",
+    "terme": "Conduction (thermique)",
+    "definition": "Transfert de chaleur à travers la matière, de proche en proche, sans déplacement de matière. Une cuillère en métal plongée dans un thé brûlant chauffe ainsi jusqu'au manche.",
+    "fiches": ["isolation-thermique", "conducteurs-isolants"]
+  },
+  {
+    "id": "convection",
+    "terme": "Convection",
+    "definition": "Transfert de chaleur par le mouvement d'un fluide (liquide ou gaz) : la partie chauffée, moins dense, monte, et la partie froide descend. C'est ce qui fait tourner l'eau dans une casserole posée sur le feu.",
+    "fiches": ["isolation-thermique"]
+  },
+  {
+    "id": "rayonnement",
+    "terme": "Rayonnement (thermique)",
+    "definition": "Transfert d'énergie par des ondes électromagnétiques, qui peut se faire même dans le vide. La chaleur du Soleil nous parvient ainsi, comme celle d'un radiateur que l'on sent sur le visage à distance.",
+    "fiches": ["isolation-thermique", "infrarouge-vision", "miroir-concentration"]
+  },
+  {
+    "id": "infrarouge",
+    "terme": "Infrarouge (IR)",
+    "definition": "Rayonnement électromagnétique invisible à l'œil, de longueur d'onde comprise entre environ 780 nm et 1 mm. Tout objet tiède en émet, et les télécommandes utilisent des LED infrarouges autour de 940 nm.",
+    "fiches": ["infrarouge-vision"]
+  },
+  {
+    "id": "longueur-onde",
+    "terme": "Longueur d'onde",
+    "definition": "Distance entre deux crêtes successives d'une onde. Pour la lumière, elle fixe la couleur : environ 450 nm pour le bleu, 650 nm pour le rouge, et plus de 780 nm pour l'infrarouge, que l'œil ne voit plus.",
+    "fiches": ["infrarouge-vision"]
+  },
+  {
+    "id": "refraction",
+    "terme": "Réfraction",
+    "definition": "Changement de direction de la lumière quand elle passe d'un milieu transparent à un autre, par exemple de l'air à l'eau. C'est pour cela qu'une paille semble brisée à la surface d'un verre d'eau.",
+    "fiches": ["lentille-bouteille"]
+  },
+  {
+    "id": "foyer",
+    "terme": "Foyer (optique)",
+    "definition": "Point où se rejoignent des rayons lumineux parallèles après avoir traversé une lentille convergente ou s'être réfléchis sur un miroir concave. La distance entre la lentille et ce point est la distance focale.",
+    "fiches": ["lentille-bouteille", "miroir-concentration"]
+  },
+  {
+    "id": "lentille-convergente",
+    "terme": "Lentille convergente",
+    "definition": "Lentille plus épaisse au centre qu'aux bords, qui rabat les rayons lumineux vers un foyer. Une loupe en est une ; une goutte d'eau bombée ou une bouteille d'eau ronde se comportent de la même façon.",
+    "fiches": ["lentille-bouteille"]
+  },
+  {
+    "id": "induction",
+    "terme": "Induction électromagnétique",
+    "definition": "Apparition d'une tension électrique dans un circuit lorsque le champ magnétique qui le traverse varie. C'est le principe de la dynamo de vélo, des transformateurs et des plaques de cuisson à induction.",
+    "fiches": ["bobine-pic-tension", "electroaimant"]
+  },
+  {
+    "id": "champ-magnetique",
+    "terme": "Champ magnétique",
+    "definition": "Zone de l'espace où s'exerce une force magnétique, créée par un aimant, un courant électrique ou la Terre elle-même. De la limaille de fer saupoudrée autour d'un aimant s'aligne le long de ses lignes de champ.",
+    "fiches": ["boussole-improvisee", "electroaimant"]
+  },
+  {
+    "id": "aimantation",
+    "terme": "Aimantation",
+    "definition": "Fait, pour un matériau, de devenir lui-même un aimant, durablement ou non. Une aiguille d'acier frottée une trentaine de fois dans le même sens avec un aimant reste aimantée pendant des jours.",
+    "fiches": ["boussole-improvisee", "electroaimant"]
+  },
+  {
+    "id": "electrolyte",
+    "terme": "Électrolyte",
+    "definition": "Liquide ou gel qui conduit le courant grâce à des ions qui se déplacent. Le jus de citron, acide, en est un, tout comme l'eau salée.",
+    "fiches": ["pile-citron"]
+  },
+  {
+    "id": "electrode",
+    "terme": "Électrode",
+    "definition": "Pièce conductrice, souvent métallique, plongée dans un électrolyte et par laquelle le courant entre ou sort. Dans une pile au citron, le clou zingué et la pièce de cuivre sont les deux électrodes.",
+    "fiches": ["pile-citron"]
+  },
+  {
+    "id": "tension",
+    "terme": "Tension électrique",
+    "definition": "Différence de potentiel électrique entre deux points d'un circuit, qui pousse le courant à circuler ; elle se mesure en volts (V). Une pile AA fournit 1,5 V, une prise de courant domestique 230 V.",
+    "fiches": ["pile-citron", "bobine-pic-tension", "conducteurs-isolants"]
+  },
+  {
+    "id": "courant",
+    "terme": "Courant électrique",
+    "definition": "Déplacement d'ensemble de charges électriques dans un conducteur, mesuré en ampères (A). Une petite LED témoin consomme environ 0,02 A, un radiateur de 2 000 W près de 9 A.",
+    "fiches": ["pile-citron", "conducteurs-isolants"]
+  },
+  {
+    "id": "resistance",
+    "terme": "Résistance électrique",
+    "definition": "Capacité d'un matériau ou d'un composant à s'opposer au passage du courant, mesurée en ohms (Ω). Pour une tension donnée, plus la résistance est grande, plus le courant est faible : c'est la loi d'Ohm, U = R × I.",
+    "fiches": ["conducteurs-isolants"]
+  },
+  {
+    "id": "isolant",
+    "terme": "Isolant",
+    "definition": "Matériau qui laisse très mal passer le courant électrique ou la chaleur. La gaine en plastique des fils électriques et la laine de verre des murs sont des isolants.",
+    "fiches": ["conducteurs-isolants", "isolation-thermique"]
+  },
+  {
+    "id": "conducteur",
+    "terme": "Conducteur",
+    "definition": "Matériau qui laisse facilement passer le courant électrique ou la chaleur. Les métaux comme le cuivre et l'aluminium sont d'excellents conducteurs ; l'eau salée conduit aussi le courant.",
+    "fiches": ["conducteurs-isolants"]
+  },
+  {
+    "id": "energie-cinetique",
+    "terme": "Énergie cinétique",
+    "definition": "Énergie que possède un objet du fait de son mouvement, égale à ½ m v². Doubler la vitesse multiplie cette énergie par quatre, ce qui explique la violence des chocs à grande vitesse.",
+    "fiches": ["energie-cinetique-fronde"]
+  },
+  {
+    "id": "energie-potentielle",
+    "terme": "Énergie potentielle",
+    "definition": "Énergie stockée par un objet du fait de sa position ou de sa déformation. Un livre en haut d'une étagère ou un élastique tendu en possèdent, et elle se transforme en mouvement quand on les lâche.",
+    "fiches": ["energie-cinetique-fronde", "levier"]
+  },
+  {
+    "id": "force-centripete",
+    "terme": "Force centripète",
+    "definition": "Force dirigée vers le centre de la trajectoire, qui oblige un objet à tourner au lieu d'aller tout droit. Pour une balle que l'on fait tourner au bout d'une ficelle, c'est la ficelle qui la fournit ; si elle casse, la balle part en ligne droite.",
+    "fiches": ["energie-cinetique-fronde"]
+  },
+  {
+    "id": "moment-force",
+    "terme": "Moment d'une force",
+    "definition": "Capacité d'une force à faire tourner un objet autour d'un axe, égale à la force multipliée par son bras de levier (en N·m). C'est pour cela qu'on pousse une porte loin de ses gonds.",
+    "fiches": ["levier"]
+  },
+  {
+    "id": "bras-levier",
+    "terme": "Bras de levier",
+    "definition": "Distance entre l'axe de rotation et la ligne d'action d'une force. Plus il est long, moins il faut de force pour obtenir le même effet de rotation : une clé à manche long desserre plus facilement un écrou.",
+    "fiches": ["levier"]
+  },
+  {
+    "id": "avantage-mecanique",
+    "terme": "Avantage mécanique",
+    "definition": "Rapport entre la force obtenue et la force fournie avec un outil simple. Un palan à quatre brins divise l'effort par environ quatre, mais il faut tirer quatre fois plus de corde.",
+    "fiches": ["levier", "poulie-palan"]
+  },
+  {
+    "id": "frottement",
+    "terme": "Frottement",
+    "definition": "Force qui s'oppose au glissement de deux surfaces l'une sur l'autre. Il permet de marcher sans glisser et de freiner, mais il use les pièces et produit de la chaleur, comme quand on se frotte les mains.",
+    "fiches": ["frottement-cabestan"]
+  },
+  {
+    "id": "coefficient-frottement",
+    "terme": "Coefficient de frottement",
+    "definition": "Nombre sans unité qui indique à quel point deux matériaux accrochent l'un sur l'autre : la force de frottement vaut ce coefficient multiplié par la force qui les presse. Il vaut environ 0,7 pour un pneu sur route sèche et moins de 0,1 pour un patin sur la glace.",
+    "fiches": ["frottement-cabestan"]
+  },
+  {
+    "id": "pression-atmospherique",
+    "terme": "Pression atmosphérique",
+    "definition": "Pression exercée par le poids de l'air qui nous entoure, d'environ 1 013 hPa au niveau de la mer. Elle pousse sur chaque centimètre carré avec une force d'environ 10 N, l'équivalent du poids d'une masse de 1 kg.",
+    "fiches": ["pression-atmospherique", "siphon"]
+  },
+  {
+    "id": "vide",
+    "terme": "Vide",
+    "definition": "Espace qui contient très peu de matière, où la pression est donc très faible. Un bocal fermé sous vide résiste à l'ouverture parce que l'air extérieur appuie sur le couvercle bien plus fort que l'air intérieur.",
+    "fiches": ["pression-atmospherique"]
+  },
+  {
+    "id": "capillarite",
+    "terme": "Capillarité",
+    "definition": "Capacité d'un liquide à monter ou à s'infiltrer dans des tubes très fins ou des matériaux poreux, sous l'effet de la tension superficielle. C'est ce qui fait remonter le café dans un sucre ou l'eau dans un essuie-tout.",
+    "fiches": ["capillarite-filtration"]
+  },
+  {
+    "id": "tension-superficielle",
+    "terme": "Tension superficielle",
+    "definition": "Force qui agit à la surface d'un liquide et la fait se comporter comme une membrane légèrement tendue. Elle donne aux gouttes leur forme bombée et permet à certains insectes de marcher sur l'eau.",
+    "fiches": ["capillarite-filtration", "lentille-bouteille"]
+  },
+  {
+    "id": "uv",
+    "terme": "Ultraviolet (UV)",
+    "definition": "Rayonnement invisible de longueur d'onde plus courte que le violet, entre environ 100 et 400 nm. Les UV du Soleil font bronzer, peuvent brûler la peau et détruisent une partie des microbes présents dans l'eau.",
+    "fiches": ["eau-solaire"]
+  },
+  {
+    "id": "pasteurisation",
+    "terme": "Pasteurisation",
+    "definition": "Chauffage d'un aliment ou d'un liquide à une température inférieure à l'ébullition, pendant une durée précise, pour détruire la plupart des microbes. Le lait pasteurisé est par exemple chauffé environ 15 secondes à 72 °C.",
+    "fiches": ["eau-solaire"]
+  },
+  {
+    "id": "condensation",
+    "terme": "Condensation",
+    "definition": "Passage d'un gaz à l'état liquide, en général lorsqu'il refroidit. La buée sur le miroir de la salle de bains est de la vapeur d'eau qui se condense au contact du verre froid.",
+    "fiches": ["eau-solaire"]
+  },
+  {
+    "id": "evaporation",
+    "terme": "Évaporation",
+    "definition": "Passage progressif d'un liquide à l'état gazeux par sa surface, sans ébullition. Le linge sèche ainsi, d'autant plus vite que l'air est chaud, sec et en mouvement.",
+    "fiches": ["eau-solaire"]
+  },
+  {
+    "id": "densite",
+    "terme": "Densité",
+    "definition": "Rapport entre la masse volumique d'un corps et celle de l'eau ; c'est un nombre sans unité. Un corps de densité inférieure à 1 flotte sur l'eau : l'huile, de densité 0,92 environ, reste en surface."
+  },
+  {
+    "id": "poussee-archimede",
+    "terme": "Poussée d'Archimède",
+    "definition": "Force verticale, dirigée vers le haut, qu'exerce un fluide sur un objet immergé ; elle est égale au poids du fluide déplacé. C'est elle qui fait flotter un bateau et remonter une bulle d'air dans l'eau."
+  },
+  {
+    "id": "oxydation",
+    "terme": "Oxydation",
+    "definition": "Réaction chimique au cours de laquelle un corps perd des électrons, souvent en se combinant à l'oxygène. La rouille du fer est une oxydation lente ; dans une pile, c'est l'oxydation du zinc qui fournit les électrons.",
+    "fiches": ["pile-citron", "combustion-poussieres"]
+  },
+  {
+    "id": "combustion",
+    "terme": "Combustion",
+    "definition": "Réaction chimique rapide entre un combustible et un comburant, le plus souvent l'oxygène de l'air, qui dégage de la chaleur et souvent de la lumière. Elle exige trois éléments réunis : combustible, comburant et source de chaleur, le « triangle du feu ».",
+    "fiches": ["combustion-poussieres"]
+  },
+  {
+    "id": "comburant",
+    "terme": "Comburant",
+    "definition": "Corps qui permet à un combustible de brûler en réagissant avec lui ; le plus courant est le dioxygène de l'air. Poser un couvercle sur une poêle qui s'enflamme éteint le feu en le privant de comburant.",
+    "fiches": ["combustion-poussieres"]
+  },
+  {
+    "id": "surface-specifique",
+    "terme": "Surface spécifique",
+    "definition": "Surface totale d'un matériau rapportée à sa masse. Plus on le divise finement, plus elle augmente : du sucre en poudre se dissout bien plus vite qu'un morceau de sucre de même masse.",
+    "fiches": ["combustion-poussieres", "capillarite-filtration"]
+  },
+  {
+    "id": "contrainte-thermique",
+    "terme": "Contrainte thermique",
+    "definition": "Tension mécanique qui apparaît dans un matériau quand ses différentes parties se dilatent ou se contractent de façon inégale. Un verre épais dans lequel on verse de l'eau bouillante peut se fendre pour cette raison.",
+    "fiches": ["choc-thermique", "detente-co2-froid"]
+  },
+  {
+    "id": "fragilite",
+    "terme": "Fragilité",
+    "definition": "Tendance d'un matériau à casser net, sans se déformer au préalable, comme le verre ou la fonte. Certains aciers deviennent fragiles à très basse température.",
+    "fiches": ["choc-thermique", "detente-co2-froid"]
+  },
+  {
+    "id": "ductilite",
+    "terme": "Ductilité",
+    "definition": "Capacité d'un matériau à s'étirer ou à se déformer beaucoup avant de rompre. Le cuivre, très ductile, peut être étiré en fils plus fins qu'un cheveu.",
+    "fiches": ["choc-thermique"]
+  },
+  {
+    "id": "vortex",
+    "terme": "Vortex",
+    "definition": "Écoulement d'un fluide qui tourne autour d'un axe, comme un tourbillon. Un anneau de vortex est un tore de fluide qui tourne sur lui-même tout en avançant, à la manière des anneaux de bulles que forment certains dauphins."
+  },
+  {
+    "id": "chaleur-latente",
+    "terme": "Chaleur latente",
+    "definition": "Énergie absorbée ou libérée par un corps lorsqu'il change d'état, sans que sa température varie. Il faut environ 2 260 kJ pour vaporiser 1 kg d'eau à 100 °C, ce qui explique pourquoi la transpiration rafraîchit si bien.",
+    "fiches": ["detente-co2-froid", "glace-seche"]
+  },
+  {
+    "id": "isolation",
+    "terme": "Isolation (thermique)",
+    "definition": "Ensemble des moyens qui limitent les échanges de chaleur entre deux milieux. Une doudoune emprisonne de l'air immobile, qui freine la conduction et la convection ; une couverture de survie limite le rayonnement.",
+    "fiches": ["isolation-thermique"]
+  },
+  {
+    "id": "ferromagnetique",
+    "terme": "Ferromagnétique",
+    "definition": "Se dit d'un matériau fortement attiré par un aimant et capable de s'aimanter, comme le fer, le nickel, le cobalt et la plupart des aciers. L'aluminium et le cuivre ne le sont pas : un aimant ne colle pas à une canette en aluminium.",
+    "fiches": ["boussole-improvisee", "electroaimant"]
+  },
+  {
+    "id": "pole-magnetique",
+    "terme": "Pôle magnétique",
+    "definition": "Chacune des deux zones d'un aimant, nord et sud, où son effet est le plus fort. Deux pôles de même nom se repoussent, deux pôles opposés s'attirent ; le pôle nord d'une boussole est attiré vers le nord géographique.",
+    "fiches": ["boussole-improvisee"]
+  },
+  {
+    "id": "loi-de-lenz",
+    "terme": "Loi de Lenz",
+    "definition": "Règle selon laquelle un courant induit s'oppose toujours à la cause qui l'a produit. Un aimant lâché dans un tube de cuivre tombe lentement, car les courants qu'il induit créent un champ qui le freine.",
+    "fiches": ["bobine-pic-tension"]
+  },
+  {
+    "id": "emissivite",
+    "terme": "Émissivité",
+    "definition": "Capacité d'une surface à émettre, et donc à absorber, du rayonnement thermique, sur une échelle de 0 à 1. Une surface noire et mate est proche de 1 ; une surface métallique brillante, proche de 0, rayonne très peu, d'où l'efficacité de la couverture de survie.",
+    "fiches": ["isolation-thermique", "infrarouge-vision"]
+  },
+  {
+    "id": "neige-carbonique",
+    "terme": "Neige carbonique (glace sèche)",
+    "definition": "Dioxyde de carbone à l'état solide, à −78,5 °C, qui se sublime sans fondre. Plongée dans de l'eau tiède, elle produit un épais brouillard blanc de fines gouttelettes d'eau.",
+    "fiches": ["glace-seche", "detente-co2-froid"]
+  },
+  {
+    "id": "galvanisation",
+    "terme": "Galvanisation",
+    "definition": "Dépôt d'une couche de zinc sur un objet en fer ou en acier pour le protéger de la rouille. Les clous galvanisés, gris mat, apportent ainsi le zinc d'une pile au citron.",
+    "fiches": ["pile-citron"]
+  },
+  {
+    "id": "led",
+    "terme": "LED (diode électroluminescente)",
+    "definition": "Composant qui émet de la lumière quand le courant le traverse dans le bon sens, de la patte longue (+) vers la patte courte (−). Il lui faut environ 1,8 V pour s'allumer si elle est rouge, et près de 3 V si elle est blanche ou bleue.",
+    "fiches": ["pile-citron", "infrarouge-vision"]
+  },
+  {
+    "id": "montage-serie",
+    "terme": "Montage en série",
+    "definition": "Branchement où les éléments sont reliés les uns à la suite des autres, en une seule boucle. Des piles en série additionnent leurs tensions : trois piles de 1,5 V donnent 4,5 V.",
+    "fiches": ["pile-citron"]
+  },
+  {
+    "id": "diamagnetisme",
+    "terme": "Diamagnétisme",
+    "definition": "Propriété de certains matériaux, comme l'eau, le bismuth ou le graphite, d'être faiblement repoussés par un aimant. Le graphite pyrolytique, particulièrement diamagnétique, peut flotter au-dessus d'aimants puissants.",
+    "fiches": ["electroaimant"]
+  },
+  {
+    "id": "masse-volumique",
+    "terme": "Masse volumique",
+    "definition": "Masse d'un volume donné de matière, en kilogrammes par mètre cube ou en grammes par centimètre cube. Un litre d'eau pèse 1 kg, un litre d'huile environ 0,92 kg."
+  },
+  {
+    "id": "effervescence",
+    "terme": "Effervescence",
+    "definition": "Dégagement de bulles de gaz au sein d'un liquide, provoqué par une réaction chimique. Un comprimé effervescent contient un acide et du bicarbonate qui, dans l'eau, réagissent en libérant du dioxyde de carbone."
+  },
+  {
+    "id": "action-reaction",
+    "terme": "Principe d'action-réaction",
+    "definition": "Troisième loi de Newton : quand un corps exerce une force sur un autre, il subit en retour une force égale et opposée. En poussant l'eau vers le bas, une fusée à eau est poussée vers le haut, comme un ballon de baudruche qu'on lâche.",
+    "fiches": ["energie-cinetique-fronde"]
+  },
+  {
+    "id": "capteur-image",
+    "terme": "Capteur d'image",
+    "definition": "Puce électronique d'un appareil photo, couverte de millions de cellules en silicium qui transforment la lumière en signal électrique. Le silicium reste sensible jusque vers 1 100 nm, dans le proche infrarouge que l'œil ne voit pas.",
+    "fiches": ["infrarouge-vision"]
+  }
+]

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- 1 : conducteur : électrons libres -->
+  <g>
+    <circle class="s-badge" cx="24" cy="26" r="9"/>
+    <text class="s-badge-text" x="24" y="26">1</text>
+    <text class="s-label" x="38" y="30">Conducteur</text>
+    <rect class="s-ghost" x="24" y="50" width="140" height="60" rx="4"/>
+    <circle class="s-solid" cx="38" cy="66" r="5"/>
+    <circle class="s-solid" cx="66" cy="66" r="5"/>
+    <circle class="s-solid" cx="94" cy="66" r="5"/>
+    <circle class="s-solid" cx="122" cy="66" r="5"/>
+    <circle class="s-solid" cx="150" cy="66" r="5"/>
+    <circle class="s-solid" cx="38" cy="94" r="5"/>
+    <circle class="s-solid" cx="66" cy="94" r="5"/>
+    <circle class="s-solid" cx="94" cy="94" r="5"/>
+    <circle class="s-solid" cx="122" cy="94" r="5"/>
+    <circle class="s-solid" cx="150" cy="94" r="5"/>
+    <g class="s-float">
+      <circle class="s-badge" cx="52" cy="80" r="2.5"/>
+      <circle class="s-badge" cx="80" cy="74" r="2.5"/>
+      <circle class="s-badge" cx="108" cy="84" r="2.5"/>
+      <circle class="s-badge" cx="136" cy="78" r="2.5"/>
+      <circle class="s-badge" cx="52" cy="104" r="2.5"/>
+      <circle class="s-badge" cx="122" cy="56" r="2.5"/>
+    </g>
+    <path class="s-accent s-flow" d="M30 124 H158" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny s-text-accent" x="94" y="140" text-anchor="middle">électrons libres</text>
+  </g>
+
+  <!-- 2 : isolant : électrons liés -->
+  <g>
+    <circle class="s-badge" cx="196" cy="26" r="9"/>
+    <text class="s-badge-text" x="196" y="26">2</text>
+    <text class="s-label" x="210" y="30">Isolant</text>
+    <rect class="s-ghost" x="196" y="50" width="140" height="60" rx="4"/>
+    <ellipse class="s-thin" cx="210" cy="66" rx="10" ry="6"/>
+    <ellipse class="s-thin" cx="238" cy="66" rx="10" ry="6"/>
+    <ellipse class="s-thin" cx="266" cy="66" rx="10" ry="6"/>
+    <ellipse class="s-thin" cx="294" cy="66" rx="10" ry="6"/>
+    <ellipse class="s-thin" cx="322" cy="66" rx="10" ry="6"/>
+    <ellipse class="s-thin" cx="210" cy="94" rx="10" ry="6"/>
+    <ellipse class="s-thin" cx="238" cy="94" rx="10" ry="6"/>
+    <ellipse class="s-thin" cx="266" cy="94" rx="10" ry="6"/>
+    <ellipse class="s-thin" cx="294" cy="94" rx="10" ry="6"/>
+    <ellipse class="s-thin" cx="322" cy="94" rx="10" ry="6"/>
+    <circle class="s-solid" cx="210" cy="66" r="4"/>
+    <circle class="s-solid" cx="238" cy="66" r="4"/>
+    <circle class="s-solid" cx="266" cy="66" r="4"/>
+    <circle class="s-solid" cx="294" cy="66" r="4"/>
+    <circle class="s-solid" cx="322" cy="66" r="4"/>
+    <circle class="s-solid" cx="210" cy="94" r="4"/>
+    <circle class="s-solid" cx="238" cy="94" r="4"/>
+    <circle class="s-solid" cx="266" cy="94" r="4"/>
+    <circle class="s-solid" cx="294" cy="94" r="4"/>
+    <circle class="s-solid" cx="322" cy="94" r="4"/>
+    <circle class="s-badge" cx="220" cy="66" r="2"/>
+    <circle class="s-badge" cx="232" cy="61" r="2"/>
+    <circle class="s-badge" cx="270" cy="72" r="2"/>
+    <circle class="s-badge" cx="304" cy="66" r="2"/>
+    <circle class="s-badge" cx="316" cy="61" r="2"/>
+    <circle class="s-badge" cx="200" cy="94" r="2"/>
+    <circle class="s-badge" cx="242" cy="100" r="2"/>
+    <circle class="s-badge" cx="276" cy="94" r="2"/>
+    <circle class="s-badge" cx="290" cy="88" r="2"/>
+    <circle class="s-badge" cx="328" cy="99" r="2"/>
+    <path class="s-dash" d="M202 124 H330"/>
+    <path class="s-hot" d="M260 118 L272 130 M272 118 L260 130"/>
+    <text class="s-tiny" x="266" y="140" text-anchor="middle">électrons liés</text>
+  </g>
+
+  <!-- 3 : échelle de résistivité (logarithmique) -->
+  <g>
+    <circle class="s-badge" cx="24" cy="164" r="9"/>
+    <text class="s-badge-text" x="24" y="164">3</text>
+    <text class="s-label" x="38" y="168">Résistivité</text>
+    <path class="s-line" d="M24 196 H340" marker-end="url(#mg-arrow)"/>
+    <path class="s-thin" d="M32 191 V201 M60 191 V201 M106 191 V201 M152 191 V201 M208 191 V201 M238 191 V201 M330 191 V201"/>
+    <text class="s-tiny s-text-accent" x="32" y="186" text-anchor="middle">cuivre</text>
+    <text class="s-tiny" x="60" y="213" text-anchor="middle">graphite</text>
+    <text class="s-tiny" x="106" y="186" text-anchor="middle">eau salée</text>
+    <text class="s-tiny" x="152" y="213" text-anchor="middle">eau pure</text>
+    <text class="s-tiny" x="208" y="186" text-anchor="middle">verre</text>
+    <text class="s-tiny" x="238" y="213" text-anchor="middle">bois sec</text>
+    <text class="s-tiny s-text-hot" x="330" y="186" text-anchor="middle">téflon</text>
+    <text class="s-tiny s-text-accent" x="24" y="228">conducteurs</text>
+    <text class="s-tiny" x="180" y="228" text-anchor="middle">10⁻⁸ → 10²⁴ Ω·m</text>
+    <text class="s-tiny s-text-hot" x="336" y="228" text-anchor="end">isolants</text>
+  </g>
+</svg>

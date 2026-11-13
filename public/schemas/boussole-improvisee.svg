@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Étape 1 : aimanter l'aiguille en alignant ses domaines -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Aimanter</text>
+
+    <rect class="s-solid" x="44" y="43" width="52" height="14" rx="2"/>
+    <text class="s-tiny" x="70" y="53" text-anchor="middle">aimant</text>
+    <path class="s-line" d="M36 61 H112" marker-end="url(#mg-arrow)"/>
+    <polygon class="s-solid" points="20,70 70,66 130,70 70,74"/>
+
+    <text class="s-tiny" x="76" y="98" text-anchor="middle">domaines en désordre</text>
+    <path class="s-thin" d="M24 118 L32 106" marker-end="url(#mg-arrow)"/>
+    <path class="s-thin" d="M52 108 L44 118" marker-end="url(#mg-arrow)"/>
+    <path class="s-thin" d="M64 112 H76" marker-end="url(#mg-arrow)"/>
+    <path class="s-thin" d="M92 118 L86 106" marker-end="url(#mg-arrow)"/>
+    <path class="s-thin" d="M104 108 L114 116" marker-end="url(#mg-arrow)"/>
+    <path class="s-thin" d="M132 112 H120" marker-end="url(#mg-arrow)"/>
+
+    <text class="s-tiny" x="76" y="140" text-anchor="middle">après : alignés</text>
+    <path class="s-accent" d="M22 154 H36 M44 154 H58 M66 154 H80 M88 154 H102 M110 154 H124"/>
+    <path class="s-accent" d="M124 154 H132" marker-end="url(#mg-arrow)"/>
+
+    <rect class="s-callout" x="14" y="172" width="140" height="44" rx="4"/>
+    <text class="s-tiny" x="84" y="190" text-anchor="middle">Pas de fer à côté :</text>
+    <text class="s-tiny s-text-hot" x="84" y="204" text-anchor="middle">il fausse le nord</text>
+    <path class="s-leader" d="M154 194 L178 178" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 2 : faire flotter l'aiguille sur un bol d'eau -->
+  <g>
+    <circle class="s-badge" cx="172" cy="30" r="9"/>
+    <text class="s-badge-text" x="172" y="30">2</text>
+    <text class="s-label" x="186" y="34">Faire flotter</text>
+
+    <path class="s-solid" d="M172 150 C176 220 340 220 344 150 Z"/>
+    <ellipse class="s-solid" cx="258" cy="150" rx="86" ry="36"/>
+    <ellipse class="s-fill-cold" cx="258" cy="150" rx="78" ry="30"/>
+    <ellipse class="s-solid" cx="258" cy="150" rx="32" ry="11"/>
+  </g>
+
+  <!-- Étape 3 : l'aiguille s'aligne sur le champ terrestre -->
+  <g>
+    <text class="s-tiny s-text-accent" x="230" y="66" text-anchor="middle">champ terrestre</text>
+    <path class="s-accent s-flow" d="M196 104 L324 58" marker-end="url(#mg-arrow)"/>
+    <text class="s-small s-text-accent" x="332" y="62">N</text>
+
+    <path class="s-accent s-draw" pathLength="1" d="M232 159 L284 141" marker-end="url(#mg-arrow)"/>
+    <text class="s-small s-text-accent s-pulse" x="292" y="142">N</text>
+    <text class="s-small" x="218" y="170">S</text>
+
+    <circle class="s-badge" cx="172" cy="222" r="9"/>
+    <text class="s-badge-text" x="172" y="222">3</text>
+    <text class="s-label" x="186" y="226">S'aligne nord-sud</text>
+  </g>
+</svg>

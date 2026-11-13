@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Étape 1 : eau bouillante versée dans un verre froid -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Eau à 100 °C</text>
+
+    <path class="s-hot s-flow" d="M58 68 C54 62 62 58 58 50"/>
+    <path class="s-hot s-flow s-delay-1" d="M74 68 C70 62 78 58 74 50"/>
+    <path class="s-hot s-flow s-delay-2" d="M90 68 C86 62 94 58 90 50"/>
+
+    <polygon class="s-solid" points="24,72 124,72 114,196 34,196"/>
+    <polygon class="s-fill-hot" points="36,96 112,96 106,184 42,184"/>
+    <polyline class="s-line" points="34,72 42,186 106,186 114,72"/>
+    <text class="s-small" x="74" y="146" text-anchor="middle">100 °C</text>
+    <text class="s-tiny" x="74" y="212" text-anchor="middle">verre froid</text>
+
+    <!-- zone zoomée sur la paroi -->
+    <circle class="s-ghost" cx="115" cy="130" r="12"/>
+    <path class="s-dash" d="M124 122 L180 64 M124 138 L180 196"/>
+  </g>
+
+  <!-- Étape 2 : zoom sur la paroi, dilatation inégale -->
+  <g>
+    <circle class="s-badge" cx="190" cy="30" r="9"/>
+    <text class="s-badge-text" x="190" y="30">2</text>
+    <text class="s-label" x="204" y="34">Dilatation inégale</text>
+
+    <rect class="s-solid" x="180" y="64" width="72" height="132"/>
+    <rect class="s-fill-hot s-pulse" x="180" y="64" width="26" height="132"/>
+    <rect class="s-fill-cold" x="226" y="64" width="26" height="132"/>
+    <path class="s-hot" d="M193 112 V76" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot" d="M193 148 V184" marker-end="url(#mg-arrow-hot)"/>
+    <text class="s-tiny s-text-hot" x="193" y="210" text-anchor="middle">chaud</text>
+    <text class="s-tiny s-text-cold" x="239" y="210" text-anchor="middle">froid</text>
+
+    <rect class="s-callout" x="262" y="68" width="88" height="40" rx="4"/>
+    <text class="s-tiny" x="306" y="84" text-anchor="middle">Face chaude :</text>
+    <text class="s-tiny s-text-hot" x="306" y="98" text-anchor="middle">s'allonge</text>
+    <path class="s-leader" d="M262 88 H200" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 3 : la face froide, étirée, se fissure -->
+  <g>
+    <path class="s-hot s-draw" pathLength="1" d="M252 118 L244 124 L249 130 L240 136 L246 142"/>
+    <rect class="s-callout" x="262" y="146" width="88" height="40" rx="4"/>
+    <text class="s-tiny" x="306" y="162" text-anchor="middle">Face froide :</text>
+    <text class="s-tiny s-text-hot" x="306" y="176" text-anchor="middle">en traction</text>
+    <path class="s-leader" d="M262 160 L250 140" marker-end="url(#mg-dot)"/>
+
+    <circle class="s-badge-hot" cx="190" cy="224" r="9"/>
+    <text class="s-badge-text" x="190" y="224">3</text>
+    <text class="s-label" x="204" y="228">Fissure côté froid</text>
+  </g>
+</svg>

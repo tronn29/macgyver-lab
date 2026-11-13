@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Étape 1 : rayons parallèles du soleil -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Rayons du soleil</text>
+  </g>
+
+  <!-- Étape 2 : la bouteille d'eau (vue en coupe) dévie les rayons -->
+  <g>
+    <circle class="s-badge" cx="196" cy="48" r="9"/>
+    <text class="s-badge-text" x="196" y="48">2</text>
+    <text class="s-label" x="210" y="52">Réfraction</text>
+
+    <circle class="s-fill-cold" cx="150" cy="118" r="48"/>
+    <circle class="s-line" cx="150" cy="118" r="48"/>
+
+    <polyline class="s-accent s-flow" points="20,88 112.5,88 195.8,103.7 280,136.4"/>
+    <polyline class="s-accent s-flow" points="20,103 104.4,103 197.4,110.5 280,124"/>
+    <polyline class="s-accent s-flow" points="20,118 102,118 198,118 280,118"/>
+    <polyline class="s-accent s-flow" points="20,133 104.4,133 197.4,125.5 280,112"/>
+    <polyline class="s-accent s-flow" points="20,148 112.5,148 195.8,132.3 280,99.6"/>
+
+    <text class="s-tiny" x="60" y="176" text-anchor="middle">eau : n = 1,33</text>
+    <path class="s-leader" d="M102 172 L128 158" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 3 : les rayons convergent au foyer -->
+  <g>
+    <circle class="s-fill-hot s-pulse" cx="240" cy="118" r="9"/>
+    <circle class="s-badge-hot" cx="262" cy="84" r="9"/>
+    <text class="s-badge-text" x="262" y="84">3</text>
+    <text class="s-label" x="276" y="88">Foyer</text>
+
+    <path class="s-dim" d="M150 180 H198" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <path class="s-dim" d="M198 180 H246" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <text class="s-tiny" x="174" y="194" text-anchor="middle">R</text>
+    <text class="s-tiny s-text-hot" x="222" y="194" text-anchor="middle">≈ R</text>
+
+    <rect class="s-callout" x="262" y="150" width="88" height="40" rx="4"/>
+    <text class="s-tiny" x="306" y="166" text-anchor="middle">tube → ligne</text>
+    <text class="s-tiny" x="306" y="180" text-anchor="middle">boule → point</text>
+  </g>
+</svg>

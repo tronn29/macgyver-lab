@@ -1,0 +1,12 @@
+{
+  "version": "2026.11.1",
+  "langue": "fr",
+  "categories": ["categories.json"],
+  "theorie": ["theorie-1.json", "theorie-2.json"],
+  "objets": ["objets.json"],
+  "equivalences": ["equivalences.json"],
+  "pratique": ["pratique.json"],
+  "missions": ["missions.json"],
+  "glossaire": ["glossaire.json"],
+  "parcours": ["parcours.json"]
+}

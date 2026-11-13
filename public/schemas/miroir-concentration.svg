@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Légende des étapes -->
+  <g>
+    <circle class="s-badge" cx="24" cy="26" r="9"/>
+    <text class="s-badge-text" x="24" y="26">1</text>
+    <text class="s-label" x="38" y="30">Rayons parallèles</text>
+    <circle class="s-badge" cx="200" cy="26" r="9"/>
+    <text class="s-badge-text" x="200" y="26">2</text>
+    <text class="s-label" x="214" y="30">Concentration</text>
+  </g>
+
+  <!-- Axe optique et soleil -->
+  <g>
+    <path class="s-dash" d="M60 120 H306"/>
+    <circle class="s-fill-hot s-pulse" cx="326" cy="120" r="14"/>
+    <circle class="s-hot" cx="326" cy="120" r="14"/>
+    <text class="s-tiny" x="326" y="148" text-anchor="middle">soleil</text>
+    <text class="s-tiny s-text-hot" x="314" y="162" text-anchor="middle">1 000 W/m²</text>
+  </g>
+
+  <!-- Miroir concave (parabolique) -->
+  <g>
+    <path class="s-thin" d="M66 56 l-8 4 M60 74 l-8 4 M56 92 l-8 4 M55 110 l-8 4 M55 128 l-8 4 M57 146 l-8 4 M61 164 l-8 4 M67 180 l-8 4"/>
+    <path class="s-line" d="M74.4 50 Q45.6 120 74.4 190"/>
+  </g>
+
+  <!-- Rayons incidents puis réfléchis vers le foyer -->
+  <g>
+    <path class="s-hot s-flow" d="M306 60 H72" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot s-flow" d="M306 90 H64" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot s-flow" d="M306 150 H64" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot s-flow" d="M306 180 H72" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot" d="M70.6 60 L138.4 114.7" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot" d="M62.7 90 L136.8 117" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot" d="M62.7 150 L136.8 123" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot" d="M70.6 180 L138.4 125.3" marker-end="url(#mg-arrow-hot)"/>
+  </g>
+
+  <!-- Foyer et amadou -->
+  <g>
+    <ellipse class="s-solid" cx="147" cy="126" rx="10" ry="4"/>
+    <circle class="s-fill-hot s-pulse" cx="145" cy="120" r="8"/>
+    <circle class="s-badge-hot" cx="145" cy="120" r="2.5"/>
+    <text class="s-label s-text-hot" x="152" y="108">F</text>
+    <text class="s-tiny" x="162" y="144" text-anchor="middle">amadou</text>
+  </g>
+
+  <!-- Cote : distance focale -->
+  <g>
+    <path class="s-dash" d="M60 126 V212 M145 150 V212"/>
+    <path class="s-dim" d="M60 206 H145" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <text class="s-tiny" x="102" y="222" text-anchor="middle">f = R / 2</text>
+  </g>
+
+  <!-- Avertissement -->
+  <g>
+    <rect class="s-callout" x="196" y="190" width="148" height="36" rx="4"/>
+    <text class="s-tiny s-text-hot" x="270" y="204" text-anchor="middle">ne jamais regarder</text>
+    <text class="s-tiny s-text-hot" x="270" y="218" text-anchor="middle">le foyer ni le reflet</text>
+  </g>
+</svg>

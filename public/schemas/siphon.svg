@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Récipient du haut, posé sur un support -->
+  <g>
+    <rect class="s-fill-muted" x="24" y="150" width="100" height="74"/>
+    <rect class="s-fill-cold" x="24" y="90" width="100" height="60"/>
+    <path class="s-cold" d="M24 90 H124"/>
+    <path class="s-line" d="M24 70 V150 H124 V70"/>
+    <path class="s-thin" d="M16 224 H344"/>
+  </g>
+
+  <!-- Récipient du bas -->
+  <g>
+    <rect class="s-fill-cold" x="236" y="200" width="100" height="22"/>
+    <path class="s-cold" d="M236 200 H336"/>
+    <path class="s-line" d="M236 160 V222 H336 V160"/>
+  </g>
+
+  <!-- Tuyau en U renversé, plein d'eau -->
+  <g>
+    <path class="s-line" d="M91 140 V56 Q91 39 108 39 H252 Q269 39 269 56 V190"/>
+    <path class="s-line" d="M101 140 V56 Q101 49 108 49 H252 Q259 49 259 56 V190"/>
+    <path class="s-cold s-flow" d="M96 140 V56 Q96 44 108 44 H252 Q264 44 264 56 V196" marker-end="url(#mg-arrow-cold)"/>
+  </g>
+
+  <!-- 1 : tuyau amorcé -->
+  <g>
+    <circle class="s-badge" cx="130" cy="24" r="9"/>
+    <text class="s-badge-text" x="130" y="24">1</text>
+    <text class="s-label" x="144" y="28">Tuyau plein d'eau</text>
+    <rect class="s-callout" x="146" y="52" width="110" height="34" rx="4"/>
+    <text class="s-tiny" x="201" y="66" text-anchor="middle">sommet ≤ 10 m</text>
+    <text class="s-tiny" x="201" y="80" text-anchor="middle">au-dessus de l'eau</text>
+  </g>
+
+  <!-- 2 : la pression de l'air pousse sur la surface -->
+  <g>
+    <circle class="s-badge" cx="24" cy="48" r="9"/>
+    <text class="s-badge-text" x="24" y="48">2</text>
+    <text class="s-tiny" x="36" y="52">1 bar</text>
+    <g class="s-pulse">
+      <path class="s-line" d="M44 58 V86" marker-end="url(#mg-arrow)"/>
+      <path class="s-line" d="M70 58 V86" marker-end="url(#mg-arrow)"/>
+    </g>
+  </g>
+
+  <!-- 3 : sortie plus basse que la surface de départ -->
+  <g>
+    <circle class="s-badge" cx="134" cy="121" r="9"/>
+    <text class="s-badge-text" x="134" y="121">3</text>
+    <rect class="s-callout" x="146" y="104" width="110" height="34" rx="4"/>
+    <text class="s-tiny" x="201" y="118" text-anchor="middle">sortie plus basse</text>
+    <text class="s-tiny" x="201" y="132" text-anchor="middle">que la surface</text>
+    <path class="s-leader" d="M256 121 H264" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Cote : différence de hauteur -->
+  <g>
+    <path class="s-dash" d="M126 90 H350"/>
+    <path class="s-dash" d="M272 196 H350"/>
+    <path class="s-dim" d="M344 90 V196" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <text class="s-small" x="338" y="148" text-anchor="end">Δh</text>
+  </g>
+</svg>

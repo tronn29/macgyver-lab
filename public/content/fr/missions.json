@@ -1,0 +1,1611 @@
+[
+  {
+    "id": "garage-nuit",
+    "titre": "Nuit close au garage",
+    "code": "OP-01 · NUIT CLOSE",
+    "difficulte": "moyen",
+    "categories": [
+      "electricite",
+      "lumiere",
+      "mecanique"
+    ],
+    "duree": 8,
+    "briefing": {
+      "lieu": "Box de garage individuel — 23 h 40",
+      "contexte": "Tu es venu récupérer du matériel dans le box loué au bout de la rue et la porte sectionnelle motorisée s'est refermée derrière toi. Deux minutes plus tard, une coupure de courant plonge tout le quartier dans le noir : le moteur ne répond plus et la porte reste verrouillée. La poignée rouge de déverrouillage manuel pend du rail, mais son cordon a cassé : elle est accrochée à 2,60 m de haut, hors de portée. Ton téléphone est déchargé et seule une lucarne grillagée donne sur la rue.",
+      "objectif": "Sortir du garage ou alerter quelqu'un dehors, sans rien casser ni créer de danger.",
+      "contraintes": [
+        "Ne démarre pas le moteur de la voiture : ses gaz d'échappement sont mortels en espace clos.",
+        "Aucune flamme : un jerrican d'essence est entreposé dans le garage.",
+        "Ne force pas la porte : un panneau qui se déboîte sous la tension des ressorts peut blesser gravement."
+      ]
+    },
+    "zones": [
+      {
+        "id": "etabli",
+        "nom": "Établi"
+      },
+      {
+        "id": "etagere",
+        "nom": "Étagère murale"
+      },
+      {
+        "id": "sol",
+        "nom": "Sol et recoins"
+      },
+      {
+        "id": "voiture",
+        "nom": "Voiture"
+      },
+      {
+        "id": "porte",
+        "nom": "Porte et rail"
+      }
+    ],
+    "objets": [
+      {
+        "objet": "voiture",
+        "zone": "voiture",
+        "etat": "batterie chargée, clé dans le vide-poche"
+      },
+      {
+        "objet": "cric",
+        "zone": "voiture",
+        "etat": "rangé dans le coffre"
+      },
+      {
+        "objet": "lampe-torche",
+        "zone": "etabli",
+        "etat": "piles faibles, mais elle éclaire encore"
+      },
+      {
+        "objet": "ruban-adhesif",
+        "zone": "etabli",
+        "etat": "rouleau entamé"
+      },
+      {
+        "objet": "pince",
+        "zone": "etabli"
+      },
+      {
+        "objet": "serre-cable",
+        "zone": "etabli",
+        "etat": "un sachet de colliers de 20 cm"
+      },
+      {
+        "objet": "marteau",
+        "zone": "etabli"
+      },
+      {
+        "objet": "tournevis",
+        "zone": "etabli"
+      },
+      {
+        "objet": "cle-molette",
+        "zone": "etabli"
+      },
+      {
+        "objet": "briquet",
+        "zone": "etabli"
+      },
+      {
+        "objet": "gants-travail",
+        "zone": "etabli"
+      },
+      {
+        "objet": "perceuse",
+        "zone": "etabli",
+        "etat": "batterie à plat"
+      },
+      {
+        "objet": "cintre-metal",
+        "zone": "etagere",
+        "etat": "trois cintres de pressing sur un clou"
+      },
+      {
+        "objet": "bombe-peinture",
+        "zone": "etagere",
+        "etat": "rouge, à moitié pleine"
+      },
+      {
+        "objet": "rallonge-electrique",
+        "zone": "etagere",
+        "etat": "enrouleur de 25 m"
+      },
+      {
+        "objet": "degrippant",
+        "zone": "etagere"
+      },
+      {
+        "objet": "carton",
+        "zone": "etagere",
+        "etat": "cartons de déménagement pliés"
+      },
+      {
+        "objet": "chiffon",
+        "zone": "etagere"
+      },
+      {
+        "objet": "balai",
+        "zone": "sol",
+        "etat": "manche en bois de 1,40 m"
+      },
+      {
+        "objet": "jerrican",
+        "zone": "sol",
+        "etat": "plein"
+      },
+      {
+        "objet": "pneu",
+        "zone": "sol"
+      },
+      {
+        "objet": "seau",
+        "zone": "sol"
+      },
+      {
+        "objet": "sac-terreau",
+        "zone": "sol"
+      },
+      {
+        "objet": "tuyau-arrosage",
+        "zone": "sol",
+        "etat": "enroulé"
+      },
+      {
+        "objet": "velo",
+        "zone": "sol",
+        "etat": "pneu arrière crevé"
+      },
+      {
+        "objet": "extincteur",
+        "zone": "porte",
+        "etat": "fixé au mur près de la porte"
+      }
+    ],
+    "leurres": [
+      "jerrican",
+      "briquet",
+      "rallonge-electrique",
+      "cric",
+      "bombe-peinture",
+      "pneu"
+    ],
+    "solutions": [
+      {
+        "id": "s1",
+        "titre": "Klaxon, feux de détresse et SOS lumineux",
+        "objets": [
+          "voiture",
+          "lampe-torche"
+        ],
+        "optionnels": [
+          "marteau"
+        ],
+        "principes": [
+          "pile-citron"
+        ],
+        "motsCles": [
+          [
+            "klaxon",
+            "klaxonner",
+            "avertisseur",
+            "corne"
+          ],
+          [
+            "SOS",
+            "sos",
+            "morse",
+            "trois courts",
+            "signal",
+            "signaux"
+          ],
+          [
+            "feux de détresse",
+            "feux de detresse",
+            "warning",
+            "warnings",
+            "feux",
+            "phares",
+            "clignotant",
+            "clignotants"
+          ],
+          [
+            "lampe",
+            "torche",
+            "lampe torche",
+            "lampe de poche",
+            "lucarne"
+          ],
+          [
+            "sans démarrer",
+            "sans demarrer",
+            "ne pas demarrer",
+            "moteur coupe",
+            "moteur eteint",
+            "batterie"
+          ]
+        ],
+        "etapes": [
+          "Ne démarre surtout pas le moteur : sur la plupart des voitures, le klaxon et les feux de détresse fonctionnent sur la seule batterie, même contact coupé.",
+          "Allume les feux de détresse : leur clignotement orange passe sous la porte et par la lucarne.",
+          "Donne des séries de coups de klaxon au rythme SOS (trois courts, trois longs, trois courts), puis marque une pause d'une minute.",
+          "Plaque la lampe torche contre la lucarne et envoie le même rythme lumineux vers la rue.",
+          "Alterne signaux et pauses pour ménager la batterie, jusqu'à ce que quelqu'un réponde."
+        ],
+        "explication": "La batterie de la voiture stocke de l'énergie chimique qu'elle restitue en courant de 12 volts, sans que le moteur tourne : pas de gaz d'échappement, aucun danger. Le klaxon et les feux transforment cette énergie en un son puissant et en éclats visibles de loin dans le noir. Le rythme SOS, trois brefs, trois longs, trois brefs, est reconnu partout comme un appel à l'aide."
+      },
+      {
+        "id": "s2",
+        "titre": "Perche à crochet pour le déverrouillage manuel",
+        "objets": [
+          "cintre-metal",
+          "balai",
+          "ruban-adhesif"
+        ],
+        "optionnels": [
+          "pince",
+          "serre-cable",
+          "gants-travail"
+        ],
+        "principes": [
+          "levier"
+        ],
+        "motsCles": [
+          [
+            "déverrouillage",
+            "deverrouillage",
+            "deverrouiller",
+            "debrayage",
+            "debrayer",
+            "poignee rouge",
+            "poignee",
+            "cordon",
+            "tirette"
+          ],
+          [
+            "crochet",
+            "cintre",
+            "fil de fer",
+            "crocheter"
+          ],
+          [
+            "balai",
+            "manche",
+            "perche",
+            "rallonge",
+            "baton"
+          ],
+          [
+            "ruban adhésif",
+            "scotch",
+            "ruban",
+            "adhesif",
+            "attacher",
+            "fixer",
+            "serre-cable",
+            "collier"
+          ],
+          [
+            "soulever",
+            "lever",
+            "a la main",
+            "manuellement",
+            "ressorts",
+            "ressort"
+          ]
+        ],
+        "etapes": [
+          "Éclaire le rail au plafond et repère la poignée rouge de déverrouillage, accrochée au chariot qui relie la porte au moteur.",
+          "Déplie un cintre avec la pince et forme à son extrémité un crochet bien fermé.",
+          "Fixe la tige du cintre le long du manche à balai avec plusieurs tours serrés de ruban adhésif, complétés par un ou deux colliers de serrage.",
+          "Engage le crochet dans la poignée et tire franchement vers le bas : le chariot se désolidarise du moteur, avec un déclic.",
+          "Soulève la porte lentement à deux mains par le bas ; elle monte facilement car ses ressorts compensent son poids. Garde-la sous contrôle et sors."
+        ],
+        "explication": "Une porte motorisée est verrouillée parce que son chariot est engrené sur la chaîne ou la vis du moteur ; la poignée de secours actionne un petit levier qui libère ce chariot. Une fois débrayée, la porte redevient manuelle : ses ressorts équilibrent presque tout son poids, et on la soulève sans effort. La perche à crochet ne fait que prolonger le bras pour atteindre ce mécanisme prévu pour les pannes de courant."
+      }
+    ],
+    "indices": [
+      "Pense à l'énergie qui reste stockée dans le garage malgré la coupure, et à la façon dont une porte motorisée est retenue fermée.",
+      "Oublie tout ce qui dépend du secteur ou produit une flamme ; regarde plutôt ce qui a sa propre batterie, ce qui est long et ce qui se tord.",
+      "Soit tu fais venir quelqu'un grâce à un signal impossible à ignorer, soit tu atteins le mécanisme qui libère la porte au lieu de la forcer."
+    ],
+    "fiches": [
+      "pile-citron",
+      "levier"
+    ],
+    "equivalences": [
+      "signaler",
+      "attacher"
+    ]
+  },
+  {
+    "id": "nord-perdu",
+    "titre": "Trouver le nord",
+    "code": "OP-02 · CIEL BAS",
+    "difficulte": "facile",
+    "categories": [
+      "magnetisme"
+    ],
+    "duree": 6,
+    "briefing": {
+      "lieu": "Massif forestier, sous-bois — 16 h 20",
+      "contexte": "Tu as quitté le sentier balisé pour contourner un chablis et tu ne le retrouves plus. Le ciel est uniformément gris, aucune ombre ne se dessine au sol et ton téléphone s'est éteint il y a une heure. Tu sais seulement que la route forestière où t'attend la voiture longe le massif par le nord, et que ce matin tu marchais vers le sud.",
+      "objectif": "Déterminer de façon fiable la direction du nord pour rejoindre la route avant la nuit.",
+      "contraintes": [
+        "La nuit tombe dans une heure et demie.",
+        "Aucun soleil : impossible de s'orienter avec les ombres."
+      ]
+    },
+    "zones": [
+      {
+        "id": "sac",
+        "nom": "Sac à dos"
+      },
+      {
+        "id": "poches",
+        "nom": "Poches"
+      },
+      {
+        "id": "sous-bois",
+        "nom": "Sous-bois"
+      }
+    ],
+    "objets": [
+      {
+        "objet": "gourde",
+        "zone": "sac",
+        "etat": "à moitié pleine"
+      },
+      {
+        "objet": "aiguille",
+        "zone": "sac",
+        "etat": "dans une mini-trousse de couture"
+      },
+      {
+        "objet": "lunettes",
+        "zone": "sac",
+        "etat": "dans un étui à fermoir aimanté"
+      },
+      {
+        "objet": "aimant",
+        "zone": "sac",
+        "etat": "le petit aimant plat du fermoir de l'étui à lunettes"
+      },
+      {
+        "objet": "couverture-survie",
+        "zone": "sac"
+      },
+      {
+        "objet": "lampe-frontale",
+        "zone": "sac"
+      },
+      {
+        "objet": "couteau",
+        "zone": "sac"
+      },
+      {
+        "objet": "ficelle",
+        "zone": "sac"
+      },
+      {
+        "objet": "sac-plastique",
+        "zone": "sac"
+      },
+      {
+        "objet": "gobelet",
+        "zone": "sac",
+        "etat": "gobelet pliable en silicone"
+      },
+      {
+        "objet": "sifflet",
+        "zone": "sac",
+        "etat": "accroché à la bretelle"
+      },
+      {
+        "objet": "barre-cereales",
+        "zone": "sac"
+      },
+      {
+        "objet": "telephone",
+        "zone": "poches",
+        "etat": "batterie à 0 %"
+      },
+      {
+        "objet": "montre",
+        "zone": "poches"
+      },
+      {
+        "objet": "cles",
+        "zone": "poches"
+      },
+      {
+        "objet": "pieces-monnaie",
+        "zone": "poches"
+      },
+      {
+        "objet": "briquet",
+        "zone": "poches"
+      },
+      {
+        "objet": "mouchoirs",
+        "zone": "poches"
+      },
+      {
+        "objet": "feuille-arbre",
+        "zone": "sous-bois",
+        "etat": "feuilles de chêne sèches"
+      },
+      {
+        "objet": "baton",
+        "zone": "sous-bois"
+      },
+      {
+        "objet": "pierre",
+        "zone": "sous-bois"
+      }
+    ],
+    "leurres": [
+      "telephone",
+      "montre",
+      "couverture-survie",
+      "sifflet"
+    ],
+    "solutions": [
+      {
+        "id": "s1",
+        "titre": "Boussole flottante à aiguille aimantée",
+        "objets": [
+          "aiguille",
+          "aimant",
+          "feuille-arbre"
+        ],
+        "optionnels": [
+          "gobelet",
+          "gourde"
+        ],
+        "principes": [
+          "boussole-improvisee"
+        ],
+        "motsCles": [
+          [
+            "aiguille",
+            "epingle"
+          ],
+          [
+            "aimant",
+            "aimanter",
+            "aimantee",
+            "aimante",
+            "magnetiser",
+            "frotter"
+          ],
+          [
+            "flotter",
+            "flottant",
+            "flotte",
+            "feuille",
+            "surface de l'eau",
+            "eau"
+          ],
+          [
+            "nord",
+            "sud",
+            "pole",
+            "s'oriente",
+            "orienter",
+            "boussole",
+            "champ magnetique"
+          ]
+        ],
+        "etapes": [
+          "Frotte l'aiguille 30 à 50 fois sur l'aimant, toujours dans le même sens, en décollant l'aimant à chaque retour.",
+          "Verse un fond d'eau de la gourde dans le gobelet et pose-le au sol, à l'abri du vent.",
+          "Pose une petite feuille sèche à la surface de l'eau et dépose délicatement l'aiguille dessus.",
+          "Éloigne l'aimant, le couteau et les clés, puis attends que la feuille cesse de tourner : l'aiguille indique l'axe nord-sud.",
+          "Choisis le bon bout grâce à ton trajet du matin, vers le sud, puis vise un arbre dans la direction du nord et avance de repère en repère."
+        ],
+        "explication": "La Terre se comporte comme un immense aimant dont le champ traverse tout le paysage. En la frottant sur l'aimant, on aligne les minuscules zones magnétiques de l'acier : l'aiguille devient elle-même un petit aimant. Posée sur une feuille qui flotte, elle tourne presque sans frottement et s'aligne sur le champ terrestre, donc sur l'axe nord-sud ; en France, l'écart avec le nord géographique est de quelques degrés à peine."
+      }
+    ],
+    "indices": [
+      "Pense au champ magnétique de la Terre : tout petit aimant libre de tourner finit par s'aligner sur lui.",
+      "Cherche un morceau d'acier fin et quelque chose qui peut l'aimanter ; laisse de côté ce qui a besoin du soleil ou d'une batterie.",
+      "Transforme l'acier en aimant, puis laisse-le tourner librement, sans frottement : à la surface de l'eau."
+    ],
+    "fiches": [
+      "boussole-improvisee"
+    ],
+    "equivalences": [
+      "aimanter"
+    ]
+  },
+  {
+    "id": "cles-grille",
+    "titre": "Les clés au fond de la grille",
+    "code": "OP-03 · FOND DE GRILLE",
+    "difficulte": "facile",
+    "categories": [
+      "magnetisme"
+    ],
+    "duree": 6,
+    "briefing": {
+      "lieu": "Parking d'un magasin de bricolage — 19 h 05",
+      "contexte": "Tu sors du magasin les bras chargés quand ton trousseau t'échappe, rebondit sur le bitume et passe entre les barreaux d'une grille d'évacuation. Il repose sur un fond de vase, à environ 80 cm, et son anneau en acier brille sous les lampadaires. La voiture est verrouillée, le magasin vient de fermer et l'averse menace.",
+      "objectif": "Récupérer le trousseau sans soulever la grille ni descendre dans le regard.",
+      "contraintes": [
+        "La grille est scellée : impossible de la soulever.",
+        "Les barreaux sont espacés de 2 cm : la main ne passe pas.",
+        "S'il pleut, le ruissellement peut emporter le trousseau."
+      ]
+    },
+    "zones": [
+      {
+        "id": "sac-courses",
+        "nom": "Sac de courses"
+      },
+      {
+        "id": "trottoir",
+        "nom": "Trottoir et caniveau"
+      },
+      {
+        "id": "sur-toi",
+        "nom": "Sur toi"
+      }
+    ],
+    "objets": [
+      {
+        "objet": "aimant",
+        "zone": "sac-courses",
+        "etat": "aimant néodyme pour barre porte-outils, encore sous blister"
+      },
+      {
+        "objet": "ficelle",
+        "zone": "sac-courses",
+        "etat": "pelote de ficelle de jardin"
+      },
+      {
+        "objet": "ruban-adhesif",
+        "zone": "sac-courses"
+      },
+      {
+        "objet": "colle-forte",
+        "zone": "sac-courses"
+      },
+      {
+        "objet": "ampoule",
+        "zone": "sac-courses"
+      },
+      {
+        "objet": "ciseaux",
+        "zone": "sac-courses"
+      },
+      {
+        "objet": "piles",
+        "zone": "sac-courses"
+      },
+      {
+        "objet": "sac-poubelle",
+        "zone": "sac-courses",
+        "etat": "rouleau neuf"
+      },
+      {
+        "objet": "eponge",
+        "zone": "sac-courses"
+      },
+      {
+        "objet": "liquide-vaisselle",
+        "zone": "sac-courses"
+      },
+      {
+        "objet": "bouteille-plastique",
+        "zone": "sac-courses",
+        "etat": "bouteille d'eau entamée"
+      },
+      {
+        "objet": "essuie-tout",
+        "zone": "sac-courses"
+      },
+      {
+        "objet": "gants-caoutchouc",
+        "zone": "sac-courses"
+      },
+      {
+        "objet": "baton",
+        "zone": "trottoir",
+        "etat": "branche de platane de 60 cm"
+      },
+      {
+        "objet": "canette",
+        "zone": "trottoir",
+        "etat": "vide"
+      },
+      {
+        "objet": "pierre",
+        "zone": "trottoir"
+      },
+      {
+        "objet": "journal",
+        "zone": "trottoir",
+        "etat": "prospectus détrempés"
+      },
+      {
+        "objet": "sac-plastique",
+        "zone": "trottoir"
+      },
+      {
+        "objet": "pieces-monnaie",
+        "zone": "sur-toi"
+      },
+      {
+        "objet": "telephone",
+        "zone": "sur-toi",
+        "etat": "chargé à 40 %, lampe intégrée"
+      },
+      {
+        "objet": "lacet",
+        "zone": "sur-toi",
+        "etat": "à tes chaussures"
+      }
+    ],
+    "leurres": [
+      "bouteille-plastique",
+      "journal",
+      "pieces-monnaie",
+      "sac-plastique"
+    ],
+    "solutions": [
+      {
+        "id": "s1",
+        "titre": "Pêche à l'aimant",
+        "objets": [
+          "aimant",
+          "ficelle"
+        ],
+        "optionnels": [
+          "ruban-adhesif",
+          "telephone",
+          "lacet",
+          "baton",
+          "ciseaux"
+        ],
+        "principes": [
+          "boussole-improvisee",
+          "electroaimant"
+        ],
+        "motsCles": [
+          [
+            "aimant",
+            "aimante",
+            "magnet",
+            "neodyme"
+          ],
+          [
+            "ficelle",
+            "fil",
+            "corde",
+            "lacet",
+            "cordelette"
+          ],
+          [
+            "descendre",
+            "faire descendre",
+            "glisser",
+            "entre les barreaux",
+            "a travers la grille"
+          ],
+          [
+            "remonter",
+            "attirer",
+            "attraper",
+            "recuperer",
+            "coller"
+          ],
+          [
+            "anneau",
+            "acier",
+            "porte-cles",
+            "metal"
+          ]
+        ],
+        "etapes": [
+          "Sors l'aimant du blister et noue solidement la ficelle autour, puis bloque le nœud avec quelques tours de ruban adhésif.",
+          "Éclaire le fond avec la lampe du téléphone pour repérer l'anneau du trousseau.",
+          "Fais descendre l'aimant lentement entre deux barreaux jusqu'à toucher l'anneau en acier.",
+          "Remonte doucement, bien à la verticale et sans à-coups, pour que le trousseau ne heurte pas les barreaux."
+        ],
+        "explication": "Un aimant au néodyme attire fortement les métaux ferromagnétiques comme l'acier de l'anneau, même si certaines clés en laiton ne réagissent pas. Sa force chute très vite avec la distance : il doit presque toucher sa cible, d'où l'intérêt de bien viser. Une fois en contact, l'attraction dépasse largement le poids d'un trousseau, à condition de remonter sans secousse."
+      }
+    ],
+    "indices": [
+      "Pense à une force qui agit à travers les barreaux, sans qu'il soit nécessaire d'attraper quoi que ce soit.",
+      "Parmi tes achats, un objet attire certains métaux ; il ne lui manque que de quoi descendre.",
+      "Suspends-le pour le faire descendre jusqu'au trousseau, puis remonte sans à-coups."
+    ],
+    "fiches": [
+      "boussole-improvisee",
+      "electroaimant"
+    ],
+    "equivalences": [
+      "aimanter",
+      "attacher"
+    ]
+  },
+  {
+    "id": "eau-potable",
+    "titre": "L'eau du ruisseau",
+    "code": "OP-04 · EAU TROUBLE",
+    "difficulte": "moyen",
+    "categories": [
+      "fluides",
+      "thermique",
+      "lumiere"
+    ],
+    "duree": 8,
+    "briefing": {
+      "lieu": "Refuge non gardé, 1 400 m d'altitude — 9 h 15",
+      "contexte": "Un éboulement a coupé le sentier et les secours ne pourront pas monter avant demain midi. Ta gourde est presque vide ; la seule eau disponible vient du ruisseau qui passe à vingt mètres, brune et chargée de terre après l'orage de la nuit. Un troupeau pâture plus haut dans la vallée. Le ciel s'est dégagé et le grand soleil est annoncé pour toute la journée.",
+      "objectif": "Produire au moins trois litres d'eau buvable d'ici ce soir.",
+      "contraintes": [
+        "Ne bois pas l'eau du ruisseau telle quelle : le troupeau en amont peut l'avoir contaminée.",
+        "La cartouche de gaz du réchaud est entamée : de quoi faire bouillir environ trois litres, pas davantage.",
+        "Aucun comprimé de purification ni filtre de randonnée."
+      ]
+    },
+    "zones": [
+      {
+        "id": "coin-cuisine",
+        "nom": "Coin cuisine"
+      },
+      {
+        "id": "placard",
+        "nom": "Placard du refuge"
+      },
+      {
+        "id": "dehors",
+        "nom": "Abords du refuge"
+      },
+      {
+        "id": "sac",
+        "nom": "Ton sac à dos"
+      }
+    ],
+    "objets": [
+      {
+        "objet": "casserole",
+        "zone": "coin-cuisine",
+        "etat": "avec son couvercle"
+      },
+      {
+        "objet": "rechaud-camping",
+        "zone": "coin-cuisine",
+        "etat": "cartouche entamée"
+      },
+      {
+        "objet": "allumettes",
+        "zone": "coin-cuisine"
+      },
+      {
+        "objet": "sel",
+        "zone": "coin-cuisine"
+      },
+      {
+        "objet": "vinaigre",
+        "zone": "coin-cuisine"
+      },
+      {
+        "objet": "savon",
+        "zone": "coin-cuisine"
+      },
+      {
+        "objet": "eponge",
+        "zone": "coin-cuisine",
+        "etat": "grise et usée"
+      },
+      {
+        "objet": "bougie",
+        "zone": "coin-cuisine"
+      },
+      {
+        "objet": "filtre-cafe",
+        "zone": "coin-cuisine",
+        "etat": "paquet entamé"
+      },
+      {
+        "objet": "cuillere",
+        "zone": "coin-cuisine"
+      },
+      {
+        "objet": "bouteille-plastique",
+        "zone": "placard",
+        "etat": "quatre bouteilles transparentes de 1,5 L, vides et propres"
+      },
+      {
+        "objet": "bouteille-verre",
+        "zone": "placard",
+        "etat": "verre brun, vide"
+      },
+      {
+        "objet": "chiffon",
+        "zone": "placard"
+      },
+      {
+        "objet": "papier-alu",
+        "zone": "placard"
+      },
+      {
+        "objet": "couverture",
+        "zone": "placard"
+      },
+      {
+        "objet": "sable",
+        "zone": "dehors",
+        "etat": "banc de sable au bord du ruisseau"
+      },
+      {
+        "objet": "gravier",
+        "zone": "dehors"
+      },
+      {
+        "objet": "charbon-bois",
+        "zone": "dehors",
+        "etat": "restes froids du foyer extérieur"
+      },
+      {
+        "objet": "seau",
+        "zone": "dehors"
+      },
+      {
+        "objet": "buche",
+        "zone": "dehors"
+      },
+      {
+        "objet": "tee-shirt",
+        "zone": "sac",
+        "etat": "propre, de rechange"
+      },
+      {
+        "objet": "gourde",
+        "zone": "sac",
+        "etat": "presque vide"
+      },
+      {
+        "objet": "lampe-frontale",
+        "zone": "sac"
+      },
+      {
+        "objet": "couteau",
+        "zone": "sac"
+      }
+    ],
+    "leurres": [
+      "sel",
+      "vinaigre",
+      "bouteille-verre",
+      "eponge",
+      "savon",
+      "bougie"
+    ],
+    "solutions": [
+      {
+        "id": "s1",
+        "titre": "Filtrer, puis désinfecter au soleil",
+        "objets": [
+          "bouteille-plastique",
+          "tee-shirt",
+          "sable"
+        ],
+        "optionnels": [
+          "gravier",
+          "charbon-bois",
+          "couteau",
+          "filtre-cafe",
+          "papier-alu",
+          "seau"
+        ],
+        "principes": [
+          "capillarite-filtration",
+          "eau-solaire"
+        ],
+        "motsCles": [
+          [
+            "filtrer",
+            "filtre",
+            "filtration",
+            "tee-shirt",
+            "tissu",
+            "sable"
+          ],
+          [
+            "décanter",
+            "decanter",
+            "decantation",
+            "reposer",
+            "laisser deposer"
+          ],
+          [
+            "soleil",
+            "sodis",
+            "uv",
+            "ultraviolet",
+            "ultraviolets",
+            "solaire"
+          ],
+          [
+            "bouteille",
+            "bouteilles",
+            "pet",
+            "plastique transparent",
+            "transparente"
+          ],
+          [
+            "six heures",
+            "6 h",
+            "6 heures",
+            "journee",
+            "deux jours"
+          ]
+        ],
+        "etapes": [
+          "Puise l'eau avec le seau et laisse-la reposer une heure : la terre la plus lourde tombe au fond.",
+          "Coupe le fond d'une bouteille, retourne-la goulot en bas et garnis-la de bas en haut : tee-shirt plié, charbon écrasé, sable rincé, puis gravier.",
+          "Verse doucement l'eau décantée ; jette les premiers passages troubles et recommence jusqu'à pouvoir lire une étiquette à travers une bouteille pleine.",
+          "Remplis les bouteilles transparentes intactes avec l'eau claire, ferme-les et couche-les en plein soleil, sur le papier alu ou une surface claire.",
+          "Laisse-les au moins six heures en plein soleil (deux jours si le ciel se couvre), puis bois directement à la bouteille."
+        ],
+        "explication": "La filtration retient la terre et les particules qui, sinon, abriteraient les microbes de la lumière. Dans une bouteille transparente de moins de deux litres, les ultraviolets du soleil, aidés par la chaleur, endommagent l'ADN des bactéries, des virus et de la plupart des parasites : c'est la désinfection solaire, ou SODIS. Le verre brun ou une eau restée trouble bloquent ces rayons et rendent la méthode inefficace."
+      },
+      {
+        "id": "s2",
+        "titre": "Filtrer, puis faire bouillir",
+        "objets": [
+          "tee-shirt",
+          "casserole",
+          "rechaud-camping"
+        ],
+        "optionnels": [
+          "filtre-cafe",
+          "allumettes",
+          "seau",
+          "sable"
+        ],
+        "principes": [
+          "capillarite-filtration"
+        ],
+        "motsCles": [
+          [
+            "filtrer",
+            "filtre",
+            "filtration",
+            "tissu",
+            "tee-shirt"
+          ],
+          [
+            "bouillir",
+            "ebullition",
+            "faire bouillir",
+            "bouillonner",
+            "bouillons"
+          ],
+          [
+            "réchaud",
+            "rechaud",
+            "casserole",
+            "chauffer",
+            "gaz"
+          ],
+          [
+            "une minute",
+            "1 minute",
+            "trois minutes",
+            "plusieurs minutes"
+          ],
+          [
+            "refroidir",
+            "couvercle",
+            "couvert",
+            "recipient propre"
+          ]
+        ],
+        "etapes": [
+          "Laisse décanter l'eau dans le seau, puis verse-la à travers le tee-shirt plié en quatre, ou un filtre à café, au-dessus de la casserole.",
+          "Installe le réchaud dehors ou devant la porte grande ouverte, sur une surface plane et stable.",
+          "Porte l'eau à gros bouillons et maintiens l'ébullition au moins une minute, couvercle posé pour économiser le gaz.",
+          "Laisse refroidir à couvert, puis transvase dans la gourde et des bouteilles propres."
+        ],
+        "explication": "À l'ébullition, environ 95 °C à cette altitude, la chaleur détruit en une minute les bactéries, les virus et les parasites présents dans l'eau. Filtrer avant de chauffer retire la terre, économise le gaz et rend l'eau agréable à boire. L'ébullition ne retire en revanche ni les particules ni les produits chimiques : d'où l'intérêt de filtrer d'abord."
+      }
+    ],
+    "indices": [
+      "Pense à deux problèmes distincts : ce qui trouble l'eau, et ce qui la rend dangereuse sans qu'on le voie.",
+      "Les produits de cuisine ne désinfectent rien ici ; cherche ce qui retient les particules, puis ce qui apporte de la chaleur ou laisse passer la lumière du soleil.",
+      "Clarifie d'abord en passant du grossier au fin, puis élimine les microbes par la chaleur ou par les ultraviolets."
+    ],
+    "fiches": [
+      "capillarite-filtration",
+      "eau-solaire"
+    ],
+    "equivalences": [
+      "filtrer-eau",
+      "chauffer"
+    ]
+  },
+  {
+    "id": "lampe-sans-ressort",
+    "titre": "La lampe sans ressort",
+    "code": "OP-05 · CONTACT PERDU",
+    "difficulte": "difficile",
+    "categories": [
+      "electricite",
+      "materiaux"
+    ],
+    "duree": 10,
+    "briefing": {
+      "lieu": "Appartement, troisième étage — 21 h 50",
+      "contexte": "Une panne de courant plonge l'immeuble dans le noir et tu dois descendre à la cave par un escalier sans fenêtre pour vérifier le compteur. Dans le tiroir de la cuisine, tu retrouves la lampe torche et deux piles neuves, mais le ressort qui faisait contact au fond du culot a disparu. Les piles flottent dans le tube et la lampe reste obstinément éteinte. Ton téléphone est déchargé.",
+      "objectif": "Remettre la lampe torche en état de marche avec ce qu'il y a dans l'appartement.",
+      "contraintes": [
+        "Aucune lampe de rechange et aucun commerce ouvert.",
+        "Pas de flamme dans un escalier encombré de cartons.",
+        "Ne crée pas de court-circuit : les piles doivent rester intactes."
+      ]
+    },
+    "zones": [
+      {
+        "id": "tiroir",
+        "nom": "Tiroir de la cuisine"
+      },
+      {
+        "id": "bureau",
+        "nom": "Bureau du salon"
+      },
+      {
+        "id": "entree",
+        "nom": "Entrée et portemanteau"
+      },
+      {
+        "id": "salle-de-bain",
+        "nom": "Salle de bain"
+      }
+    ],
+    "objets": [
+      {
+        "objet": "lampe-torche",
+        "zone": "tiroir",
+        "etat": "ressort du culot introuvable"
+      },
+      {
+        "objet": "piles",
+        "zone": "tiroir",
+        "etat": "deux piles AA neuves"
+      },
+      {
+        "objet": "elastique",
+        "zone": "tiroir"
+      },
+      {
+        "objet": "ficelle",
+        "zone": "tiroir"
+      },
+      {
+        "objet": "ruban-adhesif",
+        "zone": "tiroir"
+      },
+      {
+        "objet": "ciseaux",
+        "zone": "tiroir"
+      },
+      {
+        "objet": "bougie",
+        "zone": "tiroir"
+      },
+      {
+        "objet": "allumettes",
+        "zone": "tiroir"
+      },
+      {
+        "objet": "film-alimentaire",
+        "zone": "tiroir"
+      },
+      {
+        "objet": "cuillere",
+        "zone": "tiroir"
+      },
+      {
+        "objet": "stylo-bille",
+        "zone": "bureau",
+        "etat": "stylo à bouton poussoir"
+      },
+      {
+        "objet": "gomme",
+        "zone": "bureau"
+      },
+      {
+        "objet": "carton",
+        "zone": "bureau"
+      },
+      {
+        "objet": "journal",
+        "zone": "bureau"
+      },
+      {
+        "objet": "telephone",
+        "zone": "bureau",
+        "etat": "batterie vide"
+      },
+      {
+        "objet": "pieces-monnaie",
+        "zone": "bureau",
+        "etat": "quelques pièces de 10 et 20 centimes"
+      },
+      {
+        "objet": "emballage-chewing-gum",
+        "zone": "entree",
+        "etat": "froissé au fond d'une poche de manteau"
+      },
+      {
+        "objet": "cles",
+        "zone": "entree"
+      },
+      {
+        "objet": "mouchoirs",
+        "zone": "entree"
+      },
+      {
+        "objet": "parapluie",
+        "zone": "entree"
+      },
+      {
+        "objet": "coton-tiges",
+        "zone": "salle-de-bain"
+      },
+      {
+        "objet": "savon",
+        "zone": "salle-de-bain"
+      },
+      {
+        "objet": "serviette",
+        "zone": "salle-de-bain"
+      }
+    ],
+    "leurres": [
+      "elastique",
+      "gomme",
+      "bougie",
+      "telephone",
+      "coton-tiges",
+      "ficelle"
+    ],
+    "objetCle": "emballage-chewing-gum",
+    "pieceManquante": {
+      "nom": "Ressort de contact",
+      "remplacements": [
+        "emballage-chewing-gum",
+        "stylo-bille",
+        "pieces-monnaie"
+      ],
+      "explication": "Le ressort du culot a deux rôles : relier le pôle négatif de la dernière pile au corps métallique de la lampe, et pousser les piles l'une contre l'autre pour que chaque contact soit franc. Tout ce qui conduit l'électricité, comble l'espace et reste serré quand on revisse peut le remplacer : un tampon d'emballage métallisé, le ressort d'un stylo, ou des pièces maintenues en pression."
+    },
+    "solutions": [
+      {
+        "id": "s1",
+        "titre": "Tampon d'emballage métallisé",
+        "objets": [
+          "lampe-torche",
+          "piles",
+          "emballage-chewing-gum"
+        ],
+        "optionnels": [
+          "ruban-adhesif",
+          "ciseaux"
+        ],
+        "principes": [
+          "conducteurs-isolants"
+        ],
+        "motsCles": [
+          [
+            "emballage",
+            "chewing-gum",
+            "chewing gum",
+            "papier argente",
+            "papier alu",
+            "aluminium",
+            "alu"
+          ],
+          [
+            "conducteur",
+            "conduire",
+            "conduit",
+            "metal",
+            "metallise",
+            "metallique"
+          ],
+          [
+            "plier",
+            "plie",
+            "tampon",
+            "boulette",
+            "epaisseur",
+            "replier"
+          ],
+          [
+            "contact",
+            "pole",
+            "culot",
+            "combler",
+            "fond"
+          ],
+          [
+            "revisser",
+            "visser",
+            "serrer",
+            "pression",
+            "comprimer"
+          ]
+        ],
+        "etapes": [
+          "Déplie l'emballage et repère la face métallisée ; gratte-la légèrement de l'ongle si elle semble vernie.",
+          "Plie-le en deux, face métallisée à l'extérieur, puis encore en deux, et ainsi de suite jusqu'à obtenir un petit tampon de l'épaisseur du ressort manquant : ses deux faces restent métalliques.",
+          "Insère les piles dans le bon sens, puis place le tampon entre le pôle négatif de la dernière pile et le fond du culot.",
+          "Revisse le culot à fond pour comprimer le tampon. Si la lumière vacille, ajoute un pli ou maintiens le culot serré avec un tour de ruban adhésif."
+        ],
+        "explication": "Une lampe torche est une boucle : pôle positif, ampoule, interrupteur, corps métallique, culot, puis retour au pôle négatif par le ressort. La fine couche d'aluminium de l'emballage est un excellent conducteur : pliée en tampon, elle referme la boucle et sa légère élasticité remplace la pression du ressort. Le papier collé derrière est isolant, d'où l'importance de garder le métal à l'extérieur sur les deux faces."
+      },
+      {
+        "id": "s2",
+        "titre": "Ressort de stylo et pièce de contact",
+        "objets": [
+          "lampe-torche",
+          "piles",
+          "stylo-bille",
+          "pieces-monnaie"
+        ],
+        "optionnels": [
+          "ruban-adhesif"
+        ],
+        "principes": [
+          "conducteurs-isolants"
+        ],
+        "motsCles": [
+          [
+            "ressort"
+          ],
+          [
+            "stylo",
+            "bic",
+            "stylo a bille"
+          ],
+          [
+            "pièce",
+            "piece",
+            "pieces",
+            "monnaie",
+            "centime",
+            "centimes"
+          ],
+          [
+            "contact",
+            "pole",
+            "culot",
+            "fond"
+          ],
+          [
+            "conducteur",
+            "metal",
+            "metallique",
+            "conduire",
+            "conduit"
+          ]
+        ],
+        "etapes": [
+          "Dévisse le stylo et récupère son petit ressort métallique.",
+          "Insère les piles, puis pose une pièce à plat contre le pôle négatif de la dernière pile pour élargir la surface de contact.",
+          "Place le ressort entre la pièce et le fond du culot ; s'il est trop court, ajoute une ou deux pièces.",
+          "Revisse le culot doucement pour comprimer le ressort sans qu'il se couche de travers, puis actionne l'interrupteur."
+        ],
+        "explication": "Le ressort de stylo est en acier : il conduit le courant et retrouve sa forme quand on le comprime, exactement comme le ressort d'origine. Plus fin, il risquerait de glisser à côté du pôle plat de la pile ; la pièce, elle aussi conductrice, sert de plaque de contact et rattrape la longueur manquante. Le circuit est refermé et les piles restent pressées l'une contre l'autre."
+      }
+    ],
+    "indices": [
+      "Pense au trajet du courant : la lampe ne s'allume que si la boucle est refermée, et un ressort n'est qu'un bout de métal qui appuie.",
+      "Le caoutchouc, le coton et le plastique ne t'aideront pas ; cherche ce qui contient du métal, même en couche très fine, même dans un objet qui semble n'être qu'un déchet.",
+      "Comble l'espace laissé par le ressort avec un conducteur qui touche à la fois la pile et le culot, et qui reste serré quand tu revisses."
+    ],
+    "fiches": [
+      "conducteurs-isolants",
+      "pile-citron"
+    ],
+    "equivalences": [
+      "conduire-electricite",
+      "isoler-electricite"
+    ]
+  },
+  {
+    "id": "plaque-fonte",
+    "titre": "Le chaton sous la plaque",
+    "code": "OP-06 · POINT D'APPUI",
+    "difficulte": "difficile",
+    "categories": [
+      "mecanique"
+    ],
+    "duree": 10,
+    "briefing": {
+      "lieu": "Cour d'une maison de village — 18 h 30",
+      "contexte": "Un miaulement aigu monte d'un regard de cave : un chaton s'est glissé par une fente du cadre et se retrouve coincé dans le puits, sous une plaque de fonte d'environ 60 kg posée à plat. Impossible de la soulever à la main ; elle porte seulement, près d'un bord, un anneau de levage rabattu dans une encoche. Une barre à mine traîne contre le mur, mais posée sur la fonte, elle ne fait que racler. Au-dessus du regard, la grosse poutre de chêne de l'auvent passe à 2,50 m du sol.",
+      "objectif": "Soulever un bord de la plaque et le caler assez haut pour libérer le chaton, sans risque que la plaque retombe.",
+      "contraintes": [
+        "Ne passe jamais la main ni la tête sous une plaque qui n'est pas calée.",
+        "Tu es seul : personne pour tenir la charge pendant que tu cales.",
+        "La nuit tombe dans moins d'une heure et le chaton faiblit."
+      ]
+    },
+    "zones": [
+      {
+        "id": "cour",
+        "nom": "Cour"
+      },
+      {
+        "id": "abri-bois",
+        "nom": "Abri à bois"
+      },
+      {
+        "id": "etabli",
+        "nom": "Établi de l'appentis"
+      },
+      {
+        "id": "auvent",
+        "nom": "Sous l'auvent"
+      }
+    ],
+    "objets": [
+      {
+        "objet": "seau",
+        "zone": "cour"
+      },
+      {
+        "objet": "tuyau-arrosage",
+        "zone": "cour"
+      },
+      {
+        "objet": "balai",
+        "zone": "cour",
+        "etat": "manche en bois fin, déjà fendu"
+      },
+      {
+        "objet": "sac-terreau",
+        "zone": "cour"
+      },
+      {
+        "objet": "brique",
+        "zone": "cour",
+        "etat": "un tas de vieilles briques pleines"
+      },
+      {
+        "objet": "parpaing",
+        "zone": "cour",
+        "etat": "ébréché sur un angle"
+      },
+      {
+        "objet": "buche",
+        "zone": "abri-bois",
+        "etat": "bûches de chêne fendues"
+      },
+      {
+        "objet": "planche",
+        "zone": "abri-bois"
+      },
+      {
+        "objet": "bache",
+        "zone": "abri-bois"
+      },
+      {
+        "objet": "tournevis",
+        "zone": "etabli",
+        "etat": "grand tournevis plat"
+      },
+      {
+        "objet": "marteau",
+        "zone": "etabli"
+      },
+      {
+        "objet": "gants-travail",
+        "zone": "etabli"
+      },
+      {
+        "objet": "ficelle",
+        "zone": "etabli",
+        "etat": "pelote de ficelle de cuisine"
+      },
+      {
+        "objet": "lampe-torche",
+        "zone": "etabli"
+      },
+      {
+        "objet": "ruban-adhesif",
+        "zone": "etabli"
+      },
+      {
+        "objet": "serre-cable",
+        "zone": "etabli"
+      },
+      {
+        "objet": "corde",
+        "zone": "auvent",
+        "etat": "15 m de corde tressée en bon état, enroulée sur un clou"
+      },
+      {
+        "objet": "barre-fer",
+        "zone": "auvent",
+        "etat": "barre à mine de 1,50 m appuyée contre le mur"
+      },
+      {
+        "objet": "escabeau",
+        "zone": "auvent"
+      },
+      {
+        "objet": "velo",
+        "zone": "auvent"
+      },
+      {
+        "objet": "sac-a-dos",
+        "zone": "auvent",
+        "etat": "vieux sac accroché au mur"
+      },
+      {
+        "objet": "mousqueton",
+        "zone": "auvent",
+        "etat": "deux mousquetons d'escalade pendus au sac, comme des porte-clés"
+      }
+    ],
+    "leurres": [
+      "balai",
+      "tuyau-arrosage",
+      "seau",
+      "ficelle",
+      "bache",
+      "sac-terreau"
+    ],
+    "objetCle": "mousqueton",
+    "pieceManquante": {
+      "nom": "Point d'appui du levier",
+      "remplacements": [
+        "brique",
+        "buche",
+        "parpaing"
+      ],
+      "explication": "Une barre ne devient un levier qu'en pivotant sur un appui ; sans lui, toute la force des bras ne soulève que la barre elle-même. Une brique pleine, un parpaing ou une bûche posés tout près du bord de la plaque deviennent ce pivot : plus il est proche de la charge, plus la force est multipliée."
+    },
+    "solutions": [
+      {
+        "id": "s1",
+        "titre": "Levier sur brique et calage progressif",
+        "objets": [
+          "barre-fer",
+          "brique",
+          "buche"
+        ],
+        "optionnels": [
+          "tournevis",
+          "parpaing",
+          "gants-travail",
+          "planche"
+        ],
+        "principes": [
+          "levier"
+        ],
+        "motsCles": [
+          [
+            "levier",
+            "faire levier",
+            "bras de levier"
+          ],
+          [
+            "pivot",
+            "point d'appui",
+            "appui",
+            "brique",
+            "parpaing"
+          ],
+          [
+            "barre",
+            "barre a mine",
+            "barre de fer"
+          ],
+          [
+            "caler",
+            "cale",
+            "calage",
+            "bloquer",
+            "buche"
+          ],
+          [
+            "bout",
+            "extremite",
+            "loin du pivot",
+            "bras long",
+            "appuyer"
+          ]
+        ],
+        "etapes": [
+          "Enfile les gants, dégage la rainure au tournevis et soulève à peine un coin de la plaque pour y engager la pointe de la barre.",
+          "Pose une brique à plat contre le cadre, à une dizaine de centimètres du bord, et fais reposer la barre dessus, pointe sous la plaque.",
+          "Appuie lentement à l'autre extrémité de la barre : le bord de la plaque se soulève en pivotant sur le bord opposé.",
+          "Pousse une bûche fendue sous le bord avec le pied ou une planche, jamais avec la main, puis relâche la barre : la plaque repose sur la cale.",
+          "Rehausse le pivot avec le parpaing et recommence, cale après cale, jusqu'à une ouverture suffisante pour que le chaton sorte."
+        ],
+        "explication": "Avec une barre de 1,50 m et un pivot à 10 cm de la pointe, le bras de l'utilisateur est quatorze fois plus long que celui de la charge : la force est multipliée d'autant. Soulever un seul bord ne demande déjà qu'environ la moitié du poids de la plaque, puisque le bord opposé reste posé ; il suffit donc de quelques kilos d'effort. Les cales successives garantissent que, si la barre glisse, la plaque ne retombe que de quelques centimètres."
+      },
+      {
+        "id": "s2",
+        "titre": "Palan improvisé sous la poutre",
+        "objets": [
+          "corde",
+          "mousqueton",
+          "buche"
+        ],
+        "optionnels": [
+          "escabeau",
+          "gants-travail",
+          "planche"
+        ],
+        "principes": [
+          "poulie-palan",
+          "frottement-cabestan"
+        ],
+        "motsCles": [
+          [
+            "palan",
+            "mouflage",
+            "moufle",
+            "poulie",
+            "renvoi"
+          ],
+          [
+            "mousqueton",
+            "mousquetons"
+          ],
+          [
+            "corde",
+            "cordage"
+          ],
+          [
+            "poutre",
+            "point haut",
+            "ancrage",
+            "accrocher en haut",
+            "auvent"
+          ],
+          [
+            "caler",
+            "cale",
+            "calage",
+            "bloquer",
+            "buche"
+          ]
+        ],
+        "etapes": [
+          "Depuis l'escabeau, fais une boucle autour de la poutre avec l'extrémité de la corde, nouée solidement, et clippe un premier mousqueton dans cette boucle.",
+          "Relève l'anneau de levage de la plaque et clippe-y le second mousqueton ; fais descendre la corde depuis la poutre, passe-la dans ce mousqueton, puis remonte-la dans celui de la poutre.",
+          "Tire vers le bas sur le brin libre, en t'aidant de ton poids : le bord de la plaque se soulève.",
+          "Bloque la corde par trois tours morts autour d'un poteau de l'auvent, puis pousse une bûche sous le bord avec le pied ou une planche.",
+          "Relâche doucement la corde pour que la plaque repose sur la cale, et libère le chaton sans passer le bras sous la fonte."
+        ],
+        "explication": "Le mousqueton fixé à la plaque joue le rôle de poulie mobile : la charge est portée par deux brins de corde, ce qui divise par deux la force de traction nécessaire. Comme seul un bord se soulève, il ne faut déjà tirer que l'équivalent de la moitié du poids ; le frottement dans les mousquetons mange une partie du gain, mais le poids du corps suffit largement. Les tours morts autour du poteau retiennent la charge par frottement, le temps de caler."
+      }
+    ],
+    "indices": [
+      "Pense aux façons de multiplier une force : un bras long d'un côté d'un pivot, ou plusieurs brins de corde qui se partagent la charge.",
+      "Le manche fendu, la ficelle de cuisine et le tuyau ne tiendront pas l'effort ; cherche ce qui est rigide, ce qui résiste à l'écrasement, et ce qui pourrait servir de poulie.",
+      "Une barre ne sert à rien sans point d'appui tout près de la charge ; et quelle que soit la méthode, chaque centimètre gagné doit être calé aussitôt."
+    ],
+    "fiches": [
+      "levier",
+      "poulie-palan",
+      "frottement-cabestan"
+    ],
+    "equivalences": [
+      "faire-levier",
+      "attacher"
+    ]
+  }
+]

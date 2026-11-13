@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Étape 1 : sublimation, du solide directement au gaz -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Sublimation</text>
+
+    <rect class="s-solid" x="20" y="48" width="76" height="24" rx="3"/>
+    <text class="s-small" x="58" y="64" text-anchor="middle">Solide</text>
+
+    <rect class="s-ghost" x="142" y="48" width="76" height="24" rx="3"/>
+    <text class="s-tiny" x="180" y="64" text-anchor="middle">liquide</text>
+    <path class="s-hot" d="M148 66 L212 54"/>
+
+    <rect class="s-solid" x="264" y="48" width="76" height="24" rx="3"/>
+    <text class="s-small" x="302" y="64" text-anchor="middle">Gaz</text>
+
+    <path class="s-accent s-draw" pathLength="1" d="M58 74 C100 106 260 106 300 76" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny s-text-cold" x="180" y="86" text-anchor="middle">−78,5 °C à 1 bar</text>
+    <text class="s-tiny" x="180" y="114" text-anchor="middle">sans passer par le liquide</text>
+  </g>
+
+  <!-- Étape 2 : glace sèche dans l'eau tiède, brouillard qui coule -->
+  <g>
+    <circle class="s-badge" cx="24" cy="136" r="9"/>
+    <text class="s-badge-text" x="24" y="136">2</text>
+    <text class="s-label" x="38" y="140">Brouillard</text>
+
+    <path class="s-solid" d="M40 162 C44 206 136 206 140 162 Z"/>
+    <path class="s-fill-cold" d="M44 166 C50 196 130 196 136 166 Z"/>
+    <ellipse class="s-line" cx="90" cy="162" rx="50" ry="8"/>
+    <rect class="s-solid" x="66" y="174" width="14" height="10" rx="2"/>
+    <rect class="s-solid" x="88" y="176" width="12" height="9" rx="2"/>
+    <circle class="s-thin s-float" cx="76" cy="168" r="2.5"/>
+    <circle class="s-thin s-float s-delay-1" cx="96" cy="170" r="2"/>
+    <circle class="s-thin s-float s-delay-2" cx="108" cy="172" r="2.5"/>
+
+    <circle class="s-fill-cold s-diffuse" cx="124" cy="154" r="10"/>
+    <circle class="s-fill-cold s-diffuse s-delay-1" cx="152" cy="176" r="12"/>
+    <circle class="s-fill-cold s-diffuse s-delay-2" cx="176" cy="198" r="12"/>
+    <path class="s-cold s-flow" d="M136 158 C158 162 160 196 200 206" marker-end="url(#mg-arrow-cold)"/>
+
+    <path class="s-thin" d="M20 212 H210"/>
+    <text class="s-tiny" x="24" y="226">sol</text>
+  </g>
+
+  <!-- Légende : ce qu'est vraiment le brouillard -->
+  <g>
+    <rect class="s-callout" x="216" y="132" width="132" height="54" rx="4"/>
+    <text class="s-tiny" x="282" y="148" text-anchor="middle">Brouillard = eau</text>
+    <text class="s-tiny" x="282" y="162" text-anchor="middle">de l'air condensée</text>
+    <text class="s-tiny s-text-cold" x="282" y="176" text-anchor="middle">CO₂ invisible, lourd</text>
+    <path class="s-leader" d="M216 164 H162" marker-end="url(#mg-dot)"/>
+    <text class="s-tiny" x="282" y="208" text-anchor="middle">1 kg → ≈ 550 L de gaz</text>
+  </g>
+</svg>

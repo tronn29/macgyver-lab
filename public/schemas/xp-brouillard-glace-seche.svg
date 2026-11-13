@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Encadré : ce que l'on voit vraiment -->
+  <g>
+    <rect class="s-callout" x="10" y="18" width="152" height="54" rx="4"/>
+    <text class="s-tiny" x="86" y="34" text-anchor="middle">Le CO₂ est invisible :</text>
+    <text class="s-tiny" x="86" y="48" text-anchor="middle">on voit des gouttelettes</text>
+    <text class="s-tiny s-text-cold" x="86" y="62" text-anchor="middle">d'eau condensée</text>
+    <path class="s-leader" d="M140 72 L170 106" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Saladier et eau tiède -->
+  <g>
+    <path class="s-line" d="M16 200 H344"/>
+    <polygon class="s-fill-hot" points="127,140 253,140 240,196 140,196"/>
+    <path class="s-thin" d="M127 140 H253"/>
+    <path class="s-line" d="M120 110 L140 196 H240 L260 110"/>
+  </g>
+
+  <!-- Granulés de glace sèche et bulles de CO₂ -->
+  <g>
+    <rect class="s-fill-cold" x="160" y="184" width="12" height="8" rx="3"/>
+    <rect class="s-fill-cold" x="178" y="186" width="12" height="8" rx="3"/>
+    <rect class="s-fill-cold" x="196" y="183" width="12" height="8" rx="3"/>
+    <rect class="s-fill-cold" x="214" y="185" width="12" height="8" rx="3"/>
+    <circle class="s-line s-float" cx="168" cy="170" r="3"/>
+    <circle class="s-line s-float s-delay-1" cx="186" cy="158" r="3"/>
+    <circle class="s-line s-float s-delay-2" cx="204" cy="171" r="3"/>
+    <circle class="s-line s-float s-delay-3" cx="222" cy="160" r="3"/>
+  </g>
+
+  <!-- Brouillard qui déborde et coule -->
+  <g>
+    <ellipse class="s-fill-cold s-diffuse" cx="190" cy="124" rx="56" ry="10"/>
+    <ellipse class="s-fill-cold s-diffuse s-delay-1" cx="170" cy="112" rx="30" ry="9"/>
+    <ellipse class="s-fill-cold s-diffuse s-delay-2" cx="216" cy="108" rx="30" ry="10"/>
+    <ellipse class="s-fill-cold s-diffuse s-delay-1" cx="282" cy="142" rx="12" ry="16"/>
+    <ellipse class="s-fill-cold s-diffuse s-delay-2" cx="306" cy="192" rx="38" ry="6"/>
+    <path class="s-cold s-flow" d="M262 114 C284 120 292 150 298 182" marker-end="url(#mg-arrow-cold)"/>
+  </g>
+
+  <!-- Étape 1 : eau tiède -->
+  <g>
+    <circle class="s-badge" cx="22" cy="126" r="9"/>
+    <text class="s-badge-text" x="22" y="126">1</text>
+    <text class="s-label" x="36" y="130">Eau tiède</text>
+    <text class="s-tiny s-text-hot" x="36" y="144">40 à 50 °C</text>
+    <path class="s-leader" d="M100 146 L150 160" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 2 : glace sèche -->
+  <g>
+    <circle class="s-badge" cx="22" cy="172" r="9"/>
+    <text class="s-badge-text" x="22" y="172">2</text>
+    <text class="s-label" x="36" y="176">Glace sèche</text>
+    <text class="s-tiny s-text-cold" x="36" y="190">−78,5 °C</text>
+    <path class="s-leader" d="M92 186 L158 188" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 3 : brouillard lourd -->
+  <g>
+    <circle class="s-badge" cx="190" cy="30" r="9"/>
+    <text class="s-badge-text" x="190" y="30">3</text>
+    <text class="s-label" x="204" y="34">Brouillard lourd</text>
+    <text class="s-tiny" x="204" y="48">il coule vers le sol</text>
+  </g>
+</svg>

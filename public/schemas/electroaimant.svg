@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Légende des étapes -->
+  <g>
+    <circle class="s-badge" cx="24" cy="26" r="9"/>
+    <text class="s-badge-text" x="24" y="26">1</text>
+    <text class="s-label" x="38" y="30">Courant</text>
+    <circle class="s-badge" cx="124" cy="26" r="9"/>
+    <text class="s-badge-text" x="124" y="26">2</text>
+    <text class="s-label" x="138" y="30">Bobine</text>
+    <circle class="s-badge" cx="222" cy="26" r="9"/>
+    <text class="s-badge-text" x="222" y="26">3</text>
+    <text class="s-label" x="236" y="30">Noyau de fer</text>
+  </g>
+
+  <!-- Lignes de champ : de la pointe (N) vers la tête (S) -->
+  <g class="s-pulse">
+    <path class="s-dash" d="M266 104 C290 62 52 62 58 96" marker-end="url(#mg-arrow)"/>
+    <path class="s-dash" d="M268 102 C312 36 30 36 50 98" marker-end="url(#mg-arrow)"/>
+  </g>
+
+  <!-- Clou -->
+  <g>
+    <rect class="s-solid" x="62" y="96" width="8" height="28" rx="1"/>
+    <path class="s-solid" d="M70 104 H250 L268 110 L250 116 H70 Z"/>
+    <text class="s-label s-text-hot" x="282" y="116" text-anchor="middle">N</text>
+    <text class="s-label s-text-cold" x="46" y="126" text-anchor="middle">S</text>
+  </g>
+
+  <!-- Bobine de fil émaillé -->
+  <g>
+    <ellipse class="s-accent" cx="100" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="108" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="116" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="124" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="132" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="140" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="148" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="156" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="164" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="172" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="180" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="188" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="196" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="204" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="212" cy="110" rx="3.5" ry="11"/>
+    <ellipse class="s-accent" cx="220" cy="110" rx="3.5" ry="11"/>
+  </g>
+
+  <!-- Fils et pile -->
+  <g>
+    <path class="s-accent s-flow" d="M195 188 H220 V121" marker-end="url(#mg-arrow)"/>
+    <path class="s-accent s-flow" d="M100 121 V188 H130" marker-end="url(#mg-arrow)"/>
+    <rect class="s-solid" x="130" y="176" width="60" height="24" rx="3"/>
+    <rect class="s-solid" x="190" y="182" width="5" height="12" rx="1"/>
+    <text class="s-small" x="160" y="192" text-anchor="middle">1,5 V</text>
+    <text class="s-tiny" x="140" y="172" text-anchor="middle">−</text>
+    <text class="s-tiny" x="182" y="172" text-anchor="middle">+</text>
+  </g>
+
+  <!-- Trombones attirés par la pointe -->
+  <g>
+    <path class="s-line" d="M262 118 V136 A4 4 0 0 0 270 136 V122 A3 3 0 0 0 264 122 V132"/>
+    <path class="s-line" d="M264 142 V160 A4 4 0 0 0 272 160 V146 A3 3 0 0 0 266 146 V156"/>
+    <text class="s-tiny" x="280" y="152">trombones</text>
+  </g>
+
+  <!-- Encadrés -->
+  <g>
+    <rect class="s-callout" x="12" y="198" width="110" height="32" rx="4"/>
+    <text class="s-tiny s-text-hot" x="67" y="211" text-anchor="middle">pile chaude :</text>
+    <text class="s-tiny" x="67" y="224" text-anchor="middle">quelques secondes</text>
+    <path class="s-leader" d="M122 206 L136 200" marker-end="url(#mg-dot)"/>
+    <rect class="s-callout" x="228" y="198" width="120" height="32" rx="4"/>
+    <text class="s-tiny s-text-accent" x="288" y="211" text-anchor="middle">B ∝ N × I</text>
+    <text class="s-tiny" x="288" y="224" text-anchor="middle">N spires, I courant</text>
+  </g>
+</svg>

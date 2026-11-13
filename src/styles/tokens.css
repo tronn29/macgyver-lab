@@ -1,0 +1,195 @@
+/* =========================================================================
+   MacGyver Lab — jetons du système de design
+   Toutes les couleurs, polices, espacements, rayons et durées passent par
+   ces variables. Les composants n'utilisent jamais de valeur en dur.
+   Contrastes vérifiés (WCAG 2.2 AA) : voir UX-UI.md.
+   ========================================================================= */
+
+:root {
+  /* ---- Typographies (libres de droit, servies localement) ---- */
+  --font-head: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Échelle typographique (rem, multipliée par --font-scale sur <html>) */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: clamp(1.9rem, 1.4rem + 2vw, 2.6rem);
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-body: 1.6;
+  --tracking-label: 0.12em;
+
+  /* ---- Espacements (base 4 px) ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --gutter: clamp(1rem, 0.6rem + 1.6vw, 2rem);
+
+  /* ---- Rayons ---- */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --r-full: 999px;
+
+  /* ---- Mise en page ---- */
+  --header-h: 3.5rem;
+  --nav-h: 4.25rem;
+  --rail-w: 5.75rem;
+  --content-max: 72rem;
+  --reading-max: 44rem;
+  --tap: 44px; /* cible tactile minimale (WCAG 2.5.8) */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  /* ---- Mouvement ---- */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 420ms;
+  --dur-4: 800ms;
+
+  /* ---- Couleurs : thème sombre (par défaut) ---- */
+  --c-bg-0: #04070b;
+  --c-bg-1: #070b11;
+  --c-bg-2: #0b1219;
+  --c-surface: #101923;
+  --c-surface-2: #16212d;
+  --c-surface-3: #1d2a38;
+  --c-glass: rgba(15, 24, 35, 0.78);
+  --c-glass-strong: rgba(11, 18, 27, 0.92);
+  --c-border: rgba(142, 196, 218, 0.15);
+  --c-border-strong: rgba(110, 228, 236, 0.38);
+  --c-grid: rgba(110, 200, 220, 0.045);
+
+  --c-text: #e8edf2;
+  --c-text-2: #aebbc8;
+  --c-text-3: #8796a5;
+  --c-steel: #8a99a8;
+
+  --c-accent: #2ee6e6;
+  --c-accent-2: #19c9b5;
+  --c-accent-ink: #031417;
+  --c-accent-soft: rgba(46, 230, 230, 0.13);
+  --c-accent-glow: rgba(46, 230, 230, 0.45);
+
+  --c-orange: #ff8a1f;
+  --c-orange-ink: #1c0c00;
+  --c-orange-soft: rgba(255, 138, 31, 0.14);
+  --c-orange-glow: rgba(255, 138, 31, 0.5);
+
+  --c-success: #3ee08f;
+  --c-success-soft: rgba(62, 224, 143, 0.13);
+  --c-warning: #ffb547;
+  --c-warning-soft: rgba(255, 181, 71, 0.14);
+  --c-danger: #ff6474;
+  --c-danger-soft: rgba(255, 100, 116, 0.14);
+
+  --c-focus: #7ff6f6;
+  --shadow-1: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 18px 50px rgba(0, 0, 0, 0.5);
+  --glass-blur: blur(14px) saturate(140%);
+  --bg-glow-1: rgba(46, 230, 230, 0.10);
+  --bg-glow-2: rgba(255, 138, 31, 0.06);
+
+  /* ---- Couleurs des schémas SVG ---- */
+  --sc-line: #cfe6f0;
+  --sc-muted: #6f8597;
+  --sc-accent: #2ee6e6;
+  --sc-accent-soft: rgba(46, 230, 230, 0.6);
+  --sc-hot: #ff8a1f;
+  --sc-cold: #7cc8ff;
+  --sc-solid: rgba(120, 175, 205, 0.1);
+  --sc-panel: rgba(7, 14, 22, 0.88);
+  --sc-text: #dbe6ee;
+  --sc-text-muted: #a3b3c1;
+  --sc-on-accent: #031417;
+  --sc-bg: #081019;
+  --sc-grid: rgba(110, 200, 220, 0.07);
+
+  color-scheme: dark;
+}
+
+/* ---- Thème clair sobre ---- */
+:root[data-theme='light'] {
+  --c-bg-0: #e3e9ef;
+  --c-bg-1: #edf1f5;
+  --c-bg-2: #f4f7fa;
+  --c-surface: #ffffff;
+  --c-surface-2: #f3f6f9;
+  --c-surface-3: #e7edf2;
+  --c-glass: rgba(255, 255, 255, 0.86);
+  --c-glass-strong: rgba(255, 255, 255, 0.95);
+  --c-border: rgba(16, 48, 72, 0.13);
+  --c-border-strong: rgba(0, 124, 133, 0.45);
+  --c-grid: rgba(20, 80, 110, 0.05);
+
+  --c-text: #0c1620;
+  --c-text-2: #3c4b59;
+  --c-text-3: #556472;
+  --c-steel: #5f6f7e;
+
+  --c-accent: #00636b;
+  --c-accent-2: #00756a;
+  --c-accent-ink: #ffffff;
+  --c-accent-soft: rgba(0, 99, 107, 0.09);
+  --c-accent-glow: rgba(0, 122, 131, 0.25);
+
+  --c-orange: #a03f00;
+  --c-orange-ink: #ffffff;
+  --c-orange-soft: rgba(176, 72, 0, 0.1);
+  --c-orange-glow: rgba(176, 72, 0, 0.25);
+
+  --c-success: #076336;
+  --c-success-soft: rgba(7, 99, 54, 0.08);
+  --c-warning: #7a4700;
+  --c-warning-soft: rgba(143, 86, 0, 0.1);
+  --c-danger: #b01e30;
+  --c-danger-soft: rgba(190, 35, 53, 0.09);
+
+  --c-focus: #004e55;
+  --shadow-1: 0 1px 2px rgba(10, 30, 50, 0.06), 0 6px 18px rgba(10, 30, 50, 0.07);
+  --shadow-2: 0 2px 4px rgba(10, 30, 50, 0.08), 0 18px 40px rgba(10, 30, 50, 0.12);
+  --bg-glow-1: rgba(0, 122, 131, 0.07);
+  --bg-glow-2: rgba(176, 72, 0, 0.04);
+
+  --sc-line: #1d3445;
+  --sc-muted: #6b7f90;
+  --sc-accent: #00636b;
+  --sc-accent-soft: rgba(0, 122, 131, 0.6);
+  --sc-hot: #c25100;
+  --sc-cold: #1f6fb2;
+  --sc-solid: rgba(20, 60, 90, 0.06);
+  --sc-panel: rgba(255, 255, 255, 0.94);
+  --sc-text: #0f2230;
+  --sc-text-muted: #4a5d6c;
+  --sc-on-accent: #ffffff;
+  --sc-bg: #f7fafc;
+  --sc-grid: rgba(20, 80, 110, 0.07);
+
+  color-scheme: light;
+}
+
+/* ---- Contraste renforcé (option) : surfaces opaques, bordures franches ---- */
+:root.contrast-high {
+  --c-glass: var(--c-surface);
+  --c-glass-strong: var(--c-surface);
+  --c-border: var(--c-text-3);
+  --c-text-2: var(--c-text);
+  --glass-blur: none;
+}

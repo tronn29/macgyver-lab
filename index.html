@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>MacGyver Lab</title>
+    <meta name="description" content="Comprendre comment marche le monde, détourner les objets du quotidien et improviser avec ce qu'on a." />
+    <meta name="theme-color" content="#070b11" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./icons/icon-192.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MacGyver Lab" />
+    <script>
+      /* Applique thème, taille de texte et mouvement avant le premier affichage (évite le flash). */
+      (function () {
+        try {
+          var s = JSON.parse(localStorage.getItem('mgl:settings') || '{}');
+          var d = document.documentElement;
+          var theme = s.theme || 'dark';
+          if (theme === 'system') theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          d.setAttribute('data-theme', theme);
+          if (s.fontScale) d.style.setProperty('--font-scale', String(s.fontScale));
+          if (s.motion === 'off') d.classList.add('motion-off');
+          if (s.motion === 'on') d.classList.add('motion-on');
+          if (s.contrast === 'high') d.classList.add('contrast-high');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <div id="app" aria-busy="true">
+      <div class="boot" role="status">
+        <div class="boot__ring" aria-hidden="true"></div>
+        <p class="boot__text">Initialisation du poste de commandement…</p>
+      </div>
+    </div>
+    <noscript>
+      <p style="padding:2rem;color:#e8edf2;background:#070b11;font-family:sans-serif">
+        MacGyver Lab a besoin de JavaScript pour fonctionner.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

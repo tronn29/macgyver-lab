@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Verre : huile au-dessus, eau colorée au fond -->
+  <g>
+    <rect class="s-fill-muted" x="141" y="60" width="78" height="110"/>
+    <rect class="s-fill-hot" x="141" y="170" width="78" height="33"/>
+    <path class="s-thin" d="M141 60 H219"/>
+    <path class="s-thin" d="M141 170 H219"/>
+    <path class="s-line" d="M140 40 V200 Q140 204 144 204 H216 Q220 204 220 200 V40"/>
+  </g>
+
+  <!-- Comprimé effervescent et ses bulles -->
+  <g>
+    <rect class="s-solid" x="190" y="194" width="16" height="6" rx="2"/>
+    <circle class="s-line s-float" cx="196" cy="184" r="2.5"/>
+    <circle class="s-line s-float s-delay-1" cx="202" cy="176" r="2"/>
+    <circle class="s-line s-float s-delay-2" cx="192" cy="174" r="2"/>
+  </g>
+
+  <!-- Gouttes qui montent avec une bulle, goutte qui redescend -->
+  <g>
+    <path class="s-accent s-flow" d="M152 160 V96" marker-end="url(#mg-arrow)"/>
+    <g class="s-float">
+      <ellipse class="s-fill-hot" cx="168" cy="128" rx="9" ry="7"/>
+      <circle class="s-line" cx="168" cy="119" r="3.5"/>
+    </g>
+    <g class="s-float s-delay-2">
+      <ellipse class="s-fill-hot" cx="178" cy="92" rx="8" ry="6"/>
+      <circle class="s-line" cx="178" cy="84" r="3"/>
+    </g>
+    <circle class="s-line s-pulse" cx="170" cy="62" r="4"/>
+    <ellipse class="s-fill-hot" cx="204" cy="94" rx="7" ry="6"/>
+    <path class="s-thin" d="M204 104 V144" marker-end="url(#mg-arrow)"/>
+  </g>
+
+  <!-- Étape 1 : eau colorée -->
+  <g>
+    <circle class="s-badge" cx="22" cy="180" r="9"/>
+    <text class="s-badge-text" x="22" y="180">1</text>
+    <text class="s-label" x="36" y="184">Eau colorée</text>
+    <text class="s-tiny" x="36" y="198">densité 1</text>
+    <path class="s-leader" d="M120 186 L150 188" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 2 : huile -->
+  <g>
+    <circle class="s-badge" cx="22" cy="62" r="9"/>
+    <text class="s-badge-text" x="22" y="62">2</text>
+    <text class="s-label" x="36" y="66">Huile</text>
+    <text class="s-tiny" x="36" y="80">densité 0,92</text>
+    <path class="s-leader" d="M80 66 L146 82" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 3 : comprimé -->
+  <g>
+    <circle class="s-badge" cx="246" cy="190" r="9"/>
+    <text class="s-badge-text" x="246" y="190">3</text>
+    <text class="s-label" x="260" y="194">Comprimé</text>
+    <text class="s-tiny s-text-accent" x="260" y="208">libère du CO₂</text>
+    <path class="s-leader" d="M236 194 L208 197" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Légendes à droite -->
+  <g>
+    <text class="s-tiny" x="288" y="30" text-anchor="middle">la bulle éclate :</text>
+    <text class="s-tiny" x="288" y="44" text-anchor="middle">la goutte redescend</text>
+    <path class="s-leader" d="M246 50 L210 88" marker-end="url(#mg-dot)"/>
+
+    <rect class="s-callout" x="232" y="88" width="112" height="66" rx="4"/>
+    <text class="s-tiny" x="288" y="104" text-anchor="middle">Bulle + goutte</text>
+    <text class="s-tiny" x="288" y="118" text-anchor="middle">moins dense</text>
+    <text class="s-tiny s-text-accent" x="288" y="132" text-anchor="middle">que l'huile :</text>
+    <text class="s-tiny s-text-accent" x="288" y="146" text-anchor="middle">elle monte</text>
+    <path class="s-leader" d="M232 118 L178 126" marker-end="url(#mg-dot)"/>
+  </g>
+</svg>

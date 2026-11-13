@@ -1,0 +1,83 @@
+/* =========================================================================
+   Schémas SVG — charte commune
+   Les fichiers de public/schemas/*.svg n'ont AUCUNE couleur en dur :
+   ils utilisent uniquement les classes ci-dessous et les marqueurs
+   partagés (#mg-arrow, #mg-arrow-hot, #mg-arrow-cold, #mg-dot, #mg-tick)
+   injectés une seule fois dans la page (voir src/ui/schema.ts).
+   ========================================================================= */
+
+.schema .schema__stage > svg, .schema > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  font-family: var(--font-mono);
+}
+
+/* ---- Traits ---- */
+.schema .s-line { fill: none; stroke: var(--sc-line); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.schema .s-thin { fill: none; stroke: var(--sc-muted); stroke-width: 1; stroke-linecap: round; }
+.schema .s-dash { fill: none; stroke: var(--sc-muted); stroke-width: 1; stroke-dasharray: 4 4; }
+.schema .s-accent { fill: none; stroke: var(--sc-accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; filter: url(#mg-glow); }
+.schema .s-hot { fill: none; stroke: var(--sc-hot); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.schema .s-cold { fill: none; stroke: var(--sc-cold); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.schema .s-dim { fill: none; stroke: var(--sc-muted); stroke-width: 0.9; }
+.schema .s-leader { fill: none; stroke: var(--sc-accent-soft); stroke-width: 1; }
+
+/* ---- Surfaces ---- */
+.schema .s-solid { fill: var(--sc-solid); stroke: var(--sc-line); stroke-width: 1.4; stroke-linejoin: round; }
+.schema .s-ghost { fill: none; stroke: var(--sc-muted); stroke-width: 1; stroke-dasharray: 3 3; }
+.schema .s-fill-accent { fill: var(--sc-accent); fill-opacity: 0.22; stroke: none; }
+.schema .s-fill-hot { fill: var(--sc-hot); fill-opacity: 0.28; stroke: none; }
+.schema .s-fill-cold { fill: var(--sc-cold); fill-opacity: 0.22; stroke: none; }
+.schema .s-fill-muted { fill: var(--sc-muted); fill-opacity: 0.18; stroke: none; }
+.schema .s-callout { fill: var(--sc-panel); stroke: var(--sc-accent-soft); stroke-width: 1; }
+
+/* ---- Textes (unités du viewBox 360 × 240) ---- */
+.schema .s-label { fill: var(--sc-text); font-family: var(--font-body); font-size: 12.5px; font-weight: 600; }
+.schema .s-title { fill: var(--sc-accent); font-family: var(--font-head); font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.schema .s-small { fill: var(--sc-text); font-size: 11px; }
+.schema .s-tiny { fill: var(--sc-text-muted); font-size: 10px; }
+.schema .s-text-hot { fill: var(--sc-hot); }
+.schema .s-text-cold { fill: var(--sc-cold); }
+.schema .s-text-accent { fill: var(--sc-accent); }
+.schema .s-badge { fill: var(--sc-accent); stroke: none; }
+.schema .s-badge-hot { fill: var(--sc-hot); stroke: none; }
+.schema .s-badge-text { fill: var(--sc-on-accent); font-family: var(--font-mono); font-size: 10.5px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+
+/* ---- Animations (désactivées si mouvement réduit) ---- */
+.schema .s-flow { stroke-dasharray: 6 6; animation: s-flow 1.2s linear infinite; }
+.schema .s-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: s-draw 1.6s var(--ease-out) forwards; }
+.schema .s-pulse { animation: s-pulse 2.4s ease-in-out infinite; }
+.schema .s-blink { animation: s-blink 1.2s steps(2, jump-none) infinite; }
+.schema .s-diffuse { transform-box: fill-box; transform-origin: center; animation: s-diffuse 3s ease-out infinite; }
+.schema .s-spin { transform-box: fill-box; transform-origin: center; animation: s-spin 6s linear infinite; }
+.schema .s-float { animation: s-float 3.2s ease-in-out infinite; }
+.schema .s-delay-1 { animation-delay: 0.6s; }
+.schema .s-delay-2 { animation-delay: 1.2s; }
+.schema .s-delay-3 { animation-delay: 1.8s; }
+
+@keyframes s-flow { to { stroke-dashoffset: -24; } }
+@keyframes s-draw { to { stroke-dashoffset: 0; } }
+@keyframes s-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+@keyframes s-blink { 0% { opacity: 1; } 100% { opacity: 0.25; } }
+@keyframes s-diffuse { 0% { transform: scale(0.6); opacity: 0.9; } 100% { transform: scale(1.6); opacity: 0; } }
+@keyframes s-spin { to { transform: rotate(360deg); } }
+@keyframes s-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+.motion-off .schema *,
+.motion-off .schema *::before { animation: none !important; }
+.motion-off .schema .s-draw { stroke-dashoffset: 0; }
+.motion-off .schema .s-diffuse { opacity: 0.5; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html:not(.motion-on) .schema * { animation: none !important; }
+  html:not(.motion-on) .schema .s-draw { stroke-dashoffset: 0; }
+  html:not(.motion-on) .schema .s-diffuse { opacity: 0.5; transform: none; }
+}
+
+/* ---- Marqueurs partagés (flèches, points, cotes) : hors .schema car définis dans #mg-defs ---- */
+.mg-m-line { fill: var(--sc-line); }
+.mg-m-hot { fill: var(--sc-hot); }
+.mg-m-cold { fill: var(--sc-cold); }
+.mg-m-accent { fill: var(--sc-accent); }
+.mg-m-tick { fill: none; stroke: var(--sc-muted); stroke-width: 1.2; }

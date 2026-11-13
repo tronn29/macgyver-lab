@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Carton : film à l'arrière, trou à l'avant -->
+  <g>
+    <rect class="s-fill-muted" x="40" y="90" width="90" height="80"/>
+    <path class="s-line" d="M130 116 V90 H40"/>
+    <path class="s-line" d="M40 170 H130 V144"/>
+    <path class="s-accent" d="M40 90 Q54 130 40 170"/>
+    <text class="s-tiny" x="134" y="106">trou Ø 8 cm</text>
+    <circle class="s-fill-cold s-diffuse" cx="72" cy="120" r="10"/>
+    <circle class="s-fill-cold s-diffuse s-delay-1" cx="98" cy="142" r="12"/>
+    <circle class="s-fill-cold s-diffuse s-delay-2" cx="112" cy="110" r="8"/>
+    <path class="s-hot" d="M12 130 H32" marker-end="url(#mg-arrow-hot)"/>
+  </g>
+
+  <!-- Trajet de l'anneau -->
+  <g>
+    <path class="s-dash" d="M134 130 H292"/>
+    <ellipse class="s-ghost" cx="170" cy="130" rx="6" ry="16"/>
+    <ellipse class="s-accent" cx="240" cy="130" rx="7" ry="18"/>
+    <circle class="s-fill-cold" cx="240" cy="112" r="6"/>
+    <circle class="s-fill-cold" cx="240" cy="148" r="6"/>
+    <path class="s-accent" d="M249 112 A9 9 0 0 0 231 112" marker-end="url(#mg-arrow)"/>
+    <path class="s-accent" d="M231 148 A9 9 0 0 1 249 148" marker-end="url(#mg-arrow)"/>
+    <path class="s-accent s-flow" d="M252 130 H290" marker-end="url(#mg-arrow)"/>
+  </g>
+
+  <!-- Bandes de papier suspendues -->
+  <g>
+    <path class="s-line" d="M296 84 H344"/>
+    <rect class="s-solid" x="302" y="84" width="4" height="50"/>
+    <polygon class="s-solid" points="312,84 316,84 332,126 328,128"/>
+    <polygon class="s-solid" points="322,84 326,84 340,122 336,124"/>
+    <rect class="s-solid" x="334" y="84" width="4" height="50"/>
+    <text class="s-tiny" x="320" y="152" text-anchor="middle">papier</text>
+  </g>
+
+  <!-- Étape 1 : remplir de brume -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Remplir de brume</text>
+    <path class="s-leader" d="M60 42 L72 112" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 2 : tapoter le film -->
+  <g>
+    <circle class="s-badge" cx="24" cy="210" r="9"/>
+    <text class="s-badge-text" x="24" y="210">2</text>
+    <text class="s-label" x="38" y="214">Tapoter le film</text>
+    <path class="s-leader" d="M46 200 L43 162" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 3 : l'anneau d'air -->
+  <g>
+    <circle class="s-badge" cx="196" cy="30" r="9"/>
+    <text class="s-badge-text" x="196" y="30">3</text>
+    <text class="s-label" x="210" y="34">Anneau d'air</text>
+    <text class="s-tiny" x="210" y="48">tourne et avance</text>
+  </g>
+
+  <!-- Encadré : pourquoi il s'enroule -->
+  <g>
+    <rect class="s-callout" x="186" y="176" width="150" height="44" rx="4"/>
+    <text class="s-tiny" x="261" y="194" text-anchor="middle">Le bord freine l'air :</text>
+    <text class="s-tiny s-text-accent" x="261" y="208" text-anchor="middle">il s'enroule en tore</text>
+    <path class="s-leader" d="M240 176 L240 158" marker-end="url(#mg-dot)"/>
+  </g>
+</svg>

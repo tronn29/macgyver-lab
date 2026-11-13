@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- 1 : un bloc compact : seules ses faces touchent l’oxygène -->
+  <g>
+    <circle class="s-badge" cx="24" cy="26" r="9"/>
+    <text class="s-badge-text" x="24" y="26">1</text>
+    <text class="s-label" x="38" y="30">En bloc</text>
+    <polygon class="s-solid" points="80,70 114.6,90 80,110 45.4,90"/>
+    <polygon class="s-solid" points="45.4,90 80,110 80,150 45.4,130"/>
+    <polygon class="s-solid" points="114.6,90 80,110 80,150 114.6,130"/>
+    <polygon class="s-fill-muted" points="114.6,90 80,110 80,150 114.6,130"/>
+    <path class="s-accent" d="M80 46 V64" marker-end="url(#mg-arrow)"/>
+    <path class="s-accent" d="M18 112 H38" marker-end="url(#mg-arrow)"/>
+    <path class="s-accent" d="M142 112 H122" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny s-text-accent" x="88" y="52">O₂</text>
+    <path class="s-dim" d="M41 135 L76 155" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <text class="s-tiny" x="50" y="160" text-anchor="end">1 cm</text>
+    <text class="s-small" x="80" y="176" text-anchor="middle">surface : 6 cm²</text>
+    <text class="s-tiny" x="80" y="192" text-anchor="middle">combustion lente</text>
+  </g>
+
+  <!-- Même masse, finement divisée -->
+  <g>
+    <path class="s-line" d="M150 110 H198" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny" x="174" y="100" text-anchor="middle">même masse</text>
+    <text class="s-tiny" x="174" y="126" text-anchor="middle">broyée</text>
+  </g>
+
+  <!-- 2 : la même matière en poudre : chaque grain est entouré d’oxygène -->
+  <g>
+    <circle class="s-badge" cx="206" cy="26" r="9"/>
+    <text class="s-badge-text" x="206" y="26">2</text>
+    <text class="s-label" x="220" y="30">En poudre</text>
+    <polygon class="s-solid" points="234,57 240.1,60.5 234,64 227.9,60.5"/>
+    <polygon class="s-solid" points="227.9,60.5 234,64 234,71 227.9,67.5"/>
+    <polygon class="s-solid" points="240.1,60.5 234,64 234,71 240.1,67.5"/>
+    <polygon class="s-fill-muted" points="240.1,60.5 234,64 234,71 240.1,67.5"/>
+    <polygon class="s-solid" points="260,57 266.1,60.5 260,64 253.9,60.5"/>
+    <polygon class="s-solid" points="253.9,60.5 260,64 260,71 253.9,67.5"/>
+    <polygon class="s-solid" points="266.1,60.5 260,64 260,71 266.1,67.5"/>
+    <polygon class="s-fill-muted" points="266.1,60.5 260,64 260,71 266.1,67.5"/>
+    <polygon class="s-solid" points="286,57 292.1,60.5 286,64 279.9,60.5"/>
+    <polygon class="s-solid" points="279.9,60.5 286,64 286,71 279.9,67.5"/>
+    <polygon class="s-solid" points="292.1,60.5 286,64 286,71 292.1,67.5"/>
+    <polygon class="s-fill-muted" points="292.1,60.5 286,64 286,71 292.1,67.5"/>
+    <polygon class="s-solid" points="312,57 318.1,60.5 312,64 305.9,60.5"/>
+    <polygon class="s-solid" points="305.9,60.5 312,64 312,71 305.9,67.5"/>
+    <polygon class="s-solid" points="318.1,60.5 312,64 312,71 318.1,67.5"/>
+    <polygon class="s-fill-muted" points="318.1,60.5 312,64 312,71 318.1,67.5"/>
+    <polygon class="s-solid" points="247,81 253.1,84.5 247,88 240.9,84.5"/>
+    <polygon class="s-solid" points="240.9,84.5 247,88 247,95 240.9,91.5"/>
+    <polygon class="s-solid" points="253.1,84.5 247,88 247,95 253.1,91.5"/>
+    <polygon class="s-fill-muted" points="253.1,84.5 247,88 247,95 253.1,91.5"/>
+    <polygon class="s-solid" points="273,81 279.1,84.5 273,88 266.9,84.5"/>
+    <polygon class="s-solid" points="266.9,84.5 273,88 273,95 266.9,91.5"/>
+    <polygon class="s-solid" points="279.1,84.5 273,88 273,95 279.1,91.5"/>
+    <polygon class="s-fill-muted" points="279.1,84.5 273,88 273,95 279.1,91.5"/>
+    <polygon class="s-solid" points="299,81 305.1,84.5 299,88 292.9,84.5"/>
+    <polygon class="s-solid" points="292.9,84.5 299,88 299,95 292.9,91.5"/>
+    <polygon class="s-solid" points="305.1,84.5 299,88 299,95 305.1,91.5"/>
+    <polygon class="s-fill-muted" points="305.1,84.5 299,88 299,95 305.1,91.5"/>
+    <polygon class="s-solid" points="325,81 331.1,84.5 325,88 318.9,84.5"/>
+    <polygon class="s-solid" points="318.9,84.5 325,88 325,95 318.9,91.5"/>
+    <polygon class="s-solid" points="331.1,84.5 325,88 325,95 331.1,91.5"/>
+    <polygon class="s-fill-muted" points="331.1,84.5 325,88 325,95 331.1,91.5"/>
+    <polygon class="s-solid" points="234,105 240.1,108.5 234,112 227.9,108.5"/>
+    <polygon class="s-solid" points="227.9,108.5 234,112 234,119 227.9,115.5"/>
+    <polygon class="s-solid" points="240.1,108.5 234,112 234,119 240.1,115.5"/>
+    <polygon class="s-fill-muted" points="240.1,108.5 234,112 234,119 240.1,115.5"/>
+    <polygon class="s-solid" points="260,105 266.1,108.5 260,112 253.9,108.5"/>
+    <polygon class="s-solid" points="253.9,108.5 260,112 260,119 253.9,115.5"/>
+    <polygon class="s-solid" points="266.1,108.5 260,112 260,119 266.1,115.5"/>
+    <polygon class="s-fill-muted" points="266.1,108.5 260,112 260,119 266.1,115.5"/>
+    <polygon class="s-solid" points="286,105 292.1,108.5 286,112 279.9,108.5"/>
+    <polygon class="s-solid" points="279.9,108.5 286,112 286,119 279.9,115.5"/>
+    <polygon class="s-solid" points="292.1,108.5 286,112 286,119 292.1,115.5"/>
+    <polygon class="s-fill-muted" points="292.1,108.5 286,112 286,119 292.1,115.5"/>
+    <polygon class="s-solid" points="312,105 318.1,108.5 312,112 305.9,108.5"/>
+    <polygon class="s-solid" points="305.9,108.5 312,112 312,119 305.9,115.5"/>
+    <polygon class="s-solid" points="318.1,108.5 312,112 312,119 318.1,115.5"/>
+    <polygon class="s-fill-muted" points="318.1,108.5 312,112 312,119 318.1,115.5"/>
+    <polygon class="s-solid" points="247,129 253.1,132.5 247,136 240.9,132.5"/>
+    <polygon class="s-solid" points="240.9,132.5 247,136 247,143 240.9,139.5"/>
+    <polygon class="s-solid" points="253.1,132.5 247,136 247,143 253.1,139.5"/>
+    <polygon class="s-fill-muted" points="253.1,132.5 247,136 247,143 253.1,139.5"/>
+    <polygon class="s-solid" points="273,129 279.1,132.5 273,136 266.9,132.5"/>
+    <polygon class="s-solid" points="266.9,132.5 273,136 273,143 266.9,139.5"/>
+    <polygon class="s-solid" points="279.1,132.5 273,136 273,143 279.1,139.5"/>
+    <polygon class="s-fill-muted" points="279.1,132.5 273,136 273,143 279.1,139.5"/>
+    <polygon class="s-solid" points="299,129 305.1,132.5 299,136 292.9,132.5"/>
+    <polygon class="s-solid" points="292.9,132.5 299,136 299,143 292.9,139.5"/>
+    <polygon class="s-solid" points="305.1,132.5 299,136 299,143 305.1,139.5"/>
+    <polygon class="s-fill-muted" points="305.1,132.5 299,136 299,143 305.1,139.5"/>
+    <polygon class="s-solid" points="325,129 331.1,132.5 325,136 318.9,132.5"/>
+    <polygon class="s-solid" points="318.9,132.5 325,136 325,143 318.9,139.5"/>
+    <polygon class="s-solid" points="331.1,132.5 325,136 325,143 331.1,139.5"/>
+    <polygon class="s-fill-muted" points="331.1,132.5 325,136 325,143 331.1,139.5"/>
+    <g class="s-pulse">
+      <circle class="s-fill-accent" cx="247" cy="64" r="3"/>
+      <circle class="s-fill-accent" cx="273" cy="64" r="3"/>
+      <circle class="s-fill-accent" cx="299" cy="64" r="3"/>
+      <circle class="s-fill-accent" cx="221" cy="88" r="3"/>
+      <circle class="s-fill-accent" cx="286" cy="88" r="3"/>
+      <circle class="s-fill-accent" cx="312" cy="88" r="3"/>
+      <circle class="s-fill-accent" cx="247" cy="112" r="3"/>
+      <circle class="s-fill-accent" cx="299" cy="112" r="3"/>
+      <circle class="s-fill-accent" cx="325" cy="112" r="3"/>
+      <circle class="s-fill-accent" cx="234" cy="136" r="3"/>
+      <circle class="s-fill-accent" cx="260" cy="136" r="3"/>
+      <circle class="s-fill-accent" cx="312" cy="136" r="3"/>
+      <circle class="s-fill-accent" cx="236" cy="52" r="3"/>
+      <circle class="s-fill-accent" cx="288" cy="52" r="3"/>
+      <circle class="s-fill-accent" cx="326" cy="64" r="3"/>
+      <circle class="s-fill-accent" cx="222" cy="124" r="3"/>
+      <circle class="s-fill-accent" cx="338" cy="136" r="3"/>
+    </g>
+    <text class="s-small" x="272" y="176" text-anchor="middle">surface × 1 000</text>
+    <text class="s-tiny s-text-hot" x="272" y="192" text-anchor="middle">combustion très rapide</text>
+  </g>
+
+  <!-- Prévention industrielle -->
+  <g>
+    <rect class="s-callout" x="16" y="204" width="328" height="24" rx="4"/>
+    <text class="s-tiny" x="180" y="220" text-anchor="middle">Prévention : aspiration · humidité · aucune étincelle</text>
+  </g>
+</svg>

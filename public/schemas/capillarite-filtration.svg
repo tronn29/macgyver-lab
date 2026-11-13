@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- 1 : capillarité : la mèche transporte l'eau -->
+  <g>
+    <circle class="s-badge" cx="24" cy="26" r="9"/>
+    <text class="s-badge-text" x="24" y="26">1</text>
+    <text class="s-label" x="38" y="30">Capillarité</text>
+
+    <polygon class="s-fill-cold" points="25.1,86 78.9,86 76,130 28,130"/>
+    <path class="s-cold" d="M25 86 H79"/>
+    <path class="s-line" d="M24 70 L28 130 H76 L80 70"/>
+    <rect class="s-fill-muted" x="24" y="130" width="56" height="40"/>
+
+    <polygon class="s-fill-cold" points="106.9,184 157.1,184 156,200 108,200"/>
+    <path class="s-cold" d="M107 184 H157"/>
+    <path class="s-line" d="M104 140 L108 200 H156 L160 140"/>
+
+    <path class="s-line" d="M58 126 C58 90 66 64 82 64 C98 64 120 84 128 192"/>
+    <path class="s-cold s-flow" d="M58 126 C58 90 66 64 82 64 C98 64 120 84 128 192" marker-end="url(#mg-arrow-cold)"/>
+    <text class="s-tiny s-text-cold" x="114" y="76">mèche</text>
+
+    <!-- Tubes fins : plus le tube est fin, plus l'eau monte -->
+    <rect class="s-fill-cold" x="20" y="212" width="76" height="12"/>
+    <rect class="s-fill-cold" x="28" y="204" width="12" height="8"/>
+    <rect class="s-fill-cold" x="52" y="192" width="8" height="20"/>
+    <rect class="s-fill-cold s-pulse" x="72" y="180" width="4" height="32"/>
+    <path class="s-line" d="M28 178 V220 M40 178 V220 M52 178 V220 M60 178 V220 M72 178 V220 M76 178 V220"/>
+    <text class="s-tiny" x="104" y="214">plus fin,</text>
+    <text class="s-tiny" x="104" y="227">plus haut</text>
+  </g>
+
+  <path class="s-dash" d="M182 44 V228"/>
+
+  <!-- 2 : filtration : clarifie mais ne désinfecte pas -->
+  <g>
+    <circle class="s-badge" cx="196" cy="26" r="9"/>
+    <text class="s-badge-text" x="196" y="26">2</text>
+    <text class="s-label" x="210" y="30">Filtration</text>
+
+    <rect class="s-fill-cold" x="226" y="52" width="64" height="18"/>
+    <circle class="s-thin" cx="234" cy="78" r="4"/>
+    <circle class="s-thin" cx="246" cy="78" r="4"/>
+    <circle class="s-thin" cx="258" cy="78" r="4"/>
+    <circle class="s-thin" cx="270" cy="78" r="4"/>
+    <circle class="s-thin" cx="282" cy="78" r="4"/>
+    <circle class="s-thin" cx="240" cy="88" r="4"/>
+    <circle class="s-thin" cx="252" cy="88" r="4"/>
+    <circle class="s-thin" cx="264" cy="88" r="4"/>
+    <circle class="s-thin" cx="276" cy="88" r="4"/>
+    <rect class="s-fill-muted" x="226" y="94" width="64" height="30"/>
+    <polygon class="s-solid" points="230,132 238,128 242,136 234,140"/>
+    <polygon class="s-solid" points="246,130 254,128 256,138 248,140"/>
+    <polygon class="s-solid" points="262,132 270,128 272,138 264,140"/>
+    <polygon class="s-solid" points="276,130 284,130 286,140 278,142"/>
+    <polygon class="s-solid" points="238,142 246,144 244,148 236,147"/>
+    <polygon class="s-solid" points="266,143 274,142 274,148 266,148"/>
+    <path class="s-line" d="M228 156 q4 -4 8 0 t8 0 t8 0 t8 0 t8 0 t8 0 t8 0 t8 0"/>
+    <path class="s-dash" d="M226 70 H290 M226 94 H290 M226 124 H290 M226 150 H290"/>
+    <path class="s-line" d="M226 52 V160 L250 184 H266 L290 160 V52"/>
+
+    <path class="s-leader" d="M290 61 H296 M290 82 H296 M290 109 H296 M290 137 H296 M290 155 H296"/>
+    <text class="s-tiny s-text-cold" x="298" y="64">trouble</text>
+    <text class="s-tiny" x="298" y="85">gravier</text>
+    <text class="s-tiny" x="298" y="112">sable</text>
+    <text class="s-tiny" x="298" y="140">charbon</text>
+    <text class="s-tiny" x="298" y="158">tissu</text>
+
+    <polygon class="s-fill-cold" points="239.3,214 276.7,214 276,226 240,226"/>
+    <path class="s-line" d="M238 196 L240 226 H276 L278 196"/>
+    <path class="s-cold s-flow" d="M258 186 V212" marker-end="url(#mg-arrow-cold)"/>
+
+    <rect class="s-callout" x="280" y="176" width="68" height="50" rx="4"/>
+    <text class="s-tiny s-text-hot" x="314" y="190" text-anchor="middle">clair ≠</text>
+    <text class="s-tiny s-text-hot" x="314" y="204" text-anchor="middle">potable</text>
+    <text class="s-tiny" x="314" y="218" text-anchor="middle">→ bouillir</text>
+  </g>
+</svg>

@@ -1,0 +1,225 @@
+[
+  {
+    "id": "isoler-chaleur",
+    "titre": "Isoler de la chaleur et du froid",
+    "icone": "cooler",
+    "categorie": "thermique",
+    "resume": "Ralentir les échanges de chaleur pour garder quelque chose chaud, froid, ou se protéger soi-même.",
+    "principe": "La chaleur passe de trois façons : par contact (conduction), par l'air qui circule (convection) et par rayonnement. Un bon isolant emprisonne de l'air immobile dans de petites cellules, ce qui bloque les deux premières ; une surface brillante renvoie le rayonnement. Les meilleurs montages combinent les deux : une couche qui piège l'air, une couche réfléchissante, et aucun contact direct avec le sol ou le vent.",
+    "fiches": ["isolation-thermique"],
+    "objets": [
+      { "objet": "couverture-survie", "comment": "Enveloppe-toi dedans par-dessus tes vêtements, face argentée vers le corps, et ferme bien le col pour couper le vent.", "pourquoi": "Le film métallisé renvoie l'essentiel du rayonnement infrarouge du corps et bloque le vent.", "efficacite": 3, "limite": "Très fine, elle n'isole presque pas par contact : au sol, mets une couche épaisse dessous." },
+      { "objet": "glaciere", "comment": "Range-y les aliments avec des bouteilles d'eau congelées et n'ouvre le couvercle qu'au strict nécessaire.", "pourquoi": "Ses parois de mousse emprisonnent de l'air immobile qui freine la conduction.", "efficacite": 3, "limite": "Elle ralentit le réchauffement mais ne produit pas de froid." },
+      { "objet": "thermos", "comment": "Remplis-la d'eau bouillante ou glacée et visse le bouchon à fond.", "pourquoi": "Le vide entre ses deux parois supprime conduction et convection ; l'intérieur poli limite le rayonnement.", "efficacite": 3, "limite": "Le bouchon reste le point faible : la chaleur s'échappe surtout par là." },
+      { "objet": "polystyrene", "comment": "Découpe des plaques pour caler une boîte de tous côtés ou pour t'asseoir dessus sur un sol froid.", "pourquoi": "C'est presque entièrement de l'air enfermé dans des billes : un isolant de premier ordre.", "efficacite": 3, "limite": "Il fond et dégage des fumées toxiques près d'une flamme." },
+      { "objet": "papier-bulle", "comment": "Enroule-le en plusieurs tours autour d'une bouteille ou plaque-le contre une vitre froide.", "pourquoi": "Chaque bulle est une petite poche d'air immobile.", "efficacite": 2, "limite": "Une seule couche reste modeste ; il faut multiplier les épaisseurs." },
+      { "objet": "journal", "comment": "Froisse les feuilles en boules et bourre-en l'espace entre deux vêtements ou autour d'un récipient.", "pourquoi": "Le papier froissé crée une foule de petites poches d'air.", "efficacite": 2, "limite": "Il perd toute efficacité une fois mouillé." },
+      { "objet": "pull-laine", "comment": "Enfile-le près du corps, sous une couche coupe-vent, ou entoure-en une casserole pour la garder chaude.", "pourquoi": "Les fibres de laine frisées retiennent l'air, même légèrement humides.", "efficacite": 2, "limite": "Sans couche coupe-vent par-dessus, le vent traverse les mailles." },
+      { "objet": "papier-alu", "comment": "Emballe le plat chaud face brillante vers l'intérieur, puis entoure-le d'un torchon pour garder une lame d'air.", "pourquoi": "La surface brillante renvoie le rayonnement de chaleur.", "efficacite": 2, "limite": "L'aluminium conduit très bien la chaleur : sans couche d'air ou de tissu autour, il isole mal." }
+    ]
+  },
+  {
+    "id": "isoler-electricite",
+    "titre": "Isoler de l'électricité",
+    "icone": "tape",
+    "categorie": "electricite",
+    "resume": "Empêcher un petit courant de passer là où il ne doit pas, sur des circuits à piles ou basse tension.",
+    "principe": "Un isolant est un matériau dont les électrons restent attachés à leurs atomes : le courant ne peut pas y circuler. Plastiques, caoutchouc, verre et bois sec en font partie. L'eau et la saleté ruinent l'isolation, et l'épaisseur compte : plus la tension est forte, plus il faut d'isolant.",
+    "fiches": ["conducteurs-isolants"],
+    "securite": { "niveau": "rouge", "note": "Ces solutions de fortune ne valent que pour des piles ou des circuits de quelques volts. Jamais sur le secteur (230 V) : coupe le courant au disjoncteur et fais appel à un électricien." },
+    "objets": [
+      { "objet": "ruban-isolant", "comment": "Enroule-le en spirale sur le fil dénudé, en chevauchant chaque tour de moitié, et déborde de 2 cm de chaque côté.", "pourquoi": "Le PVC est un isolant conçu pour cet usage, et il épouse le fil en s'étirant.", "efficacite": 3, "limite": "Il se décolle avec la chaleur et le temps : c'est une réparation provisoire." },
+      { "objet": "chambre-a-air", "comment": "Découpe une bande, étire-la autour de la zone à protéger et maintiens-la avec un collier de serrage.", "pourquoi": "Le caoutchouc épais isole bien et serre fort en se rétractant.", "efficacite": 2, "limite": "Une chambre à air sale ou humide perd une partie de son pouvoir isolant." },
+      { "objet": "gants-caoutchouc", "comment": "Enfile-les pour manipuler des piles ou des fils de batterie sans contact direct avec la peau.", "pourquoi": "Le latex ne laisse pas circuler le courant.", "efficacite": 2, "limite": "Ce ne sont pas des gants d'électricien : la moindre déchirure et ils ne protègent plus de rien." },
+      { "objet": "sac-plastique", "comment": "Enveloppe un boîtier à piles ou un connecteur et ferme avec un élastique pour le protéger aussi de la pluie.", "pourquoi": "Le polyéthylène est isolant et étanche.", "efficacite": 1, "limite": "Très fin, il se perce facilement sur une arête de métal." },
+      { "objet": "planche", "comment": "Pose dessus les éléments d'un montage à piles pour les séparer d'une surface métallique.", "pourquoi": "Le bois sec contient peu d'eau et laisse très mal passer le courant.", "efficacite": 2, "limite": "Humide, le bois devient légèrement conducteur." },
+      { "objet": "serre-cable", "comment": "Utilise-le pour maintenir des fils à distance l'un de l'autre et éviter qu'ils se touchent.", "pourquoi": "Le nylon est isolant : il fixe sans créer de contact électrique.", "efficacite": 2, "limite": "Il maintient mais ne recouvre pas : un fil dénudé reste à protéger." }
+    ]
+  },
+  {
+    "id": "conduire-electricite",
+    "titre": "Conduire l'électricité",
+    "icone": "wire",
+    "categorie": "electricite",
+    "resume": "Remplacer un fil, un contact ou un ressort manquant pour refermer un petit circuit à piles.",
+    "principe": "Dans un métal, une partie des électrons circule librement : relié à une pile, il laisse passer le courant. Le contact doit être franc, sur métal nu, sans vernis, peinture ni oxyde. Un conducteur fin ou long résiste davantage, et un court-circuit direct entre les deux bornes d'une pile la fait chauffer.",
+    "fiches": ["conducteurs-isolants", "pile-citron"],
+    "securite": { "niveau": "orange", "note": "Ne relie jamais directement le + et le – d'une pile ou d'une batterie : le métal chauffe, la pile peut fuir ou s'enflammer (surtout au lithium). Jamais d'improvisation sur le secteur." },
+    "objets": [
+      { "objet": "papier-alu", "comment": "Plie une bande en plusieurs épaisseurs ou roule-la en boulette serrée pour combler un espace entre une pile et son contact.", "pourquoi": "L'aluminium est un excellent conducteur, et il se modèle à la forme voulue.", "efficacite": 3, "limite": "Une feuille unique se déchire ; il faut l'épaissir et la maintenir en pression." },
+      { "objet": "emballage-chewing-gum", "comment": "Repère la face métallisée et plie l'emballage en accordéon pour qu'elle se trouve à l'extérieur des deux côtés.", "pourquoi": "La fine couche d'aluminium conduit, même si le papier collé derrière est isolant.", "efficacite": 2, "limite": "Certains emballages sont en papier pur ou vernis : gratte légèrement pour vérifier." },
+      { "objet": "trombone", "comment": "Déplie-le et utilise-le comme fil pour relier deux contacts, ou comme pont dans un porte-piles.", "pourquoi": "C'est de l'acier, un métal conducteur, rigide et facile à tordre.", "efficacite": 3, "limite": "Certains trombones sont gainés de plastique : il faut gratter jusqu'au métal." },
+      { "objet": "fil-electrique", "comment": "Dénude chaque extrémité sur 1 cm et torsade-la autour des contacts.", "pourquoi": "Le cuivre est l'un des meilleurs conducteurs, et sa gaine l'isole du reste.", "efficacite": 3, "limite": "Sans outil, dénuder proprement demande de la patience." },
+      { "objet": "cintre-metal", "comment": "Coupe un morceau, gratte le vernis aux deux bouts et sers-t'en comme tige de contact rigide.", "pourquoi": "Sous la peinture, c'est du fil d'acier conducteur.", "efficacite": 2, "limite": "Le vernis est isolant : sans grattage, rien ne passe." },
+      { "objet": "pieces-monnaie", "comment": "Empile quelques pièces pour combler un écart entre une pile et un contact plat.", "pourquoi": "Les pièces sont en alliages métalliques conducteurs.", "efficacite": 2, "limite": "Elles ne font pas ressort : il faut les maintenir serrées." },
+      { "objet": "stylo-bille", "comment": "Démonte un stylo rétractable pour récupérer son petit ressort métallique.", "pourquoi": "Le ressort est en acier : il conduit et assure en plus une pression de contact.", "efficacite": 3, "limite": "Il est plus fin qu'un ressort de pile : il peut glisser à côté du contact." },
+      { "objet": "crayon-papier", "comment": "Taille les deux bouts et utilise la mine comme liaison pour un très petit courant, par exemple une LED de test.", "pourquoi": "Le graphite de la mine conduit l'électricité, moins bien qu'un métal.", "efficacite": 1, "limite": "Sa résistance est élevée : une ampoule classique ne s'allumera pas." }
+    ]
+  },
+  {
+    "id": "faire-lentille",
+    "titre": "Faire une lentille",
+    "icone": "lens",
+    "categorie": "lumiere",
+    "resume": "Grossir un détail ou concentrer la lumière du soleil en un point avec un objet transparent et bombé.",
+    "principe": "La lumière ralentit et dévie en entrant dans un milieu transparent comme l'eau ou le verre : c'est la réfraction. Si la surface est bombée vers l'extérieur, les rayons se rapprochent et se croisent en un point, le foyer. Plus la courbure est forte et la surface régulière, plus l'image est nette et le point lumineux petit.",
+    "fiches": ["lentille-bouteille", "miroir-concentration"],
+    "securite": { "niveau": "orange", "note": "Ne regarde jamais le soleil à travers une lentille, et ne laisse pas une loupe ou une bouteille d'eau en plein soleil près d'une matière inflammable." },
+    "objets": [
+      { "objet": "loupe", "comment": "Tiens-la entre l'œil et l'objet, puis éloigne-la jusqu'à ce que l'image soit nette.", "pourquoi": "Sa face bombée est taillée pour converger la lumière.", "efficacite": 3, "limite": "Une petite loupe ne concentre qu'une petite quantité de lumière." },
+      { "objet": "lunettes", "comment": "Utilise des verres de presbyte, plus épais au centre, comme loupe ou pour faire converger la lumière.", "pourquoi": "Les verres convergents rapprochent les rayons comme une loupe.", "efficacite": 2, "limite": "Les verres de myope, plus fins au centre, font l'inverse et dispersent la lumière." },
+      { "objet": "bouteille-plastique", "comment": "Remplis-la d'eau claire à ras bord, ferme-la, et regarde ou concentre la lumière à travers sa partie arrondie.", "pourquoi": "L'eau enfermée dans le plastique courbe forme une lentille cylindrique.", "efficacite": 2, "limite": "Elle concentre la lumière en une ligne plus qu'en un point." },
+      { "objet": "sac-congelation", "comment": "Remplis-le d'eau, chasse l'air et pince-le pour lui donner une forme bien bombée.", "pourquoi": "Une poche d'eau bombée fait converger la lumière.", "efficacite": 2, "limite": "La forme reste irrégulière : le foyer est flou." },
+      { "objet": "verre-eau", "comment": "Place-le rempli d'eau devant un texte, en le tenant à distance pour grossir les lettres.", "pourquoi": "Le cylindre d'eau dévie la lumière comme une lentille.", "efficacite": 1, "limite": "L'image est déformée et ne grossit que dans un sens." },
+      { "objet": "glacons", "comment": "Polis un bloc de glace bien transparente à la chaleur des mains pour lui donner une face bombée.", "pourquoi": "La glace claire est transparente et réfracte la lumière comme l'eau.", "efficacite": 1, "limite": "Il faut une glace sans bulles, ce qui est rare, et elle fond vite." }
+    ]
+  },
+  {
+    "id": "colmater",
+    "titre": "Colmater une fuite",
+    "icone": "tape",
+    "categorie": "materiaux",
+    "resume": "Boucher provisoirement un trou ou une fissure pour arrêter une fuite d'eau ou d'air.",
+    "principe": "Pour colmater, il faut une matière souple qui épouse la surface, qui adhère et qui résiste à la pression du fluide. On travaille sur une surface propre et sèche, on déborde largement autour du trou et on serre si possible. Plus la pression est forte, plus le colmatage doit être maintenu mécaniquement.",
+    "objets": [
+      { "objet": "ruban-adhesif", "comment": "Sèche et dégraisse la zone, puis enroule le ruban en le tendant, en débordant de plusieurs centimètres.", "pourquoi": "Sa colle épaisse et sa trame toilée tiennent bien sous tension.", "efficacite": 3, "limite": "Il colle mal sur une surface mouillée ou grasse." },
+      { "objet": "colle-forte", "comment": "Sur une petite fissure sèche, dépose une fine couche et laisse durcir le temps indiqué.", "pourquoi": "Elle durcit dans les fissures et forme un bouchon rigide et étanche.", "efficacite": 3, "limite": "Inutile sur un tuyau souple qui bouge, ou sur une surface humide." },
+      { "objet": "chambre-a-air", "comment": "Découpe une bande, enroule-la très serrée autour d'un tuyau qui fuit et bloque-la avec un collier de serrage.", "pourquoi": "Le caoutchouc tendu plaque la zone et s'adapte à sa forme.", "efficacite": 2, "limite": "Il faut un vrai serrage, sinon l'eau sous pression passe dessous." },
+      { "objet": "film-alimentaire", "comment": "Enroule-le en de nombreux tours bien tendus autour d'un raccord qui suinte.", "pourquoi": "Chaque tour adhère au précédent et la tension écrase la fuite.", "efficacite": 2, "limite": "Faible tenue face à une forte pression." },
+      { "objet": "chewing-gum", "comment": "Mâche-le, puis écrase-le fermement sur un petit trou sec, en le débordant.", "pourquoi": "La gomme malléable épouse le trou et elle est imperméable.", "efficacite": 1, "limite": "Ne tient que sur de petits trous, à basse pression et à froid." },
+      { "objet": "savon", "comment": "Frotte un pain de savon humidifié sur une fissure fine jusqu'à la remplir.", "pourquoi": "La pâte de savon bouche les petits interstices le temps qu'elle reste en place.", "efficacite": 1, "limite": "Le savon se dissout dans l'eau : solution de quelques minutes à quelques heures." },
+      { "objet": "bougie", "comment": "Fais goutter un peu de cire sur un très petit trou d'un récipient vide et sec, puis laisse-la figer.", "pourquoi": "La cire fondue coule dans le trou puis durcit en refroidissant.", "efficacite": 1, "limite": "Elle se détache facilement et fond à la chaleur." }
+    ]
+  },
+  {
+    "id": "aimanter",
+    "titre": "Aimanter et attirer le métal",
+    "icone": "magnet",
+    "categorie": "magnetisme",
+    "resume": "Récupérer un objet en fer hors de portée ou transformer une aiguille en boussole.",
+    "principe": "Un aimant attire le fer, l'acier, le nickel et le cobalt, mais pas l'aluminium, le cuivre ni le laiton. Dans l'acier, de minuscules zones magnétiques sont orientées au hasard : en frottant toujours dans le même sens avec un aimant, on les aligne et l'acier devient lui-même un aimant faible. La force d'un aimant chute très vite avec la distance : il faut presque toucher l'objet.",
+    "fiches": ["boussole-improvisee", "electroaimant"],
+    "objets": [
+      { "objet": "aimant", "comment": "Attache-le solidement au bout d'une ficelle pour repêcher un objet en acier, ou frotte une aiguille dessus toujours dans le même sens.", "pourquoi": "Son champ magnétique attire le fer et aligne les zones magnétiques de l'acier.", "efficacite": 3, "limite": "Sans effet sur l'aluminium, le cuivre, le laiton et certains aciers inoxydables." },
+      { "objet": "ecouteurs", "comment": "Récupère le petit aimant au néodyme de l'écouteur s'il est déjà hors d'usage.", "pourquoi": "Chaque haut-parleur contient un aimant puissant pour sa taille.", "efficacite": 2, "limite": "Il est minuscule : la force d'attraction reste limitée." },
+      { "objet": "aiguille", "comment": "Frotte-la 30 à 50 fois sur un aimant, dans un seul sens, pour en faire l'aiguille d'une boussole.", "pourquoi": "L'acier fin s'aimante facilement et s'oriente ensuite dans le champ magnétique terrestre.", "efficacite": 3, "limite": "L'aimantation s'affaiblit avec le temps et les chocs : il faut parfois recommencer." },
+      { "objet": "trombone", "comment": "Déplie-le, aimante-le comme une aiguille, ou utilise-le comme petit crochet à aimanter.", "pourquoi": "C'est de l'acier, donc aimantable.", "efficacite": 2, "limite": "Plus épais et plus tordu qu'une aiguille, il s'oriente moins bien sur l'eau." },
+      { "objet": "tournevis", "comment": "Frotte la tige avec un aimant, du manche vers la pointe, pour qu'elle retienne une vis.", "pourquoi": "La tige en acier garde une partie de l'aimantation.", "efficacite": 2, "limite": "L'effet reste faible : suffisant pour une vis, pas pour un objet lourd." },
+      { "objet": "clou", "comment": "Enroule un fil électrique isolé en spires serrées autour du clou et relie brièvement les deux bouts à une pile.", "pourquoi": "Le courant dans la bobine crée un champ magnétique que le fer du clou renforce : c'est un électroaimant.", "efficacite": 2, "limite": "La pile se vide et le fil chauffe vite : quelques secondes de contact seulement." }
+    ]
+  },
+  {
+    "id": "faire-levier",
+    "titre": "Faire levier",
+    "icone": "bar",
+    "categorie": "mecanique",
+    "resume": "Soulever ou ouvrir ce qui est trop lourd ou trop serré en multipliant sa force.",
+    "principe": "Un levier est une barre rigide qui pivote autour d'un point d'appui. Plus on appuie loin du pivot et plus la charge en est proche, plus la force est multipliée : c'est le rapport des longueurs des deux bras. En échange, la main parcourt une plus grande distance que la charge.",
+    "fiches": ["levier"],
+    "securite": { "niveau": "orange", "note": "Cale la charge au fur et à mesure qu'elle monte et ne passe jamais une main dessous. Un levier qui glisse ou casse libère d'un coup toute l'énergie accumulée." },
+    "objets": [
+      { "objet": "barre-fer", "comment": "Glisse la pointe sous la charge, pose la barre sur un appui tout proche, et appuie à l'autre extrémité.", "pourquoi": "Longue et rigide, elle offre un grand rapport entre les bras de levier.", "efficacite": 3, "limite": "Sans point d'appui solide placé près de la charge, elle ne multiplie presque rien." },
+      { "objet": "pied-de-biche", "comment": "Engage l'extrémité plate dans la fente et bascule le manche en prenant appui sur sa courbure.", "pourquoi": "Sa forme coudée intègre le point d'appui juste derrière la pointe.", "efficacite": 3, "limite": "Manche court : il faut beaucoup de force pour une charge très lourde." },
+      { "objet": "brique", "comment": "Place-la sous la barre, le plus près possible de la charge, pour servir de pivot.", "pourquoi": "Un point d'appui proche de la charge raccourcit le petit bras et augmente le gain.", "efficacite": 3, "limite": "Une brique creuse ou fissurée peut éclater sous l'effort." },
+      { "objet": "buche", "comment": "Couche-la sous la barre comme point d'appui, ou glisse-la sous la charge pour la caler.", "pourquoi": "Le bois dense résiste à l'écrasement et ne roule pas s'il est bien posé.", "efficacite": 2, "limite": "Une bûche ronde peut rouler : bloque-la ou choisis-la fendue." },
+      { "objet": "planche", "comment": "Utilise-la comme levier pour décoller une charge modérée, ou sous le pivot pour l'empêcher de s'enfoncer.", "pourquoi": "Rigide et longue, elle transmet l'effort sur un grand bras.", "efficacite": 2, "limite": "Elle peut casser net au niveau d'un nœud du bois." },
+      { "objet": "tournevis", "comment": "Glisse la lame sous le couvercle d'un pot et bascule le manche en appuyant sur le rebord.", "pourquoi": "Le rebord sert de pivot tout près de la charge.", "efficacite": 2, "limite": "La lame peut se tordre ou casser si l'effort est trop grand." },
+      { "objet": "cuillere", "comment": "Glisse le manche sous une capsule ou un couvercle et bascule en appuyant sur le bord.", "pourquoi": "Même un levier court multiplie la force de la main sur un petit objet.", "efficacite": 1, "limite": "Elle plie au moindre effort sérieux." },
+      { "objet": "cle-molette", "comment": "Serre-la sur un écrou bloqué et pousse au bout du manche, loin de l'écrou.", "pourquoi": "Plus on pousse loin de l'axe, plus le couple appliqué est grand.", "efficacite": 2, "limite": "Elle glisse si elle est mal serrée, et peut arrondir l'écrou." }
+    ]
+  },
+  {
+    "id": "filtrer-eau",
+    "titre": "Filtrer l'eau",
+    "icone": "drop",
+    "categorie": "fluides",
+    "resume": "Clarifier une eau trouble en retenant la terre et les particules, avant de la désinfecter.",
+    "principe": "Un filtre laisse passer l'eau par des pores plus petits que les particules à retenir : plus les couches sont fines, plus l'eau ressort claire. On empile du plus grossier au plus fin pour éviter de colmater le filtre. Filtrer ne tue pas les microbes : une eau claire doit encore être bouillie ou désinfectée au soleil.",
+    "fiches": ["capillarite-filtration", "eau-solaire"],
+    "securite": { "niveau": "orange", "note": "Une eau filtrée n'est pas une eau potable. Fais-la bouillir ou désinfecte-la au soleil après filtration, et n'utilise jamais une eau contaminée par des produits chimiques." },
+    "objets": [
+      { "objet": "tee-shirt", "comment": "Plie-le en quatre épaisseurs et verse l'eau à travers, au-dessus d'un récipient propre.", "pourquoi": "Le tissage serré retient la terre, les débris et une partie des particules fines.", "efficacite": 2, "limite": "Les particules très fines et les microbes passent." },
+      { "objet": "filtre-cafe", "comment": "Place-le dans un entonnoir ou une bouteille coupée et laisse l'eau s'écouler doucement.", "pourquoi": "Son papier est conçu pour retenir des particules très fines.", "efficacite": 2, "limite": "Il se colmate vite avec une eau très boueuse : décante d'abord." },
+      { "objet": "sable", "comment": "Verse une couche épaisse de sable fin rincé dans une bouteille coupée, au-dessus d'un tissu.", "pourquoi": "L'eau suit des chemins étroits entre les grains, où les particules restent piégées.", "efficacite": 2, "limite": "Les premiers litres sortent troubles : il faut rincer le filtre." },
+      { "objet": "charbon-bois", "comment": "Écrase des morceaux de charbon de bois refroidi et ajoute une couche sous le sable.", "pourquoi": "Sa surface poreuse retient une partie des odeurs et des goûts.", "efficacite": 1, "limite": "Le charbon de foyer n'est pas du charbon actif : son effet reste modeste." },
+      { "objet": "gravier", "comment": "Mets-le en couche supérieure du filtre pour arrêter les débris les plus gros.", "pourquoi": "Il retient les gros éléments et évite de boucher le sable.", "efficacite": 1, "limite": "Seul, il ne clarifie presque pas." },
+      { "objet": "bouteille-plastique", "comment": "Coupe le fond, retourne-la goulot en bas et empile tissu, charbon, sable puis gravier.", "pourquoi": "Elle sert de colonne de filtration et le goulot de sortie.", "efficacite": 2, "limite": "Ce n'est qu'un support : la qualité dépend des couches." },
+      { "objet": "chiffon", "comment": "Tends-le sur le goulot d'un récipient comme un premier tamis.", "pourquoi": "Le tissu arrête les débris visibles.", "efficacite": 1, "limite": "Un chiffon sale apporte plus de microbes qu'il n'en retient." }
+    ]
+  },
+  {
+    "id": "chauffer",
+    "titre": "Chauffer sans cuisinière",
+    "icone": "fire",
+    "categorie": "thermique",
+    "resume": "Réchauffer de l'eau ou un repas avec une petite flamme ou l'énergie du soleil.",
+    "principe": "Chauffer, c'est apporter de l'énergie plus vite qu'elle ne s'échappe. On peut la produire par combustion, ou capter le rayonnement solaire : une surface noire l'absorbe, une surface brillante le renvoie vers la cible. Dans tous les cas, limiter les pertes avec un couvercle ou une enceinte isolée compte autant que la source.",
+    "fiches": ["miroir-concentration", "isolation-thermique", "eau-solaire"],
+    "securite": { "niveau": "orange", "note": "Toute flamme se fait dehors ou dans une pièce bien aérée, loin des matières inflammables : un réchaud en espace clos produit du monoxyde de carbone, un gaz mortel et inodore." },
+    "objets": [
+      { "objet": "rechaud-camping", "comment": "Installe-le sur une surface plane et stable, à l'extérieur ou près d'une fenêtre ouverte, et couvre la casserole.", "pourquoi": "Il brûle du gaz pour fournir une chaleur forte et réglable.", "efficacite": 3, "limite": "Jamais dans une tente ou une pièce fermée, et attention à la réserve de gaz." },
+      { "objet": "casserole", "comment": "Pose un couvercle ou une assiette dessus pendant la chauffe.", "pourquoi": "Le couvercle bloque la vapeur, qui emporterait beaucoup de chaleur.", "efficacite": 2, "limite": "Ce n'est pas une source de chaleur : elle ne fait que mieux la garder." },
+      { "objet": "papier-alu", "comment": "Tapisse l'intérieur d'un carton ou d'un pare-soleil pour renvoyer le soleil vers une casserole noire.", "pourquoi": "La surface brillante réfléchit le rayonnement solaire vers la cible.", "efficacite": 2, "limite": "Ne fonctionne qu'en plein soleil, et lentement." },
+      { "objet": "carton", "comment": "Fabrique une boîte ouverte vers le soleil, tapissée d'alu, avec le récipient au fond sous un film transparent.", "pourquoi": "C'est un four solaire : le rayonnement entre, la chaleur reste piégée dans l'enceinte.", "efficacite": 2, "limite": "Il faut plusieurs heures de plein soleil pour cuire." },
+      { "objet": "sac-poubelle", "comment": "Remplis à moitié un sac noir d'eau, ferme-le et laisse-le à plat au soleil sur une surface chaude.", "pourquoi": "Le noir absorbe presque tout le rayonnement solaire et le transforme en chaleur.", "efficacite": 2, "limite": "Donne une eau tiède à chaude, pas bouillante." },
+      { "objet": "bougie", "comment": "Place une petite casserole sur un support stable juste au-dessus de la flamme, à l'abri du vent.", "pourquoi": "La flamme apporte une petite puissance continue.", "efficacite": 1, "limite": "Trop faible pour faire bouillir plus qu'un fond d'eau, et la suie noircit le récipient." }
+    ]
+  },
+  {
+    "id": "attacher",
+    "titre": "Attacher et fixer",
+    "icone": "rope",
+    "categorie": "mecanique",
+    "resume": "Lier, suspendre ou maintenir deux choses ensemble avec ce qu'on a sous la main.",
+    "principe": "Un lien tient par sa résistance à la traction et par le frottement : chaque tour supplémentaire autour d'un support augmente fortement la friction, ce qui permet de retenir une grande charge avec peu de force. Un bon nœud ou un serrage ne glisse pas sous charge et se défait quand on le veut.",
+    "fiches": ["frottement-cabestan", "poulie-palan"],
+    "objets": [
+      { "objet": "corde", "comment": "Fais deux ou trois tours morts autour du support avant de nouer : le frottement soulage le nœud.", "pourquoi": "Chaque tour multiplie le frottement, c'est l'effet cabestan.", "efficacite": 3, "limite": "Une vieille corde abîmée ou frottée sur une arête vive peut casser." },
+      { "objet": "fil-fer", "comment": "Entoure les deux pièces et torsade les extrémités avec une pince.", "pourquoi": "Le métal tordu garde sa forme et ne se détend pas.", "efficacite": 3, "limite": "Il coupe les matières souples et se rompt si on le tord trop souvent." },
+      { "objet": "serre-cable", "comment": "Passe-le autour des deux éléments et tire la queue jusqu'au blocage.", "pourquoi": "La crémaillère ne laisse le collier se serrer que dans un sens.", "efficacite": 3, "limite": "Se défait mal sans le couper, et le plastique vieillit au soleil." },
+      { "objet": "ficelle", "comment": "Double-la ou triple-la et multiplie les tours pour répartir l'effort.", "pourquoi": "Plusieurs brins en parallèle se partagent la charge.", "efficacite": 2, "limite": "Un seul brin casse sous une charge modeste." },
+      { "objet": "lacet", "comment": "Retire un lacet de chaussure pour lier, suspendre ou faire une boucle de traction.", "pourquoi": "Tressé, il est solide pour sa taille et se noue bien.", "efficacite": 2, "limite": "Court : il ne suffit que pour de petites attaches." },
+      { "objet": "fil-dentaire", "comment": "Utilise-le pour coudre, ligaturer ou suspendre un petit objet léger.", "pourquoi": "Ses fibres synthétiques fines résistent étonnamment bien à la traction.", "efficacite": 2, "limite": "Il glisse dans les nœuds : fais-en plusieurs à la suite." },
+      { "objet": "ceinture", "comment": "Boucle-la autour d'un objet encombrant pour le porter ou le maintenir serré.", "pourquoi": "Sa boucle donne un serrage réglable et solide.", "efficacite": 2, "limite": "Longueur fixe et peu adaptée aux petites pièces." },
+      { "objet": "chambre-a-air", "comment": "Découpe des bandes et sers-t'en comme de gros élastiques pour maintenir des pièces.", "pourquoi": "Le caoutchouc étiré exerce un serrage permanent.", "efficacite": 2, "limite": "Il se détend et craquelle avec le temps et le soleil." }
+    ]
+  },
+  {
+    "id": "signaler",
+    "titre": "Signaler sa présence",
+    "icone": "flashlight",
+    "categorie": "lumiere",
+    "resume": "Être vu ou entendu de loin quand on a besoin d'aide.",
+    "principe": "Un signal porte loin s'il contraste fortement avec son environnement : un éclat de lumière sur un fond sombre, une couleur vive, un son aigu et répété. Le rythme compte autant que la puissance : trois signaux identiques, répétés à intervalles réguliers, sont reconnus comme un appel de détresse.",
+    "fiches": ["miroir-concentration"],
+    "securite": { "niveau": "vert", "note": "Ne dirige jamais un éclat de soleil dans les yeux d'un conducteur ou d'un pilote, et n'utilise un signal de détresse qu'en cas de besoin réel." },
+    "objets": [
+      { "objet": "miroir", "comment": "Renvoie le soleil vers la cible en visant à travers l'écart entre deux doigts tendus, puis balaie légèrement.", "pourquoi": "Une surface plane renvoie un faisceau de soleil visible à des kilomètres.", "efficacite": 3, "limite": "Inutile sans soleil." },
+      { "objet": "cd", "comment": "Vise à travers le trou central et oriente le reflet du soleil vers la cible.", "pourquoi": "Sa face réfléchissante agit comme un petit miroir, avec un viseur intégré.", "efficacite": 2, "limite": "Moins efficace qu'un vrai miroir, car la surface est petite et irisée." },
+      { "objet": "lampe-torche", "comment": "De nuit, émets trois éclats courts, trois longs, trois courts, puis marque une pause et recommence.", "pourquoi": "Un éclat lumineux se voit de très loin dans l'obscurité, et le rythme SOS est universel.", "efficacite": 3, "limite": "Économise les piles : envoie des séries espacées plutôt qu'un faisceau continu." },
+      { "objet": "sifflet", "comment": "Donne trois coups longs, attends une minute et recommence.", "pourquoi": "Un son aigu porte plus loin que la voix et ne fatigue pas la gorge.", "efficacite": 3, "limite": "Le vent et le bruit ambiant réduisent sa portée." },
+      { "objet": "voiture", "comment": "Sans démarrer le moteur, allume les feux de détresse et donne des séries de trois coups de klaxon.", "pourquoi": "La batterie alimente un avertisseur puissant et des feux très visibles.", "efficacite": 3, "limite": "Une batterie se vide en quelques heures : alterne et fais des pauses." },
+      { "objet": "couverture-survie", "comment": "Déploie-la face brillante vers le ciel sur un endroit dégagé, lestée de pierres.", "pourquoi": "Sa grande surface réfléchissante tranche sur un fond naturel.", "efficacite": 2, "limite": "Elle s'envole facilement si elle est mal lestée." },
+      { "objet": "gilet-jaune", "comment": "Porte-le ou accroche-le bien en vue, en hauteur.", "pourquoi": "Sa couleur fluorescente ressort de jour et ses bandes renvoient la lumière des phares.", "efficacite": 2, "limite": "De nuit, il n'est visible que si une lumière l'éclaire." },
+      { "objet": "papier-alu", "comment": "Tends une feuille bien lisse sur un carton rigide pour en faire un miroir de fortune.", "pourquoi": "Lisse, l'aluminium réfléchit la lumière comme un miroir.", "efficacite": 1, "limite": "Le moindre froissement disperse le reflet et réduit la portée." }
+    ]
+  },
+  {
+    "id": "lubrifier",
+    "titre": "Lubrifier",
+    "icone": "oil",
+    "categorie": "mecanique",
+    "resume": "Faire glisser ce qui frotte, grince ou coince : tiroir, fermeture éclair, serrure, charnière.",
+    "principe": "Deux surfaces qui se touchent s'accrochent par leurs aspérités microscopiques. Un lubrifiant glisse une fine couche entre elles : un liquide ou une graisse qui les sépare, ou une poudre en feuillets, comme le graphite, qui glissent les uns sur les autres. Les lubrifiants liquides attirent la poussière, d'où l'intérêt des lubrifiants secs pour les mécanismes fins.",
+    "fiches": ["frottement-cabestan"],
+    "objets": [
+      { "objet": "crayon-papier", "comment": "Frotte la mine sur la clé, puis fais-la jouer plusieurs fois dans la serrure.", "pourquoi": "Le graphite est formé de feuillets qui glissent les uns sur les autres : c'est un lubrifiant sec.", "efficacite": 3, "limite": "Ne convient pas aux charnières lourdes ni aux pièces très chargées." },
+      { "objet": "bougie", "comment": "Frotte la cire sur les coulisses d'un tiroir en bois ou sur une fermeture éclair qui coince.", "pourquoi": "La cire forme un film sec et glissant qui n'attire pas la poussière.", "efficacite": 3, "limite": "Inefficace sur les mécanismes métalliques qui chauffent ou tournent vite." },
+      { "objet": "savon", "comment": "Frotte un pain de savon sec sur une fermeture éclair, une vis à bois ou une glissière.", "pourquoi": "Le savon dépose une couche glissante entre les surfaces.", "efficacite": 3, "limite": "Il attire l'humidité et peut favoriser la rouille sur le métal." },
+      { "objet": "degrippant", "comment": "Pulvérise sur l'écrou ou la charnière grippée, attends quelques minutes, puis fais jouer la pièce.", "pourquoi": "Son huile très fluide pénètre dans les interstices et dissout une partie de la rouille.", "efficacite": 3, "limite": "Il s'évapore en partie : ce n'est pas un graissage durable." },
+      { "objet": "huile-cuisine", "comment": "Dépose une goutte sur une charnière qui grince et essuie l'excès.", "pourquoi": "Le film d'huile sépare les surfaces métalliques.", "efficacite": 2, "limite": "Elle rancit, devient collante et attire la poussière avec le temps." },
+      { "objet": "vaseline", "comment": "Applique une fine couche sur un joint, un filetage ou une charnière exposée à l'humidité.", "pourquoi": "Cette graisse épaisse lubrifie et repousse l'eau.", "efficacite": 2, "limite": "Elle abîme certains caoutchoucs et attire la saleté." },
+      { "objet": "liquide-vaisselle", "comment": "Dilue quelques gouttes dans l'eau pour faire glisser une bague coincée ou emboîter deux tuyaux.", "pourquoi": "Ses tensioactifs rendent les surfaces mouillées très glissantes.", "efficacite": 2, "limite": "Effet temporaire : il sèche ou se rince vite." }
+    ]
+  }
+]

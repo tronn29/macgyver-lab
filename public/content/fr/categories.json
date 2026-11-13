@@ -1,0 +1,11 @@
+[
+  { "id": "electricite", "nom": "Électricité", "icone": "bolt", "description": "Courant, tension, piles, conducteurs et isolants." },
+  { "id": "magnetisme", "nom": "Magnétisme", "icone": "magnet", "description": "Aimants, boussoles, électroaimants et induction." },
+  { "id": "chimie", "nom": "Chimie", "icone": "atom", "description": "Réactions, électrolytes, combustion et changements d'état." },
+  { "id": "mecanique", "nom": "Mécanique", "icone": "gear", "description": "Forces, leviers, poulies, frottements et énergie." },
+  { "id": "lumiere", "nom": "Lumière", "icone": "prism", "description": "Réfraction, lentilles, miroirs, infrarouge et ultraviolet." },
+  { "id": "thermique", "nom": "Chaleur et froid", "icone": "thermo", "description": "Température, isolation, dilatation et chocs thermiques." },
+  { "id": "pression", "nom": "Pression", "icone": "gauge", "description": "Pression de l'air, des gaz et des liquides." },
+  { "id": "materiaux", "nom": "Matériaux", "icone": "cube", "description": "Propriétés de la matière : fragilité, conduction, adhérence." },
+  { "id": "fluides", "nom": "Eau et fluides", "icone": "drop", "description": "Écoulements, capillarité, filtration et eau potable." }
+]

@@ -1,0 +1,81 @@
+[
+  {
+    "id": "survie-nature",
+    "titre": "Survivre en pleine nature",
+    "description": "S'orienter sans boussole, rendre l'eau buvable et se faire repérer : les principes qui comptent quand on est seul dehors.",
+    "icone": "compass",
+    "etapes": [
+      { "type": "fiche", "id": "boussole-improvisee" },
+      { "type": "pratique", "id": "boussole-aiguille" },
+      { "type": "mission", "id": "nord-perdu" },
+      { "type": "fiche", "id": "capillarite-filtration" },
+      { "type": "fiche", "id": "eau-solaire" },
+      { "type": "equivalence", "id": "filtrer-eau" },
+      { "type": "pratique", "id": "distillateur-solaire" },
+      { "type": "mission", "id": "eau-potable" },
+      { "type": "fiche", "id": "miroir-concentration" },
+      { "type": "equivalence", "id": "signaler" }
+    ]
+  },
+  {
+    "id": "electricite-fortune",
+    "titre": "Électricité de fortune",
+    "description": "Comprendre ce qui conduit, ce qui isole et comment fabriquer un peu de courant avec trois fois rien, sans jamais toucher au secteur.",
+    "icone": "bolt",
+    "etapes": [
+      { "type": "fiche", "id": "conducteurs-isolants" },
+      { "type": "equivalence", "id": "conduire-electricite" },
+      { "type": "equivalence", "id": "isoler-electricite" },
+      { "type": "fiche", "id": "pile-citron" },
+      { "type": "pratique", "id": "pile-citron-xp" },
+      { "type": "fiche", "id": "electroaimant" },
+      { "type": "fiche", "id": "bobine-pic-tension" },
+      { "type": "mission", "id": "lampe-sans-ressort" }
+    ]
+  },
+  {
+    "id": "froid-chaleur",
+    "titre": "Le froid et la chaleur comme outils",
+    "description": "Détente des gaz, sublimation, chocs thermiques et isolation : utiliser la température plutôt que la force.",
+    "icone": "thermo",
+    "etapes": [
+      { "type": "fiche", "id": "detente-co2-froid" },
+      { "type": "fiche", "id": "glace-seche" },
+      { "type": "pratique", "id": "brouillard-glace-seche" },
+      { "type": "fiche", "id": "choc-thermique" },
+      { "type": "fiche", "id": "isolation-thermique" },
+      { "type": "equivalence", "id": "isoler-chaleur" },
+      { "type": "equivalence", "id": "chauffer" }
+    ]
+  },
+  {
+    "id": "demultiplier-force",
+    "titre": "Démultiplier sa force",
+    "description": "Leviers, poulies et frottements : soulever, tirer et retenir bien plus lourd que soi.",
+    "icone": "gear",
+    "etapes": [
+      { "type": "fiche", "id": "levier" },
+      { "type": "equivalence", "id": "faire-levier" },
+      { "type": "fiche", "id": "poulie-palan" },
+      { "type": "fiche", "id": "frottement-cabestan" },
+      { "type": "equivalence", "id": "attacher" },
+      { "type": "mission", "id": "garage-nuit" },
+      { "type": "mission", "id": "plaque-fonte" }
+    ]
+  },
+  {
+    "id": "lumiere-vision",
+    "titre": "Voir l'invisible",
+    "description": "Lentilles d'eau, miroirs, infrarouge et traces invisibles : apprendre à voir ce que l'œil ne montre pas.",
+    "icone": "eye",
+    "etapes": [
+      { "type": "fiche", "id": "lentille-bouteille" },
+      { "type": "pratique", "id": "loupe-goutte-eau" },
+      { "type": "equivalence", "id": "faire-lentille" },
+      { "type": "fiche", "id": "infrarouge-vision" },
+      { "type": "pratique", "id": "infrarouge-camera" },
+      { "type": "fiche", "id": "empreintes-poussiere" },
+      { "type": "pratique", "id": "empreintes-cacao" }
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Livres, règle et aimant -->
+  <g>
+    <path class="s-line" d="M12 204 H348"/>
+    <rect class="s-solid" x="20" y="164" width="52" height="40" rx="2"/>
+    <rect class="s-solid" x="22" y="124" width="48" height="40" rx="2"/>
+    <rect class="s-solid" x="20" y="84" width="52" height="40" rx="2"/>
+    <rect class="s-solid" x="24" y="50" width="44" height="34" rx="2"/>
+    <rect class="s-solid" x="30" y="44" width="206" height="6"/>
+    <rect class="s-solid" x="20" y="28" width="52" height="16" rx="2"/>
+    <rect class="s-fill-hot" x="200" y="50" width="30" height="10"/>
+    <rect class="s-fill-cold" x="200" y="60" width="30" height="10"/>
+    <rect class="s-line" x="200" y="50" width="30" height="20"/>
+  </g>
+
+  <!-- Lignes de champ et écart -->
+  <g>
+    <path class="s-dash s-pulse" d="M206 70 Q200 82 212 94"/>
+    <path class="s-dash s-pulse" d="M215 70 V92"/>
+    <path class="s-dash s-pulse" d="M224 70 Q230 82 218 94"/>
+    <path class="s-dim" d="M192 70 V92" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <text class="s-tiny" x="186" y="86" text-anchor="end">≈ 1 cm</text>
+  </g>
+
+  <!-- Trombone suspendu, fil scotché sur la table -->
+  <g>
+    <path class="s-thin" d="M215 122 V198"/>
+    <rect class="s-fill-muted" x="205" y="198" width="20" height="6"/>
+    <g class="s-float">
+      <path class="s-line" d="M213 120 V99 A4 4 0 0 1 221 99 V116 A3 3 0 0 1 215 116 V102"/>
+    </g>
+    <path class="s-accent" d="M236 114 V92" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny s-text-accent" x="242" y="104">attraction</text>
+    <path class="s-hot" d="M236 128 V150" marker-end="url(#mg-arrow-hot)"/>
+    <text class="s-tiny s-text-hot" x="242" y="144">poids + fil</text>
+  </g>
+
+  <!-- Étape 1 : aimant fixé -->
+  <g>
+    <circle class="s-badge" cx="250" cy="30" r="9"/>
+    <text class="s-badge-text" x="250" y="30">1</text>
+    <text class="s-label" x="264" y="34">Aimant fixé</text>
+    <path class="s-leader" d="M260 42 L232 58" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 2 : fil scotché -->
+  <g>
+    <circle class="s-badge" cx="100" cy="150" r="9"/>
+    <text class="s-badge-text" x="100" y="150">2</text>
+    <text class="s-label" x="114" y="154">Fil scotché</text>
+    <path class="s-leader" d="M190 160 L213 182" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 3 : il flotte -->
+  <g>
+    <circle class="s-badge" cx="100" cy="110" r="9"/>
+    <text class="s-badge-text" x="100" y="110">3</text>
+    <text class="s-label" x="114" y="114">Il flotte</text>
+    <path class="s-leader" d="M186 110 L208 108" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Variante : graphite au-dessus d'aimants en damier -->
+  <g>
+    <rect class="s-callout" x="260" y="160" width="86" height="64" rx="4"/>
+    <text class="s-tiny" x="303" y="174" text-anchor="middle">Variante :</text>
+    <text class="s-tiny s-text-accent" x="303" y="188" text-anchor="middle">graphite</text>
+    <rect class="s-solid s-float" x="283" y="196" width="40" height="4"/>
+    <rect class="s-fill-hot" x="275" y="206" width="14" height="10"/>
+    <rect class="s-fill-cold" x="289" y="206" width="14" height="10"/>
+    <rect class="s-fill-hot" x="303" y="206" width="14" height="10"/>
+    <rect class="s-fill-cold" x="317" y="206" width="14" height="10"/>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Œil de l'observateur -->
+  <g>
+    <path class="s-line" d="M105 30 Q120 20 135 30 Q120 40 105 30 Z"/>
+    <circle class="s-line" cx="120" cy="30" r="3"/>
+  </g>
+
+  <!-- Page, film transparent et goutte bombée -->
+  <g>
+    <rect class="s-fill-muted" x="24" y="168" width="156" height="6"/>
+    <path class="s-hot" d="M113 167 H127"/>
+    <path class="s-thin" d="M24 110 H180"/>
+    <text class="s-tiny" x="150" y="124">film</text>
+    <path class="s-fill-cold" d="M99 110 Q120 84 141 110 Z"/>
+    <path class="s-line" d="M99 110 Q120 84 141 110"/>
+  </g>
+
+  <!-- Rayons vers l'œil et image agrandie -->
+  <g>
+    <path class="s-accent s-flow" d="M127 168 L133 110 L120 36"/>
+    <path class="s-accent s-flow" d="M113 168 L107 110 L120 36"/>
+    <path class="s-dash" d="M133 110 L148 200"/>
+    <path class="s-dash" d="M107 110 L92 200"/>
+    <path class="s-hot s-pulse" d="M92 200 H148"/>
+    <text class="s-tiny s-text-hot" x="120" y="216" text-anchor="middle">image agrandie</text>
+  </g>
+
+  <!-- Étape 1 : la goutte -->
+  <g>
+    <circle class="s-badge" cx="24" cy="76" r="9"/>
+    <text class="s-badge-text" x="24" y="76">1</text>
+    <text class="s-label" x="38" y="80">Goutte</text>
+    <text class="s-tiny" x="38" y="94">bombée</text>
+    <path class="s-leader" d="M84 84 L106 102" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Étape 2 : bouteille d'eau, lentille cylindrique -->
+  <g>
+    <circle class="s-badge" cx="210" cy="30" r="9"/>
+    <text class="s-badge-text" x="210" y="30">2</text>
+    <text class="s-label" x="224" y="34">Bouteille d'eau</text>
+    <path class="s-line" d="M250 58 H280" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny" x="292" y="62">dessin</text>
+    <rect class="s-solid" x="254" y="66" width="22" height="8" rx="2"/>
+    <rect class="s-fill-cold" x="240" y="74" width="50" height="122" rx="12"/>
+    <rect class="s-line" x="240" y="74" width="50" height="122" rx="12"/>
+    <path class="s-accent s-pulse" d="M286 132 H246" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny s-text-accent" x="298" y="128">inversée</text>
+    <text class="s-tiny s-text-accent" x="298" y="142">agrandie</text>
+    <text class="s-tiny" x="265" y="214" text-anchor="middle">lentille cylindrique</text>
+  </g>
+</svg>

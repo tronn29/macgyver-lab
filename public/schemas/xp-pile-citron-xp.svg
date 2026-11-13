@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Encadré : rôle du zinc -->
+  <g>
+    <rect class="s-callout" x="12" y="18" width="136" height="40" rx="4"/>
+    <text class="s-tiny" x="80" y="34" text-anchor="middle">Le zinc s'oxyde et</text>
+    <text class="s-tiny s-text-accent" x="80" y="48" text-anchor="middle">libère des électrons</text>
+    <path class="s-leader" d="M38 58 L54 124" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- LED rouge -->
+  <g>
+    <circle class="s-fill-accent s-pulse" cx="180" cy="40" r="17"/>
+    <path class="s-solid" d="M172 48 V38 A8 8 0 0 1 188 38 V48 Z"/>
+    <path class="s-line" d="M168 48 H192"/>
+    <path class="s-line" d="M176 48 V58"/>
+    <path class="s-line" d="M184 48 V62"/>
+  </g>
+
+  <!-- Circuit extérieur : du cuivre (+) vers la LED, puis vers le zinc (−) -->
+  <g>
+    <path class="s-accent s-flow" d="M264 110 V68 H184 V62"/>
+    <path class="s-accent s-flow" d="M176 58 V68 H56 V112"/>
+    <path class="s-line" d="M84 110 C84 88 146 90 146 112"/>
+    <path class="s-line" d="M174 110 C174 88 236 90 236 112"/>
+    <text class="s-small s-text-hot" x="274" y="100">+</text>
+    <text class="s-small s-text-cold" x="62" y="100">−</text>
+  </g>
+
+  <!-- Trois citrons : clou zingué (Zn) et cuivre (Cu) -->
+  <g>
+    <ellipse class="s-solid" cx="70" cy="150" rx="36" ry="26"/>
+    <rect class="s-solid" x="54" y="112" width="4" height="44"/>
+    <rect class="s-fill-hot" x="80" y="110" width="8" height="40"/>
+    <text class="s-tiny" x="56" y="170" text-anchor="middle">Zn</text>
+    <text class="s-tiny" x="84" y="170" text-anchor="middle">Cu</text>
+
+    <ellipse class="s-solid" cx="160" cy="150" rx="36" ry="26"/>
+    <rect class="s-solid" x="144" y="112" width="4" height="44"/>
+    <rect class="s-fill-hot" x="170" y="110" width="8" height="40"/>
+    <text class="s-tiny" x="146" y="170" text-anchor="middle">Zn</text>
+    <text class="s-tiny" x="174" y="170" text-anchor="middle">Cu</text>
+
+    <ellipse class="s-solid" cx="250" cy="150" rx="36" ry="26"/>
+    <rect class="s-solid" x="234" y="112" width="4" height="44"/>
+    <rect class="s-fill-hot" x="260" y="110" width="8" height="40"/>
+    <text class="s-tiny" x="236" y="170" text-anchor="middle">Zn</text>
+    <text class="s-tiny" x="264" y="170" text-anchor="middle">Cu</text>
+  </g>
+
+  <!-- Étape 1 : un citron -->
+  <g>
+    <circle class="s-badge" cx="24" cy="206" r="9"/>
+    <text class="s-badge-text" x="24" y="206">1</text>
+    <text class="s-label" x="38" y="210">Un citron ≈ 0,9 V</text>
+  </g>
+
+  <!-- Étape 2 : en série -->
+  <g>
+    <circle class="s-badge" cx="196" cy="206" r="9"/>
+    <text class="s-badge-text" x="196" y="206">2</text>
+    <text class="s-label" x="210" y="210">3 en série ≈ 2,7 V</text>
+  </g>
+
+  <!-- Étape 3 : LED -->
+  <g>
+    <circle class="s-badge" cx="226" cy="30" r="9"/>
+    <text class="s-badge-text" x="226" y="30">3</text>
+    <text class="s-label" x="240" y="34">LED rouge</text>
+    <text class="s-tiny" x="240" y="48">patte longue au +</text>
+  </g>
+</svg>

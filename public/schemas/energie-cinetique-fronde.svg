@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Étape 1 : rotation autour de la main -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Rotation</text>
+
+    <circle class="s-dash s-flow" cx="96" cy="126" r="80"/>
+    <circle class="s-dash" cx="96" cy="126" r="40"/>
+    <path class="s-line" d="M96 126 H176"/>
+    <circle class="s-solid" cx="96" cy="126" r="5"/>
+    <text class="s-tiny" x="88" y="118" text-anchor="end">main</text>
+    <circle class="s-solid" cx="136" cy="126" r="3"/>
+    <circle class="s-solid" cx="176" cy="126" r="6"/>
+
+    <path class="s-dim" d="M96 140 H136" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <text class="s-tiny" x="116" y="153" text-anchor="middle">r</text>
+    <path class="s-dim" d="M96 162 H176" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <text class="s-tiny" x="136" y="175" text-anchor="middle">2r</text>
+
+    <path class="s-accent" d="M136 120 V96" marker-end="url(#mg-arrow)"/>
+    <text class="s-small s-text-accent" x="142" y="102">v</text>
+    <path class="s-accent s-draw" pathLength="1" d="M176 118 V52" marker-end="url(#mg-arrow)"/>
+    <text class="s-small s-text-accent" x="184" y="80">2v</text>
+    <text class="s-tiny" x="186" y="52">lâcher :</text>
+    <text class="s-tiny" x="186" y="64">tout droit</text>
+  </g>
+
+  <!-- Étape 2 : la vitesse croît avec le rayon -->
+  <g>
+    <circle class="s-badge" cx="258" cy="88" r="9"/>
+    <text class="s-badge-text" x="258" y="88">2</text>
+    <text class="s-label" x="272" y="92">v = ω × r</text>
+    <text class="s-tiny" x="250" y="112">2 × plus loin</text>
+    <text class="s-tiny" x="250" y="126">= 2 × plus vite</text>
+  </g>
+
+  <!-- Étape 3 : l'énergie croît avec le carré de la vitesse -->
+  <g>
+    <circle class="s-badge-hot" cx="226" cy="142" r="9"/>
+    <text class="s-badge-text" x="226" y="142">3</text>
+    <text class="s-label" x="240" y="146">E = ½ m v²</text>
+
+    <path class="s-thin" d="M224 212 H340"/>
+    <rect class="s-fill-accent" x="240" y="201.5" width="26" height="10.5"/>
+    <rect class="s-thin" x="240" y="201.5" width="26" height="10.5"/>
+    <rect class="s-fill-hot s-pulse" x="296" y="170" width="26" height="42"/>
+    <rect class="s-thin" x="296" y="170" width="26" height="42"/>
+    <text class="s-small" x="253" y="194" text-anchor="middle">× 1</text>
+    <text class="s-small s-text-hot" x="309" y="164" text-anchor="middle">× 4</text>
+    <text class="s-tiny" x="253" y="226" text-anchor="middle">v</text>
+    <text class="s-tiny" x="309" y="226" text-anchor="middle">2v</text>
+  </g>
+</svg>

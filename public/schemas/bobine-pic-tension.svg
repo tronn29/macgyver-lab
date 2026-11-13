@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Étape 1 : la bobine parcourue par un courant stocke de l'énergie magnétique -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Courant établi</text>
+
+    <path class="s-dash" d="M150 105 C172 105 172 62 90 62 C8 62 8 105 30 105"/>
+    <path class="s-dash" d="M150 105 C172 105 172 148 90 148 C8 148 8 105 30 105"/>
+
+    <ellipse class="s-line" cx="48" cy="105" rx="7" ry="22"/>
+    <ellipse class="s-line" cx="62" cy="105" rx="7" ry="22"/>
+    <ellipse class="s-line" cx="76" cy="105" rx="7" ry="22"/>
+    <ellipse class="s-line" cx="90" cy="105" rx="7" ry="22"/>
+    <ellipse class="s-line" cx="104" cy="105" rx="7" ry="22"/>
+    <ellipse class="s-line" cx="118" cy="105" rx="7" ry="22"/>
+    <ellipse class="s-line" cx="132" cy="105" rx="7" ry="22"/>
+    <path class="s-accent s-flow" d="M34 105 H148" marker-end="url(#mg-arrow)"/>
+
+    <text class="s-tiny s-text-accent" x="90" y="166" text-anchor="middle">champ magnétique</text>
+    <text class="s-tiny" x="90" y="180" text-anchor="middle">= énergie stockée</text>
+
+    <rect class="s-callout" x="16" y="192" width="160" height="36" rx="4"/>
+    <text class="s-tiny" x="96" y="206" text-anchor="middle">u = L · di/dt</text>
+    <text class="s-tiny" x="96" y="220" text-anchor="middle">s'oppose à la variation</text>
+  </g>
+
+  <!-- Étape 2 : le courant est coupé brutalement -->
+  <g>
+    <circle class="s-badge" cx="200" cy="30" r="9"/>
+    <text class="s-badge-text" x="200" y="30">2</text>
+    <text class="s-label" x="214" y="34">Coupure</text>
+
+    <path class="s-thin" d="M200 96 V50" marker-end="url(#mg-arrow)"/>
+    <path class="s-thin" d="M200 96 H340" marker-end="url(#mg-arrow)"/>
+    <text class="s-small" x="190" y="58" text-anchor="middle">i</text>
+    <text class="s-tiny" x="334" y="110" text-anchor="middle">t</text>
+    <path class="s-accent" d="M200 64 H262 L266 96 H336"/>
+    <path class="s-dash" d="M264 46 V96"/>
+    <text class="s-tiny" x="302" y="84" text-anchor="middle">courant → 0</text>
+  </g>
+
+  <!-- Étape 3 : la bobine réagit par un pic de tension -->
+  <g>
+    <circle class="s-badge-hot" cx="200" cy="124" r="9"/>
+    <text class="s-badge-text" x="200" y="124">3</text>
+    <text class="s-label" x="214" y="128">Pic de tension</text>
+
+    <path class="s-thin" d="M200 200 V142" marker-end="url(#mg-arrow)"/>
+    <path class="s-thin" d="M200 200 H340" marker-end="url(#mg-arrow)"/>
+    <text class="s-small" x="190" y="152" text-anchor="middle">u</text>
+    <text class="s-tiny" x="334" y="214" text-anchor="middle">t</text>
+    <path class="s-dash" d="M264 140 V200"/>
+    <path class="s-hot s-draw" pathLength="1" d="M200 198 H262 L265 146 L271 198 H336"/>
+    <path class="s-hot s-blink" d="M278 152 L286 160 L280 164 L290 174"/>
+    <text class="s-tiny s-text-hot" x="318" y="186" text-anchor="middle">étincelle</text>
+  </g>
+</svg>

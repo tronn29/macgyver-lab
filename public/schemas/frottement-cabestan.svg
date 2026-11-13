@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- 1 : corde enroulée autour d'un poteau -->
+  <g>
+    <circle class="s-badge" cx="24" cy="26" r="9"/>
+    <text class="s-badge-text" x="24" y="26">1</text>
+    <text class="s-label" x="38" y="30">Tours de corde</text>
+    <path class="s-solid" d="M70 60 V190 A22 7 0 0 0 114 190 V60 Z"/>
+    <ellipse class="s-solid" cx="92" cy="60" rx="22" ry="7"/>
+    <path class="s-dash" d="M114 104 L70 116 M114 128 L70 140"/>
+    <path class="s-accent" d="M70 92 L114 104 M70 116 L114 128 M70 140 L114 152"/>
+    <path class="s-hot s-flow" d="M70 92 L22 86" marker-end="url(#mg-arrow-hot)"/>
+    <text class="s-tiny s-text-hot" x="12" y="76">charge T</text>
+    <path class="s-accent" d="M114 152 L148 158" marker-end="url(#mg-arrow)"/>
+    <text class="s-tiny s-text-accent" x="126" y="176">main t</text>
+    <text class="s-tiny" x="92" y="214" text-anchor="middle">chaque tour ×6,6</text>
+    <text class="s-tiny" x="92" y="228" text-anchor="middle">si μ = 0,3</text>
+  </g>
+
+  <path class="s-dash" d="M180 44 V228"/>
+
+  <!-- 2 : croissance exponentielle de la force retenue -->
+  <g>
+    <circle class="s-badge" cx="196" cy="26" r="9"/>
+    <text class="s-badge-text" x="196" y="26">2</text>
+    <text class="s-label" x="210" y="30">Exponentielle</text>
+    <text class="s-tiny" x="222" y="48">rapport T / t</text>
+    <path class="s-line" d="M214 196 H338" marker-end="url(#mg-arrow)"/>
+    <path class="s-line" d="M214 196 V54" marker-end="url(#mg-arrow)"/>
+    <path class="s-thin" d="M250 196 V200 M286 196 V200 M322 196 V200"/>
+    <text class="s-tiny" x="214" y="210" text-anchor="middle">0</text>
+    <text class="s-tiny" x="250" y="210" text-anchor="middle">1</text>
+    <text class="s-tiny" x="286" y="210" text-anchor="middle">2</text>
+    <text class="s-tiny" x="322" y="210" text-anchor="middle">3</text>
+    <text class="s-tiny" x="338" y="226" text-anchor="end">nombre de tours</text>
+    <path class="s-accent s-draw" pathLength="1" d="M214 195.5 L232 194.8 L250 192.9 L268 188.1 L286 175.7 L295 163.6 L304 144.1 L313 112.8 L322 62.5"/>
+    <circle class="s-badge" cx="250" cy="192.9" r="3"/>
+    <circle class="s-badge" cx="286" cy="175.7" r="3"/>
+    <circle class="s-badge s-pulse" cx="322" cy="62.5" r="3.5"/>
+    <text class="s-tiny" x="250" y="182" text-anchor="middle">×6,6</text>
+    <text class="s-tiny" x="280" y="168" text-anchor="end">×43</text>
+    <text class="s-tiny s-text-hot" x="314" y="66" text-anchor="end">×286</text>
+    <rect class="s-callout" x="222" y="84" width="84" height="22" rx="4"/>
+    <text class="s-tiny s-text-accent" x="264" y="99" text-anchor="middle">T = t × e^(μθ)</text>
+  </g>
+</svg>

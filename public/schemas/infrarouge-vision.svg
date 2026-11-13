@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Étape 1 : un objet chaud émet de l'infrarouge -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Émission</text>
+
+    <rect class="s-solid" x="24" y="64" width="44" height="50" rx="4"/>
+    <rect class="s-fill-hot s-pulse" x="28" y="70" width="36" height="40" rx="2"/>
+    <path class="s-line" d="M68 74 C84 74 84 102 68 102"/>
+    <text class="s-small" x="46" y="130" text-anchor="middle">60 °C</text>
+
+    <text class="s-tiny s-text-hot" x="150" y="64" text-anchor="middle">infrarouge ≈ 10 µm</text>
+    <path class="s-hot s-flow" d="M92 80 q8 -8 16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 L214 80" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot s-flow s-delay-1" d="M92 108 q8 -8 16 0 t16 0 t16 0 t16 0"/>
+
+    <!-- la vitre arrête l'infrarouge lointain -->
+    <rect class="s-fill-cold" x="158" y="92" width="6" height="36"/>
+    <rect class="s-line" x="158" y="92" width="6" height="36"/>
+    <path class="s-hot" d="M170 104 L178 112 M178 104 L170 112"/>
+    <text class="s-tiny" x="161" y="142" text-anchor="middle">vitre : opaque à l'IR</text>
+  </g>
+
+  <!-- Étape 2 : la caméra thermique transforme la chaleur en image -->
+  <g>
+    <circle class="s-badge" cx="240" cy="30" r="9"/>
+    <text class="s-badge-text" x="240" y="30">2</text>
+    <text class="s-label" x="254" y="34">Capteur</text>
+
+    <rect class="s-solid" x="216" y="74" width="14" height="26" rx="2"/>
+    <rect class="s-solid" x="230" y="64" width="76" height="46" rx="4"/>
+    <rect class="s-fill-muted" x="240" y="72" width="56" height="30" rx="2"/>
+    <ellipse class="s-fill-hot s-pulse" cx="268" cy="87" rx="10" ry="12"/>
+    <text class="s-tiny" x="268" y="124" text-anchor="middle">image de chaleur</text>
+  </g>
+
+  <!-- Étape 3 : où se situe l'infrarouge dans le spectre -->
+  <g>
+    <circle class="s-badge" cx="24" cy="156" r="9"/>
+    <text class="s-badge-text" x="24" y="156">3</text>
+    <text class="s-label" x="38" y="160">Spectre</text>
+
+    <text class="s-tiny" x="58" y="174" text-anchor="middle">UV</text>
+    <text class="s-tiny s-text-accent" x="116" y="174" text-anchor="middle">visible</text>
+    <text class="s-tiny" x="172" y="174" text-anchor="middle">proche IR</text>
+    <text class="s-tiny s-text-hot" x="274" y="174" text-anchor="middle">IR thermique</text>
+
+    <rect class="s-fill-muted" x="20" y="180" width="77" height="16"/>
+    <rect class="s-fill-accent" x="97" y="180" width="39" height="16"/>
+    <rect class="s-fill-muted" x="136" y="180" width="73" height="16"/>
+    <rect class="s-fill-hot s-pulse" x="209" y="180" width="131" height="16"/>
+    <rect class="s-thin" x="20" y="180" width="320" height="16"/>
+    <path class="s-thin" d="M97 180 V200 M136 180 V200 M209 180 V196"/>
+    <text class="s-tiny" x="99" y="210" text-anchor="end">0,4 µm</text>
+    <text class="s-tiny" x="134" y="210">0,8 µm</text>
+
+    <path class="s-hot" d="M272 216 V200" marker-end="url(#mg-arrow-hot)"/>
+    <text class="s-tiny" x="240" y="228" text-anchor="middle">pic du corps humain : 9,4 µm</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+{
+  "name": "macgyver-lab",
+  "version": "1.0.0",
+  "description": "MacGyver Lab — PWA personnelle pour apprendre comment marche le monde",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run validate && tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173",
+    "validate": "node scripts/validate-content.mjs",
+    "test": "vitest run",
+    "icons": "node scripts/gen-icons.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.6",
+    "vitest": "^3.2.7"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/chakra-petch": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0"
+  },
+  "private": true
+}

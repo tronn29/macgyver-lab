@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Étape 1 : déposer une trace (vue de côté) -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Déposer</text>
+    <text class="s-tiny" x="38" y="48">doigt propre</text>
+    <path class="s-solid" d="M46 64 V118 Q46 140 66 140 Q86 140 86 118 V64"/>
+    <path class="s-thin" d="M56 128 Q66 134 76 128"/>
+    <rect class="s-thin" x="56" y="98" width="20" height="24" rx="8"/>
+    <path class="s-accent" d="M100 76 V124" marker-end="url(#mg-arrow)"/>
+    <rect class="s-fill-muted" x="18" y="140" width="96" height="10"/>
+    <path class="s-line" d="M18 140 H114"/>
+    <path class="s-ghost" d="M52 140 Q66 136 80 140"/>
+    <text class="s-tiny" x="66" y="166" text-anchor="middle">trace invisible</text>
+    <text class="s-tiny s-text-hot" x="66" y="180" text-anchor="middle">sueur + sébum</text>
+  </g>
+
+  <!-- Étape 2 : poudrer au pinceau (vue de dessus) -->
+  <g>
+    <circle class="s-badge" cx="136" cy="30" r="9"/>
+    <text class="s-badge-text" x="136" y="30">2</text>
+    <text class="s-label" x="150" y="34">Poudrer</text>
+    <text class="s-tiny" x="150" y="48">cacao, pinceau</text>
+    <rect class="s-fill-muted" x="132" y="120" width="96" height="76" rx="3"/>
+    <ellipse class="s-thin" cx="180" cy="160" rx="14" ry="19"/>
+    <ellipse class="s-thin" cx="180" cy="161" rx="9" ry="13"/>
+    <ellipse class="s-thin" cx="180" cy="162" rx="4" ry="6"/>
+    <polygon class="s-solid" points="206,62 214,66 198,100 190,96"/>
+    <polygon class="s-fill-hot" points="190,96 198,100 192,114 180,110"/>
+    <path class="s-accent s-flow" d="M160 128 Q176 118 194 126"/>
+    <circle class="s-fill-hot s-float" cx="174" cy="132" r="1.8"/>
+    <circle class="s-fill-hot s-float s-delay-1" cx="184" cy="138" r="1.8"/>
+    <circle class="s-fill-hot s-float s-delay-2" cx="168" cy="144" r="1.8"/>
+    <circle class="s-fill-hot s-float s-delay-3" cx="190" cy="148" r="1.8"/>
+  </g>
+
+  <!-- Étape 3 : relever au ruban adhésif sur une carte -->
+  <g>
+    <circle class="s-badge" cx="248" cy="30" r="9"/>
+    <text class="s-badge-text" x="248" y="30">3</text>
+    <text class="s-label" x="262" y="34">Relever</text>
+    <text class="s-tiny" x="262" y="48">ruban adhésif</text>
+    <rect class="s-solid" x="252" y="120" width="88" height="76" rx="3"/>
+    <rect class="s-fill-accent" x="262" y="132" width="68" height="52" rx="2"/>
+    <ellipse class="s-hot" cx="296" cy="158" rx="14" ry="19"/>
+    <ellipse class="s-hot" cx="296" cy="159" rx="9" ry="13"/>
+    <ellipse class="s-hot" cx="296" cy="160" rx="4" ry="6"/>
+    <path class="s-accent" d="M232 104 Q244 92 258 104" marker-end="url(#mg-arrow)"/>
+  </g>
+
+  <!-- Encadré : pourquoi la poudre colle -->
+  <g>
+    <rect class="s-callout" x="60" y="204" width="240" height="26" rx="4"/>
+    <text class="s-tiny" x="180" y="221" text-anchor="middle">La poudre colle aux résidus gras</text>
+  </g>
+</svg>

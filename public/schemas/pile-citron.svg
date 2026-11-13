@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Le citron : électrolyte entre deux électrodes -->
+  <g>
+    <ellipse class="s-solid" cx="180" cy="160" rx="96" ry="50"/>
+    <ellipse class="s-ghost" cx="180" cy="160" rx="88" ry="43"/>
+    <text class="s-tiny" x="180" y="142" text-anchor="middle">électrolyte</text>
+    <path class="s-cold s-flow" d="M212 162 H150" marker-end="url(#mg-arrow-cold)"/>
+    <text class="s-tiny s-text-cold" x="180" y="178" text-anchor="middle">ions</text>
+    <text class="s-tiny s-text-accent" x="180" y="228" text-anchor="middle">≈ 0,9 V par citron</text>
+  </g>
+
+  <!-- Étape 1 : le zinc s'oxyde et cède des électrons -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Zinc −</text>
+
+    <rect class="s-solid" x="130" y="92" width="10" height="92"/>
+    <rect class="s-fill-muted" x="130" y="92" width="10" height="92"/>
+
+    <rect class="s-callout" x="10" y="74" width="104" height="40" rx="4"/>
+    <text class="s-tiny" x="62" y="90" text-anchor="middle">Zn → Zn²⁺ + 2 e⁻</text>
+    <text class="s-tiny" x="62" y="104" text-anchor="middle">le zinc s'use</text>
+    <path class="s-leader" d="M114 94 L130 128" marker-end="url(#mg-dot)"/>
+  </g>
+
+  <!-- Les électrons passent par le fil et la LED -->
+  <g>
+    <path class="s-line" d="M135 92 V64 H173 M187 64 H225 V92"/>
+    <circle class="s-fill-accent s-pulse" cx="180" cy="64" r="13"/>
+    <circle class="s-solid" cx="180" cy="64" r="7"/>
+    <text class="s-tiny" x="180" y="40" text-anchor="middle">LED</text>
+    <path class="s-accent s-flow" d="M122 88 V54 H160" marker-end="url(#mg-arrow)"/>
+    <path class="s-accent s-flow" d="M200 54 H238 V84" marker-end="url(#mg-arrow)"/>
+    <text class="s-small s-text-accent" x="141" y="48" text-anchor="middle">e⁻</text>
+    <text class="s-small s-text-accent" x="219" y="48" text-anchor="middle">e⁻</text>
+  </g>
+
+  <!-- Étape 2 : le cuivre fait capter les électrons par l'acide -->
+  <g>
+    <circle class="s-badge" cx="262" cy="30" r="9"/>
+    <text class="s-badge-text" x="262" y="30">2</text>
+    <text class="s-label" x="276" y="34">Cuivre +</text>
+
+    <rect class="s-solid" x="220" y="92" width="10" height="92"/>
+    <rect class="s-fill-hot" x="220" y="92" width="10" height="92"/>
+    <circle class="s-thin s-float" cx="238" cy="158" r="2.5"/>
+    <circle class="s-thin s-float s-delay-1" cx="243" cy="171" r="2"/>
+    <circle class="s-thin s-float s-delay-2" cx="237" cy="182" r="2.5"/>
+
+    <rect class="s-callout" x="246" y="74" width="104" height="40" rx="4"/>
+    <text class="s-tiny" x="298" y="90" text-anchor="middle">2 H⁺ + 2 e⁻ → H₂</text>
+    <text class="s-tiny" x="298" y="104" text-anchor="middle">bulles de gaz</text>
+    <path class="s-leader" d="M262 114 L242 152" marker-end="url(#mg-dot)"/>
+  </g>
+</svg>

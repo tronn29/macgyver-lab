@@ -1,0 +1,549 @@
+[
+  {
+    "id": "brouillard-glace-seche",
+    "titre": "Brouillard de glace sèche",
+    "sousTitre": "Un nuage lourd qui déborde du saladier et coule sur la table",
+    "categories": ["thermique", "chimie", "fluides"],
+    "duree": 20,
+    "difficulte": 1,
+    "adulte": true,
+    "securite": {
+      "niveau": "orange",
+      "note": "La glace sèche est à −78,5 °C : elle brûle la peau par le froid en quelques secondes. On la manipule uniquement avec des gants isolants et une pince, dans une pièce aérée, et on ne l'enferme jamais dans un récipient fermé, qui pourrait éclater sous la pression du gaz."
+    },
+    "schema": {
+      "fichier": "xp-brouillard-glace-seche.svg",
+      "alt": "Saladier vu de côté rempli d'eau tiède : des morceaux de glace sèche posés au fond dégagent des bulles qui remontent. Un brouillard blanc se forme au-dessus de l'eau, déborde du bord droit et coule jusqu'à la table où il s'étale. Un encadré précise que le brouillard est fait de gouttelettes d'eau et non de CO₂.",
+      "legende": "La glace sèche se sublime dans l'eau tiède ; le gaz très froid condense la vapeur en brouillard, plus lourd que l'air."
+    },
+    "materiel": [
+      { "nom": "Glace sèche en granulés (bâtonnets de quelques millimètres)", "quantite": "200 à 500 g" },
+      { "nom": "Saladier en verre ou en plastique épais, à large ouverture", "quantite": "1" },
+      { "nom": "Eau tiède (40 à 50 °C) et une bouilloire pour en refaire", "quantite": "1 à 2 L" },
+      { "nom": "Gants isolants (gants de cuisine épais ou gants de ski)", "quantite": "1 paire" },
+      { "nom": "Pince de cuisine", "quantite": "1" },
+      { "nom": "Plateau ou torchon pour protéger la table", "quantite": "1" },
+      { "nom": "Glacière en polystyrène au couvercle simplement posé, pour conserver la glace sèche", "quantite": "1" }
+    ],
+    "etapes": [
+      "Choisir une pièce aérée, ouvrir une fenêtre et poser le saladier sur un plateau, sur une table stable.",
+      "Enfiler les gants isolants. Garder la glace sèche dans sa glacière en polystyrène, couvercle posé mais non verrouillé, jusqu'au moment de l'utiliser.",
+      "Remplir le saladier à moitié d'eau tiède, entre 40 et 50 °C.",
+      "Avec la pince, déposer 3 ou 4 granulés de glace sèche dans l'eau, sans les lâcher de haut pour éviter les éclaboussures.",
+      "Observer : l'eau bouillonne, un brouillard blanc s'élève, remplit le saladier puis déborde et coule le long des parois jusqu'à la table.",
+      "Quand le brouillard faiblit (au bout de 2 à 5 minutes), retirer une partie de l'eau refroidie et rajouter de l'eau tiède : la production repart.",
+      "Comparer avec un second récipient d'eau froide du robinet : avec les mêmes granulés, le brouillard est nettement plus faible.",
+      "À la fin, laisser les granulés restants se sublimer à l'air libre dans la glacière ouverte, dans une pièce ventilée et hors de portée des enfants et des animaux."
+    ],
+    "precautions": [
+      "Ne jamais toucher la glace sèche à mains nues, ne jamais la porter à la bouche ni l'avaler, et ne jamais en mettre dans une boisson.",
+      "Ne jamais la stocker dans un récipient hermétique (bouteille, bocal, boîte fermée) ni dans un congélateur : le gaz libéré peut le faire éclater.",
+      "Travailler dans une pièce aérée et ne pas se pencher longuement au-dessus du brouillard : le CO₂, plus lourd que l'air, s'accumule au ras du sol et peut provoquer maux de tête et malaise dans un local confiné.",
+      "Ne pas transporter la glace sèche dans l'habitacle fermé d'une voiture ; la mettre dans le coffre, vitres entrouvertes.",
+      "Ne pas jeter la glace sèche dans un évier ou des toilettes : le choc froid peut fissurer la céramique ou les canalisations."
+    ],
+    "resultat": "Dès que les granulés touchent l'eau, celle-ci se met à bouillonner et un brouillard blanc et épais se forme. Il ne monte pas comme de la vapeur de casserole : il déborde, coule sur la table comme un liquide et s'étale au sol avant de disparaître. Avec de l'eau froide, l'effet est beaucoup plus faible.",
+    "explication": [
+      "La glace sèche est du dioxyde de carbone solide. À la pression atmosphérique, elle ne fond pas : elle passe directement à l'état de gaz, c'est la [[sublimation]]. L'eau tiède lui apporte beaucoup de chaleur d'un coup, d'où le bouillonnement : chaque bulle est du CO₂ gazeux très froid.",
+      "Le CO₂ lui-même est invisible. En remontant, les bulles se chargent de vapeur d'eau puis se mélangent à l'air au-dessus du saladier, qu'elles refroidissent brutalement : la vapeur subit une [[condensation]] en milliards de gouttelettes minuscules. C'est ce nuage de gouttelettes que l'on voit, exactement comme un nuage dans le ciel.",
+      "Ce brouillard est à la fois froid et riche en CO₂, environ une fois et demie plus dense que l'air : sa [[densite]] plus élevée le fait couler vers le bas. Avec de l'eau froide, la sublimation est plus lente et l'air contient moins de vapeur à condenser : l'effet est moindre. Voir aussi [[neige-carbonique]] et [[chaleur-latente]]."
+    ],
+    "pourAllerPlusLoin": "Poser sur le saladier une bande de tissu trempée dans de l'eau savonneuse et la tirer doucement sur le bord : une bulle géante remplie de brouillard se forme et grossit. Pourquoi finit-elle par éclater, et pourquoi le brouillard libéré tombe-t-il au lieu de monter ?",
+    "fiches": ["glace-seche", "detente-co2-froid"]
+  },
+  {
+    "id": "canon-vortex",
+    "titre": "Canon à anneaux d'air",
+    "sousTitre": "Un carton qui tire des tourbillons capables de renverser des bandes de papier à plusieurs mètres",
+    "categories": ["fluides", "pression", "mecanique"],
+    "duree": 30,
+    "difficulte": 1,
+    "adulte": false,
+    "securite": {
+      "niveau": "vert",
+      "note": "Expérience sans danger. La découpe au cutter est à confier à un adulte. Pour rendre les anneaux visibles, on utilise uniquement la brume d'un humidificateur à eau : jamais de fumée, d'encens ni de fumigène."
+    },
+    "schema": {
+      "fichier": "xp-canon-vortex.svg",
+      "alt": "Carton vu de côté : la face arrière est remplacée par un film plastique tendu que l'on tapote, la face avant percée d'un trou rond. La boîte est remplie de brume. Un anneau d'air en sort, tourne sur lui-même en avançant, et va soulever des bandes de papier suspendues à droite. Un encadré explique que le bord du trou freine l'air, qui s'enroule en tore.",
+      "legende": "Une tape sur le film chasse un paquet d'air par le trou : il s'enroule en anneau et voyage loin sans se disperser."
+    },
+    "materiel": [
+      { "nom": "Carton fermé (boîte à chaussures ou plus grand)", "quantite": "1" },
+      { "nom": "Film plastique alimentaire ou sac plastique découpé", "quantite": "1 morceau" },
+      { "nom": "Ruban adhésif large", "quantite": "1 rouleau" },
+      { "nom": "Cutter ou ciseaux, et un bol ou un verre pour tracer le cercle", "quantite": "1" },
+      { "nom": "Humidificateur à brume froide rempli d'eau claire", "quantite": "1 (facultatif)" },
+      { "nom": "Bandes de papier fin (10 × 2 cm) et une ficelle", "quantite": "5 à 6 bandes" }
+    ],
+    "etapes": [
+      "Fermer le carton avec du ruban adhésif pour qu'il soit étanche à l'air.",
+      "Sur une petite face, tracer un cercle de 8 à 10 cm de diamètre bien centré et le faire découper par un adulte : les bords doivent être nets.",
+      "Découper la face opposée en laissant un cadre de 2 cm, puis tendre le film plastique à sa place et le fixer tout autour au ruban adhésif.",
+      "Tendre une ficelle entre deux chaises et y scotcher les bandes de papier pour qu'elles pendent librement, à 2 ou 3 m du canon.",
+      "Viser les bandes, trou en avant, et donner une tape sèche et brève du plat des doigts au centre du film : les bandes doivent s'agiter au passage de l'anneau, une fraction de seconde après la tape.",
+      "Pour voir les anneaux, placer la sortie de l'humidificateur devant le trou quelques secondes afin de remplir la boîte de brume, puis tapoter à nouveau.",
+      "Reculer progressivement et noter la distance maximale à laquelle les bandes bougent encore.",
+      "Recommencer avec un trou plus petit (couvrir une partie avec du carton) et comparer la vitesse et la portée des anneaux."
+    ],
+    "precautions": [
+      "Faire découper le carton par un adulte, sur un support adapté, lame dirigée loin des doigts.",
+      "Utiliser l'humidificateur avec de l'eau claire uniquement, sans huile essentielle, et le tenir loin des prises et appareils électriques.",
+      "Ne jamais remplir la boîte de fumée, d'encens, de bougie ou de fumigène.",
+      "Ne pas viser le visage d'une personne de près, même si les anneaux sont inoffensifs."
+    ],
+    "resultat": "À chaque tape, un anneau de brume bien net sort du trou, avance en ligne droite en tournant sur lui-même et garde sa forme sur un ou deux mètres. Les bandes de papier se soulèvent d'un coup quand il les atteint, même à plusieurs mètres, alors qu'on ne sent aucun souffle à côté du canon.",
+    "explication": [
+      "La tape sur le film comprime brièvement l'air de la boîte : la [[pression]] intérieure dépasse un instant la [[pression-atmospherique]] et chasse un paquet d'air par le trou.",
+      "Au centre du trou, l'air sort vite ; sur les bords, il est freiné par le carton et par l'air immobile autour. Cette différence de vitesse fait s'enrouler la couche extérieure sur elle-même : il se forme un [[vortex]] en forme d'anneau, un tore d'air qui tourne autour de son propre cercle tout en avançant.",
+      "Cette rotation rend l'anneau stable : il emporte avec lui l'air qu'il contient au lieu de se mélanger à l'air ambiant, d'où sa portée étonnante. La brume ne fait que rendre visible un phénomène qui existe aussi sans elle, ce que prouvent les bandes de papier."
+    ],
+    "pourAllerPlusLoin": "Tirer deux anneaux l'un derrière l'autre, très rapprochés : le second rattrape-t-il le premier ? Que se passe-t-il quand deux anneaux tirés par deux canons se rencontrent de face ?",
+    "fiches": ["pression-atmospherique"]
+  },
+  {
+    "id": "lampe-a-lave",
+    "titre": "Lampe à lave maison",
+    "sousTitre": "Des gouttes colorées qui montent et redescendent dans l'huile",
+    "categories": ["chimie", "fluides"],
+    "duree": 15,
+    "difficulte": 1,
+    "adulte": false,
+    "securite": {
+      "niveau": "vert",
+      "note": "Sans danger. Préférer des comprimés effervescents sans médicament (vitamine C ou pastilles de nettoyage pour dentier non utilisées), ne pas boire le mélange et ne jamais fermer le récipient pendant la réaction."
+    },
+    "schema": {
+      "fichier": "xp-lampe-a-lave.svg",
+      "alt": "Verre haut vu de côté : de l'eau colorée au fond, une épaisse couche d'huile au-dessus. Un comprimé posé au fond libère des bulles. Des gouttes d'eau colorée accrochées à des bulles montent dans l'huile ; une goutte sans bulle redescend. Un encadré explique que l'ensemble bulle et goutte est moins dense que l'huile.",
+      "legende": "Une bulle de gaz soulève une goutte d'eau dans l'huile ; quand la bulle éclate en surface, la goutte retombe."
+    },
+    "materiel": [
+      { "nom": "Verre haut, vase ou bouteille transparente", "quantite": "1 (environ 50 cl)" },
+      { "nom": "Huile végétale (tournesol ou colza)", "quantite": "environ 35 cl" },
+      { "nom": "Eau du robinet", "quantite": "environ 10 cl" },
+      { "nom": "Colorant alimentaire liquide", "quantite": "quelques gouttes" },
+      { "nom": "Comprimés effervescents (vitamine C par exemple)", "quantite": "2" },
+      { "nom": "Lampe de poche (facultatif, pour éclairer par-dessous)", "quantite": "1" }
+    ],
+    "etapes": [
+      "Verser l'eau dans le verre jusqu'au quart de sa hauteur environ.",
+      "Ajouter 5 à 10 gouttes de colorant et remuer : l'eau se colore uniformément.",
+      "Verser lentement l'huile jusqu'à 3 cm du bord. Attendre une minute : l'huile reste au-dessus et les deux couches se séparent nettement.",
+      "Ajouter une goutte de colorant directement sur l'huile et observer : elle traverse l'huile sans s'y mélanger et rejoint l'eau.",
+      "Casser un comprimé effervescent en quatre et laisser tomber un morceau dans le verre.",
+      "Observer pendant une à deux minutes la montée et la descente des gouttes colorées. Ajouter un autre morceau quand l'activité ralentit.",
+      "Pour l'effet lampe, poser le verre sur une lampe de poche allumée tournée vers le haut, dans une pièce sombre."
+    ],
+    "precautions": [
+      "Ne pas boire le mélange et le garder hors de portée des jeunes enfants.",
+      "Ne jamais boucher le verre ou la bouteille pendant la réaction : le gaz produit ferait monter la pression.",
+      "Ne pas jeter l'huile dans l'évier : la récupérer dans une bouteille fermée, à déposer en déchetterie, et ne vider que l'eau colorée.",
+      "Le colorant peut tacher : travailler sur un plateau ou du papier journal."
+    ],
+    "resultat": "Le comprimé tombe au fond et se met à pétiller. Des gouttes d'eau colorée, entourées de bulles, s'élèvent lentement dans l'huile, éclatent en surface, puis redescendent en boules colorées. Le mouvement continue tant que le comprimé produit du gaz.",
+    "explication": [
+      "L'huile et l'eau ne se mélangent pas, et l'huile, de [[densite]] 0,92 environ, reste au-dessus de l'eau. Le colorant alimentaire se dissout dans l'eau mais pas dans l'huile : il ne colore que la couche du bas.",
+      "Le comprimé contient un acide et du bicarbonate de sodium. Au contact de l'eau, ils réagissent et libèrent du dioxyde de carbone : c'est l'[[effervescence]]. Les bulles de gaz se forment dans l'eau et emportent avec elles une petite goutte colorée.",
+      "Le petit ensemble « bulle + goutte » est globalement moins dense que l'huile : la [[poussee-archimede]] le fait monter. En surface, la bulle éclate et libère son gaz dans l'air ; la goutte d'eau, désormais seule et plus dense que l'huile, retombe au fond. Voir aussi [[masse-volumique]]."
+    ],
+    "pourAllerPlusLoin": "Recommencer avec de l'eau salée au fond, ou avec de l'huile froide sortie du réfrigérateur : les gouttes montent-elles plus vite ou plus lentement ? Quel rôle joue la viscosité de l'huile ?"
+  },
+  {
+    "id": "pile-citron-xp",
+    "titre": "Pile au citron",
+    "sousTitre": "Allumer une LED avec trois ou quatre citrons, du cuivre et du zinc",
+    "categories": ["electricite", "chimie"],
+    "duree": 30,
+    "difficulte": 2,
+    "adulte": false,
+    "securite": {
+      "niveau": "vert",
+      "note": "Tensions très faibles, sans danger. Les citrons utilisés ne doivent plus être mangés, car ils contiennent des sels de zinc, et les clous sont pointus."
+    },
+    "schema": {
+      "fichier": "xp-pile-citron-xp.svg",
+      "alt": "Trois citrons alignés, chacun piqué d'un clou zingué (Zn) et d'une plaque de cuivre (Cu). Des fils relient le cuivre de chaque citron au zinc du suivant. Le zinc du premier et le cuivre du dernier sont reliés à une LED rouge qui brille, la patte longue côté cuivre. Une légende indique environ 0,9 V par citron et 2,7 V pour trois en série.",
+      "legende": "Chaque citron fournit près de 0,9 V : en série, leurs tensions s'additionnent assez pour allumer une LED rouge."
+    },
+    "materiel": [
+      { "nom": "Citrons bien juteux", "quantite": "3 à 4" },
+      { "nom": "Clous galvanisés (zingués, gris mat), d'environ 5 cm", "quantite": "3 à 4" },
+      { "nom": "Pièces de cuivre ou chutes de plaque ou de fil de cuivre épais", "quantite": "3 à 4" },
+      { "nom": "Fils électriques à pinces crocodiles", "quantite": "4 à 5" },
+      { "nom": "LED rouge (la couleur qui demande le moins de tension)", "quantite": "1" },
+      { "nom": "Multimètre (facultatif)", "quantite": "1" },
+      { "nom": "Couteau, pour une fente dans chaque citron (adulte)", "quantite": "1" }
+    ],
+    "etapes": [
+      "Rouler chaque citron sur la table en appuyant fermement pour libérer le jus à l'intérieur sans percer la peau.",
+      "Dans chaque citron, enfoncer un clou galvanisé d'un côté et, à environ 3 cm de là, glisser une pièce de cuivre dans une petite fente faite au couteau. Le clou et le cuivre ne doivent jamais se toucher.",
+      "Avec un multimètre réglé sur 2 V continu, mesurer la tension d'un seul citron, pointe rouge sur le cuivre : on lit environ 0,9 V.",
+      "Relier les citrons en série : une pince sur le cuivre du citron 1, l'autre sur le clou du citron 2 ; puis le cuivre du citron 2 au clou du citron 3, et ainsi de suite.",
+      "Mesurer la tension entre le clou du premier citron et le cuivre du dernier : avec trois citrons, on obtient environ 2,7 V.",
+      "Brancher la LED : patte longue (+) sur le cuivre du dernier citron, patte courte (−) sur le clou du premier. Éteindre la lumière pour mieux voir la lueur.",
+      "Si la LED reste éteinte, l'inverser, vérifier chaque pince, ajouter un quatrième citron ou enfoncer davantage les électrodes."
+    ],
+    "precautions": [
+      "Faire la fente dans le citron avec un couteau tenu par un adulte.",
+      "Ne pas manger les citrons après l'expérience et se laver les mains ; jeter les citrons à la poubelle.",
+      "Manipuler les clous avec précaution : leur pointe peut piquer.",
+      "Ne jamais brancher les fils sur une prise de courant ou sur une batterie de voiture : ce montage n'est fait que pour les citrons."
+    ],
+    "resultat": "Un seul citron donne environ 0,9 V, trop peu pour allumer la LED. Trois ou quatre citrons en série font monter la tension à 2,7 à 3,6 V : la LED rouge s'allume faiblement, bien visible dans le noir. Inversée, elle reste éteinte.",
+    "explication": [
+      "Chaque citron est une pile. Le zinc du clou, apporté par la [[galvanisation]], est le métal qui s'oxyde : chaque atome de zinc qui passe dans le jus sous forme d'ion abandonne deux électrons dans le clou. Cette [[oxydation]] fait du clou l'[[electrode]] négative.",
+      "Les électrons parcourent le fil extérieur jusqu'au cuivre, l'électrode positive, où ils sont captés par les ions hydrogène de l'acide citrique, qui forment de minuscules bulles d'hydrogène. Le jus de citron, riche en ions, est l'[[electrolyte]] qui ferme le circuit à l'intérieur du fruit.",
+      "La [[tension]] d'une telle pile dépend surtout du couple de métaux (zinc et cuivre, environ 0,9 V) et pas de la taille du fruit. Une [[led]] rouge a besoin d'environ 1,8 V : il faut donc additionner plusieurs citrons en [[montage-serie]]. Le [[courant]] reste très faible, moins d'un milliampère, d'où la lueur discrète."
+    ],
+    "pourAllerPlusLoin": "Remplacer les citrons par des pommes de terre, du vinaigre ou de l'eau salée dans des gobelets. Quelle tension obtient-on à chaque fois ? Et en remplaçant le clou zingué par un clou en fer ordinaire ?",
+    "fiches": ["pile-citron", "conducteurs-isolants"]
+  },
+  {
+    "id": "levitation-trombone",
+    "titre": "Le trombone qui flotte",
+    "sousTitre": "Un trombone retenu par un fil, suspendu dans le vide sous un aimant",
+    "categories": ["magnetisme", "mecanique"],
+    "duree": 20,
+    "difficulte": 2,
+    "adulte": true,
+    "securite": {
+      "niveau": "orange",
+      "note": "Les aimants néodyme sont très puissants : ils pincent violemment la peau en se collant, se brisent en éclats coupants et sont très dangereux s'ils sont avalés. Les tenir hors de portée des enfants, à distance des stimulateurs cardiaques, des cartes bancaires et des téléphones."
+    },
+    "schema": {
+      "fichier": "xp-levitation-trombone.svg",
+      "alt": "Une règle maintenue par une pile de livres dépasse au-dessus de la table ; un aimant est fixé sous son extrémité. Un trombone flotte environ un centimètre sous l'aimant, retenu par un fil scotché sur la table. Des lignes de champ relient l'aimant au trombone ; une flèche vers le haut indique l'attraction, une flèche vers le bas le poids et la tension du fil. Un encadré montre la variante du graphite qui flotte au-dessus d'aimants.",
+      "legende": "L'attraction de l'aimant équilibre le poids du trombone et la tension du fil : il tient en l'air sans rien toucher."
+    },
+    "materiel": [
+      { "nom": "Aimant puissant (néodyme ou ferrite épaisse)", "quantite": "1" },
+      { "nom": "Règle rigide ou baguette", "quantite": "1" },
+      { "nom": "Pile de livres", "quantite": "4 à 5" },
+      { "nom": "Trombone en acier", "quantite": "1 ou 2" },
+      { "nom": "Fil à coudre", "quantite": "30 cm" },
+      { "nom": "Ruban adhésif", "quantite": "1 rouleau" },
+      { "nom": "Feuilles de papier, papier aluminium, couvercle en acier", "quantite": "1 de chaque" },
+      { "nom": "Variante : plaquette de graphite pyrolytique et 4 petits aimants néodyme cubiques", "quantite": "facultatif" }
+    ],
+    "etapes": [
+      "Fixer l'aimant sous l'extrémité de la règle avec du ruban adhésif.",
+      "Glisser l'autre extrémité de la règle sous une pile de livres pour que l'aimant dépasse au-dessus de la table, à environ 20 cm de hauteur.",
+      "Nouer le fil au trombone, puis approcher le trombone de l'aimant jusqu'à ce qu'il soit attiré, sans le laisser coller.",
+      "Tirer doucement le fil vers le bas jusqu'à ce que le trombone se détache de l'aimant et reste suspendu en l'air, à 0,5 à 2 cm en dessous, fil tendu.",
+      "Scotcher l'extrémité du fil sur la table à cette longueur exacte. Ajuster jusqu'à ce que le trombone flotte sans osciller.",
+      "Glisser successivement une feuille de papier, puis du papier aluminium dans l'espace entre l'aimant et le trombone : il reste en place.",
+      "Glisser maintenant un couvercle métallique en acier : le trombone tombe aussitôt.",
+      "Variante, si l'on possède le matériel : disposer les quatre aimants cubiques en damier (pôles alternés), puis poser délicatement la plaquette de graphite au-dessus : elle flotte à environ 1 mm."
+    ],
+    "precautions": [
+      "Approcher les aimants néodyme l'un de l'autre lentement et en les tenant fermement, jamais avec un doigt entre les deux.",
+      "Garder les aimants hors de portée des jeunes enfants : deux aimants avalés peuvent se coller à travers la paroi de l'intestin et provoquer de graves lésions.",
+      "Tenir les aimants à au moins 15 cm d'un stimulateur cardiaque, et loin des cartes bancaires, des montres mécaniques et des téléphones.",
+      "Ranger les aimants séparés par une cale en carton pour éviter qu'ils ne s'entrechoquent et éclatent."
+    ],
+    "resultat": "Le trombone reste immobile en l'air, sous l'aimant, sans le toucher. Le papier et l'aluminium glissés entre les deux ne changent rien, alors que le couvercle en acier le fait tomber immédiatement. Dans la variante, la plaquette de graphite plane au-dessus des aimants.",
+    "explication": [
+      "L'acier du trombone est [[ferromagnetique]] : dans le [[champ-magnetique]] de l'aimant, il s'aimante lui-même, et son extrémité la plus proche devient un [[pole-magnetique]] opposé à celui de l'aimant. Les deux s'attirent.",
+      "Cette attraction diminue très vite avec la distance. À une hauteur précise, elle équilibre exactement le poids du trombone et la tension du fil : les forces se compensent et le trombone tient en l'air. Plus bas, l'attraction devient trop faible et il tombe ; plus haut, elle l'emporte et il colle.",
+      "Le papier et l'aluminium ne sont pas magnétiques et laissent passer le champ. L'acier du couvercle, lui, canalise les lignes de champ, et le trombone n'est presque plus attiré. Le graphite de la variante fonctionne à l'inverse : il est faiblement repoussé par les aimants, c'est le [[diamagnetisme]]."
+    ],
+    "pourAllerPlusLoin": "Avec une règle graduée, mesurer l'écart maximal pour lequel le trombone tient encore en l'air, puis recommencer avec deux trombones accrochés l'un à l'autre. L'écart augmente-t-il ou diminue-t-il, et pourquoi ?",
+    "fiches": ["boussole-improvisee", "electroaimant"]
+  },
+  {
+    "id": "fusee-a-eau",
+    "titre": "Fusée à eau",
+    "sousTitre": "Une bouteille, de l'eau et de l'air comprimé pour s'élever d'une vingtaine de mètres",
+    "categories": ["pression", "mecanique", "fluides"],
+    "duree": 60,
+    "difficulte": 2,
+    "adulte": true,
+    "securite": {
+      "niveau": "orange",
+      "note": "Une bouteille sous pression stocke beaucoup d'énergie. Toujours en extérieur, dans un espace dégagé, avec des lunettes de protection, à faible pression (3 bar au maximum), avec une bouteille de boisson gazeuse intacte, et sous la responsabilité d'un adulte. Personne devant ni au-dessus de la fusée."
+    },
+    "schema": {
+      "fichier": "xp-fusee-a-eau.svg",
+      "alt": "À gauche, une pompe à vélo munie d'un manomètre reliée par un long tuyau à une bouteille retournée sur un pas de tir, goulot vers le bas, fermée par un bouchon. Le tiers inférieur de la bouteille contient de l'eau, le reste de l'air comprimé. À droite, la même fusée en vol éjecte un jet d'eau vers le bas et une flèche indique la poussée vers le haut. Un encadré rappelle que personne ne doit se tenir devant ni au-dessus.",
+      "legende": "L'air comprimé chasse l'eau vers le bas ; en retour, la bouteille est poussée vers le haut."
+    },
+    "materiel": [
+      { "nom": "Bouteille de boisson gazeuse en PET de 1,5 L, intacte, sans rayure ni bosse", "quantite": "1" },
+      { "nom": "Bouchon en liège ou en caoutchouc adapté au goulot, traversé par une aiguille de gonflage de ballon", "quantite": "1" },
+      { "nom": "Pompe à vélo à pied avec manomètre", "quantite": "1" },
+      { "nom": "Tuyau souple reliant la pompe à l'aiguille", "quantite": "au moins 5 m" },
+      { "nom": "Pas de tir : caisse, cagette ou trois piquets maintenant la bouteille goulot en bas", "quantite": "1" },
+      { "nom": "Carton fort et ruban adhésif pour trois ailerons et une coiffe", "quantite": "1" },
+      { "nom": "Lunettes de protection", "quantite": "1 par personne" },
+      { "nom": "Eau", "quantite": "0,5 L" }
+    ],
+    "etapes": [
+      "Choisir un grand espace dégagé en extérieur (pelouse, terrain de sport) d'au moins 30 m de côté, sans arbre, fil électrique ni passant, par temps calme.",
+      "Coller trois ailerons en carton répartis autour de la bouteille, près du goulot, et une coiffe arrondie sur le fond : c'est le haut de la fusée.",
+      "Préparer le bouchon avec l'adulte : l'aiguille de gonflage doit le traverser de part en part, et le tuyau de la pompe y être raccordé.",
+      "Remplir la bouteille d'eau au tiers environ (0,5 L), enfoncer le bouchon modérément, puis retourner la bouteille, goulot vers le bas, sur le pas de tir, bien verticale.",
+      "Dérouler le tuyau sur toute sa longueur ; tout le monde met ses lunettes et se place à au moins 5 m, sur le côté, personne devant ni au-dessus de la fusée.",
+      "L'adulte pompe régulièrement en surveillant le manomètre. La fusée décolle d'elle-même quand le bouchon cède.",
+      "Si le bouchon n'a pas cédé à 3 bar, arrêter de pomper et tirer d'un coup sec sur le tuyau depuis sa position, sans s'approcher : le bouchon se libère et la fusée part. Au tir suivant, enfoncer le bouchon un peu moins.",
+      "Attendre que la fusée soit retombée et immobile avant d'aller la ramasser. Inspecter la bouteille : au moindre pli, fissure ou blanchiment du plastique, la remplacer."
+    ],
+    "precautions": [
+      "N'utiliser que des bouteilles de boisson gazeuse en PET, conçues pour la pression ; jamais de bouteille d'eau plate, de verre, de métal ni de bouteille abîmée ou déjà déformée.",
+      "Ne jamais dépasser 3 bar et ne jamais se pencher au-dessus de la bouteille quand elle est sous pression.",
+      "Personne devant ni au-dessus de la fusée ; lunettes de protection pour tous, et tir uniquement sous la responsabilité d'un adulte.",
+      "Ne jamais viser une personne, un animal, une maison ou une route, et ne pas tirer par vent fort.",
+      "Ne pas réutiliser une bouteille qui a heurté un sol dur ou présente la moindre déformation."
+    ],
+    "resultat": "Dans un jaillissement d'eau, la bouteille décolle en une fraction de seconde et monte d'une quinzaine à une vingtaine de mètres avant de retomber. Avec trop peu ou trop d'eau, elle monte nettement moins haut : il existe un remplissage optimal, autour du tiers.",
+    "explication": [
+      "En pompant, on augmente la [[pression]] de l'air enfermé au-dessus de l'eau. Cet air comprimé stocke de l'énergie, comme un ressort que l'on tend. Quand le bouchon cède, il pousse violemment l'eau à travers le goulot.",
+      "L'eau est éjectée vers le bas à grande vitesse. D'après le [[action-reaction|principe d'action-réaction]], l'eau exerce sur la bouteille une force égale et opposée : la poussée, dirigée vers le haut. L'eau, bien plus lourde que l'air, emporte beaucoup de mouvement à chaque instant, d'où une poussée bien supérieure à celle de l'air seul.",
+      "L'énergie de l'air comprimé devient [[energie-cinetique]] de la fusée, puis [[energie-potentielle]] à mesure qu'elle monte. Trop d'eau laisse peu de place à l'air et alourdit la fusée ; trop peu d'eau donne une poussée trop brève. Les ailerons placés en bas maintiennent la fusée droite, comme les plumes d'une flèche."
+    ],
+    "pourAllerPlusLoin": "Faire une série de tirs à la même pression (2 bar) en changeant seulement la quantité d'eau : 0,2 L, 0,4 L, 0,5 L, 0,7 L. Estimer la hauteur atteinte (par exemple en chronométrant la durée du vol) et trouver le remplissage optimal.",
+    "fiches": ["pression-atmospherique", "energie-cinetique-fronde"]
+  },
+  {
+    "id": "infrarouge-camera",
+    "titre": "Voir l'infrarouge avec un téléphone",
+    "sousTitre": "La lumière invisible de la télécommande apparaît à l'écran",
+    "categories": ["lumiere"],
+    "duree": 15,
+    "difficulte": 1,
+    "adulte": false,
+    "securite": {
+      "niveau": "vert",
+      "note": "Sans danger : la LED d'une télécommande est très peu puissante. Ne pas démonter la télécommande et ranger ses piles hors de portée des jeunes enfants."
+    },
+    "schema": {
+      "fichier": "xp-infrarouge-camera.svg",
+      "alt": "Une télécommande à gauche émet un faisceau infrarouge vers la caméra frontale d'un téléphone, dont l'écran montre une lueur sur la LED. Le même faisceau vers un œil est barré : l'œil ne voit rien. En bas, une bande de spectre de 400 à 1 100 nm sépare la lumière visible de l'infrarouge et repère la LED de télécommande à 940 nm.",
+      "legende": "La LED émet vers 940 nm : trop loin pour l'œil, mais encore dans la plage du capteur du téléphone."
+    },
+    "materiel": [
+      { "nom": "Télécommande infrarouge (télévision, climatiseur…) avec des piles en état", "quantite": "1" },
+      { "nom": "Smartphone avec caméra frontale et caméra arrière", "quantite": "1" },
+      { "nom": "Feuille de papier blanc, verre d'eau, sac poubelle noir", "quantite": "1 de chaque" },
+      { "nom": "Pièce qu'on peut plonger dans le noir", "quantite": "1" }
+    ],
+    "etapes": [
+      "Regarder directement la petite LED à l'avant de la télécommande en appuyant sur un bouton : à l'œil nu, on ne voit rien.",
+      "Ouvrir l'appareil photo du téléphone en mode caméra frontale (selfie) et pointer la télécommande vers l'objectif, à 10 cm.",
+      "Appuyer sur un bouton : la LED apparaît à l'écran sous forme d'un point lumineux blanc violacé qui clignote rapidement.",
+      "Recommencer avec la caméra arrière : selon les modèles, la lueur est plus faible, voire invisible, car cette caméra possède souvent un filtre anti-infrarouge plus efficace.",
+      "Placer successivement une feuille de papier, un verre d'eau puis un morceau de sac poubelle noir entre la télécommande et la caméra, et noter ce qui laisse passer l'infrarouge.",
+      "Vision nocturne improvisée : dans la pièce plongée dans le noir, tenir la télécommande à 10 ou 20 cm d'un objet clair, bouton enfoncé, et le filmer avec la caméra frontale : l'objet apparaît faiblement éclairé à l'écran alors que l'œil ne le voit pas."
+    ],
+    "precautions": [
+      "Ne pas démonter la télécommande ni retirer sa LED.",
+      "Ranger les piles hors de portée des jeunes enfants, surtout les piles bouton, très dangereuses si elles sont avalées.",
+      "Ne pas appuyer trop longtemps sur les boutons en visant un appareil allumé : on risquerait de dérégler la télévision ou le climatiseur."
+    ],
+    "resultat": "La LED, invisible à l'œil, apparaît nettement à l'écran du téléphone et clignote à chaque appui, surtout avec la caméra frontale. Le papier fin et l'eau laissent passer une partie de la lueur, et certains plastiques noirs, opaques pour l'œil, la laissent passer aussi. Dans le noir, un objet proche devient visible à l'écran.",
+    "explication": [
+      "La télécommande communique par impulsions de lumière [[infrarouge]], d'une [[longueur-onde]] d'environ 940 nm. Notre œil ne perçoit la lumière qu'entre 400 et 780 nm environ : au-delà, il est aveugle, comme une oreille face aux ultrasons.",
+      "Le [[capteur-image]] du téléphone est en silicium, sensible jusque vers 1 100 nm. Les fabricants placent devant lui un filtre qui bloque la plus grande partie de l'infrarouge, sinon les couleurs des photos seraient faussées. Ce filtre est souvent moins efficace sur la caméra frontale, d'où une lueur plus visible.",
+      "Le capteur n'a pas de « couleur infrarouge » : l'infrarouge qui traverse le filtre touche ses pixels rouges, verts et bleus, et l'écran affiche une lueur blanche ou violacée. Un matériau peut être opaque pour la lumière visible et transparent pour l'infrarouge, et inversement : c'est le cas de certains plastiques noirs."
+    ],
+    "pourAllerPlusLoin": "Pointer la télécommande vers un miroir puis vers un mur, à 2 m de la télévision : arrive-t-on encore à changer de chaîne ? Qu'est-ce que cela montre sur la réflexion de l'infrarouge ?",
+    "fiches": ["infrarouge-vision"]
+  },
+  {
+    "id": "boussole-aiguille",
+    "titre": "Boussole flottante",
+    "sousTitre": "Une aiguille aimantée sur un bouchon trouve le nord toute seule",
+    "categories": ["magnetisme"],
+    "duree": 15,
+    "difficulte": 1,
+    "adulte": false,
+    "securite": {
+      "niveau": "vert",
+      "note": "Sans danger. Attention à la pointe de l'aiguille et à la découpe du bouchon, à confier à un adulte."
+    },
+    "schema": {
+      "fichier": "xp-boussole-aiguille.svg",
+      "alt": "À gauche, un aimant glisse le long d'une aiguille, toujours dans le même sens. À droite, un bol vu en perspective contient de l'eau sur laquelle flotte un disque de bouchon portant l'aiguille, orientée selon l'axe nord-sud ; une flèche indique le nord. Un encadré explique que l'aiguille aimantée s'aligne sur le champ magnétique terrestre.",
+      "legende": "Aimantée par frottement et libre de tourner sur l'eau, l'aiguille s'aligne sur le champ magnétique de la Terre."
+    },
+    "materiel": [
+      { "nom": "Aiguille à coudre en acier", "quantite": "1" },
+      { "nom": "Aimant (un aimant de réfrigérateur peut suffire)", "quantite": "1" },
+      { "nom": "Bouchon en liège, ou petite feuille d'arbre, ou capsule en plastique", "quantite": "1" },
+      { "nom": "Bol en verre, en plastique ou en céramique (pas en métal)", "quantite": "1" },
+      { "nom": "Eau", "quantite": "le bol aux trois quarts" },
+      { "nom": "Téléphone avec application boussole, ou vraie boussole, pour vérifier", "quantite": "1" }
+    ],
+    "etapes": [
+      "Vérifier d'abord que l'aiguille n'attire pas un trombone : elle n'est pas encore aimantée.",
+      "Tenir l'aiguille par le chas et frotter un pôle de l'aimant de son chas jusqu'à sa pointe, 30 à 50 fois, toujours dans le même sens, en éloignant l'aimant entre deux passages.",
+      "Vérifier que l'aiguille attire maintenant un trombone ou de la limaille.",
+      "Faire découper par un adulte une rondelle de bouchon de 5 mm d'épaisseur, ou utiliser une petite feuille ou une capsule en plastique.",
+      "Poser le bol sur une table, loin de tout objet métallique, aimant, téléphone ou haut-parleur, et le remplir d'eau aux trois quarts.",
+      "Poser l'aiguille sur le flotteur, puis poser délicatement l'ensemble au centre de l'eau. Attendre qu'il s'immobilise.",
+      "Comparer l'orientation de l'aiguille avec la boussole du téléphone, et repérer quelle extrémité montre le nord.",
+      "Tourner doucement le flotteur d'un quart de tour avec un doigt et le lâcher : il revient à la même orientation."
+    ],
+    "precautions": [
+      "Faire découper le bouchon par un adulte, sur une planche, avec un couteau tenu loin des doigts.",
+      "Manipuler l'aiguille par le chas et la ranger piquée dans un bouchon après l'expérience.",
+      "Ne pas poser d'aimant puissant près d'un téléphone, d'une carte bancaire ou d'un stimulateur cardiaque."
+    ],
+    "resultat": "Le flotteur tourne lentement puis s'immobilise : l'aiguille indique l'axe nord-sud, en accord avec la boussole du téléphone. Écarté de cette direction, il y revient toujours. Un objet en fer approché le fait dévier.",
+    "explication": [
+      "L'acier de l'aiguille est [[ferromagnetique]] : il contient de minuscules zones déjà aimantées, orientées au hasard, qui s'annulent. Frotter l'aimant toujours dans le même sens les aligne en grande partie : c'est l'[[aimantation]]. L'aiguille devient un petit aimant, avec un pôle nord et un pôle sud.",
+      "La Terre se comporte comme un énorme aimant et produit un [[champ-magnetique]] faible mais présent partout. Libre de tourner, l'aiguille s'aligne sur ses lignes de champ : son [[pole-magnetique]] nord se tourne vers le nord. Le pôle Nord géographique correspond en fait à un pôle sud magnétique, puisque les pôles opposés s'attirent.",
+      "L'eau sert de pivot presque sans frottement : la force exercée par la Terre est minuscule et ne suffirait pas à faire tourner une aiguille posée sur une table. En France, le nord magnétique et le nord géographique ne diffèrent que de quelques degrés."
+    ],
+    "pourAllerPlusLoin": "Approcher un aimant du bol : quelle extrémité de l'aiguille est attirée par le pôle marqué N de l'aimant ? Chauffer l'aiguille ou la laisser tomber plusieurs fois sur le sol diminue-t-il son aimantation ?",
+    "fiches": ["boussole-improvisee", "electroaimant"]
+  },
+  {
+    "id": "empreintes-cacao",
+    "titre": "Relever ses empreintes digitales",
+    "sousTitre": "Du cacao, un pinceau et du ruban adhésif, comme en police scientifique",
+    "categories": ["materiaux"],
+    "duree": 20,
+    "difficulte": 1,
+    "adulte": false,
+    "securite": {
+      "niveau": "vert",
+      "note": "Sans danger. On ne relève que ses propres empreintes ou celles de personnes d'accord, et on évite d'inhaler la poudre."
+    },
+    "schema": {
+      "fichier": "xp-empreintes-cacao.svg",
+      "alt": "Trois étapes côte à côte : un doigt appuie sur une plaque de verre et laisse une trace invisible de sueur et de sébum ; vu de dessus, un pinceau saupoudre du cacao qui fait apparaître l'empreinte ; un ruban adhésif collé sur une carte blanche conserve l'empreinte révélée. En bas, une légende explique que la poudre colle aux résidus gras.",
+      "legende": "La poudre fine adhère aux traces de sueur et de sébum déposées par les crêtes de la peau."
+    },
+    "materiel": [
+      { "nom": "Cacao en poudre non sucré (ou farine pour les surfaces sombres)", "quantite": "1 cuillère à café" },
+      { "nom": "Crayon à papier tendre (2B ou plus) et une feuille de papier", "quantite": "1" },
+      { "nom": "Pinceau doux (pinceau à maquillage ou à aquarelle)", "quantite": "1" },
+      { "nom": "Ruban adhésif transparent large", "quantite": "1 rouleau" },
+      { "nom": "Verre propre, miroir ou boîtier de CD", "quantite": "1" },
+      { "nom": "Cartes blanches et une carte noire", "quantite": "quelques-unes" },
+      { "nom": "Loupe", "quantite": "1 (facultatif)" }
+    ],
+    "etapes": [
+      "Se laver et se sécher les mains, puis passer le bout de l'index sur le front ou l'aile du nez pour le charger légèrement en sébum.",
+      "Appuyer fermement l'index sur la surface lisse du verre, sans glisser, puis le retirer : la trace est presque invisible.",
+      "Tremper à peine le pinceau dans le cacao, tapoter pour enlever l'excès, puis balayer la zone très doucement, du bout des poils, par petits mouvements circulaires.",
+      "Quand les lignes apparaissent, souffler légèrement pour chasser la poudre en trop.",
+      "Poser un morceau de ruban adhésif sur l'empreinte, lisser avec le doigt sans frotter, puis le décoller d'un seul geste.",
+      "Coller le ruban sur une carte blanche : l'empreinte brune y est conservée.",
+      "Méthode au crayon : noircir un carré de papier au crayon, y frotter le bout du doigt, appliquer le ruban adhésif sur le doigt, le décoller et le coller sur une carte blanche.",
+      "Observer à la loupe et identifier le dessin général : arc, boucle ou tourbillon, puis repérer des détails comme une ligne qui se divise ou s'arrête."
+    ],
+    "precautions": [
+      "Ne relever que ses propres empreintes ou celles de proches qui sont d'accord, et ne pas les conserver ni les partager sans leur accord.",
+      "Ne pas souffler fort dans la poudre ni la respirer ; travailler au-dessus d'un papier journal.",
+      "Bien nettoyer le verre et le pinceau après usage."
+    ],
+    "resultat": "Sur le verre, un motif de lignes brunes très fines apparaît là où il n'y avait qu'une trace à peine visible. Une fois relevé sur le ruban, il se conserve sur la carte et se compare facilement à la loupe à celui des autres doigts : aucun n'est identique.",
+    "explication": [
+      "La peau du bout des doigts forme des crêtes, appelées crêtes papillaires, percées de pores qui sécrètent de la sueur. En touchant une surface, ces crêtes y déposent un mince film de sueur, de sels et de sébum qui reproduit leur dessin : c'est une empreinte latente, invisible à l'œil nu.",
+      "Le cacao est une poudre très fine, à grande [[surface-specifique]]. Ses grains adhèrent bien mieux aux zones humides et grasses qu'au verre propre : ils restent piégés sur les crêtes et sont chassés des sillons par le pinceau. Le dessin apparaît par contraste.",
+      "Le ruban adhésif arrache les grains collés à la trace et les transporte sur la carte sans déformer le dessin. Les services de police scientifique utilisent le même principe, avec des poudres choisies pour contraster avec chaque surface."
+    ],
+    "pourAllerPlusLoin": "Comparer les empreintes laissées sur du verre, du plastique et du papier, puis avec la farine sur une surface sombre. Pourquoi la poudre fonctionne-t-elle mal sur le papier, qui absorbe la sueur ?",
+    "fiches": ["empreintes-poussiere"]
+  },
+  {
+    "id": "loupe-goutte-eau",
+    "titre": "Loupe à goutte d'eau",
+    "sousTitre": "Une goutte bombée grossit les lettres, une bouteille retourne les dessins",
+    "categories": ["lumiere", "fluides"],
+    "duree": 15,
+    "difficulte": 1,
+    "adulte": false,
+    "securite": {
+      "niveau": "vert",
+      "note": "Sans danger. Ne jamais regarder le Soleil à travers une lentille, et ne pas laisser une bouteille d'eau en plein soleil près de papier ou de tissu : elle peut concentrer la lumière."
+    },
+    "schema": {
+      "fichier": "xp-loupe-goutte-eau.svg",
+      "alt": "À gauche, vue de côté d'une goutte d'eau bombée posée sur un film transparent au-dessus d'une page : les rayons partant d'une lettre traversent la goutte et rejoignent l'œil ; leurs prolongements en pointillés montrent une image agrandie sous la page. À droite, une bouteille d'eau placée devant une flèche dessinée vers la droite : vue à travers la bouteille, la flèche est inversée et agrandie.",
+      "legende": "Une surface d'eau bombée fait converger la lumière : la goutte grossit dans toutes les directions, la bouteille dans une seule."
+    },
+    "materiel": [
+      { "nom": "Film plastique transparent rigide (pochette plastique, couvercle de boîte, boîtier de CD)", "quantite": "1" },
+      { "nom": "Paille ou compte-gouttes", "quantite": "1" },
+      { "nom": "Eau", "quantite": "un verre" },
+      { "nom": "Page de journal ou texte imprimé en petits caractères", "quantite": "1" },
+      { "nom": "Bouteille ronde et lisse, transparente, remplie d'eau", "quantite": "1" },
+      { "nom": "Carte avec une flèche dessinée au feutre noir", "quantite": "1" }
+    ],
+    "etapes": [
+      "Poser le film transparent à plat sur le texte, en le surélevant de 1 à 2 cm avec deux gommes ou deux livres.",
+      "Avec la paille, déposer une petite goutte d'eau (3 à 4 mm de diamètre) sur le film, au-dessus des lettres.",
+      "Regarder la goutte d'au-dessus, l'œil à environ 10 cm : les lettres sous la goutte apparaissent agrandies.",
+      "Ajouter une goutte beaucoup plus grosse et plus plate à côté, et comparer le grossissement des deux.",
+      "Faire varier la hauteur du film au-dessus du texte et noter quand l'image est la plus nette.",
+      "Dessiner une flèche horizontale de 3 cm pointant vers la droite sur une carte, puis la placer debout à 10 cm derrière la bouteille d'eau.",
+      "Regarder la flèche à travers la bouteille en éloignant la carte peu à peu : à partir d'une certaine distance, la flèche pointe vers la gauche et paraît élargie, mais garde sa hauteur."
+    ],
+    "precautions": [
+      "Ne jamais regarder le Soleil à travers la goutte, la bouteille ou une loupe.",
+      "Ne pas laisser de bouteille d'eau ou de boule de verre au soleil sur un rebord de fenêtre, près de rideaux ou de papier.",
+      "Essuyer l'eau renversée près des appareils électriques."
+    ],
+    "resultat": "Sous la goutte, les lettres paraissent deux à trois fois plus grandes ; la petite goutte, plus bombée, grossit davantage que la grosse goutte plate. À travers la bouteille, la flèche s'élargit, puis se retourne de gauche à droite quand on l'éloigne, sans changer de hauteur.",
+    "explication": [
+      "Grâce à la [[tension-superficielle]], la goutte prend une forme bombée, plus épaisse au centre qu'aux bords : c'est une [[lentille-convergente]] miniature. La lumière qui la traverse change de direction par [[refraction]] en passant de l'eau à l'air, et les rayons sont rabattus les uns vers les autres.",
+      "Quand l'objet est plus proche de la goutte que son [[foyer]], l'œil reçoit des rayons qui semblent provenir d'un objet plus grand, situé plus loin : il voit une image agrandie et droite, comme avec une loupe. Plus la goutte est petite, plus elle est courbée, plus son foyer est proche et plus elle grossit.",
+      "La bouteille est courbée dans une seule direction : c'est une lentille cylindrique, qui n'agit qu'horizontalement. Une fois l'objet placé au-delà de son foyer, l'image se retourne, mais seulement de gauche à droite : la flèche change de sens, alors que sa hauteur ne change pas."
+    ],
+    "pourAllerPlusLoin": "Remplacer l'eau par de l'huile, plus réfringente : la goutte grossit-elle davantage ? Et que voit-on à travers la bouteille avec un mot écrit à l'horizontale, puis à la verticale ?",
+    "fiches": ["lentille-bouteille", "miroir-concentration"]
+  },
+  {
+    "id": "distillateur-solaire",
+    "titre": "Distillateur solaire",
+    "sousTitre": "Tirer de l'eau douce d'une eau salée avec un saladier et du soleil",
+    "categories": ["thermique", "fluides"],
+    "duree": 240,
+    "difficulte": 1,
+    "adulte": false,
+    "securite": {
+      "niveau": "vert",
+      "note": "Sans danger. L'eau obtenue n'est garantie potable que si l'on part d'eau du robinet salée et d'un matériel propre : ce dispositif retire le sel mais pas tous les polluants."
+    },
+    "schema": {
+      "fichier": "xp-distillateur-solaire.svg",
+      "alt": "Saladier vu de côté contenant de l'eau salée, avec un verre vide posé au centre. Un film plastique tendu ferme le saladier ; un caillou posé au centre le creuse au-dessus du verre. Le soleil chauffe l'eau, la vapeur monte, se condense en gouttes sous le film, qui glissent vers le centre et tombent dans le verre. Un encadré précise que le sel ne s'évapore pas.",
+      "legende": "L'eau s'évapore en laissant le sel, se condense sous le film plus frais, puis coule vers le point bas et tombe dans le verre."
+    },
+    "materiel": [
+      { "nom": "Grand saladier (de préférence sombre à l'intérieur)", "quantite": "1" },
+      { "nom": "Verre ou petit bol, plus bas que le bord du saladier", "quantite": "1" },
+      { "nom": "Film plastique alimentaire", "quantite": "1 grand morceau" },
+      { "nom": "Élastique large ou ruban adhésif", "quantite": "1" },
+      { "nom": "Petit caillou propre", "quantite": "1" },
+      { "nom": "Eau du robinet et sel de cuisine", "quantite": "1 L et 2 cuillères à soupe" },
+      { "nom": "Colorant alimentaire (facultatif)", "quantite": "quelques gouttes" }
+    ],
+    "etapes": [
+      "Dissoudre le sel dans l'eau et goûter une goutte de cette eau salée pour s'en souvenir. Ajouter éventuellement quelques gouttes de colorant.",
+      "Poser le verre vide au centre du saladier ; s'il flotte, le lester avec quelques billes propres.",
+      "Verser l'eau salée dans le saladier, autour du verre, sur 2 à 3 cm de hauteur, sans en faire tomber dans le verre.",
+      "Tendre le film plastique sur le saladier et le fixer tout autour avec l'élastique pour que le montage soit bien étanche.",
+      "Poser le caillou au centre du film, juste au-dessus du verre : le film se creuse en cône, sans toucher le verre.",
+      "Placer le montage en plein soleil, sur une surface stable, pendant 3 à 4 heures, entre la fin de matinée et le milieu d'après-midi.",
+      "Observer régulièrement la buée puis les gouttes sous le film, et leur trajet jusqu'au centre.",
+      "Retirer le film et comparer : l'eau du verre est incolore et, si l'on est parti d'eau du robinet, n'a plus le goût salé."
+    ],
+    "precautions": [
+      "Pour goûter le résultat, partir uniquement d'eau du robinet et de sel de cuisine, avec un matériel lavé : ce dispositif ne rend pas potable une eau polluée par des produits chimiques.",
+      "Préférer un saladier en plastique ou en inox à un saladier en verre, plus fragile en cas de chute.",
+      "Ne pas boire l'eau du saladier : très salée, elle déshydrate au lieu d'hydrater."
+    ],
+    "resultat": "Au bout de quelques minutes, une buée se forme sous le film, puis de vraies gouttes qui grossissent, glissent vers le creux et tombent dans le verre. Après quelques heures, on récupère quelques dizaines de millilitres d'eau incolore et non salée, tandis que l'eau du saladier devient plus salée.",
+    "explication": [
+      "Le rayonnement du Soleil traverse le film et chauffe l'eau salée. Une partie de l'eau passe à l'état de vapeur par [[evaporation]]. Le sel, lui, ne s'évapore pas aux températures atteintes : il reste dans le saladier, tout comme le colorant.",
+      "L'air enfermé se charge de vapeur. Le film, refroidi par l'air extérieur, est plus frais que cet air humide : la vapeur s'y transforme en gouttes par [[condensation]], en libérant la [[chaleur-latente]] qu'elle avait absorbée en s'évaporant.",
+      "Grâce au caillou, le film forme une pente vers le centre. Les gouttes glissent jusqu'au point bas et tombent dans le verre. C'est le principe de la distillation, utilisé pour dessaler l'eau de mer, ici alimenté par l'énergie solaire. Le rendement reste faible : il faut beaucoup de surface pour produire un litre."
+    ],
+    "pourAllerPlusLoin": "Faire deux montages identiques, l'un avec un saladier clair, l'autre avec un fond tapissé de papier noir, et comparer la quantité d'eau recueillie. Quel rôle joue la couleur du fond ?",
+    "fiches": ["eau-solaire", "isolation-thermique"]
+  }
+]
