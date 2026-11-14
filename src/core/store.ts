@@ -217,13 +217,27 @@ export function resetProgress(): void {
   listeners.forEach((fn) => fn(progress as Progress));
 }
 
+/** Lecture / écriture brutes d'une clé (avec repli en mémoire), pour les autres magasins locaux. */
+export const readKey = (key: string): string | null => readRaw(key);
+export const writeKey = (key: string, value: string): boolean => writeRaw(key, value);
+
+/** Clé des fiches et fonctions personnelles (voir core/perso.ts), incluse dans la sauvegarde. */
+export const PERSO_KEY = 'mgl:perso';
+
 export function exportProgress(): string {
-  return JSON.stringify({ app: 'macgyver-lab', exportLe: new Date().toISOString(), progression: getProgress(), reglages: getSettings() }, null, 2);
+  let perso: unknown = null;
+  try {
+    perso = JSON.parse(readRaw(PERSO_KEY) || 'null');
+  } catch {
+    perso = null;
+  }
+  return JSON.stringify({ app: 'macgyver-lab', exportLe: new Date().toISOString(), progression: getProgress(), reglages: getSettings(), perso }, null, 2);
 }
 
 export function importProgress(json: string): void {
-  const data = JSON.parse(json) as { app?: string; progression?: unknown; reglages?: unknown };
+  const data = JSON.parse(json) as { app?: string; progression?: unknown; reglages?: unknown; perso?: unknown };
   if (data.app !== 'macgyver-lab' || !data.progression) throw new Error('format');
+  if (data.perso && typeof data.perso === 'object') writeRaw(PERSO_KEY, JSON.stringify(data.perso));
   progress = migrate(data.progression);
   saveProgress();
   if (data.reglages) setSettings(data.reglages as Partial<Settings>);

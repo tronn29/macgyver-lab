@@ -31,6 +31,14 @@ export const SECTIONS = {
 const INFOS = new Set(['modele', 'aide', 'score']);
 
 /** Retire les balises de glossaire [[id]] / [[id|texte]] : ce qui reste entre crochets est un texte à remplacer. */
+/** Valeur désignée par un chemin JSON (« /schema/fichier »). */
+function valueAt(obj, pointer) {
+  return pointer
+    .split('/')
+    .slice(1)
+    .reduce((v, key) => (v == null ? v : v[key.replace(/~1/g, '/').replace(/~0/g, '~')]), obj);
+}
+
 export function hasPlaceholder(text) {
   return typeof text === 'string' && /[[\]]/.test(text.replace(/\[\[[^\]]*\]\]/g, ''));
 }
@@ -110,7 +118,12 @@ export function verifyModel(model, { contentDir = join(ROOT, 'public', 'content'
     }
     const validate = ajv.getSchema(`content#/definitions/${SECTIONS[k].def}`);
     items.forEach((item, i) => {
-      if (!validate(item)) for (const e of validate.errors) erreurs.push(`${k}[${i}] : ${ajvMessage(e)}`);
+      if (!validate(item))
+        for (const e of validate.errors) {
+          // Un texte entre crochets est déjà signalé « texte à remplacer » : pas de second message sur son format
+          if (['pattern', 'enum', 'minLength', 'maxLength'].includes(e.keyword) && hasPlaceholder(valueAt(item, e.instancePath))) continue;
+          erreurs.push(`${k}[${i}] : ${ajvMessage(e)}`);
+        }
     });
   }
 

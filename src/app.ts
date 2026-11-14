@@ -66,8 +66,13 @@ export async function promptInstall(): Promise<void> {
 function registerRoutes(): void {
   route('/', () => homeView());
   route('/archives', archivesList);
+  // Éditeur de fiches perso (chargé à la demande), déclaré avant « /archives/:id »
+  route('/archives/creer', async (ctx) => (await import('./views/editeur')).ficheEditor(ctx));
+  route('/archives/editer/:id', async (ctx) => (await import('./views/editeur')).ficheEditor(ctx));
   route('/archives/:id', ficheDetail);
   route('/arsenal', arsenalList);
+  route('/arsenal/creer', async (ctx) => (await import('./views/editeur')).fonctionEditor(ctx));
+  route('/arsenal/editer/:id', async (ctx) => (await import('./views/editeur')).fonctionEditor(ctx));
   route('/arsenal/f/:id', fonctionDetail);
   route('/arsenal/o/:id', objetDetail);
   route('/labo', laboList);

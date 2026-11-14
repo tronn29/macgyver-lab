@@ -9,6 +9,7 @@
 | **Arsenal** | 12 fonctions, 119 objets, efficacité notée de 1 à 3, comment / pourquoi / limite, vue par fonction ou par objet, page objet (fonctions possibles, missions où il apparaît, propriétés, lieux) |
 | **Laboratoire** | 11 expériences : matériel, protocole à cocher, précautions, résultat, explication, variante, « J'ai réalisé l'expérience » |
 | **Opérations** | 6 missions (2 faciles, 2 moyennes, 2 difficiles), dossier de briefing, compte à rebours avec pause, scan par zones (tuiles ou liste), 3 indices payants qui se débloquent dans l'ordre, solution écrite, brouillon automatique, rapport (score détaillé, idées clés, leurres, objet clé, pièce manquante, solutions possibles, auto-évaluation, fiches à réviser), historique |
+| **Mes fiches, Mes fonctions** | Éditeur dans l'appli (formulaire, paragraphes typés, quiz, image par défaut ou schéma officiel, aperçu au vrai design, brouillon automatique), sections séparées des listes officielles, modification, export au format des modèles, suppression ; comptées dans la lecture, les favoris, les quiz, la recherche et les statistiques |
 | **Entraînement** | Défi du jour, révision espacée (Leitner), entraînement libre, 5 parcours thématiques |
 | **Ressources** | Recherche globale (questions naturelles, surlignage), glossaire (65 termes), favoris |
 | **Profil** | Progression (indicateurs, activité sur 28 jours, points faibles par catégorie, 11 insignes, historique), réglages, confidentialité |

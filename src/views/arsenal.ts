@@ -7,7 +7,9 @@ import type { RouteContext, View } from '../core/router';
 import { setQuery } from '../core/router';
 import { tokenize } from '../core/search';
 import type { Fonction, Objet } from '../core/types';
-import { emptyState, panel, safetyBadge, segmented } from '../ui/components';
+import { emptyState, linkBtn, panel, safetyBadge, segmented } from '../ui/components';
+import { estPerso, isPerso, persoFonctions } from '../core/perso';
+import { persoBar } from './perso-ui';
 import { icon } from '../ui/icons';
 import { catIcon, catName, favButton, fonctionCard, notFoundView, pageHeader, relatedLinks } from './common';
 
@@ -52,8 +54,23 @@ export function arsenalList(ctx: RouteContext): View {
     const tokens = tokenize(q);
     if (vue === 'fonctions') {
       const items = c.fonctions.filter((f) => !tokens.length || fonctionMatches(f, tokens));
+      const perso = persoFonctions().filter((f) => !tokens.length || fonctionMatches(f, tokens));
       countEl.textContent = t('arsenal.fonctions', { n: items.length });
-      results.replaceChildren(items.length ? h('div', { class: 'card-grid' }, ...items.map(fonctionCard)) : emptyState(t('arsenal.aucunResultat'), '', { icon: 'search' }));
+      results.replaceChildren(
+        // Mes fonctions (écrites dans l'appli) : section à part, au-dessus des fonctions officielles
+        ...(persoFonctions().length
+          ? [
+              h(
+                'section',
+                { class: 'perso-section', 'aria-labelledby': 'mes-fonctions-t' },
+                h('div', { class: 'perso-section__head' }, h('h2', { class: 'block-title', id: 'mes-fonctions-t' }, icon('pen', 20), t('perso.mesFonctions')), h('span', { class: 'chip chip--muted' }, t('arsenal.fonctions', { n: perso.length }))),
+                perso.length ? h('div', { class: 'card-grid' }, ...perso.map(fonctionCard)) : h('p', { class: 'muted' }, t('perso.aucuneFonctionFiltre'))
+              ),
+              h('h2', { class: 'block-title block-title--spaced' }, t('perso.fonctionsOfficielles')),
+            ]
+          : []),
+        items.length ? h('div', { class: 'card-grid' }, ...items.map(fonctionCard)) : emptyState(t('arsenal.aucunResultat'), '', { icon: 'search' })
+      );
     } else {
       const items = objetsUtiles.filter((o) => !tokens.length || objetMatches(o, tokens));
       countEl.textContent = t('commun.objets', { n: items.length });
@@ -99,7 +116,13 @@ export function arsenalList(ctx: RouteContext): View {
     node: h(
       'div',
       { class: 'page' },
-      pageHeader({ kicker: t('arsenal.kicker'), title: t('arsenal.titre'), icon: 'multitool', intro: t('arsenal.intro') }),
+      pageHeader({
+        kicker: t('arsenal.kicker'),
+        title: t('arsenal.titre'),
+        icon: 'multitool',
+        intro: t('arsenal.intro'),
+        actions: [linkBtn(t('perso.creerFonction'), '#/arsenal/creer', { variant: 'primary', small: true, icon: 'plus' })],
+      }),
       h(
         'div',
         { class: 'toolbar toolbar--split' },
@@ -119,8 +142,8 @@ export function arsenalList(ctx: RouteContext): View {
           { hideLegend: true }
         )
       ),
-      countEl,
       h('h2', { class: 'sr-only' }, t('commun.listeTitre')),
+      countEl,
       results
     ),
   };
@@ -140,15 +163,18 @@ export function fonctionDetail(ctx: RouteContext): View {
       'article',
       { class: 'page fonction' },
       pageHeader({
-        kicker: `${t('arsenal.kicker')} · ${catName(fn.categorie)}`,
+        kicker: `${estPerso(fn.id) ? t('perso.maFonction') : t('arsenal.kicker')} · ${catName(fn.categorie)}`,
         title: fn.titre,
         icon: fn.icone,
         back: { href: '#/arsenal', label: t('arsenal.titre') },
         actions: [favButton('fonction', fn.id, fn.titre)],
-        intro: fn.resume,
+        intro: fn.resume || undefined,
         meta: [h('span', { class: 'chip chip--muted' }, icon(catIcon(fn.categorie), 14), catName(fn.categorie)), fn.securite ? safetyBadge(fn.securite.niveau) : null],
       }),
-      panel([h('h2', { class: 'block-title' }, icon('bulb', 20), t('arsenal.principe')), h('p', { class: 'panel__text panel__text--lg' }, fn.principe), fn.securite ? h('p', { class: `notice notice--${fn.securite.niveau === 'rouge' ? 'danger' : 'warning'}` }, icon('shield', 18), fn.securite.note) : null], { class: 'principle-panel', corners: true }),
+      isPerso(fn.id) ? persoBar('fonction', fn) : null,
+      !fn.principe && !fn.securite
+        ? null
+        : panel([h('h2', { class: 'block-title' }, icon('bulb', 20), t('arsenal.principe')), fn.principe ? h('p', { class: 'panel__text panel__text--lg' }, fn.principe) : null, fn.securite ? h('p', { class: `notice notice--${fn.securite.niveau === 'rouge' ? 'danger' : 'warning'}` }, icon('shield', 18), fn.securite.note) : null], { class: 'principle-panel', corners: true }),
       h('h2', { class: 'block-title block-title--spaced' }, icon('multitool', 20), t('arsenal.objetsCandidats')),
       h(
         'ol',
@@ -169,7 +195,7 @@ export function fonctionDetail(ctx: RouteContext): View {
             h(
               'dl',
               { class: 'equiv__body' },
-              h('div', null, h('dt', null, t('arsenal.comment')), h('dd', null, it.comment)),
+              it.comment ? h('div', null, h('dt', null, t('arsenal.comment')), h('dd', null, it.comment)) : null,
               h('div', null, h('dt', null, t('arsenal.pourquoi')), h('dd', null, it.pourquoi)),
               it.limite ? h('div', { class: 'equiv__limit' }, h('dt', null, t('arsenal.limite')), h('dd', null, it.limite)) : null
             )
@@ -224,7 +250,7 @@ export function objetDetail(ctx: RouteContext): View {
                 'li',
                 { class: 'equiv' },
                 h('div', { class: 'equiv__head' }, h('a', { class: 'equiv__obj', href: `#/arsenal/f/${fn.id}` }, icon(fn.icone, 20), h('span', null, fn.titre)), it ? efficacite(it.efficacite) : null),
-                it ? h('dl', { class: 'equiv__body' }, h('div', null, h('dt', null, t('arsenal.comment')), h('dd', null, it.comment)), h('div', null, h('dt', null, t('arsenal.pourquoi')), h('dd', null, it.pourquoi)), it.limite ? h('div', { class: 'equiv__limit' }, h('dt', null, t('arsenal.limite')), h('dd', null, it.limite)) : null) : null
+                it ? h('dl', { class: 'equiv__body' }, it.comment ? h('div', null, h('dt', null, t('arsenal.comment')), h('dd', null, it.comment)) : null, h('div', null, h('dt', null, t('arsenal.pourquoi')), h('dd', null, it.pourquoi)), it.limite ? h('div', { class: 'equiv__limit' }, h('dt', null, t('arsenal.limite')), h('dd', null, it.limite)) : null) : null
               );
             })
           )

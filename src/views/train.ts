@@ -19,7 +19,7 @@ export function revisionView(): View {
   const c = content();
   const p = getProgress();
   const stage = h('div', { class: 'train-stage' });
-  const cards = Object.entries(p.srs).filter(([id]) => c.byId.fiche.has(id));
+  const cards = Object.entries(p.srs).filter(([id]) => Boolean(c.byId.fiche.get(id)?.quiz.length));
 
   const boxes = h(
     'div',

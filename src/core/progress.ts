@@ -65,7 +65,8 @@ export function setRead(fiche: Fiche, lu: boolean): boolean {
     if (lu && !deja) {
       p.lus[fiche.id] = new Date().toISOString();
       p.xp += XP.ficheLue;
-      if (!p.srs[fiche.id]) p.srs[fiche.id] = newCard();
+      // Révision espacée : seulement si la fiche a un quiz (fiches perso sans quiz)
+      if (!p.srs[fiche.id] && fiche.quiz.length) p.srs[fiche.id] = newCard();
       recordActivity(p);
       change = true;
     } else if (!lu && deja) {
@@ -189,7 +190,7 @@ export function dueFiches(content: Content, today = dayKey()): Fiche[] {
   const p = getProgress();
   return dueIds(p.srs, today)
     .map((id) => content.byId.fiche.get(id))
-    .filter((f): f is Fiche => Boolean(f));
+    .filter((f): f is Fiche => Boolean(f?.quiz.length));
 }
 
 export function masteredCount(p: Progress): number {

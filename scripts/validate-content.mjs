@@ -276,12 +276,8 @@ for (const p of data.parcours) {
 /* ---------- 6 bis. Règle de contenu (non négociable) ----------
  * Bloque les termes de fabrication d'armes, d'explosifs ou de dispositifs dangereux, partout.
  * Pour un sujet sensible (principeSeul), bloque aussi toute quantité de matière et tout vocabulaire de montage. */
-const INTERDITS = [
-  /d[ée]tonateur/i, /poudre noire/i, /thermite/i, /napalm/i, /molotov/i, /nitrate d'ammonium/i, /chlorate de (potassium|sodium)/i,
-  /peroxyde d'ac[ée]tone/i, /\btatp\b/i, /m[èe]che lente/i, /explosif artisanal/i, /engin explosif/i, /arme artisanale/i,
-  /fabriquer (une|un|des) (arme|bombe|explosif|grenade|fumig[èe]ne)/i, /fabrication (d'une|d'un|de) (arme|bombe|explosif|grenade)/i,
-  /taser artisanal/i, /canon (de|à) (pomme de terre|patate)/i, /pistolet [àa] (clous|bille) improvis/i,
-];
+// Liste partagée avec l'éditeur de l'appli (src/core/regle-contenu.json)
+const INTERDITS = JSON.parse(readFileSync(join(ROOT, 'src', 'core', 'regle-contenu.json'), 'utf8')).interdits.map((s) => new RegExp(s, 'i'));
 const QUANTITE = /\b\d+(?:[.,]\d+)?\s?(?:mg|g|kg|grammes?|kilos?|ml|mL|cl|L|litres?|cuill[èe]res?)\b/;
 const MONTAGE = /\b(sch[ée]ma de montage|liste des composants|branche[rz]? (le|la|les) (fil|borne)|r[ée]sistance de \d|condensateur de \d|enroule[rz]? \d+ (tours|spires))/i;
 
@@ -317,8 +313,9 @@ for (const f of data.theorie) {
 }
 
 /* ---------- 7. SVG orphelins ---------- */
-// Le schéma d'exemple des modèles est vérifié comme les autres, mais il n'appartient à aucune fiche
-for (const f of readdirSync(SCHEMAS)) if (/^modele-.*\.svg$/.test(f)) checkSvg(`schemas/${f}`, f);
+// Le schéma d'exemple des modèles est vérifié comme les autres, mais il n'appartient à aucune fiche,
+// ainsi que l'image par défaut des fiches écrites dans l'appli (perso-*.svg)
+for (const f of readdirSync(SCHEMAS)) if (/^(modele|perso)-.*\.svg$/.test(f)) checkSvg(`schemas/${f}`, f);
 for (const f of readdirSync(SCHEMAS)) if (f.endsWith('.svg') && !usedSvgs.has(f)) warn(`schemas/${f}`, "schéma non utilisé par aucune fiche ni expérience");
 
 /* ---------- Résumé ---------- */

@@ -104,3 +104,21 @@ Tests : 54 (7 nouveaux : case « Lu », score enregistré, quiz cliqué dans un 
 | Glace sèche : « le CO₂ froid est 1,5 fois plus dense que l'air » (vrai seulement à température égale) | Formulation corrigée |
 | Deux tirets demi-cadratins dans des intervalles de valeurs | Remplacés par « à » |
 | Étiquettes du schéma CO₂ trop serrées (environ 1 unité de chevauchement) | Interlignes élargis |
+
+## Éditeur de fiches et de fonctions : vérifications et corrections
+
+- Tests : 86 (14 nouveaux : conversion des paragraphes, superposition sans toucher aux 22 fiches, lecture, favori, recherche et suppression avec ses traces, fiche sans quiz hors révision, stockage abîmé, identifiants, fonction avec objet du catalogue et objet nouveau, export accepté par `modele:verifier` une fois les crochets remplacés, règle de contenu, formulaire réel : refus vide, aperçu sans trace, enregistrement).
+- Parcours complet dans un vrai navigateur, au clavier, sur téléphone (375 × 812) : créer une fiche (accroche, série et réalité, À retenir, question), aperçu, enregistrement, case « Lu », favori, quiz, liste « Mes fiches », accueil, statistiques, recherche, révision, modification, export, suppression ; même chose pour une fonction. Version de production vérifiée aussi (schéma par défaut chargé, aucune erreur).
+- Contraste : 0 échec dans les thèmes sombre, clair et contraste élevé (listes, fiche et fonction perso, formulaires avec erreurs, aperçu, export, réglages).
+- Accessibilité du formulaire : chaque champ a une étiquette, aucun identifiant en double, titres sans saut (h1, h2 par section, h3 par paragraphe ou question), cases « bonne réponse » de 24 px avec un nom distinct (« Réponse 2 »).
+- Paysage (812 × 375) et grand écran (1280 × 800) : aucun débordement horizontal sur les pages de l'éditeur.
+
+| Défaut trouvé | Correction |
+|---|---|
+| Archives en paysage : la rangée de filtres élargissait toute la page (défaut déjà présent) | Colonne de la barre d'outils limitée à la largeur de la page |
+| Les boutons « Créer une fiche » et « Surprends-moi » recouvraient le sur-titre sur téléphone | Boutons avec texte placés sous le titre sur petit écran |
+| Une fiche sans quiz aurait cassé la révision espacée | La révision ignore les fiches sans question |
+| Carte perso : catégorie, « Ma fiche » et « Lu » serrés sur une ligne | « Ma fiche » sur sa propre ligne |
+| Champs de réponse du quiz trop étroits sur téléphone | Bouton « Retirer » déplacé sous le champ |
+| Aperçu : défilement animé jusqu'en haut, plus d'une seconde | Défilement immédiat |
+| Export : moins de 4 paragraphes et nom de schéma signalés comme erreurs de format | Paragraphes à remplir ajoutés ; un seul message par texte entre crochets |

@@ -18,6 +18,7 @@ import { label, panel, segmented } from '../ui/components';
 import { icon } from '../ui/icons';
 import { ficheDetail } from './archives';
 import { fonctionDetail } from './arsenal';
+import { asPreview } from './apercu';
 import { pageHeader } from './common';
 import { experienceDetail } from './labo';
 import { missionBriefing, missionField } from './operations';
@@ -226,25 +227,6 @@ function ensureDemos() {
 /* ---------- Mise en forme de l'aperçu ---------- */
 
 /** Le titre de chaque aperçu devient un titre de niveau 2 (un seul h1 par page), sans changer son style. */
-function asPreview(node: HTMLElement, inertSelectors: string[] = []): HTMLElement {
-  node.classList.remove('view-enter');
-  node.querySelectorAll('h1').forEach((el) => {
-    el.setAttribute('role', 'heading');
-    el.setAttribute('aria-level', '2');
-    el.removeAttribute('tabindex');
-  });
-  node.querySelectorAll<HTMLElement>('.back-link, .pager').forEach((el) => (el.hidden = true));
-  // Commandes qui écriraient dans la progression : visibles mais non interactives (estompées)
-  for (const sel of ['.page-head__actions', '.read-box', '.notes', '.experience__done', '.briefing__launch'])
-    node.querySelectorAll<HTMLElement>(sel).forEach((el) => {
-      el.inert = true;
-      el.classList.add('is-preview-inert');
-    });
-  // Zones entières rendues non interactives sans changer leur apparence
-  for (const sel of inertSelectors) node.querySelectorAll<HTMLElement>(sel).forEach((el) => (el.inert = true));
-  return node;
-}
-
 const ctx = (id: string, query = ''): RouteContext => ({ path: '', params: { id }, query: new URLSearchParams(query) });
 
 function previewMission(m: Mission): HTMLElement {

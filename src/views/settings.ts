@@ -2,11 +2,14 @@
 import { content } from '../core/content';
 import { h } from '../core/dom';
 import { t } from '../core/i18n';
+import { navigate } from '../core/router';
 import { exportProgress, getSettings, importProgress, isPersistent, resetProgress, setSettings, type Settings } from '../core/store';
 import { btn, confirmDialog, linkBtn, panel, segmented, switchControl, toast } from '../ui/components';
 import { icon } from '../ui/icons';
 import { applySettings, installState, promptInstall } from '../app';
 import { pageHeader } from './common';
+import { resetSearchIndex } from './misc';
+import { applyPerso, deleteAllPerso, persoFiches, persoFonctions } from '../core/perso';
 
 declare const __APP_VERSION__: string;
 
@@ -41,6 +44,8 @@ export function settingsView() {
     if (!file) return;
     try {
       importProgress(await file.text());
+      applyPerso(content());
+      resetSearchIndex();
       applySettings(getSettings());
       toast(t('reglages.importOk'), { icon: 'check', tone: 'success' });
     } catch {
@@ -147,6 +152,26 @@ export function settingsView() {
             }, true),
         }),
         h('p', { class: 'muted small' }, t('reglages.stockage', { n: usedKb() }))
+      ),
+      h(
+        'section',
+        { class: 'panel settings__group', 'aria-labelledby': 'perso-t' },
+        h('h2', { class: 'block-title', id: 'perso-t' }, icon('pen', 20), t('perso.reglagesTitre')),
+        h('p', { class: 'panel__text' }, t('perso.reglagesTexte', { a: persoFiches().length, b: persoFonctions().length })),
+        h('div', { class: 'btn-row' }, linkBtn(t('perso.creerFiche'), '#/archives/creer', { variant: 'ghost', icon: 'plus' }), linkBtn(t('perso.creerFonction'), '#/arsenal/creer', { variant: 'ghost', icon: 'plus' })),
+        persoFiches().length + persoFonctions().length
+          ? btn(t('perso.toutSupprimer'), {
+              variant: 'danger',
+              icon: 'trash',
+              onClick: () =>
+                confirmDialog(t('perso.toutSupprimerTitre'), t('perso.toutSupprimerTexte'), t('perso.toutSupprimer'), () => {
+                  deleteAllPerso(content());
+                  resetSearchIndex();
+                  toast(t('perso.toutSupprime'), { icon: 'check' });
+                  navigate('/reglages', true);
+                }, true),
+            })
+          : null
       ),
       h(
         'section',

@@ -1,0 +1,23 @@
+{
+  "_note": "Règle de contenu (non négociable) : termes bloqués partout, dans le contenu officiel (validateur) et dans les fiches écrites dans l’appli (éditeur). Expressions régulières, insensibles à la casse.",
+  "interdits": [
+    "d[ée]tonateur",
+    "poudre noire",
+    "thermite",
+    "napalm",
+    "molotov",
+    "nitrate d'ammonium",
+    "chlorate de (potassium|sodium)",
+    "peroxyde d'ac[ée]tone",
+    "\\btatp\\b",
+    "m[èe]che lente",
+    "explosif artisanal",
+    "engin explosif",
+    "arme artisanale",
+    "fabriquer (une|un|des) (arme|bombe|explosif|grenade|fumig[èe]ne)",
+    "fabrication (d'une|d'un|de) (arme|bombe|explosif|grenade)",
+    "taser artisanal",
+    "canon (de|à) (pomme de terre|patate)",
+    "pistolet [àa] (clous|bille) improvis"
+  ]
+}

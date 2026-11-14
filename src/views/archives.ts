@@ -19,6 +19,9 @@ import { listenButton, stopSpeech } from '../ui/speech';
 import { navigate } from '../core/router';
 import { play } from '../core/sound';
 import { catIcon, catName, categoryFilter, countByCategory, favButton, ficheCard, notFoundView, pageHeader, relatedLinks } from './common';
+import { estPerso, isPerso, persoFiches, toutesFiches } from '../core/perso';
+import { persoBar } from './perso-ui';
+import { linkBtn } from '../ui/components';
 import { openGlossaryForFiche } from './glossaire';
 
 type Statut = 'toutes' | 'non-lues' | 'lues' | 'favoris';
@@ -30,18 +33,36 @@ export function archivesList(ctx: RouteContext): View {
   if (cat && !c.byId.categorie.has(cat)) cat = null;
 
   const grid = h('div', { class: 'card-grid', 'aria-live': 'polite' });
+  // Mes fiches (écrites dans l'appli) : section à part, au-dessus des fiches officielles
+  const persoGrid = h('div', { class: 'card-grid' });
+  const persoCount = h('span', { class: 'chip chip--muted' });
+  const persoSection = h(
+    'section',
+    { class: 'perso-section', 'aria-labelledby': 'mes-fiches-t' },
+    h('div', { class: 'perso-section__head' }, h('h2', { class: 'block-title', id: 'mes-fiches-t' }, icon('pen', 20), t('perso.mesFiches')), persoCount),
+    persoGrid
+  );
+  const officiellesTitre = h('h2', { class: 'sr-only' }, t('commun.listeTitre'));
   const filterSlot = h('div');
   const countEl = h('p', { class: 'list-count' });
 
   const apply = () => {
     const p = getProgress();
-    const items = c.fiches.filter((f) => {
+    const garde = (f: Fiche) => {
       if (cat && !f.categories.includes(cat as Fiche['categories'][number])) return false;
       if (statut === 'lues' && !p.lus[f.id]) return false;
       if (statut === 'non-lues' && p.lus[f.id]) return false;
       if (statut === 'favoris' && !p.favoris[`fiche:${f.id}`]) return false;
       return true;
-    });
+    };
+    const items = c.fiches.filter(garde);
+    const perso = persoFiches().filter(garde);
+    persoSection.hidden = !persoFiches().length;
+    persoCount.textContent = t('commun.fiches', { n: perso.length });
+    persoGrid.replaceChildren(...(perso.length ? perso.map((f) => ficheCard(f)) : [h('p', { class: 'muted' }, t('perso.aucuneFiltre'))]));
+    // Titre visible seulement quand les deux sections coexistent
+    officiellesTitre.className = persoFiches().length ? 'block-title block-title--spaced' : 'sr-only';
+    officiellesTitre.textContent = persoFiches().length ? t('perso.fichesOfficielles') : t('commun.listeTitre');
     countEl.textContent = t('commun.fiches', { n: items.length });
     grid.replaceChildren(
       ...(items.length
@@ -67,7 +88,7 @@ export function archivesList(ctx: RouteContext): View {
 
   const renderFilters = () => {
     filterSlot.replaceChildren(
-      categoryFilter(cat, countByCategory(c.fiches), (id) => {
+      categoryFilter(cat, countByCategory(toutesFiches(c)), (id) => {
         cat = id;
         setQuery({ cat: id });
         renderFilters();
@@ -95,7 +116,8 @@ export function archivesList(ctx: RouteContext): View {
   renderFilters();
   apply();
 
-  const lus = Object.keys(getProgress().lus).filter((id) => c.byId.fiche.has(id)).length;
+  const toutes = toutesFiches(c);
+  const lus = toutes.filter((f) => getProgress().lus[f.id]).length;
   return {
     title: t('archives.titre'),
     section: 'archives',
@@ -109,6 +131,7 @@ export function archivesList(ctx: RouteContext): View {
         icon: 'archive',
         intro: t('archives.intro'),
         actions: [
+          linkBtn(t('perso.creerFiche'), '#/archives/creer', { variant: 'primary', small: true, icon: 'plus' }),
           h(
             'button',
             {
@@ -117,8 +140,8 @@ export function archivesList(ctx: RouteContext): View {
               title: t('archives.surpriseDesc'),
               onclick: () => {
                 const p = getProgress();
-                const pool = c.fiches.filter((f) => !p.lus[f.id]);
-                const list = pool.length ? pool : c.fiches;
+                const pool = toutes.filter((f) => !p.lus[f.id]);
+                const list = pool.length ? pool : toutes;
                 navigate(`/archives/${list[Math.floor(Math.random() * list.length)].id}`);
               },
             },
@@ -126,11 +149,12 @@ export function archivesList(ctx: RouteContext): View {
             h('span', null, t('archives.surprise'))
           ),
         ],
-        meta: [h('span', { class: 'chip chip--accent' }, icon('check', 14), t('home.lues', { a: lus, b: c.fiches.length }))],
+        meta: [h('span', { class: 'chip chip--accent' }, icon('check', 14), t('home.lues', { a: lus, b: toutes.length }))],
       }),
       h('div', { class: 'toolbar' }, filterSlot),
+      persoSection,
+      officiellesTitre,
       countEl,
-      h('h2', { class: 'sr-only' }, t('commun.listeTitre')),
       grid
     ),
   };
@@ -145,10 +169,12 @@ export function ficheDetail(ctx: RouteContext): View {
   const f = c.byId.fiche.get(ctx.params.id);
   if (!f) return notFoundView(t('archives.introuvable'), { href: '#/archives', label: t('archives.titre') });
 
+  // Fiche écrite dans l'appli (ou son aperçu dans l'éditeur) : pas de pager, commandes propres
+  const perso = estPerso(f.id);
   const list = orderedFiches();
   const idx = list.indexOf(f);
-  const prev = list[idx - 1];
-  const next = list[idx + 1];
+  const prev = idx > 0 ? list[idx - 1] : undefined;
+  const next = idx >= 0 ? list[idx + 1] : undefined;
   const settings = getSettings();
 
   /* Mode enfant */
@@ -205,8 +231,8 @@ export function ficheDetail(ctx: RouteContext): View {
     f.principeSeul
       ? h('div', { class: 'notice notice--danger', role: 'note' }, icon('shield', 20), h('p', null, t('securite.principeSeul')))
       : null,
-    h('div', { class: 'fiche__tools' }, eliBtn, listenButton(f, () => eliBtn.getAttribute('aria-pressed') === 'true'), termIds.size ? btn(t('archives.glossaire'), { variant: 'ghost', small: true, icon: 'book', onClick: () => openGlossaryForFiche(f, [...termIds]) }) : null),
-    enfantPanel,
+    h('div', { class: 'fiche__tools' }, f.enfant ? eliBtn : null, listenButton(f, () => eliBtn.getAttribute('aria-pressed') === 'true'), termIds.size ? btn(t('archives.glossaire'), { variant: 'ghost', small: true, icon: 'book', onClick: () => openGlossaryForFiche(f, [...termIds]) }) : null),
+    f.enfant ? enfantPanel : null,
     ...(long ? longBody(f) : shortBody(f)),
     f.echelle ? echelleBlock(f.echelle) : null,
     readBox,
@@ -230,7 +256,9 @@ export function ficheDetail(ctx: RouteContext): View {
           )
         )
       : null,
-    h(
+    perso && !fichesLiees.length && !equivalences.length && !pratiques.length
+      ? null
+      : h(
       'section',
       { class: 'links-block', 'aria-labelledby': 'links-t' },
       h('h2', { class: 'block-title', id: 'links-t' }, t('archives.liens')),
@@ -240,7 +268,9 @@ export function ficheDetail(ctx: RouteContext): View {
         { title: t('archives.pratique'), icon: 'flask', items: f.principeSeul ? [] : pratiques.map((x) => ({ href: `#/labo/${x.id}`, label: x.titre, icon: 'flask', sub: t('commun.minutes', { n: x.duree }) })) },
       ]) ?? h('p', { class: 'muted' }, t('commun.aucun'))
     ),
-    h(
+    !f.quiz.length
+      ? null
+      : h(
       'section',
       { class: 'quiz-block panel', 'aria-labelledby': 'quiz-t' },
       h('h2', { class: 'block-title', id: 'quiz-t' }, icon('brain', 20), t('archives.quiz')),
@@ -260,7 +290,9 @@ export function ficheDetail(ctx: RouteContext): View {
       )
     ),
     notesPanel(`fiche:${f.id}`, f.titre, `#/archives/${f.id}`),
-    h(
+    perso
+      ? null
+      : h(
       'nav',
       { class: 'pager', 'aria-label': t('archives.fiche') },
       prev ? h('a', { class: 'pager__link pager__link--prev', href: `#/archives/${prev.id}` }, icon('chevron-left', 18), h('span', null, h('small', null, t('archives.fichePrecedente')), prev.titre)) : h('span'),
@@ -283,7 +315,7 @@ export function ficheDetail(ctx: RouteContext): View {
     'article',
     { class: 'page fiche' },
     pageHeader({
-      kicker: `${t('archives.fiche')} · ${f.categories.map(catName).join(' · ')}`,
+      kicker: `${perso ? t('perso.maFiche') : t('archives.fiche')} · ${f.categories.map(catName).join(' · ')}`,
       title: f.titre,
       back: { href: '#/archives', label: t('archives.titre') },
       actions: [favButton('fiche', f.id, f.titre), iconBtn('share', t('commun.partager'), () => void shareFiche(f))],
@@ -296,6 +328,7 @@ export function ficheDetail(ctx: RouteContext): View {
       ],
     }),
     f.sousTitre ? h('p', { class: 'fiche__subtitle' }, f.sousTitre) : null,
+    isPerso(f.id) ? persoBar('fiche', f) : null,
     h('div', { class: ['fiche__layout', long && 'fiche__layout--long'] }, aside, main),
     schemaFab
   );
@@ -355,7 +388,7 @@ function longBody(f: Fiche & { texte: string[] }): HTMLElement[] {
   return [
     h('section', { class: 'longread', 'aria-labelledby': 'lr-t' }, h('h2', { class: 'sr-only', id: 'lr-t' }, t('archives.texte')), ...paras),
     panel(
-      [h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau), h('p', { class: 'panel__text' }, f.securite.note)],
+      [h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau), f.securite.note ? h('p', { class: 'panel__text' }, f.securite.note) : null],
       { class: `safety-panel safety-panel--${f.securite.niveau}` }
     ),
   ];

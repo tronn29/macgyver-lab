@@ -4,6 +4,7 @@ import { parseDay } from '../core/dates';
 import { h } from '../core/dom';
 import { fmtDate, fmtNumber, t, tList } from '../core/i18n';
 import { activityDays, BADGES, currentStreak, levelFor, masteredCount, weakPoints } from '../core/progress';
+import { persoFiches, persoFonctions, toutesFiches } from '../core/perso';
 import { getProgress } from '../core/store';
 import { label, linkBtn, panel, progressBar } from '../ui/components';
 import { icon } from '../ui/icons';
@@ -20,7 +21,8 @@ export function statsView() {
   const indices = p.missions.reduce((s, r) => s + r.details.indices.length, 0);
 
   const kpis: [string, string, string][] = [
-    ['archive', t('stats.fichesLues'), `${c.fiches.filter((f) => p.lus[f.id]).length}/${c.fiches.length}`],
+    ['archive', t('stats.fichesLues'), `${toutesFiches(c).filter((f) => p.lus[f.id]).length}/${toutesFiches(c).length}`],
+    ['pen', t('stats.ecrites'), String(persoFiches().length + persoFonctions().length)],
     ['brain', t('stats.maitrisees'), String(masteredCount(p))],
     ['flask', t('stats.experiences'), `${c.experiences.filter((e) => p.experiences[e.id]).length}/${c.experiences.length}`],
     ['target', t('stats.missionsReussies'), `${reussies}/${c.missions.length}`],

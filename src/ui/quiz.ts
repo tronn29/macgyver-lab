@@ -134,7 +134,7 @@ export function quizRunner(
           { class: ['quiz__result', correct ? 'is-correct' : 'is-wrong'] },
           h('p', { class: 'quiz__verdict' }, icon(correct ? 'check' : 'x', 18), correct ? t('quiz.bonne') : t('quiz.mauvaise')),
           !correct ? h('p', { class: 'quiz__answer' }, t('quiz.reponseEtait', { r: item.quiz.choix[item.quiz.reponse] })) : null,
-          h('p', { class: 'quiz__explain' }, item.quiz.explication),
+          item.quiz.explication ? h('p', { class: 'quiz__explain' }, item.quiz.explication) : null,
           opts.showFicheLink ? h('a', { class: 'quiz__link', href: `#/archives/${item.fiche.id}` }, icon('archive', 14), t('revision.ouvrirFiche')) : null
         )
       );

@@ -13,6 +13,7 @@ import './styles/schemas.css';
 
 import { applySettings, mountShell } from './app';
 import { loadContent, setContent } from './core/content';
+import { applyPerso } from './core/perso';
 import { h } from './core/dom';
 import { setLocale, t } from './core/i18n';
 import { getSettings, isPersistent } from './core/store';
@@ -26,6 +27,8 @@ async function boot(): Promise<void> {
   try {
     const c = await loadContent('fr');
     setContent(c);
+    // Fiches et fonctions écrites dans l'appli : superposées au contenu officiel, qui reste intact
+    applyPerso(c);
     mountShell(root);
     if (!isPersistent()) toast(t('app.stockageIndispo'), { icon: 'alert', tone: 'orange', duration: 8000 });
   } catch (err) {

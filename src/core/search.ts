@@ -7,6 +7,7 @@
 import { normalize } from './dom';
 import type { Content } from './types';
 import { ficheBody, stripMarkup } from './fiche';
+import { toutesFiches, toutesFonctions } from './perso';
 
 export type ResultType = 'fiche' | 'fonction' | 'objet' | 'experience' | 'mission' | 'terme';
 
@@ -37,7 +38,8 @@ export function tokenize(query: string): string[] {
 
 export function buildIndex(c: Content): SearchDoc[] {
   const docs: SearchDoc[] = [];
-  for (const f of c.fiches) {
+  // Fiches et fonctions perso comprises (écrites dans l'appli)
+  for (const f of toutesFiches(c)) {
     docs.push({
       type: 'fiche',
       id: f.id,
@@ -53,7 +55,7 @@ export function buildIndex(c: Content): SearchDoc[] {
       ],
     });
   }
-  for (const fn of c.fonctions) {
+  for (const fn of toutesFonctions(c)) {
     const objets = fn.objets.map((o) => {
       const obj = c.byId.objet.get(o.objet);
       return `${obj?.nom ?? o.objet} ${(obj?.alias ?? []).join(' ')}`;

@@ -1,5 +1,7 @@
 # Guide du contenu — MacGyver Lab
 
+> Pour écrire une fiche **pour toi seul**, sans fichier ni commande : Archives > « Créer une fiche » dans l'appli. Ce guide concerne le contenu officiel, publié pour tous les appareils.
+
 Tout le contenu de l'appli vit dans `public/content/fr/` (fichiers JSON) et `public/schemas/` (schémas SVG). Tu n'as jamais besoin de toucher au code pour ajouter une fiche, une fonction, une expérience ou une mission.
 
 ## 1. Où ajouter quoi

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Image par défaut des fiches personnelles (écrites dans l'appli, sans schéma) :
+       un carnet de terrain ouvert, un crayon et une ampoule d'idée. -->
+  <g>
+    <rect class="s-ghost" x="62" y="40" width="236" height="160" rx="8"/>
+    <rect class="s-solid" x="70" y="48" width="108" height="144" rx="4"/>
+    <rect class="s-solid" x="182" y="48" width="108" height="144" rx="4"/>
+    <path class="s-line" d="M180 50 V190"/>
+    <path class="s-thin" d="M84 78 H164 M84 96 H164 M84 114 H150 M84 132 H164 M84 150 H140"/>
+    <path class="s-thin" d="M196 132 H276 M196 150 H262 M196 168 H276"/>
+    <text class="s-label" x="124" y="68" text-anchor="middle">Ma fiche</text>
+  </g>
+  <g class="s-float">
+    <circle class="s-fill-accent s-pulse" cx="236" cy="92" r="20"/>
+    <circle class="s-accent" cx="236" cy="92" r="20"/>
+    <path class="s-accent" d="M228 116 H244 M230 122 H242"/>
+    <path class="s-accent s-draw" d="M228 96 L236 84 L244 96"/>
+  </g>
+  <g>
+    <path class="s-solid" d="M300 74 L318 92 L262 190 L246 194 L244 178 Z"/>
+    <path class="s-hot" d="M300 74 L318 92"/>
+    <path class="s-thin" d="M246 178 L262 190"/>
+  </g>
+  <text class="s-tiny" x="180" y="226" text-anchor="middle">Fiche personnelle, sans schéma</text>
+</svg>

@@ -6,6 +6,7 @@ Appli mobile personnelle (PWA) pour apprendre comment marche le monde, de façon
 - **Arsenal d'objets** (Équivalences) : 12 fonctions × 119 objets, recherche par fonction ou par objet (« que faire avec du papier alu ? »).
 - **Laboratoire** (Pratique) : 11 expériences sans danger, protocole à cocher.
 - **Opérations** (Missions) : 6 briefings (facile, moyen, difficile), scan de la pièce, indices payants, compte à rebours, score fondé sur la logique, rapport « Mission réussie » ou « À revoir ».
+- **Mes fiches et Mes fonctions** : un éditeur dans l'appli (bouton « Créer une fiche » des Archives, « Créer une fonction » de l'Arsenal) pour écrire ses propres fiches sans JSON ni commande, avec aperçu au vrai design. Enregistrées sur le téléphone, à part du contenu officiel, et exportables au format des modèles.
 - En plus : défi du jour, série de jours, révision espacée, parcours thématiques, glossaire avec infobulles, carnet de terrain, lecture vocale, statistiques et points faibles, insignes, partage d'une fiche en image, thème clair, hors connexion.
 
 ## Démarrer
@@ -28,7 +29,9 @@ npm run dev        # http://localhost:5173
 
 ## Ajouter du contenu
 
-Voir **[CONTENU.md](CONTENU.md)**. En résumé : modifier les fichiers JSON de `public/content/fr/` (et ajouter un SVG dans `public/schemas/` pour une fiche ou une expérience), lancer `npm run validate`, puis publier.
+**Pour toi seul, depuis le téléphone** : Archives > « Créer une fiche » (ou Arsenal > « Créer une fonction »). La fiche apparaît aussitôt dans « Mes fiches ». Le bouton « Exporter » d'une fiche perso donne son texte au format des modèles, si tu veux un jour en faire une fiche officielle.
+
+**Contenu officiel** : voir **[CONTENU.md](CONTENU.md)**. En résumé : modifier les fichiers JSON de `public/content/fr/` (et ajouter un SVG dans `public/schemas/` pour une fiche ou une expérience), lancer `npm run validate`, puis publier.
 
 ## Déployer (gratuit)
 

@@ -4,6 +4,7 @@ import { dayKey } from '../core/dates';
 import { h } from '../core/dom';
 import { fmtDate, fmtNumber, t, tList } from '../core/i18n';
 import { currentStreak, dueFiches, levelFor, weakPoints, XP } from '../core/progress';
+import { toutesFiches, toutesFonctions } from '../core/perso';
 import { navigate } from '../core/router';
 import { getProgress } from '../core/store';
 import { label, linkBtn, panel, progressBar, ring } from '../ui/components';
@@ -22,14 +23,17 @@ export function homeView() {
   const defiFait = Boolean(p.defis[today]);
   const hour = new Date().getHours();
 
-  const lues = c.fiches.filter((f) => p.lus[f.id]).length;
-  const vues = c.fonctions.filter((f) => p.vuesFonctions[f.id]).length;
+  // Totaux : fiches et fonctions perso comprises
+  const fiches = toutesFiches(c);
+  const fonctions = toutesFonctions(c);
+  const lues = fiches.filter((f) => p.lus[f.id]).length;
+  const vues = fonctions.filter((f) => p.vuesFonctions[f.id]).length;
   const faites = c.experiences.filter((e) => p.experiences[e.id]).length;
   const reussies = c.missions.filter((m) => p.missions.some((r) => r.id === m.id && r.reussie)).length;
 
   const modules = [
-    { href: '#/archives', icon: 'archive', code: 'MOD-01', name: t('nav.archives'), desc: t('home.archivesDesc'), a: lues, b: c.fiches.length, stat: t('home.lues', { a: lues, b: c.fiches.length }) },
-    { href: '#/arsenal', icon: 'multitool', code: 'MOD-02', name: t('nav.arsenalLong'), desc: t('home.arsenalDesc'), a: vues, b: c.fonctions.length, stat: t('home.fonctionsVues', { a: vues, b: c.fonctions.length }) },
+    { href: '#/archives', icon: 'archive', code: 'MOD-01', name: t('nav.archives'), desc: t('home.archivesDesc'), a: lues, b: fiches.length, stat: t('home.lues', { a: lues, b: fiches.length }) },
+    { href: '#/arsenal', icon: 'multitool', code: 'MOD-02', name: t('nav.arsenalLong'), desc: t('home.arsenalDesc'), a: vues, b: fonctions.length, stat: t('home.fonctionsVues', { a: vues, b: fonctions.length }) },
     { href: '#/labo', icon: 'flask', code: 'MOD-03', name: t('nav.laboLong'), desc: t('home.laboDesc'), a: faites, b: c.experiences.length, stat: t('home.faites', { a: faites, b: c.experiences.length }) },
     { href: '#/operations', icon: 'target', code: 'MOD-04', name: t('nav.operations'), desc: t('home.operationsDesc'), a: reussies, b: c.missions.length, stat: t('home.reussies', { a: reussies, b: c.missions.length }) },
   ];
