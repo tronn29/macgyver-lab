@@ -23,6 +23,8 @@ npm run dev        # http://localhost:5173
 | `npm run build` | validation + typecheck + build de production dans `dist/` |
 | `npm run preview` | sert `dist/` (avec service worker) sur http://localhost:4173 |
 | `npm run icons` | régénère les icônes de l'appli |
+| `npm run modele:verifier -- <fichier>` | liste ce qui manque dans un modèle rempli |
+| `npm run modele:ajouter -- <fichier>` | ajoute un modèle rempli à l'appli |
 
 ## Ajouter du contenu
 
@@ -69,4 +71,5 @@ Aucun compte, aucun traceur, aucune requête vers un tiers (polices incluses). L
 - [FONCTIONNALITES.md](FONCTIONNALITES.md) : inventaire, améliorations, ajouts
 - [TACHES.md](TACHES.md) : liste des tâches
 - [CONTENU.md](CONTENU.md) : guide pour ajouter du contenu (format, guide de style, règle des ordres de grandeur)
+- [MODELES.md](MODELES.md) : modèles vierges à dupliquer, page d'aperçu `#/modeles`, vérification et ajout
 - [ORDRES-DE-GRANDEUR.md](ORDRES-DE-GRANDEUR.md) : liste des ordres de grandeur avec leur prononciation et leur équivalent concret

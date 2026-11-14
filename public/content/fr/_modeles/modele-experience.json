@@ -1,0 +1,44 @@
+{
+  "modele": "experience",
+  "aide": "[Duplique ce fichier, remplace chaque texte entre crochets, puis lance : npm run modele:verifier -- public/content/fr/_modeles/mon-fichier.json. Uniquement des expériences sans danger et maîtrisables : jamais de feu, d'explosif, de fumigène ni de haute tension. Guide : MODELES.md.]",
+  "pratique": [
+    {
+      "id": "[identifiant-unique : minuscules et tirets, ex. : lampe-a-lave]",
+      "titre": "[Titre court, ex. : Lampe à lave maison]",
+      "sousTitre": "[Une phrase qui dit ce qu'on va voir, ex. : Des bulles colorées qui montent et descendent sans fin]",
+      "categories": ["[Catégorie principale : electricite, magnetisme, chimie, mecanique, lumiere, thermique, pression, materiaux ou fluides]"],
+      "duree": "[Durée en minutes, écrite sans guillemets, ex. : 20]",
+      "difficulte": "[1, 2 ou 3 écrit sans guillemets : 1 facile, 2 intermédiaire, 3 avancé]",
+      "adulte": "[true si la présence d'un adulte est recommandée, false sinon, écrit sans guillemets]",
+      "securite": {
+        "niveau": "[vert ou orange (jamais rouge pour une expérience)]",
+        "note": "[Le risque principal et la précaution, en une phrase]"
+      },
+      "schema": {
+        "fichier": "[Nom du dessin dans public/schemas/, commençant par xp-, ex. : xp-lampe-a-lave.svg ; pars de modele-exemple.svg]",
+        "alt": "[Description complète du montage dessiné, pour les personnes qui ne le voient pas (au moins 20 caractères)]",
+        "legende": "[Une phrase sous le schéma]"
+      },
+      "materiel": [
+        { "nom": "[Premier élément du matériel, ex. : Bouteille plastique transparente de 1,5 L (un litre et demi)]", "quantite": "[Quantité, ex. : 1]" },
+        { "nom": "[Deuxième élément, ex. : Huile de cuisine]", "quantite": "[Quantité, ex. : un verre]" }
+      ],
+      "etapes": [
+        "[Étape 1 : une action précise, ex. : Remplis la bouteille aux trois quarts d'huile.]",
+        "[Étape 2 : l'action suivante]",
+        "[Étape 3 : ajoute autant d'étapes que nécessaire (5 à 9 conseillées)]"
+      ],
+      "precautions": [
+        "[Précaution 1, ex. : Fais-le au-dessus d'un évier.]",
+        "[Précaution 2 facultative]"
+      ],
+      "resultat": "[Ce qu'on observe quand tout marche, en une ou deux phrases]",
+      "explication": [
+        "[Le principe : pourquoi ça se passe ainsi, avec une comparaison du quotidien et les valeurs prononcées. Terme du glossaire possible, ex. : [[densite|plus dense]].]",
+        "[Deuxième paragraphe facultatif : le détail physique]"
+      ],
+      "pourAllerPlusLoin": "[Facultatif : une variante ou une question à explorer ; supprime la ligne sinon]",
+      "fiches": ["[Identifiant d'une fiche Théorie liée, ex. : siphon]"]
+    }
+  ]
+}

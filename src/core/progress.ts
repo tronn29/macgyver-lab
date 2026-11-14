@@ -4,6 +4,9 @@ import { newCard, review, dueIds, MASTERED_BOX } from './srs';
 import { getProgress, update, type MissionRun, type Progress } from './store';
 import type { Content, Fiche, Quiz } from './types';
 
+/** Contenu d'aperçu de la page #/modeles : il ne doit jamais toucher la progression. */
+export const isModeleId = (id: string): boolean => id.startsWith('_modele');
+
 export const XP = {
   ficheLue: 10,
   quizOk: 5,
@@ -55,6 +58,7 @@ export function currentStreak(p: Progress, today = dayKey()): { jours: number; e
  * Décocher : XP retirés et fiche retirée de la révision (son historique de révision repart de zéro).
  */
 export function setRead(fiche: Fiche, lu: boolean): boolean {
+  if (isModeleId(fiche.id)) return false;
   let change = false;
   update((p) => {
     const deja = Boolean(p.lus[fiche.id]);
@@ -80,6 +84,7 @@ export function isRead(id: string): boolean {
 
 /** Enregistre le résultat complet d'un quiz de fiche. */
 export function recordFicheQuiz(ficheId: string, score: number, total: number): void {
+  if (isModeleId(ficheId)) return;
   update((p) => {
     const prev = p.quizFiches[ficheId];
     p.quizFiches[ficheId] = {
@@ -94,6 +99,7 @@ export function recordFicheQuiz(ficheId: string, score: number, total: number): 
 }
 
 export function markFonctionVue(id: string): void {
+  if (isModeleId(id)) return;
   update((p) => {
     if (!p.vuesFonctions[id]) {
       p.vuesFonctions[id] = new Date().toISOString();
@@ -103,6 +109,7 @@ export function markFonctionVue(id: string): void {
 }
 
 export function toggleExperience(id: string): boolean {
+  if (isModeleId(id)) return false;
   let fait = false;
   update((p) => {
     if (p.experiences[id]) {
@@ -127,6 +134,7 @@ export function isFavori(type: string, id: string): boolean {
 }
 
 export function toggleFavori(type: string, id: string): boolean {
+  if (isModeleId(id)) return false;
   const key = favKey(type, id);
   let on = false;
   update((p) => {
@@ -140,6 +148,7 @@ export function toggleFavori(type: string, id: string): boolean {
 }
 
 export function answerQuiz(ficheId: string, categories: string[], correct: boolean, srs: boolean): void {
+  if (isModeleId(ficheId)) return;
   update((p) => {
     if (srs) p.srs[ficheId] = review(p.srs[ficheId] ?? newCard(), correct);
     for (const c of categories) {
@@ -168,6 +177,7 @@ export function recordMission(run: MissionRun): { premiereReussite: boolean; xp:
 }
 
 export function setLast(route: string, titre: string): void {
+  if (route.includes('/_modele')) return;
   update((p) => {
     p.dernier = { route, titre };
   });

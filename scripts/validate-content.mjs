@@ -60,6 +60,10 @@ const COLLECTIONS = {
 };
 
 const data = {};
+for (const [col, files] of Object.entries(index).filter(([k]) => k in COLLECTIONS))
+  for (const file of files ?? [])
+    if (/(^|\/)_modeles\//.test(file)) err('index.json', `« ${file} » : un modèle ne doit jamais être chargé ; remplis-le puis lance npm run modele:ajouter`);
+
 for (const [col, def] of Object.entries(COLLECTIONS)) {
   data[col] = [];
   const validate = validator(def);
@@ -313,6 +317,8 @@ for (const f of data.theorie) {
 }
 
 /* ---------- 7. SVG orphelins ---------- */
+// Le schéma d'exemple des modèles est vérifié comme les autres, mais il n'appartient à aucune fiche
+for (const f of readdirSync(SCHEMAS)) if (/^modele-.*\.svg$/.test(f)) checkSvg(`schemas/${f}`, f);
 for (const f of readdirSync(SCHEMAS)) if (f.endsWith('.svg') && !usedSvgs.has(f)) warn(`schemas/${f}`, "schéma non utilisé par aucune fiche ni expérience");
 
 /* ---------- Résumé ---------- */

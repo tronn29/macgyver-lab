@@ -685,5 +685,26 @@
     "ecouter": "Écouter la fiche",
     "arreter": "Arrêter la lecture",
     "indispo": "La lecture vocale n'est pas disponible sur cet appareil."
+  },
+  "modeles": {
+    "kicker": "Outils · Modèles",
+    "titre": "Modèles de contenu",
+    "intro": "Aperçu des quatre modèles vierges avec le vrai design de l'appli. Les textes entre crochets montrent où écrire et ce qui est attendu : une fois remplis, ils prendront exactement cette place.",
+    "cachee": "Page cachée : elle n'apparaît dans aucun menu ni dans la recherche. Les éléments qui modifieraient ta progression (favori, case « Lu », carnet, lancement de mission) sont désactivés dans l'aperçu.",
+    "comment": "Comment s'en servir",
+    "etape1": "Duplique un modèle de public/content/fr/_modeles/ (ex. : ma-fiche.json) dans le même dossier.",
+    "etape2": "Remplace chaque texte entre crochets ; supprime les lignes marquées « facultatif » dont tu n'as pas besoin.",
+    "etape3": "Vérifie qu'il ne manque rien : npm run modele:verifier -- public/content/fr/_modeles/ma-fiche.json",
+    "etape4": "Ajoute-le à l'appli : npm run modele:ajouter -- public/content/fr/_modeles/ma-fiche.json (le guide complet est dans MODELES.md).",
+    "commandes": "Commandes",
+    "choisir": "Choisir un modèle",
+    "ongletFiche": "Fiche Théorie",
+    "ongletEquivalence": "Équivalence",
+    "ongletExperience": "Expérience",
+    "ongletMission": "Mission",
+    "fichier": "Aperçu du fichier",
+    "motsCles": "Idées clés reconnues dans la réponse du joueur",
+    "score": "Score",
+    "scoreExemple": "Exemple : un joueur qui choisit les objets de la solution 1 et écrit ses idées clés obtiendrait {n}/100."
   }
 }

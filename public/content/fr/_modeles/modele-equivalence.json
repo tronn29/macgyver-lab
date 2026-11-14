@@ -1,0 +1,52 @@
+{
+  "modele": "equivalence",
+  "aide": "[Duplique ce fichier, remplace chaque texte entre crochets, puis lance : npm run modele:verifier -- public/content/fr/_modeles/mon-fichier.json. Les objets doivent exister dans objets.json, ou être décrits dans le bloc « objets » plus bas. Guide : MODELES.md.]",
+  "equivalences": [
+    {
+      "id": "[identifiant-de-la-fonction : verbe à l'infinitif et tirets, ex. : isoler-chaleur]",
+      "titre": "[La fonction à remplacer, ex. : Isoler de la chaleur et du froid]",
+      "icone": "[Nom d'une icône, ex. : thermo, multitool, bolt, drop, magnet, lens, rope, fire ; voir src/ui/icons.ts]",
+      "categorie": "[Un seul mot parmi : electricite, magnetisme, chimie, mecanique, lumiere, thermique, pression, materiaux, fluides]",
+      "resume": "[Une phrase : à quoi sert cette fonction, ex. : Garder la chaleur du corps ou protéger quelque chose du froid.]",
+      "principe": "[Deux ou trois phrases : la physique commune à tous les objets de la liste, avec une comparaison du quotidien. Terme du glossaire possible, ex. : [[isolation|isoler]].]",
+      "fiches": ["[Identifiant d'une fiche Théorie liée, ex. : isolation-thermique]"],
+      "securite": {
+        "niveau": "[Facultatif : vert, orange ou rouge ; supprime tout le bloc securite si inutile]",
+        "note": "[Le risque et la précaution]"
+      },
+      "objets": [
+        {
+          "objet": "[Identifiant d'un objet de objets.json, ex. : couverture-survie]",
+          "comment": "[Comment l'utiliser, concrètement, en une ou deux phrases]",
+          "pourquoi": "[Le principe qui explique pourquoi cet objet marche, en une phrase]",
+          "efficacite": "[1, 2 ou 3 écrit sans guillemets : 1 dépannage, 2 correct, 3 excellent]",
+          "limite": "[Facultatif : la limite ou le piège, en une phrase]"
+        },
+        {
+          "objet": "[Identifiant d'un deuxième objet, ex. : papier-alu]",
+          "comment": "[Comment l'utiliser]",
+          "pourquoi": "[Le principe, en une phrase]",
+          "efficacite": "[1, 2 ou 3]",
+          "limite": "[Facultatif : la limite]"
+        },
+        {
+          "objet": "[Identifiant d'un troisième objet : il en faut au moins 3]",
+          "comment": "[Comment l'utiliser]",
+          "pourquoi": "[Le principe, en une phrase]",
+          "efficacite": "[1, 2 ou 3]",
+          "limite": "[Facultatif : la limite]"
+        }
+      ]
+    }
+  ],
+  "objets": [
+    {
+      "id": "[Facultatif : un objet absent de objets.json ; identifiant en minuscules et tirets, ex. : boite-oeufs ; supprime ce bloc si tous tes objets existent déjà]",
+      "nom": "[Nom affiché, ex. : Boîte à œufs en carton]",
+      "alias": ["[Autre nom pour la recherche, ex. : carton à œufs]"],
+      "lieux": ["[Où le trouver : cuisine, garage, salle-de-bain, bureau, exterieur, voiture, chambre, atelier ou sac]"],
+      "icone": "[Nom d'une icône, ex. : box ; other si aucune ne convient]",
+      "proprietes": ["[Propriété utile, ex. : isolant]", "[Autre propriété, ex. : léger]"]
+    }
+  ]
+}

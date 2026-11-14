@@ -1,0 +1,85 @@
+{
+  "modele": "mission",
+  "aide": "[Duplique ce fichier, remplace chaque texte entre crochets, puis lance : npm run modele:verifier -- public/content/fr/_modeles/mon-fichier.json. Il faut 20 à 30 objets dans la pièce (duplique les lignes d'objets). Guide : MODELES.md.]",
+  "score": "[Rien à remplir ici : le score est calculé tout seul sur 100. Objets /40 : part des objets requis de la solution la plus proche. Logique /40 : groupes de mots-clés retrouvés dans le texte du joueur. Rigueur /20 : moins 5 par leurre choisi. Indices : moins 5, moins 10, moins 15. Réussite à partir de 60. Supprime cette ligne si tu veux.]",
+  "missions": [
+    {
+      "id": "[identifiant-unique : minuscules et tirets, ex. : garage-nuit]",
+      "titre": "[Titre de mission, ex. : Nuit close au garage]",
+      "code": "[Nom de code affiché sur le dossier, ex. : OP-07 · NUIT CLOSE]",
+      "difficulte": "[Un seul mot : facile (une solution évidente), moyen (deux solutions et des leurres) ou difficile (un objet clé qui semble inutile et une pièce manquante)]",
+      "categories": ["[Catégorie principale : electricite, magnetisme, chimie, mecanique, lumiere, thermique, pression, materiaux ou fluides]"],
+      "duree": "[Durée du compte à rebours en minutes, écrite sans guillemets : 6 facile, 8 moyen, 10 difficile]",
+      "briefing": {
+        "lieu": "[Lieu et heure, ex. : Garage individuel, 23 h 40]",
+        "contexte": "[La situation en trois ou quatre phrases immersives, à la deuxième personne : Tu es…]",
+        "objectif": "[L'objectif en une phrase, ex. : Sortir du garage ou alerter quelqu'un, sans rien casser de dangereux.]",
+        "contraintes": ["[Contrainte 1, ex. : Ne démarre pas le moteur : ses gaz sont mortels en espace clos.]", "[Contrainte 2]"]
+      },
+      "zones": [
+        { "id": "[identifiant de zone, ex. : etabli]", "nom": "[Nom affiché, ex. : Établi]" },
+        { "id": "[deuxième zone, ex. : etagere]", "nom": "[Nom affiché, ex. : Étagère murale]" },
+        { "id": "[troisième zone, ex. : sol]", "nom": "[Nom affiché, ex. : Sol et recoins]" }
+      ],
+      "objets": [
+        { "objet": "[objet utile 1 : identifiant de objets.json, ex. : lampe-torche]", "zone": "[identifiant d'une zone ci-dessus]", "etat": "[Facultatif : précision visible au scan, ex. : piles faibles]" },
+        { "objet": "[objet utile 2, ex. : corde]", "zone": "[zone]", "etat": "[Facultatif]" },
+        { "objet": "[objet utile 3, ex. : balai]", "zone": "[zone]" },
+        { "objet": "[objet clé (mission difficile) : utile mais qui semble inutile, ex. : emballage-chewing-gum]", "zone": "[zone]" },
+        { "objet": "[leurre 1 : plausible mais inutile, ex. : jerrican]", "zone": "[zone]", "etat": "[Facultatif]" },
+        { "objet": "[leurre 2, ex. : briquet]", "zone": "[zone]" },
+        { "objet": "[leurre 3, ex. : parapluie]", "zone": "[zone]" },
+        { "objet": "[objet neutre, ni utile ni piège : duplique ces lignes jusqu'à 20 à 30 objets]", "zone": "[zone]" }
+      ],
+      "leurres": ["[leurre 1 : le même identifiant que dans la liste des objets]", "[leurre 2]", "[leurre 3]"],
+      "objetCle": "[Difficile seulement : identifiant de l'objet clé ; supprime la ligne pour une mission facile ou moyenne]",
+      "pieceManquante": {
+        "nom": "[Difficile seulement : la pièce qui manque, ex. : Ressort de contact ; supprime tout le bloc sinon]",
+        "remplacements": ["[Identifiant d'un objet présent qui peut la remplacer, ex. : papier-alu]"],
+        "explication": "[Pourquoi ce remplacement marche, en une phrase]"
+      },
+      "solutions": [
+        {
+          "id": "s1",
+          "titre": "[Nom de la première solution, ex. : Perche à crochet pour le déverrouillage manuel]",
+          "objets": ["[objet requis 1 : identifiant présent dans la pièce]", "[objet requis 2]"],
+          "optionnels": ["[Facultatif : objet qui aide sans être indispensable]"],
+          "principes": ["[Identifiant de la fiche Théorie qui explique la solution, ex. : levier]"],
+          "motsCles": [
+            ["[idée clé 1 : un mot que le joueur écrirait]", "[synonyme]", "[autre forme, ex. : pluriel ou verbe]"],
+            ["[idée clé 2]", "[synonyme]"],
+            ["[idée clé 3 : le principe, ex. : levier]", "[synonyme, ex. : faire levier]"]
+          ],
+          "etapes": ["[Étape 1 de la solution]", "[Étape 2]", "[Étape 3]"],
+          "explication": "[Le principe physique derrière la solution, en deux ou trois phrases]"
+        },
+        {
+          "id": "s2",
+          "titre": "[Deuxième solution (moyen et difficile), ex. : Klaxon et signaux lumineux ; supprime ce bloc pour une mission facile]",
+          "objets": ["[objet requis 1]", "[objet requis 2]"],
+          "principes": ["[Identifiant de fiche Théorie]"],
+          "motsCles": [["[idée clé 1]", "[synonyme]"], ["[idée clé 2]", "[synonyme]"]],
+          "etapes": ["[Étape 1]", "[Étape 2]"],
+          "explication": "[Le principe, en deux ou trois phrases]"
+        }
+      ],
+      "indices": [
+        "[Indice 1, piste de principe : oriente vers la physique sans nommer d'objet, ex. : Pense à l'énergie qui reste stockée malgré la coupure.]",
+        "[Indice 2, piste d'objets : une catégorie d'objets ou l'élimination de leurres, ex. : Oublie tout ce qui produit une flamme.]",
+        "[Indice 3, piste de méthode : la logique de la solution, sans les étapes]"
+      ],
+      "fiches": ["[Identifiant d'une fiche Théorie à réviser en cas d'échec, ex. : levier]"],
+      "equivalences": ["[Identifiant d'une fonction de l'Arsenal à réviser, ex. : faire-levier]"]
+    }
+  ],
+  "objets": [
+    {
+      "id": "[Facultatif : un objet absent de objets.json, ex. : emballage-chewing-gum ; supprime ce bloc si tous tes objets existent déjà]",
+      "nom": "[Nom affiché, ex. : Emballage de chewing-gum]",
+      "alias": ["[Autre nom pour la recherche]"],
+      "lieux": ["[cuisine, garage, salle-de-bain, bureau, exterieur, voiture, chambre, atelier ou sac]"],
+      "icone": "[Nom d'une icône, ex. : sheet ; other si aucune ne convient]",
+      "proprietes": ["[Propriété utile, ex. : conducteur]"]
+    }
+  ]
+}

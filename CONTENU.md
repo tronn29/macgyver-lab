@@ -14,6 +14,8 @@ Tout le contenu de l'appli vit dans `public/content/fr/` (fichiers JSON) et `pub
 | un terme du glossaire       | `glossaire.json`                             | `terme`                                    |
 | un parcours thématique      | `parcours.json`                              | `parcours`                                 |
 
+**Le plus simple : pars d'un modèle vierge.** Voir `MODELES.md` (modèles dans `_modeles/`, aperçu à l'adresse `#/modeles`).
+
 `index.json` liste les fichiers de chaque collection. Tu peux créer ton propre fichier (par exemple `theorie-perso.json`) et l'ajouter à la liste `theorie` : l'appli fusionne tous les fichiers.
 
 ## 2. Règles d'or

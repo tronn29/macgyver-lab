@@ -87,6 +87,8 @@ function registerRoutes(): void {
   route('/progression', () => statsView());
   route('/reglages', () => settingsView());
   route('/confidentialite', () => privacyView());
+  // Page cachée : accessible seulement par son adresse, chargée à la demande (absente des menus et de la recherche)
+  route('/modeles', async (ctx) => (await import('./views/modeles')).modelesView(ctx));
   fallback(() => notFound());
 }
 

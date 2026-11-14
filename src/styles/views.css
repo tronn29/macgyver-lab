@@ -777,3 +777,17 @@
 .verdict-nuance { flex-basis: 100%; margin: 0; font-size: var(--fs-sm); font-weight: 600; color: var(--c-text); line-height: 1.4; }
 .verdict-nuance--head { order: 0; flex-basis: auto; align-self: center; color: var(--c-text-2); font-weight: 500; }
 .longread__serie-head .verdict-nuance { flex-basis: 100%; }
+
+/* ---------- Page cachée #/modeles ---------- */
+.cmd { display: inline-block; padding: 0.1rem 0.4rem; border: 1px solid var(--c-border); border-radius: var(--r-xs); background: var(--c-surface-2); font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--c-text); overflow-wrap: anywhere; }
+.modeles__guide { margin-bottom: var(--sp-5); }
+.modeles__etapes { display: grid; gap: var(--sp-2); margin: 0; padding-left: 1.3rem; }
+.modeles__etapes li::marker { font-family: var(--font-mono); color: var(--c-accent); font-weight: 700; }
+.modeles__onglets { margin-bottom: var(--sp-4); }
+.modeles__apercu { padding: var(--sp-4) 0 0; border-top: 2px dashed var(--c-border-strong); }
+.modeles__fichier { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); margin: 0 0 var(--sp-5); font-size: var(--fs-sm); color: var(--c-text-2); }
+.modeles__fichier .icon { color: var(--c-accent); }
+.modeles__mission > * + * { margin-top: var(--sp-8); }
+.modeles__score { margin-top: var(--sp-5); }
+.modeles__apercu .hints { list-style: none; padding: 0; }
+.is-preview-inert { opacity: 0.6; }

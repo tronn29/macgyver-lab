@@ -1,0 +1,75 @@
+{
+  "modele": "fiche-theorie",
+  "aide": "[Duplique ce fichier (ex. : _modeles/ma-fiche.json), remplace CHAQUE texte entre crochets, supprime les lignes facultatives inutiles, puis lance : npm run modele:verifier -- public/content/fr/_modeles/ma-fiche.json. Les balises [[id|texte]] (deux crochets) sont des termes du glossaire : garde-les. Guide complet : MODELES.md.]",
+  "theorie": [
+    {
+      "id": "[identifiant-unique : minuscules, chiffres et tirets, ex. : extincteur-co2 ; ne le change plus jamais ensuite]",
+      "titre": "[Titre court et concret, ex. : Extincteur au CO₂ et froid]",
+      "sousTitre": "[Une phrase qui donne envie de lire, ex. : Comment un extincteur coupe un feu, et pourquoi le CO₂ sort glacé]",
+      "categories": [
+        "[Catégorie principale, un seul mot parmi : electricite, magnetisme, chimie, mecanique, lumiere, thermique, pression, materiaux, fluides]",
+        "[Catégorie secondaire facultative, même liste ; supprime cette ligne si inutile]"
+      ],
+      "niveau": "[Facultatif : 1, 2 ou 3, la difficulté de compréhension, écrit sans guillemets, ex. : 2 ; supprime la ligne sinon]",
+      "schema": {
+        "fichier": "[Nom du dessin déposé dans public/schemas/, ex. : extincteur-co2.svg ; pars de public/schemas/modele-exemple.svg]",
+        "alt": "[Description complète de ce que montre le schéma, pour les personnes qui ne le voient pas (au moins 20 caractères), avec les valeurs prononcées, ex. : 57 bar (cinquante-sept bars)]",
+        "legende": "[Une phrase sous le schéma, ex. : Le triangle du feu et la détente du CO₂.]"
+      },
+      "texte": [
+        "**[Accroche en gras : l'idée principale en une phrase, ex. : Un extincteur n'éteint pas un feu, il lui retire ce dont il a besoin.]** [Pars de zéro : ce que c'est et comment ça marche. Annonce les comptes, ex. : « Un feu a besoin de trois choses ». Tutoie le lecteur, sans tiret cadratin.]",
+        "**[Accroche en gras sur les types ou variantes, ex. : Il existe quatre grands types d'extincteurs]** [Pour chacun : ce qu'il fait, pourquoi, et où on le trouve dans la vie réelle, ex. : « On le trouve près des tableaux électriques ».]",
+        "**Peu de gens savent que [le fait surprenant de la fiche].** [Le pourquoi physique, avec une comparaison du quotidien, ex. : « comme une foule dans un métro bondé ». Chaque valeur suivie de sa prononciation et de son équivalent concret, ex. : 57 bar (cinquante-sept bars), soit presque soixante fois la pression de l'air. Terme du glossaire avec infobulle, ex. : le gaz [[detente|se détend]].]",
+        "**[Accroche en gras qui pose une question, ex. : Pourquoi il sort glacé.]** [Explique le pourquoi, pas seulement le quoi : pourquoi ça se refroidit, pourquoi la température s'arrête à une valeur précise.]",
+        "**Dans la série**, [ce que fait MacGyver, en une ou deux phrases]. **Dans la réalité**, [ce qui se passe vraiment, et pourquoi]. [Un cas concret où ça marcherait vraiment, ex. : « Ça marche en revanche sur un tuyau en plastique rigide ».]",
+        "**À retenir :** [le principe en mots simples, en deux ou trois phrases, avec un exemple du quotidien que le lecteur a déjà vécu, ex. : la bombe aérosol qui devient glacée dans ta main.]"
+      ],
+      "enfant": "[Explication pour un enfant de 8 ans, avec une image du quotidien, ex. : « Le gaz était serré très fort dans la bouteille… » (au moins 20 caractères)]",
+      "realite": {
+        "verdict": "[Un seul mot : vrai (marche vraiment), partiel (marche partiellement) ou faux]",
+        "nuance": "[Facultatif, 90 caractères maximum, affiché avec l'étiquette, ex. : Marchait sur les anciens capteurs, plus sur les modernes ; supprime la ligne sinon]",
+        "explication": "[Deux phrases : ce que montre la série, ce qui est vrai, et le cas où ça marche (sert à l'image de partage)]"
+      },
+      "securite": {
+        "niveau": "[Un seul mot : vert (sans danger), orange (prudence) ou rouge (principe seulement, ne jamais reproduire)]",
+        "note": "[Le risque réel et la précaution à prendre, ex. : Le jet provoque des brûlures par le froid.]"
+      },
+      "liens": {
+        "fiches": ["[Identifiant d'une fiche liée, ex. : choc-thermique]"],
+        "equivalences": ["[Identifiant d'une fonction de l'Arsenal, ex. : isoler-chaleur ; supprime la ligne si aucune]"],
+        "pratique": ["[Identifiant d'une expérience du Labo, ex. : brouillard-glace-seche ; aucune pour un sujet sensible]"]
+      },
+      "quiz": [
+        {
+          "question": "[Question claire sur un compte ou un pourquoi, ex. : De combien d'éléments un feu a-t-il besoin ?]",
+          "choix": ["[Bonne réponse]", "[Mauvaise réponse plausible]", "[Mauvaise réponse plausible]", "[Quatrième choix facultatif]"],
+          "reponse": "[Numéro de la bonne réponse en partant de 0, écrit sans guillemets : 0 pour le premier choix, 1 pour le deuxième]",
+          "explication": "[Pourquoi c'est la bonne réponse, en une ou deux phrases]"
+        },
+        {
+          "question": "[Deuxième question, sur le pourquoi physique, ex. : Pourquoi un gaz qui se détend se refroidit-il ?]",
+          "choix": ["[Mauvaise réponse plausible]", "[Bonne réponse]", "[Mauvaise réponse plausible]"],
+          "reponse": "[Numéro de la bonne réponse en partant de 0, ex. : 1]",
+          "explication": "[Pourquoi c'est la bonne réponse]"
+        }
+      ],
+      "motsCles": ["[Mot de recherche, ex. : extincteur]", "[Synonyme ou objet, ex. : neige carbonique]"],
+      "echelle": {
+        "titre": "[Facultatif : titre d'une échelle graduée, ex. : Échelle de frottement ; supprime tout le bloc echelle si inutile]",
+        "intro": "[Une phrase qui explique la grandeur, ex. : Le coefficient de frottement μ (mu) mesure à quel point deux surfaces s'accrochent.]",
+        "niveaux": [
+          { "valeur": "[Valeur, ex. : μ = 0,1]", "dit": "[Sa prononciation, ex. : mu égale zéro virgule un]", "description": "[Ce que ça représente, ex. : très glissant, une corde mouillée sur de la glace]" },
+          { "valeur": "[Valeur suivante, ex. : μ = 0,3]", "dit": "[Sa prononciation]", "description": "[Ce que ça représente dans la vie réelle]" }
+        ]
+      }
+    }
+  ],
+  "glossaire": [
+    {
+      "id": "[Identifiant du terme : minuscules et tirets, ex. : neige-carbonique ; à utiliser dans le texte sous la forme [[neige-carbonique|texte affiché]] ; supprime ce bloc si le terme existe déjà dans glossaire.json]",
+      "terme": "[Le terme tel qu'il s'affiche, ex. : Neige carbonique]",
+      "definition": "[Une ou deux phrases claires, avec un exemple concret]",
+      "fiches": ["[Identifiant de la fiche qui l'utilise, ex. : extincteur-co2]"]
+    }
+  ]
+}
