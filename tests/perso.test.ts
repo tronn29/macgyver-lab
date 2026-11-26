@@ -252,3 +252,17 @@ describe('schémas dessinés pour les fiches personnelles', () => {
     }
   });
 });
+
+describe('rendre une fiche personnelle officielle', () => {
+  it('prépare une demande avec la consigne puis la fiche au format des modèles', async () => {
+    const { demandeOfficielle } = await import('../src/core/perso');
+    const texte = demandeOfficielle(c, 'fiche', ficheTest());
+    const [consigne, ...reste] = texte.split('\n\n');
+    expect(consigne).toMatch(/^Rends officielle ma fiche personnelle « .+ » de MacGyver Lab\./);
+    expect(consigne).toMatch(/règle de contenu/);
+    const modele = JSON.parse(reste.join('\n\n'));
+    expect(modele.modele).toBe('fiche-theorie');
+    expect(modele.theorie[0].id).toBe('test');
+    expect(modele.theorie[0].securite).toEqual({ niveau: 'vert' });
+  });
+});

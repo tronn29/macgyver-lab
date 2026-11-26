@@ -213,3 +213,12 @@ Décisions prises sans consultation, avec leur raison. Chacune peut être revue.
 |---|---|
 | **Schéma de principe, pas de circuit** | La description demandait pile, transformateur, condensateur et deux pointes reliés, avec l'étincelle haute tension en sortie : c'est le plan d'un appareil à décharge, interdit par la règle de contenu. Le schéma montre seulement deux idées séparées, sans fil, sans composant relié ni valeur : deux bobines sur un noyau (peu de spires, beaucoup de spires : la tension monte) et l'air qui devient conducteur au-delà d'un seuil (étincelle, comme la foudre en petit). |
 | **Proposé dans l'éditeur** | La fiche est une fiche personnelle : l'éditeur ne proposait que les schémas des fiches officielles. Une liste de schémas dessinés pour les fiches personnelles (`SCHEMAS_PERSO`, fichiers `perso-*.svg`) apparaît en tête du choix « Schéma ». Le fichier s'appelle `perso-rasoir-haute-tension.svg`, vérifié par le validateur comme les autres schémas. |
+
+## Bouton « Rendre officielle »
+
+| Décision | Raison |
+|---|---|
+| **Le bouton prépare une demande, il ne publie pas tout seul** | L'appli est un site statique sans serveur, et rien ne doit quitter l'appareil (RGPD). Elle ne peut donc pas modifier son propre contenu ni envoyer la fiche quelque part. Le bouton ouvre une fenêtre qui explique les trois étapes et copie une demande prête à coller dans Claude Code : une phrase de consigne, puis la fiche au format des modèles (le même que l'export). |
+| **Claude Code fait la conversion** | Une fiche officielle doit passer le validateur, la règle de contenu, les tests et le déploiement : c'est le chemin déjà utilisé pour les autres fiches. La consigne demande de garder ton texte, de compléter ce qui manque (schéma, quiz, version enfant, liens) et d'appliquer la règle de contenu. |
+| **Fiches et fonctions** | Le bouton apparaît dans la barre de chaque fiche personnelle et de chaque fonction personnelle, à côté de Modifier, Exporter et Supprimer. Il est mis en avant (bouton principal) parce que c'est l'action demandée. |
+| **Version personnelle gardée** | La fiche personnelle n'est pas supprimée automatiquement : la fenêtre indique de la supprimer soi-même une fois la version officielle en ligne, pour ne rien perdre si la conversion n'a pas encore eu lieu. |

@@ -385,3 +385,15 @@ export function exportFonction(c: Content, f: Fonction): string {
   const objets = perso.map((o) => ({ id: sansPrefixe(o.id), nom: o.nom, alias: [], lieux: ['[Où le trouver : cuisine, garage, salle-de-bain, bureau, exterieur, voiture, chambre, atelier ou sac]'], icone: o.icone, proprietes: ['[Propriété utile, ex. : isolant]'] }));
   return `${JSON.stringify({ modele: 'equivalence', aide: "[Fonction exportée depuis l'appli. Dépose ce fichier dans public/content/fr/_modeles/, remplace les textes entre crochets restants (une fonction officielle demande au moins 3 objets), puis : npm run modele:verifier -- <fichier>. Voir MODELES.md.]", equivalences: [fonction], ...(objets.length ? { objets } : {}) }, null, 2)}\n`;
 }
+
+/**
+ * Demande prête à coller dans Claude Code pour faire d'une fiche (ou fonction) personnelle
+ * une fiche officielle : l'appli publiée ne peut pas modifier son propre contenu.
+ */
+export function demandeOfficielle(c: Content, type: 'fiche' | 'fonction', item: Fiche | Fonction): string {
+  const fiche = type === 'fiche';
+  const consigne = fiche
+    ? `Rends officielle ma fiche personnelle « ${item.titre} » de MacGyver Lab. Ajoute-la aux fiches officielles au format long, garde mon texte, complète ce qui manque (schéma, quiz, version enfant, liens) et applique la règle de contenu.`
+    : `Rends officielle ma fonction personnelle « ${item.titre} » de MacGyver Lab. Ajoute-la à l'Arsenal, garde mon texte, complète ce qui manque et applique la règle de contenu.`;
+  return `${consigne}\n\n${fiche ? exportFiche(item as Fiche) : exportFonction(c, item as Fonction)}`;
+}

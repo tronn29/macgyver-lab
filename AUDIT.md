@@ -156,3 +156,8 @@ Tests : 54 (7 nouveaux : case « Lu », score enregistré, quiz cliqué dans un 
 - Validateur : 42 fiches, contenu valide, 0 avertissement d'unité, 16 avertissements d'accroche (textes fournis, inchangés).
 - Tests : 103 (aucune parenthèse superflue ni prononciation manquante sur toutes les fiches, `dit` seulement pour les valeurs difficiles, niveau de sécurité seul, validateur qui bloque une note de sécurité).
 - Téléphone en portrait et en paysage : encadré Sécurité réduit au niveau, données clés et échelle de frottement correctes, éditeur sans champ « Précaution », aucun débordement.
+
+## Bouton « Rendre officielle » : vérifications
+
+- Tests : 105 (la demande commence par la consigne et contient une fiche au format des modèles valide).
+- Téléphone en portrait et en paysage : bouton visible dans la barre de la fiche personnelle, fenêtre lisible, bouton « Copier la demande » visible sans défilement de la page, aucun débordement.
