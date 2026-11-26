@@ -88,13 +88,13 @@ describe('paragraphes : éditeur → texte enrichi → éditeur', () => {
 });
 
 describe('stockage et superposition au contenu officiel', () => {
-  it('ajoute la fiche perso sans toucher aux 22 fiches officielles', () => {
+  it('ajoute la fiche perso sans toucher aux fiches officielles', () => {
     saveFiche(c, ficheTest());
-    expect(c.fiches).toHaveLength(22);
+    expect(c.fiches).toHaveLength(officielles.length);
     expect(c.fiches.map((f) => JSON.stringify(f))).toEqual(officielles);
     expect(c.byId.fiche.get('perso-test')?.titre).toBe('Pourquoi la glace flotte');
     expect(persoFiches()).toHaveLength(1);
-    expect(toutesFiches(c)).toHaveLength(23);
+    expect(toutesFiches(c)).toHaveLength(officielles.length + 1);
     // Relu depuis le stockage
     expect(loadPerso().fiches[0].id).toBe('perso-test');
   });
@@ -112,7 +112,7 @@ describe('stockage et superposition au contenu officiel', () => {
     expect(getProgress().lus[f.id]).toBeUndefined();
     expect(getProgress().srs[f.id]).toBeUndefined();
     expect(getProgress().favoris[`fiche:${f.id}`]).toBeUndefined();
-    expect(c.fiches).toHaveLength(22);
+    expect(c.fiches).toHaveLength(officielles.length);
   });
 
   it('une fiche sans quiz n’entre pas dans la révision espacée', () => {
@@ -235,7 +235,7 @@ describe('éditeur (formulaire réel)', () => {
     expect(d.fiches).toHaveLength(1);
     expect(d.fiches[0].texte).toEqual(['**Peu de gens savent que…** la suite du paragraphe.']);
     expect(d.fiches[0].categories).toEqual(['chimie']);
-    expect(c.fiches).toHaveLength(22);
+    expect(c.fiches).toHaveLength(officielles.length);
     expect(location.hash).toBe(`#/archives/${d.fiches[0].id}`);
   });
 });

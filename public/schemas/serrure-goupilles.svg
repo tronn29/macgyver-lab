@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Coupe d'une serrure à goupilles avec la bonne clé : toutes les coupures sur la ligne de cisaillement -->
+  <g>
+    <circle class="s-badge" cx="24" cy="20" r="9"/>
+    <text class="s-badge-text" x="24" y="20">1</text>
+    <text class="s-label" x="38" y="24">Serrure à goupilles, bonne clé</text>
+  </g>
+  <g>
+    <rect class="s-solid" x="20" y="40" width="230" height="72" rx="3"/>
+    <rect class="s-solid" x="20" y="116" width="230" height="56" rx="3"/>
+    <rect class="s-fill-accent" x="20" y="116" width="230" height="56" rx="3"/>
+    <path class="s-thin" d="M50 44 L55 46.5 L45 51.5 L55 56.5 L45 61.5 L55 66.5 L45 71.5 L55 76.5 L45 81.5 L50 84"/>
+    <rect class="s-solid" x="43" y="84" width="14" height="28" rx="2"/>
+    <rect class="s-fill-hot" x="43" y="84" width="14" height="28" rx="2"/>
+    <rect class="s-solid" x="43" y="116" width="14" height="22" rx="4"/>
+    <rect class="s-fill-cold" x="43" y="116" width="14" height="22" rx="4"/>
+    <path class="s-thin" d="M90 44 L95 46.5 L85 51.5 L95 56.5 L85 61.5 L95 66.5 L85 71.5 L95 76.5 L85 81.5 L90 84"/>
+    <rect class="s-solid" x="83" y="84" width="14" height="28" rx="2"/>
+    <rect class="s-fill-hot" x="83" y="84" width="14" height="28" rx="2"/>
+    <rect class="s-solid" x="83" y="116" width="14" height="32" rx="4"/>
+    <rect class="s-fill-cold" x="83" y="116" width="14" height="32" rx="4"/>
+    <path class="s-thin" d="M130 44 L135 46.5 L125 51.5 L135 56.5 L125 61.5 L135 66.5 L125 71.5 L135 76.5 L125 81.5 L130 84"/>
+    <rect class="s-solid" x="123" y="84" width="14" height="28" rx="2"/>
+    <rect class="s-fill-hot" x="123" y="84" width="14" height="28" rx="2"/>
+    <rect class="s-solid" x="123" y="116" width="14" height="18" rx="4"/>
+    <rect class="s-fill-cold" x="123" y="116" width="14" height="18" rx="4"/>
+    <path class="s-thin" d="M170 44 L175 46.5 L165 51.5 L175 56.5 L165 61.5 L175 66.5 L165 71.5 L175 76.5 L165 81.5 L170 84"/>
+    <rect class="s-solid" x="163" y="84" width="14" height="28" rx="2"/>
+    <rect class="s-fill-hot" x="163" y="84" width="14" height="28" rx="2"/>
+    <rect class="s-solid" x="163" y="116" width="14" height="28" rx="4"/>
+    <rect class="s-fill-cold" x="163" y="116" width="14" height="28" rx="4"/>
+    <path class="s-thin" d="M210 44 L215 46.5 L205 51.5 L215 56.5 L205 61.5 L215 66.5 L205 71.5 L215 76.5 L205 81.5 L210 84"/>
+    <rect class="s-solid" x="203" y="84" width="14" height="28" rx="2"/>
+    <rect class="s-fill-hot" x="203" y="84" width="14" height="28" rx="2"/>
+    <rect class="s-solid" x="203" y="116" width="14" height="24" rx="4"/>
+    <rect class="s-fill-cold" x="203" y="116" width="14" height="24" rx="4"/>
+    <path class="s-solid" d="M6 130 L42 130 L50 138 L58 130 L82 130 L90 148 L98 130 L122 130 L130 134 L138 130 L162 130 L170 144 L178 130 L202 130 L210 140 L218 130 L238 130 L238 166 L6 166 Z"/>
+    <path class="s-accent s-flow" d="M14 114 H256"/>
+  </g>
+  <g>
+    <text class="s-tiny" x="262" y="54">ressorts</text>
+    <path class="s-leader" d="M258 51 L216 58" marker-end="url(#mg-dot)"/>
+    <text class="s-tiny" x="262" y="78">corps fixe</text>
+    <text class="s-tiny s-text-hot" x="262" y="100">jeu (exagéré)</text>
+    <path class="s-leader" d="M258 98 L251 113" marker-end="url(#mg-dot)"/>
+    <text class="s-small s-text-accent" x="262" y="117">ligne de</text>
+    <text class="s-small s-text-accent" x="262" y="131.5">cisaillement</text>
+    <text class="s-tiny" x="262" y="150">barillet</text>
+    <text class="s-tiny" x="262" y="164">(il tourne)</text>
+    <text class="s-tiny" x="122" y="184" text-anchor="middle">bonne clé : chaque goupille à sa hauteur</text>
+  </g>
+  <g>
+    <rect class="s-callout" x="14" y="196" width="332" height="30" rx="4"/>
+    <text class="s-small" x="180" y="215" text-anchor="middle">Coupures alignées : le barillet tourne</text>
+  </g>
+</svg>

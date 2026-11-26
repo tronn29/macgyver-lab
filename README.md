@@ -2,7 +2,7 @@
 
 Appli mobile personnelle (PWA) pour apprendre comment marche le monde, de façon concrète : comprendre des principes, détourner des objets du quotidien, improviser avec ce qu'on a.
 
-- **Archives** (Théorie) : 22 fiches de révision avec schéma SVG animé, principe en 3 lignes, « Série ou réalité ? », niveau de sécurité, quiz, mode « explique-moi comme à un enfant ».
+- **Archives** (Théorie) : 27 fiches de révision avec schéma SVG animé, principe en 3 lignes, « Série ou réalité ? », niveau de sécurité, quiz, mode « explique-moi comme à un enfant ».
 - **Arsenal d'objets** (Équivalences) : 12 fonctions × 119 objets, recherche par fonction ou par objet (« que faire avec du papier alu ? »).
 - **Laboratoire** (Pratique) : 11 expériences sans danger, protocole à cocher.
 - **Opérations** (Missions) : 6 briefings (facile, moyen, difficile), scan de la pièce, indices payants, compte à rebours, score fondé sur la logique, rapport « Mission réussie » ou « À revoir ».

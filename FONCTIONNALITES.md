@@ -5,13 +5,13 @@
 | Domaine | Fonctionnalités |
 |---|---|
 | **Accueil** (poste de commandement) | Niveau et XP, série de jours (avec alerte « en danger »), défi du jour, 4 modules avec anneau de progression, révision du jour, « Reprendre » la dernière page, point faible détecté ou suggestion de fiche, parcours en cours, recherche rapide |
-| **Archives** | 22 fiches : schéma SVG animé et agrandissable, principe en 3 lignes, « Pourquoi ça marche » avec termes du glossaire en infobulle, données clés, « Série ou réalité ? », sécurité, liens symétriques vers fiches, équivalences et expériences, quiz, fiche précédente et suivante. Filtres par catégorie et par statut (lues, non lues, favoris) |
+| **Archives** | 27 fiches : schéma SVG animé et agrandissable, principe en 3 lignes, « Pourquoi ça marche » avec termes du glossaire en infobulle, données clés, « Série ou réalité ? », sécurité, liens symétriques vers fiches, équivalences et expériences, quiz, fiche précédente et suivante. Filtres par catégorie et par statut (lues, non lues, favoris) |
 | **Arsenal** | 12 fonctions, 119 objets, efficacité notée de 1 à 3, comment / pourquoi / limite, vue par fonction ou par objet, page objet (fonctions possibles, missions où il apparaît, propriétés, lieux) |
 | **Laboratoire** | 11 expériences : matériel, protocole à cocher, précautions, résultat, explication, variante, « J'ai réalisé l'expérience » |
 | **Opérations** | 6 missions (2 faciles, 2 moyennes, 2 difficiles), dossier de briefing, compte à rebours avec pause, scan par zones (tuiles ou liste), 3 indices payants qui se débloquent dans l'ordre, solution écrite, brouillon automatique, rapport (score détaillé, idées clés, leurres, objet clé, pièce manquante, solutions possibles, auto-évaluation, fiches à réviser), historique |
 | **Mes fiches, Mes fonctions** | Éditeur dans l'appli (formulaire, paragraphes typés, quiz, image par défaut ou schéma officiel, aperçu au vrai design, brouillon automatique), sections séparées des listes officielles, modification, export au format des modèles, suppression ; comptées dans la lecture, les favoris, les quiz, la recherche et les statistiques |
 | **Entraînement** | Défi du jour, révision espacée (Leitner), entraînement libre, 5 parcours thématiques |
-| **Ressources** | Recherche globale (questions naturelles, surlignage), glossaire (65 termes), favoris |
+| **Ressources** | Recherche globale (questions naturelles, surlignage), glossaire (71 termes), favoris |
 | **Profil** | Progression (indicateurs, activité sur 28 jours, points faibles par catégorie, 11 insignes, historique), réglages, confidentialité |
 | **Plateforme** | PWA installable, hors connexion, mises à jour signalées, raccourcis d'appli (défi, révision, opérations), partage d'une fiche en image, export / import / effacement, thème clair, sons optionnels, retour haptique |
 

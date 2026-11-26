@@ -122,3 +122,10 @@ Tests : 54 (7 nouveaux : case « Lu », score enregistré, quiz cliqué dans un 
 | Champs de réponse du quiz trop étroits sur téléphone | Bouton « Retirer » déplacé sous le champ |
 | Aperçu : défilement animé jusqu'en haut, plus d'une seconde | Défilement immédiat |
 | Export : moins de 4 paragraphes et nom de schéma signalés comme erreurs de format | Paragraphes à remplir ajoutés ; un seul message par texte entre crochets |
+
+## Cinq fiches « serrures et sécurité » : vérifications
+
+- Validateur : contenu valide, 27 fiches, 71 termes ; 2 avertissements (accroche « Peu de gens savent » absente des textes fournis de la porte et du fusible).
+- Tests : 89 (nouveaux : texte fourni mot pour mot hors des 4 corrections listées, structure du format long, schéma, quiz et nuance de chaque fiche).
+- Schémas mesurés avec la police réelle : aucun texte hors cadre ni chevauchement (corrigés : 3 paires d'étiquettes trop serrées, une légende qui coupait le cercle du zoom, un arc en pointillés qui traversait les étiquettes de la porte).
+- Téléphone en portrait (375 × 812) et en paysage (812 × 375) : aucun débordement ; contraste : 0 échec en thème sombre et clair ; la recherche trouve chaque fiche (« serrure », « cadenas », « fusible », « scier barreau », « bloquer porte ») et les liens sont symétriques (la fiche du levier renvoie vers la porte).

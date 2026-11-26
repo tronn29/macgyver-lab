@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Un fil couvert de grains durs use un barreau grain par grain ; échelle de dureté -->
+  <g>
+    <circle class="s-badge" cx="24" cy="20" r="9"/>
+    <text class="s-badge-text" x="24" y="20">1</text>
+    <text class="s-label" x="38" y="24">Fil abrasif</text>
+  </g>
+  <g>
+    <circle class="s-solid" cx="94" cy="118" r="36"/>
+    <path class="s-fill-muted" d="M84 83 L94 90 L104 83 Z"/>
+    <text class="s-tiny" x="94" y="124" text-anchor="middle">barreau</text>
+    <path class="s-line" d="M18 78 H170"/>
+    <circle class="s-fill-hot" cx="28" cy="75" r="3"/><circle class="s-fill-hot" cx="40" cy="81" r="3"/><circle class="s-fill-hot" cx="52" cy="75" r="3"/><circle class="s-fill-hot" cx="64" cy="81" r="3"/><circle class="s-fill-hot" cx="76" cy="75" r="3"/><circle class="s-fill-hot" cx="88" cy="81" r="3"/><circle class="s-fill-hot" cx="100" cy="75" r="3"/><circle class="s-fill-hot" cx="112" cy="81" r="3"/><circle class="s-fill-hot" cx="124" cy="75" r="3"/><circle class="s-fill-hot" cx="136" cy="81" r="3"/><circle class="s-fill-hot" cx="148" cy="75" r="3"/>
+    <path class="s-accent s-flow" d="M40 62 H148" marker-start="url(#mg-arrow-accent)" marker-end="url(#mg-arrow-accent)"/>
+    <text class="s-tiny s-text-accent" x="94" y="54" text-anchor="middle">va-et-vient</text>
+    <text class="s-tiny" x="94" y="172" text-anchor="middle">le fil creuse une rainure</text>
+  </g>
+  <g>
+    <circle class="s-badge" cx="204" cy="20" r="9"/>
+    <text class="s-badge-text" x="204" y="20">2</text>
+    <text class="s-label" x="218" y="24">Zoom</text>
+    <circle class="s-callout" cx="276" cy="98" r="58"/>
+    <path class="s-line" d="M222 116 H330"/>
+    <path class="s-thin" d="M230 122 H322 M238 130 H314"/>
+    <path class="s-line" d="M226 82 H326"/>
+    <polygon class="s-fill-hot" points="250,84 258,84 254,112"/>
+    <polygon class="s-hot" points="250,84 258,84 254,112"/>
+    <polygon class="s-fill-hot" points="286,84 294,84 290,110"/>
+    <polygon class="s-hot" points="286,84 294,84 290,110"/>
+    <path class="s-accent" d="M262 100 H280" marker-end="url(#mg-arrow-accent)"/>
+    <circle class="s-fill-muted s-float" cx="244" cy="112" r="2.5"/>
+    <circle class="s-fill-muted s-float s-delay-1" cx="238" cy="108" r="2"/>
+    <text class="s-tiny s-text-hot" x="276" y="72" text-anchor="middle">grain dur</text>
+    <text class="s-tiny" x="276" y="172" text-anchor="middle">copeaux arrachés</text>
+  </g>
+  <g>
+    <path class="s-dim" d="M30 202 H330" marker-end="url(#mg-arrow)"/>
+    <circle class="s-badge" cx="60" cy="202" r="4"/>
+    <circle class="s-badge" cx="180" cy="202" r="4"/>
+    <circle class="s-badge-hot" cx="310" cy="202" r="4"/>
+    <text class="s-tiny" x="60" y="222" text-anchor="middle">calcaire</text>
+    <text class="s-tiny" x="180" y="222" text-anchor="middle">acier trempé</text>
+    <text class="s-tiny s-text-hot" x="310" y="222" text-anchor="middle">diamant</text>
+    <text class="s-tiny" x="30" y="192">dureté</text>
+    <text class="s-tiny s-text-accent" x="330" y="192" text-anchor="end">un grain use ce qui est moins dur</text>
+  </g>
+</svg>

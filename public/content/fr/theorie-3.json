@@ -1,0 +1,521 @@
+[
+  {
+    "id": "serrure-goupilles",
+    "titre": "Crocheter une serrure avec un trombone",
+    "sousTitre": "Goupilles, ligne de cisaillement, et le jeu minuscule qui rend toute serrure imparfaite",
+    "categories": [
+      "mecanique",
+      "materiaux"
+    ],
+    "niveau": 2,
+    "schema": {
+      "fichier": "serrure-goupilles.svg",
+      "alt": "Coupe d'une serrure à goupilles avec la bonne clé. En haut, le corps fixe contient cinq ressorts qui appuient sur cinq goupilles. En bas, le barillet, la partie qui tourne, contient la seconde moitié de chaque goupille, de longueurs différentes, posée sur les crans de la clé. Toutes les coupures des goupilles tombent exactement sur la ligne de cisaillement, entre le corps et le barillet : le barillet peut tourner. Un petit espace entre le corps et le barillet, exagéré sur le dessin, représente le jeu de fabrication.",
+      "legende": "La bonne clé aligne chaque coupure sur la ligne de cisaillement ; le jeu entre corps et barillet est la faiblesse de toute serrure."
+    },
+    "texte": [
+      "**Une serrure à goupilles, c'est une suite de petits obstacles alignés par erreur.** À l'intérieur du barillet (la partie qui tourne), il y a une rangée de goupilles, en général 5 ou 6, chacune coupée en deux. Sans la bonne clé, les points de coupure sont à des hauteurs différentes et bloquent la rotation. La bonne clé soulève chaque goupille exactement à la hauteur où tous les points de coupure s'alignent sur une ligne, appelée la [[ligne-cisaillement|ligne de cisaillement]].",
+      "**Peu de gens savent qu'aucune serrure n'est parfaite.** Pour que la clé rentre et tourne sans forcer, il existe un minuscule [[jeu-mecanique|jeu de fabrication]] entre le barillet et le corps de la serrure. Ce jeu fait que les goupilles ne se bloquent jamais toutes en même temps : quand le barillet est sollicité en rotation, une seule à la fois se retrouve vraiment coincée sur la ligne de cisaillement, les autres restent libres. C'est cette imperfection, présente sur toutes les serrures mécaniques, qui rend le crochetage possible en théorie.",
+      "**Dans la série**, MacGyver ouvre une porte en quelques secondes avec un simple trombone plié. **Dans la réalité**, un trombone plie souvent avant de pouvoir soulever une goupille correctement, car l'acier est trop mou et la forme trop imprécise. Les vrais outils de crochetage sont en acier trempé, fins et rigides, et même avec les bons outils, apprendre à sentir ce jeu minuscule demande des heures de pratique. Les serrures modernes à sécurité renforcée ajoutent des goupilles de sécurité (en forme de champignon ou de bobine) ou remplacent les goupilles par des disques, ce qui rend la méthode inefficace.",
+      "**À retenir :** toute serrure mécanique repose sur un jeu de fabrication minuscule, nécessaire pour qu'elle fonctionne, et c'est ce même jeu qui crée sa faiblesse. C'est un principe qu'on retrouve partout en mécanique : plus une pièce doit bouger librement, plus elle laissera un peu de place à l'erreur."
+    ],
+    "enfant": "Imagine une rangée de petits bâtons coupés en deux, chacun à une hauteur différente, qui empêchent une roue de tourner. La bonne clé est comme une règle magique : elle pousse chaque bâton juste assez pour que toutes les coupures se mettent en ligne, et la roue tourne. Comme les pièces ne sont jamais fabriquées parfaitement, il reste toujours un tout petit espace entre elles : c'est ce petit défaut qui rend toute serrure imparfaite.",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Le principe est réel, mais pas avec un trombone en quelques secondes",
+      "explication": "Le crochetage repose sur un vrai défaut de toutes les serrures mécaniques : un jeu de fabrication minuscule. Mais un trombone est trop mou et trop imprécis, il faut des heures d'entraînement même avec de vrais outils, et les serrures modernes ajoutent des goupilles de sécurité ou des disques."
+    },
+    "securite": {
+      "niveau": "vert",
+      "note": "Aucun danger physique. Crocheter une serrure qui ne t'appartient pas est illégal : pour une porte bloquée, on appelle un serrurier."
+    },
+    "liens": {
+      "fiches": [
+        "cadenas-combinaison",
+        "frottement-cabestan"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Que fait la bonne clé dans une serrure à goupilles ?",
+        "choix": [
+          "Elle soulève chaque goupille pour que toutes les coupures s'alignent sur la ligne de cisaillement",
+          "Elle pousse toutes les goupilles le plus haut possible",
+          "Elle comprime les ressorts pour les casser",
+          "Elle écarte le barillet du corps de la serrure"
+        ],
+        "reponse": 0,
+        "explication": "Chaque goupille est coupée en deux. Avec la bonne clé, toutes les coupures tombent sur la ligne entre le barillet et le corps : plus rien ne traverse cette ligne, le barillet tourne."
+      },
+      {
+        "question": "Pourquoi toute serrure mécanique a-t-elle un petit jeu entre le barillet et le corps ?",
+        "choix": [
+          "Pour que la clé rentre et que le barillet tourne sans forcer",
+          "Pour laisser passer l'air",
+          "Pour économiser du métal",
+          "C'est une usure qui n'apparaît qu'avec le temps"
+        ],
+        "reponse": 0,
+        "explication": "Sans ce jeu, les pièces frotteraient et la serrure se bloquerait. Ce jeu nécessaire est aussi sa faiblesse."
+      },
+      {
+        "question": "Que provoque ce jeu quand le barillet est sollicité en rotation ?",
+        "choix": [
+          "Une seule goupille à la fois se coince vraiment sur la ligne de cisaillement",
+          "Toutes les goupilles se coincent en même temps",
+          "Les goupilles tombent",
+          "La clé se coince"
+        ],
+        "reponse": 0,
+        "explication": "Les trous des goupilles ne sont jamais parfaitement alignés : une goupille touche la première et se coince, les autres restent libres."
+      },
+      {
+        "question": "Pourquoi un trombone fonctionne-t-il mal pour crocheter une serrure ?",
+        "choix": [
+          "Son acier est trop mou et sa forme trop imprécise : il plie avant de soulever correctement une goupille",
+          "Il est trop court",
+          "Il conduit l'électricité",
+          "Il est si dur qu'il casse les goupilles"
+        ],
+        "reponse": 0,
+        "explication": "Les vrais outils sont en acier trempé, fins et rigides, et demandent quand même des heures de pratique."
+      },
+      {
+        "question": "Comment les serrures à sécurité renforcée résistent-elles au crochetage ?",
+        "choix": [
+          "Elles ajoutent des goupilles de sécurité de forme spéciale, ou remplacent les goupilles par des disques",
+          "Elles suppriment la ligne de cisaillement",
+          "Elles utilisent des goupilles en plastique",
+          "Elles n'ont plus de barillet"
+        ],
+        "reponse": 0,
+        "explication": "Une goupille en forme de champignon ou de bobine trompe la sensation de coincement ; une serrure à disques n'a plus de goupilles à soulever."
+      }
+    ],
+    "motsCles": [
+      "serrure",
+      "crocheter",
+      "crochetage",
+      "trombone",
+      "goupille",
+      "clé",
+      "barillet",
+      "cylindre",
+      "porte",
+      "ligne de cisaillement",
+      "jeu",
+      "tolérance",
+      "serrurier"
+    ]
+  },
+  {
+    "id": "porte-charniere",
+    "titre": "Bloquer une porte avec un stylo dans la charnière",
+    "sousTitre": "Pourquoi un petit objet coincé près du pivot arrête une porte entière",
+    "categories": [
+      "mecanique"
+    ],
+    "niveau": 1,
+    "schema": {
+      "fichier": "porte-charniere.svg",
+      "alt": "Porte vue de dessus. À gauche, le cadre ; la porte, longue et fine, pivote sur la charnière placée contre le cadre. À l'autre bout, près de la poignée, une flèche montre la poussée : loin du pivot, il faut peu de force. Tout près de la charnière, un stylo est coincé dans l'interstice entre la porte et le cadre : il est écrasé avec une force multipliée et bloque la rotation. Une cote indique le grand bras de levier entre la charnière et la poignée.",
+      "legende": "Loin du pivot, peu de force suffit ; tout près, la même poussée écrase le stylo et bloque la porte."
+    },
+    "texte": [
+      "**Une porte, ce n'est qu'un grand levier qui pivote autour de sa charnière.** Pour l'ouvrir, il suffit normalement de pousser sur la poignée, loin de l'axe de rotation, ce qui demande peu de force (plus le point de poussée est loin du pivot, moins il faut de force). Pour la bloquer, il suffit d'empêcher ce pivot de tourner.",
+      "**Si tu glisses un objet rigide dans l'interstice côté charnières, entre la porte et le cadre, il se coince tout près du pivot.** Comme un [[bras-levier|levier]] marche dans les deux sens, la poussée exercée loin, sur la porte, y est multipliée : l'objet est écrasé avec une force énorme et empêche toute rotation. Un stylo, une fourchette ou même une pièce de monnaie bien insérée suffisent, car l'objet travaille en compression : plus on pousse la porte, plus il se coince, exactement l'inverse d'une cale qu'on retirerait facilement.",
+      "**Dans la série**, MacGyver bloque une porte blindée avec un simple stylo en quelques secondes. **Dans la réalité**, ça marche vraiment, mais seulement sur des charnières classiques à gonds visibles, pas sur les portes modernes à charnières invisibles ou blindées, pensées justement pour qu'on ne puisse pas accéder à ce point faible de l'extérieur.",
+      "**À retenir :** bloquer un pivot est souvent plus simple que bloquer toute une surface. C'est le même principe qu'une cale sous une roue de voiture : il suffit d'empêcher le point de rotation de bouger pour immobiliser tout l'ensemble."
+    ],
+    "enfant": "Une porte, c'est comme une bascule qui tourne autour d'un clou. Si tu pousses loin du clou, c'est facile. Mais tout près du clou, la même poussée devient énorme. Si on glisse un crayon juste à côté des charnières, la porte l'écrase très fort au lieu de tourner, et elle reste bloquée.",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Marche sur des gonds classiques, pas sur une porte blindée ni à charnières invisibles",
+      "explication": "Un objet rigide coincé côté charnières bloque bien une porte ordinaire : la poussée y est multipliée par l'effet de levier. Les portes blindées et les charnières invisibles sont justement conçues pour qu'on n'accède pas à ce point faible."
+    },
+    "securite": {
+      "niveau": "orange",
+      "note": "Garde les doigts loin du côté des charnières : la force y est énorme et peut écraser un doigt ou arracher une charnière. Ne bloque jamais une issue de secours."
+    },
+    "liens": {
+      "fiches": [
+        "levier",
+        "frottement-cabestan"
+      ],
+      "equivalences": [
+        "faire-levier"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Pourquoi faut-il peu de force pour ouvrir une porte en poussant sur la poignée ?",
+        "choix": [
+          "La poignée est loin du pivot : le bras de levier est grand",
+          "La poignée est en métal",
+          "La porte est creuse",
+          "L'air de la pièce aide à pousser"
+        ],
+        "reponse": 0,
+        "explication": "Plus le point de poussée est loin de l'axe de rotation, moins il faut de force pour faire tourner la porte."
+      },
+      {
+        "question": "Pourquoi un objet coincé tout près de la charnière bloque-t-il si bien la porte ?",
+        "choix": [
+          "La poussée sur la porte y est multipliée par l'effet de levier : l'objet est écrasé avec une force énorme",
+          "Il colle à la charnière",
+          "Il rend la porte plus lourde",
+          "Il bouche la serrure"
+        ],
+        "reponse": 0,
+        "explication": "Le levier marche dans les deux sens : une poussée loin du pivot devient une force énorme tout près de lui."
+      },
+      {
+        "question": "Comment travaille l'objet coincé quand on pousse la porte ?",
+        "choix": [
+          "En compression : plus on pousse, plus il se coince",
+          "En traction : il s'étire",
+          "Il ne subit aucune force",
+          "Il tourne avec la porte"
+        ],
+        "reponse": 0,
+        "explication": "Il est pris en étau entre la porte et le cadre : chaque poussée le serre davantage."
+      },
+      {
+        "question": "Sur quelles portes l'astuce ne marche-t-elle pas ?",
+        "choix": [
+          "Les portes blindées ou à charnières invisibles",
+          "Les portes en bois",
+          "Les portes intérieures",
+          "Les portes peintes"
+        ],
+        "reponse": 0,
+        "explication": "Elles sont conçues pour qu'on ne puisse pas atteindre le côté des charnières de l'extérieur."
+      },
+      {
+        "question": "Quel objet du quotidien applique le même principe ?",
+        "choix": [
+          "Une cale sous la roue d'une voiture",
+          "Un parapluie",
+          "Une lampe torche",
+          "Un tire-bouchon"
+        ],
+        "reponse": 0,
+        "explication": "Dans les deux cas, on immobilise tout l'ensemble en empêchant le point de rotation de bouger."
+      }
+    ],
+    "motsCles": [
+      "porte",
+      "bloquer",
+      "charnière",
+      "gond",
+      "stylo",
+      "cale",
+      "pivot",
+      "levier",
+      "coincer",
+      "fermer",
+      "barricader"
+    ]
+  },
+  {
+    "id": "cadenas-combinaison",
+    "titre": "Ouvrir un cadenas à combinaison à l'oreille",
+    "sousTitre": "Des disques à encoche, et le défaut de fabrication des modèles bon marché",
+    "categories": [
+      "mecanique"
+    ],
+    "niveau": 1,
+    "schema": {
+      "fichier": "cadenas-combinaison.svg",
+      "alt": "Coupe d'un cadenas à combinaison : quatre disques côte à côte, chacun avec son chiffre à l'avant et une encoche. Les quatre encoches sont alignées, et la tige du cadenas les traverse toutes : elle peut sortir. Un encadré précise que sur un cadenas bon marché, les pièces sont imprécises et qu'un petit jeu se sent quand un disque approche de son bon chiffre.",
+      "legende": "Le cadenas ne s'ouvre que si toutes les encoches sont alignées ; un modèle bon marché laisse sentir un petit jeu."
+    },
+    "texte": [
+      "**Un cadenas à combinaison, c'est une serrure sans clé, où le code remplace la forme.** À l'intérieur, plusieurs disques tournent indépendamment, chacun avec une encoche. Le cadenas ne s'ouvre que lorsque toutes les encoches s'alignent en même temps pour laisser passer une pièce métallique.",
+      "**Peu de gens savent qu'un cadenas bon marché a un défaut de fabrication exploitable.** Comme pour la serrure à goupilles, les pièces ne sont jamais taillées au micron près. Quand un disque approche de son bon chiffre, un minuscule [[jeu-mecanique|jeu]] supplémentaire peut se faire sentir ou s'entendre, un petit relâchement de tension à l'écoute attentive. C'est un défaut de fabrication, pas une fonctionnalité voulue.",
+      "**Dans la série**, MacGyver ouvre un cadenas en quelques secondes, l'oreille collée dessus. **Dans la réalité**, cette sensation est extrêmement subtile, demande un cadenas de mauvaise qualité et des dizaines d'essais méthodiques, pas une ouverture en quelques secondes. Les cadenas de sécurité modernes sont justement conçus pour supprimer ce jeu.",
+      "**À retenir :** dès qu'un mécanisme combine plusieurs pièces mobiles qui doivent s'aligner, la précision de fabrication devient le point faible. C'est vrai pour un cadenas comme pour n'importe quel assemblage de précision."
+    ],
+    "enfant": "Un cadenas à code, c'est comme plusieurs roues empilées, chacune avec une petite fente. Il ne s'ouvre que si toutes les fentes sont alignées, comme des perles qu'on voudrait enfiler sur une baguette. Sur un cadenas pas cher, les roues sont un peu mal taillées et bougent très légèrement différemment près du bon chiffre. Mais c'est si discret qu'il faut énormément de patience pour le sentir.",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Possible sur un cadenas bon marché, après de longs essais, pas en quelques secondes",
+      "explication": "Un cadenas à combinaison bon marché peut avoir assez de jeu pour qu'on sente un disque approcher de son chiffre. Mais c'est très subtil, il faut des dizaines d'essais méthodiques, et les cadenas de sécurité sont conçus pour supprimer ce jeu."
+    },
+    "securite": {
+      "niveau": "vert",
+      "note": "Aucun danger. N'essaie que sur ton propre cadenas : ouvrir celui de quelqu'un d'autre est illégal."
+    },
+    "liens": {
+      "fiches": [
+        "serrure-goupilles"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quand un cadenas à combinaison s'ouvre-t-il ?",
+        "choix": [
+          "Quand les encoches de tous les disques sont alignées en même temps",
+          "Dès qu'un seul disque est sur le bon chiffre",
+          "Quand on tourne tous les disques dans le même sens",
+          "Quand on tire très fort sur l'anse"
+        ],
+        "reponse": 0,
+        "explication": "La pièce métallique ne passe que si toutes les encoches forment un passage continu."
+      },
+      {
+        "question": "D'où vient la faiblesse d'un cadenas bon marché ?",
+        "choix": [
+          "D'un jeu de fabrication : les pièces ne sont pas taillées au micron près",
+          "D'un code de secours gravé à l'intérieur",
+          "D'un aimant caché",
+          "De sa couleur"
+        ],
+        "reponse": 0,
+        "explication": "Des pièces imprécises laissent du jeu, et ce jeu change légèrement quand un disque approche de la bonne position."
+      },
+      {
+        "question": "Comment se manifeste ce défaut près du bon chiffre ?",
+        "choix": [
+          "Par un minuscule relâchement de tension, très difficile à sentir ou à entendre",
+          "Par un bip",
+          "Par un voyant qui s'allume",
+          "Le cadenas s'ouvre tout seul"
+        ],
+        "reponse": 0,
+        "explication": "C'est extrêmement subtil : il faut un cadenas de mauvaise qualité et des dizaines d'essais méthodiques."
+      },
+      {
+        "question": "Pourquoi les cadenas de sécurité résistent-ils à cette méthode ?",
+        "choix": [
+          "Ils sont conçus pour supprimer ce jeu",
+          "Ils ont plus de couleurs",
+          "Ils sont plus lourds",
+          "Ils n'ont pas de disques"
+        ],
+        "reponse": 0,
+        "explication": "Avec des pièces précises, rien ne trahit la bonne position d'un disque."
+      }
+    ],
+    "motsCles": [
+      "cadenas",
+      "combinaison",
+      "code",
+      "disque",
+      "encoche",
+      "ouvrir",
+      "oreille",
+      "jeu",
+      "tolérance",
+      "casier",
+      "valise"
+    ]
+  },
+  {
+    "id": "fusible-alarme",
+    "titre": "Faire sauter un fusible pour désactiver une alarme ou une caméra",
+    "sousTitre": "Ce que protège vraiment un fusible, et pourquoi une alarme sérieuse survit à une coupure",
+    "categories": [
+      "electricite"
+    ],
+    "niveau": 1,
+    "schema": {
+      "fichier": "fusible-alarme.svg",
+      "alt": "Circuit simple : le réseau électrique alimente une alarme en passant par un fusible. Dans le fusible, un fil fin en zigzag fond si trop de courant le traverse. L'alarme contient une batterie de secours qui prend le relais quand le courant est coupé, et elle envoie une alerte pour prévenir qu'on l'a privée de courant.",
+      "legende": "Le fusible coupe un circuit en cas de surintensité ; une alarme sérieuse a sa batterie de secours et prévient."
+    },
+    "texte": [
+      "**Un fusible, c'est un interrupteur qui se sacrifie pour protéger le reste du circuit.** À l'intérieur, un fil fin est calibré pour fondre si le [[courant|courant]] qui le traverse dépasse une limite précise, ce qui coupe immédiatement l'alimentation avant qu'un vrai dégât (surchauffe, incendie) ne se produise ailleurs sur le circuit.",
+      "Si tu coupes l'alimentation électrique d'un bâtiment, tout appareil branché directement dessus s'arrête, y compris une alarme ou une caméra basique.",
+      "**Dans la série**, couper le courant suffit à désactiver toute la sécurité d'un bâtiment. **Dans la réalité**, les systèmes de sécurité sérieux ont tous une batterie de secours justement prévue pour continuer à fonctionner en cas de coupure, et beaucoup envoient une alerte automatique dès que l'alimentation principale disparaît, ce qui revient à prévenir directement qu'on cherche à les désactiver.",
+      "**À retenir :** un [[fusible|fusible]] protège un circuit, il ne protège pas un système entier. C'est pour ça que tout dispositif de sécurité sérieux prévoit une solution de secours pour le moment précis où l'alimentation normale disparaît."
+    ],
+    "enfant": "Un fusible, c'est comme un petit gardien qui accepte de tomber pour sauver les autres : s'il passe trop d'électricité, son fil fond et tout s'arrête avant que les fils ne chauffent trop. Une vraie alarme, elle, a une pile de secours, comme une lampe de poche rangée dans un tiroir : si le courant s'en va, elle continue de marcher, et elle prévient même quelqu'un.",
+    "realite": {
+      "verdict": "faux",
+      "nuance": "Seulement sur un appareil basique, sans batterie de secours",
+      "explication": "Couper le courant arrête un appareil branché directement sur le réseau. Mais les systèmes de sécurité sérieux ont une batterie de secours, et beaucoup envoient une alerte dès que l'alimentation principale disparaît."
+    },
+    "securite": {
+      "niveau": "orange",
+      "note": "Ne touche jamais l'intérieur d'un tableau électrique. Un fusible grillé se remplace, courant coupé, par un fusible du même calibre : jamais par un fil ni par un fusible plus fort, qui laisseraient le circuit chauffer jusqu'à l'incendie."
+    },
+    "liens": {
+      "fiches": [
+        "conducteurs-isolants"
+      ],
+      "equivalences": [
+        "isoler-electricite"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Comment un fusible protège-t-il un circuit ?",
+        "choix": [
+          "Son fil fin fond quand le courant dépasse une limite, ce qui coupe l'alimentation",
+          "Il stocke l'électricité en trop",
+          "Il refroidit les fils",
+          "Il augmente la tension"
+        ],
+        "reponse": 0,
+        "explication": "Le fil est calibré pour fondre au-delà d'un certain courant, avant que les fils du circuit ne surchauffent."
+      },
+      {
+        "question": "Pourquoi ne faut-il jamais remplacer un fusible par un fil ou par un fusible plus fort ?",
+        "choix": [
+          "Le circuit pourrait chauffer jusqu'à l'incendie sans que rien ne coupe",
+          "La lumière serait moins forte",
+          "Le compteur tournerait à l'envers",
+          "Ça ne change rien"
+        ],
+        "reponse": 0,
+        "explication": "Le fusible est la limite de sécurité du circuit : le supprimer, c'est laisser passer un courant que les fils ne supportent pas."
+      },
+      {
+        "question": "Que se passe-t-il quand on coupe le courant d'une alarme sérieuse ?",
+        "choix": [
+          "Elle passe sur sa batterie de secours et, souvent, envoie une alerte",
+          "Elle s'arrête définitivement",
+          "Elle ouvre toutes les portes",
+          "Elle efface ses enregistrements"
+        ],
+        "reponse": 0,
+        "explication": "Les systèmes de sécurité sont conçus pour ce moment précis : la coupure est elle-même un signal d'alerte."
+      },
+      {
+        "question": "Que protège un fusible ?",
+        "choix": [
+          "Un circuit, pas un système entier",
+          "Tout le bâtiment contre les intrusions",
+          "Uniquement les appareils éteints",
+          "Le compteur électrique contre la pluie"
+        ],
+        "reponse": 0,
+        "explication": "Il coupe un circuit en cas de surintensité ; la sécurité d'un système complet demande une alimentation de secours."
+      }
+    ],
+    "motsCles": [
+      "fusible",
+      "disjoncteur",
+      "courant",
+      "coupure",
+      "alarme",
+      "caméra",
+      "tableau électrique",
+      "batterie de secours",
+      "surintensité",
+      "court-circuit",
+      "électricité"
+    ]
+  },
+  {
+    "id": "sciage-abrasif",
+    "titre": "Scier des barreaux avec un fil et de la pâte abrasive",
+    "sousTitre": "Arracher la matière grain par grain : de la pâte abrasive au fil diamanté",
+    "categories": [
+      "materiaux",
+      "mecanique"
+    ],
+    "niveau": 2,
+    "schema": {
+      "fichier": "sciage-abrasif.svg",
+      "alt": "Deux vues. 1 : un fil couvert de grains durs passe sur un barreau dans un mouvement de va-et-vient et y creuse une rainure. 2 : un zoom montre deux grains durs, pointus, qui raclent la surface et arrachent de minuscules copeaux. En bas, une échelle de dureté va du calcaire à l'acier trempé puis au diamant : un grain n'use que ce qui est moins dur que lui.",
+      "legende": "Chaque grain est une micro-dent : il n'use que ce qui est moins dur que lui."
+    },
+    "texte": [
+      "**Scier, ce n'est jamais couper d'un coup, c'est arracher la matière grain par grain.** Une lame de scie classique est une rangée de petites dents dures qui grattent le métal à chaque passage. Un fil fin, recouvert d'une pâte contenant des [[abrasif|particules dures]] (comme certains dentifrices abrasifs ou de la cendre fine), fonctionne sur le même principe : chaque grain agit comme une micro-dent qui use progressivement la surface.",
+      "**Peu de gens savent que c'est exactement le principe des scies diamantées professionnelles**, utilisées dans le bâtiment pour couper du béton armé : un simple fil, mais recouvert de grains de diamant, assez durs pour user n'importe quel métal plus tendre qu'eux.",
+      "**Dans la série**, MacGyver scie un barreau de prison en quelques minutes avec un fil et du dentifrice. **Dans la réalité**, l'acier des vrais barreaux est beaucoup plus [[durete|dur]] que les grains présents dans un dentifrice classique, donc ça prendrait des heures, voire ne fonctionnerait pas du tout selon l'alliage. Ça marche en revanche sur des métaux plus tendres, comme l'aluminium ou certains alliages bon marché.",
+      "**À retenir :** couper un matériau dur ne demande pas forcément un outil tranchant, juste un abrasif plus dur que lui, appliqué avec de la patience. C'est le même principe que le papier de verre, qui use le bois grain par grain sans jamais le trancher."
+    ],
+    "enfant": "Scier, ce n'est pas trancher d'un coup : c'est gratter tout petit morceau par tout petit morceau, comme une lime à ongles. Si tu frottes une ficelle couverte de grains durs, chaque grain arrache un minuscule bout de matière. Mais il faut que les grains soient plus durs que ce qu'on frotte, sinon ce sont eux qui s'usent ! C'est pour ça que les scies des chantiers ont des grains de diamant.",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Marche sur l'aluminium ; sur un barreau en acier, des heures, voire jamais",
+      "explication": "Un fil enduit d'abrasif use bien un métal tendre comme l'aluminium. Sur l'acier dur d'un vrai barreau, les grains d'un dentifrice sont trop tendres : il faudrait des heures, voire ça ne marcherait pas du tout."
+    },
+    "securite": {
+      "niveau": "orange",
+      "note": "Un fil tiré vite chauffe et peut couper la peau : protège tes mains. Les poussières de métal irritent les yeux et les poumons : porte des lunettes et travaille dans un endroit aéré."
+    },
+    "liens": {
+      "fiches": [
+        "frottement-cabestan",
+        "choc-thermique"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Comment un fil enduit de pâte abrasive coupe-t-il un métal ?",
+        "choix": [
+          "Chaque grain dur agit comme une micro-dent qui arrache la matière grain par grain",
+          "Il fait fondre le métal",
+          "Il le dissout chimiquement",
+          "Il le casse d'un coup"
+        ],
+        "reponse": 0,
+        "explication": "Comme une lame de scie, mais avec des milliers de grains à la place des dents."
+      },
+      {
+        "question": "Quelle condition faut-il pour qu'un abrasif use un matériau ?",
+        "choix": [
+          "Ses grains doivent être plus durs que le matériau",
+          "Il doit être mouillé",
+          "Il doit être chaud",
+          "Il doit être coloré"
+        ],
+        "reponse": 0,
+        "explication": "Un grain plus tendre que la surface s'use lui-même au lieu de l'user."
+      },
+      {
+        "question": "Pourquoi les scies à fil diamanté coupent-elles même le béton armé ?",
+        "choix": [
+          "Le diamant est plus dur que le béton et que tous les métaux",
+          "Le fil est électrifié",
+          "Le diamant fait fondre l'acier",
+          "Le fil est très épais"
+        ],
+        "reponse": 0,
+        "explication": "Le diamant, le plus dur des matériaux naturels, use tout ce qui est moins dur que lui."
+      },
+      {
+        "question": "Sur quel métal la méthode du fil et du dentifrice peut-elle marcher ?",
+        "choix": [
+          "L'aluminium, plus tendre",
+          "L'acier trempé des barreaux de prison",
+          "Aucun métal, jamais",
+          "Tous les métaux, en quelques minutes"
+        ],
+        "reponse": 0,
+        "explication": "Les grains d'un dentifrice classique sont trop tendres face à l'acier dur, mais suffisent pour un métal tendre."
+      },
+      {
+        "question": "Quel outil du quotidien use par abrasion sans trancher ?",
+        "choix": [
+          "Le papier de verre",
+          "Un couteau",
+          "Des ciseaux",
+          "Une hache"
+        ],
+        "reponse": 0,
+        "explication": "Il use le bois grain par grain, exactement comme le fil abrasif use le métal."
+      }
+    ],
+    "motsCles": [
+      "scier",
+      "scie",
+      "barreau",
+      "fil",
+      "abrasif",
+      "dentifrice",
+      "diamant",
+      "fil diamanté",
+      "dureté",
+      "papier de verre",
+      "limer",
+      "prison",
+      "aluminium",
+      "acier"
+    ]
+  }
+]

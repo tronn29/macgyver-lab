@@ -1,8 +1,8 @@
 {
-  "version": "2026.11.1",
+  "version": "2026.11.2",
   "langue": "fr",
   "categories": ["categories.json"],
-  "theorie": ["theorie-1.json", "theorie-2.json"],
+  "theorie": ["theorie-1.json", "theorie-2.json", "theorie-3.json"],
   "objets": ["objets.json"],
   "equivalences": ["equivalences.json"],
   "pratique": ["pratique.json"],

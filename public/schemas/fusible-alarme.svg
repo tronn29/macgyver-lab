@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Circuit : réseau, fusible (fil fin qui fond si trop de courant), alarme avec batterie de secours et alerte -->
+  <g>
+    <circle class="s-badge" cx="24" cy="20" r="9"/>
+    <text class="s-badge-text" x="24" y="20">1</text>
+    <text class="s-label" x="38" y="24">Un fusible protège un circuit</text>
+  </g>
+  <g>
+    <rect class="s-solid" x="14" y="62" width="62" height="44" rx="4"/>
+    <text class="s-small" x="45" y="88" text-anchor="middle">réseau</text>
+    <path class="s-line" d="M76 76 H104 M176 76 H222"/>
+    <path class="s-line" d="M45 106 V140 H276 V122"/>
+    <rect class="s-solid" x="104" y="64" width="72" height="24" rx="12"/>
+    <path class="s-hot s-pulse" d="M112 76 L120 70 L128 82 L136 70 L144 82 L152 70 L160 82 L168 76"/>
+    <text class="s-tiny s-text-hot" x="140" y="56" text-anchor="middle">fil fin qui fond</text>
+    <text class="s-tiny" x="140" y="104" text-anchor="middle">fusible</text>
+    <path class="s-accent s-flow" d="M80 128 H120" marker-end="url(#mg-arrow-accent)"/>
+    <text class="s-tiny s-text-accent" x="100" y="156" text-anchor="middle">courant</text>
+  </g>
+  <g>
+    <rect class="s-solid" x="222" y="50" width="108" height="72" rx="6"/>
+    <text class="s-small" x="276" y="70" text-anchor="middle">alarme</text>
+    <rect class="s-solid" x="244" y="82" width="52" height="24" rx="3"/>
+    <rect class="s-fill-cold" x="248" y="86" width="30" height="16" rx="1"/>
+    <rect class="s-solid" x="296" y="89" width="5" height="10" rx="1"/>
+    <text class="s-tiny s-text-cold" x="276" y="176" text-anchor="middle">batterie de secours</text>
+    <path class="s-leader" d="M276 166 L268 104" marker-end="url(#mg-dot)"/>
+    <path class="s-accent s-blink" d="M318 46 L334 30"/>
+    <path class="s-accent s-blink s-delay-1" d="M324 52 L344 40"/>
+    <text class="s-tiny s-text-accent" x="300" y="16" text-anchor="middle">alerte envoyée</text>
+  </g>
+  <g>
+    <rect class="s-callout" x="14" y="190" width="332" height="38" rx="4"/>
+    <text class="s-tiny" x="180" y="205" text-anchor="middle">Courant coupé : la batterie prend le relais</text>
+    <text class="s-tiny s-text-accent" x="180" y="220" text-anchor="middle">et l'alarme prévient qu'on l'a privée de courant</text>
+  </g>
+</svg>

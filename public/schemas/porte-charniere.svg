@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Porte vue de dessus : un levier qui pivote sur la charnière ; un stylo coincé près du pivot -->
+  <g>
+    <circle class="s-badge" cx="24" cy="20" r="9"/>
+    <text class="s-badge-text" x="24" y="20">1</text>
+    <text class="s-label" x="38" y="24">Porte vue de dessus</text>
+  </g>
+  <g>
+    <rect class="s-solid" x="14" y="112" width="40" height="64" rx="2"/>
+    <path class="s-thin" d="M18 124 L30 112 M18 140 L42 116 M18 156 L50 124 M18 172 L54 136 M30 176 L54 152 M46 176 L54 168"/>
+    <text class="s-tiny" x="34" y="194" text-anchor="middle">cadre</text>
+    <rect class="s-solid" x="66" y="136" width="262" height="14" rx="2"/>
+    <rect class="s-solid" x="294" y="126" width="22" height="8" rx="2"/>
+    <circle class="s-solid" cx="60" cy="156" r="6"/>
+    <circle class="s-fill-accent s-pulse" cx="60" cy="156" r="10"/>
+    <rect class="s-fill-hot" x="56" y="120" width="8" height="14" rx="2"/>
+    <rect class="s-hot" x="56" y="120" width="8" height="14" rx="2"/>
+    <path class="s-hot" d="M78 128 H68" marker-end="url(#mg-arrow-hot)"/>
+  </g>
+  <g>
+    <path class="s-accent s-flow" d="M305 76 V120" marker-end="url(#mg-arrow-accent)"/>
+    <text class="s-small s-text-accent" x="298" y="70" text-anchor="end">poussée</text>
+    <text class="s-tiny" x="298" y="84" text-anchor="end">loin du pivot :</text>
+    <text class="s-tiny" x="298" y="98" text-anchor="end">peu de force</text>
+    <text class="s-small s-text-hot" x="86" y="100">stylo coincé</text>
+    <text class="s-tiny" x="86" y="114">écrasé, force multipliée</text>
+    <path class="s-leader" d="M84 104 L66 120" marker-end="url(#mg-dot)"/>
+    <text class="s-tiny" x="74" y="174">charnière (pivot)</text>
+    <path class="s-dim" d="M60 186 H305" marker-start="url(#mg-tick)" marker-end="url(#mg-tick)"/>
+    <text class="s-tiny" x="236" y="182" text-anchor="middle">grand bras de levier</text>
+  </g>
+  <g>
+    <rect class="s-callout" x="14" y="200" width="332" height="28" rx="4"/>
+    <text class="s-small" x="180" y="218" text-anchor="middle">Écrasé près du pivot, il bloque la rotation</text>
+  </g>
+</svg>

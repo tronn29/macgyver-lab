@@ -178,7 +178,8 @@
     "definition": "Déplacement d'ensemble de charges électriques dans un conducteur, mesuré en ampères (A). Une petite LED témoin consomme environ 0,02 A, un radiateur de 2 000 W près de 9 A.",
     "fiches": [
       "pile-citron",
-      "conducteurs-isolants"
+      "conducteurs-isolants",
+      "fusible-alarme"
     ]
   },
   {
@@ -244,7 +245,8 @@
     "terme": "Bras de levier",
     "definition": "Distance entre l'axe de rotation et la ligne d'action d'une force. Plus il est long, moins il faut de force pour obtenir le même effet de rotation : une clé à manche long desserre plus facilement un écrou.",
     "fiches": [
-      "levier"
+      "levier",
+      "porte-charniere"
     ]
   },
   {
@@ -539,6 +541,47 @@
     "fiches": [
       "empreintes-poussiere",
       "conducteurs-isolants"
+    ]
+  },
+  {
+    "id": "jeu-mecanique",
+    "terme": "Jeu (mécanique)",
+    "definition": "Petit espace laissé exprès entre deux pièces qui doivent bouger l'une par rapport à l'autre. Sans jeu, elles frotteraient et se bloqueraient ; avec trop de jeu, l'assemblage devient imprécis. Toute serrure en a, et c'est sa faiblesse.",
+    "fiches": [
+      "serrure-goupilles",
+      "cadenas-combinaison"
+    ]
+  },
+  {
+    "id": "ligne-cisaillement",
+    "terme": "Ligne de cisaillement",
+    "definition": "Dans une serrure à goupilles, la limite entre le barillet (la partie qui tourne) et le corps fixe. Le barillet ne peut tourner que si aucune goupille ne traverse cette ligne : c'est ce que fait la bonne clé.",
+    "fiches": [
+      "serrure-goupilles"
+    ]
+  },
+  {
+    "id": "fusible",
+    "terme": "Fusible",
+    "definition": "Pièce de sécurité d'un circuit électrique : un fil fin calibré pour fondre si le courant dépasse une limite. En fondant, il coupe le circuit avant que les fils ne surchauffent. On le remplace toujours par un fusible du même calibre.",
+    "fiches": [
+      "fusible-alarme"
+    ]
+  },
+  {
+    "id": "abrasif",
+    "terme": "Abrasif",
+    "definition": "Matière faite de grains durs qui usent une surface en arrachant de minuscules morceaux : sable, papier de verre, poudre de diamant. Un abrasif n'use que ce qui est moins dur que lui.",
+    "fiches": [
+      "sciage-abrasif"
+    ]
+  },
+  {
+    "id": "durete",
+    "terme": "Dureté",
+    "definition": "Résistance d'un matériau à la rayure. Un matériau raye tous ceux qui sont moins durs que lui : le calcaire est tendre, l'acier trempé est dur, et le diamant, le plus dur des matériaux naturels, raye tous les métaux.",
+    "fiches": [
+      "sciage-abrasif"
     ]
   }
 ]

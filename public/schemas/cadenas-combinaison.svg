@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Cadenas à combinaison : 4 disques à encoche ; quand les encoches s'alignent, la tige passe -->
+  <g>
+    <circle class="s-badge" cx="24" cy="20" r="9"/>
+    <text class="s-badge-text" x="24" y="20">1</text>
+    <text class="s-label" x="38" y="24">Disques alignés : la tige passe</text>
+  </g>
+  <g>
+    <rect class="s-solid" x="70" y="58" width="34" height="96" rx="6"/>
+    <rect class="s-fill-accent" x="78" y="92" width="18" height="22" rx="2"/>
+    <text class="s-label" x="87" y="142" text-anchor="middle">3</text>
+    <rect class="s-solid" x="124" y="58" width="34" height="96" rx="6"/>
+    <rect class="s-fill-accent" x="132" y="92" width="18" height="22" rx="2"/>
+    <text class="s-label" x="141" y="142" text-anchor="middle">7</text>
+    <rect class="s-solid" x="178" y="58" width="34" height="96" rx="6"/>
+    <rect class="s-fill-accent" x="186" y="92" width="18" height="22" rx="2"/>
+    <text class="s-label" x="195" y="142" text-anchor="middle">1</text>
+    <rect class="s-solid" x="232" y="58" width="34" height="96" rx="6"/>
+    <rect class="s-fill-accent" x="240" y="92" width="18" height="22" rx="2"/>
+    <text class="s-label" x="249" y="142" text-anchor="middle">9</text>
+    <rect class="s-solid" x="40" y="97" width="244" height="12" rx="3"/>
+    <rect class="s-fill-hot" x="40" y="97" width="244" height="12" rx="3"/>
+    <path class="s-hot s-flow" d="M290 103 H330" marker-end="url(#mg-arrow-hot)"/>
+    <text class="s-tiny s-text-hot" x="306" y="92" text-anchor="middle">tige</text>
+  </g>
+  <g>
+    <text class="s-tiny" x="87" y="50" text-anchor="middle">disque</text>
+    <text class="s-tiny" x="249" y="50" text-anchor="middle">encoche</text>
+    <path class="s-leader" d="M249 54 L249 90" marker-end="url(#mg-dot)"/>
+    <text class="s-tiny" x="168" y="172" text-anchor="middle">chaque disque tourne seul ; son chiffre est devant</text>
+  </g>
+  <g>
+    <rect class="s-callout" x="14" y="184" width="332" height="44" rx="4"/>
+    <text class="s-small" x="180" y="201" text-anchor="middle">Bon marché : pièces imprécises, un petit jeu</text>
+    <text class="s-small s-text-accent" x="180" y="218" text-anchor="middle">se sent près du bon chiffre</text>
+  </g>
+</svg>
