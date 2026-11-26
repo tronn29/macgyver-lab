@@ -17,7 +17,7 @@ Ouvre l'appli à l'adresse **`#/modeles`**, par exemple `http://localhost:5173/#
 
 ## Partir d'une fiche écrite dans l'appli
 
-Une fiche ou une fonction écrite dans l'appli (« Mes fiches », « Mes fonctions ») a un bouton **Exporter** : il donne son texte au format de ces modèles, à copier ou à télécharger. Enregistre-le dans `public/content/fr/_modeles/` (ex. : `ma-fiche.json`) puis passe directement à l'étape 3. Ce qu'une fiche officielle exige en plus de l'éditeur est déjà ajouté entre crochets : le nom du schéma à dessiner, la version pour enfant, la précaution, les mots-clés, l'explication des questions et, si besoin, des paragraphes (au moins 4, dont « Dans la série / Dans la réalité »).
+Une fiche ou une fonction écrite dans l'appli (« Mes fiches », « Mes fonctions ») a un bouton **Exporter** : il donne son texte au format de ces modèles, à copier ou à télécharger. Enregistre-le dans `public/content/fr/_modeles/` (ex. : `ma-fiche.json`) puis passe directement à l'étape 3. Ce qu'une fiche officielle exige en plus de l'éditeur est déjà ajouté entre crochets : le nom du schéma à dessiner, la version pour enfant, les mots-clés, l'explication des questions et, si besoin, des paragraphes (au moins 4, dont « Dans la série / Dans la réalité »).
 
 ## 1. Dupliquer un modèle
 
