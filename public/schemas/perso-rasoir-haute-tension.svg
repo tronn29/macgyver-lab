@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Schéma de principe seulement : aucun circuit, aucun composant relié, aucune valeur -->
+
+  <!-- Étape 1 : deux bobines sur un même noyau, la tension suit le nombre de spires -->
+  <g>
+    <circle class="s-badge" cx="24" cy="30" r="9"/>
+    <text class="s-badge-text" x="24" y="30">1</text>
+    <text class="s-label" x="38" y="34">Élever la tension</text>
+
+    <rect class="s-line" x="40" y="62" width="120" height="100" rx="4"/>
+    <rect class="s-line" x="64" y="86" width="72" height="52" rx="2"/>
+
+    <!-- Peu de spires à gauche -->
+    <path class="s-accent" d="M34 84 H46 M34 98 H46 M34 112 H46 M34 126 H46 M34 140 H46"/>
+    <!-- Beaucoup de spires à droite -->
+    <path class="s-hot" d="M154 72 H166 M154 80 H166 M154 88 H166 M154 96 H166 M154 104 H166 M154 112 H166 M154 120 H166 M154 128 H166 M154 136 H166 M154 144 H166 M154 152 H166"/>
+
+    <text class="s-tiny s-text-accent" x="16" y="56">peu de spires</text>
+    <text class="s-tiny s-text-hot" x="188" y="180" text-anchor="end">beaucoup de spires</text>
+
+    <path class="s-accent s-flow" d="M12 112 H30" marker-end="url(#mg-arrow)"/>
+    <path class="s-hot s-flow" d="M170 112 H188" marker-end="url(#mg-arrow)"/>
+
+    <rect class="s-callout" x="16" y="194" width="168" height="36" rx="4"/>
+    <text class="s-tiny" x="100" y="208" text-anchor="middle">basse tension en entrée,</text>
+    <text class="s-tiny" x="100" y="222" text-anchor="middle">haute tension en sortie</text>
+  </g>
+
+  <!-- Étape 2 : au-delà d'un seuil, l'air devient conducteur -->
+  <g>
+    <circle class="s-badge-hot" cx="212" cy="30" r="9"/>
+    <text class="s-badge-text" x="212" y="30">2</text>
+    <text class="s-label" x="226" y="34">L'air cède</text>
+
+    <path class="s-line" d="M222 112 H252 L262 112"/>
+    <path class="s-line" d="M338 112 H308 L298 112"/>
+    <path class="s-hot s-blink" d="M264 112 L272 102 L278 120 L286 100 L292 118 L297 112"/>
+
+    <text class="s-tiny" x="280" y="80" text-anchor="middle">air isolant</text>
+    <path class="s-dash" d="M280 86 V98"/>
+
+    <text class="s-tiny s-text-hot" x="280" y="146" text-anchor="middle">étincelle :</text>
+    <text class="s-tiny s-text-hot" x="280" y="160" text-anchor="middle">l'air s'ionise</text>
+
+    <rect class="s-callout" x="200" y="194" width="148" height="36" rx="4"/>
+    <text class="s-tiny" x="274" y="208" text-anchor="middle">comme la foudre,</text>
+    <text class="s-tiny" x="274" y="222" text-anchor="middle">en tout petit</text>
+  </g>
+</svg>

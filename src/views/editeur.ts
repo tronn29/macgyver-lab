@@ -16,6 +16,7 @@ import {
   APERCU_FONCTION,
   CATEGORIES,
   SCHEMA_DEFAUT,
+  SCHEMAS_PERSO,
   assembleTexte,
   clean,
   clearBrouillon,
@@ -310,6 +311,7 @@ function etatFicheDepuis(raw: unknown): FicheEtat | null {
 function buildFiche(s: FicheEtat, id: string, apercu = false): Fiche {
   const c = content();
   const officielle = s.schema ? c.fiches.find((f) => f.schema.fichier === s.schema) : null;
+  const dessine = s.schema ? SCHEMAS_PERSO.find((x) => x.fichier === s.schema) : undefined;
   let texte = assembleTexte(s.paragraphes);
   if (apercu && !texte.length) texte = [t('perso.apercuVide')];
   const quiz = s.quiz
@@ -323,7 +325,7 @@ function buildFiche(s: FicheEtat, id: string, apercu = false): Fiche {
     titre: clean(s.titre) || (apercu ? t('perso.sansTitre') : ''),
     sousTitre: clean(s.sousTitre) || undefined,
     categories: [s.categorie || 'mecanique'],
-    schema: officielle ? { ...officielle.schema } : { fichier: SCHEMA_DEFAUT, alt: t('perso.schemaDefautAlt') },
+    schema: officielle ? { ...officielle.schema } : dessine ? { fichier: dessine.fichier, alt: dessine.alt } : { fichier: SCHEMA_DEFAUT, alt: t('perso.schemaDefautAlt') },
     texte,
     enfant: clean(s.enfant),
     realite: { verdict: s.verdict, nuance: clean(s.nuance) || undefined, explication: explicationDepuis(s.paragraphes) },
@@ -610,7 +612,10 @@ export function ficheEditor(ctx: RouteContext): View {
     const f = buildFiche(s, APERCU_FICHE, true);
     schemaPreview.replaceChildren(schemaFigure({ ...f.schema, legende: undefined, compact: true, zoomable: false }));
   };
-  const schemas = c.fiches.map((f) => ({ value: f.schema.fichier, label: t('perso.schemaDe', { titre: f.titre }) }));
+  const schemas = [
+    ...SCHEMAS_PERSO.map((x) => ({ value: x.fichier, label: x.titre })),
+    ...c.fiches.map((f) => ({ value: f.schema.fichier, label: t('perso.schemaDe', { titre: f.titre }) })),
+  ];
 
   /* --- Construction du formulaire --- */
   const build = () => {

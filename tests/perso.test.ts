@@ -239,3 +239,16 @@ describe('éditeur (formulaire réel)', () => {
     expect(location.hash).toBe(`#/archives/${d.fiches[0].id}`);
   });
 });
+
+describe('schémas dessinés pour les fiches personnelles', () => {
+  it('chaque schéma proposé existe et a une description', async () => {
+    const { SCHEMAS_PERSO } = await import('../src/core/perso');
+    const { existsSync } = await import('node:fs');
+    const { join } = await import('node:path');
+    for (const s of SCHEMAS_PERSO) {
+      expect(existsSync(join(__dirname, '..', 'public', 'schemas', s.fichier)), s.fichier).toBe(true);
+      expect(s.fichier.startsWith('perso-')).toBe(true);
+      expect(s.alt.length).toBeGreaterThan(20);
+    }
+  });
+});

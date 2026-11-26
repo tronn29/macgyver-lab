@@ -14,6 +14,15 @@ import regle from './regle-contenu.json';
 
 export const PREFIXE = 'perso-';
 export const SCHEMA_DEFAUT = 'perso-defaut.svg';
+
+/** Schémas de principe dessinés pour les fiches personnelles (proposés dans l'éditeur). */
+export const SCHEMAS_PERSO: { fichier: string; titre: string; alt: string }[] = [
+  {
+    fichier: 'perso-rasoir-haute-tension.svg',
+    titre: "Schéma du rasoir : élever la tension, étincelle dans l'air",
+    alt: "Schéma de principe en deux parties. 1 : deux bobines sur un même noyau, peu de spires à gauche et beaucoup de spires à droite ; une basse tension entre, une haute tension sort. 2 : deux tiges séparées par de l'air isolant ; au-delà d'un seuil, l'air s'ionise et une étincelle passe, comme la foudre en tout petit.",
+  },
+];
 export const CATEGORIES: CategorieId[] = ['electricite', 'magnetisme', 'chimie', 'mecanique', 'lumiere', 'thermique', 'pression', 'materiaux', 'fluides'];
 
 export interface PersoData {
