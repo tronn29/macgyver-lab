@@ -863,52 +863,22 @@
   },
   {
     "id": "lentille-bouteille",
-    "titre": "Lentille avec une bouteille d'eau",
+    "titre": "Faire du feu avec une bouteille d'eau en guise de loupe",
     "sousTitre": "Une bouteille ronde pleine d'eau concentre la lumière comme une loupe",
     "categories": [
       "lumiere"
     ],
-    "duree": 2,
     "niveau": 1,
     "schema": {
       "fichier": "lentille-bouteille.svg",
       "alt": "Schéma en coupe : des rayons de soleil parallèles traversent une bouteille ronde remplie d'eau ; ils sont déviés en entrant et en sortant, puis convergent vers un foyer chaud situé environ à un rayon de bouteille derrière la paroi. Une légende précise qu'un tube concentre la lumière en une ligne et une boule en un point.",
       "legende": "La réfraction rabat les rayons vers un foyer, à environ un rayon derrière la bouteille."
     },
-    "principe": [
-      "La lumière change de direction en passant de l'air à l'eau : c'est la réfraction.",
-      "Une bouteille ronde pleine d'eau agit comme une lentille convergente.",
-      "Les rayons du soleil se rejoignent au foyer, où la chaleur se concentre."
-    ],
-    "pourquoi": [
-      "La lumière va environ 1,33 fois (un virgule trente-trois fois) moins vite dans l'eau que dans l'air : elle y perd environ un quart de sa vitesse. Quand un rayon arrive en biais sur une surface courbe, il change de direction : c'est la [[refraction|réfraction]]. Sur une surface bombée, les rayons du bord sont plus déviés que ceux du centre, et tous se rabattent vers une même zone : le [[foyer]].",
-      "Une bouteille cylindrique se comporte comme une [[lentille-convergente|lentille convergente]] dans un seul sens : elle concentre la lumière en une ligne brillante, parallèle à la bouteille. Un récipient sphérique, comme un ballon de verre ou une boule à neige, concentre en un point, bien plus chaud. Pour un cylindre d'eau, le foyer se trouve à environ un rayon de bouteille derrière la paroi.",
-      "Une cible sombre absorbe mieux la lumière qu'une cible claire et chauffe donc plus vite. Cette concentration est aussi un danger : une bouteille d'eau ou une boule de verre laissée au soleil près d'une matière sèche peut déclencher un départ de feu."
-    ],
     "enfant": "La lumière, c'est comme une troupe de coureurs : quand ils entrent dans l'eau, ils ralentissent et changent un peu de direction. Une bouteille ronde pleine d'eau fait tourner tous les rayons du soleil vers le même endroit, comme un entonnoir à lumière. Là où ils se rejoignent, ça chauffe très fort, comme sous une loupe.",
-    "chiffres": [
-      {
-        "valeur": "1,33",
-        "label": "indice de réfraction de l'eau : la lumière y va 1,33 fois (un virgule trente-trois fois) moins vite",
-        "dit": "un virgule trente-trois",
-        "concret": "La lumière perd environ un quart de sa vitesse en entrant dans l'eau : c'est ce qui fait paraître cassée une paille plongée dans un verre."
-      },
-      {
-        "valeur": "≈ 1 rayon",
-        "label": "distance du foyer derrière une bouteille cylindrique pleine d'eau",
-        "dit": "environ un rayon",
-        "concret": "Pour une bouteille de huit centimètres de diamètre, la ligne brillante se forme environ quatre centimètres derrière la paroi, à peu près la largeur de deux doigts."
-      },
-      {
-        "valeur": "≈ 1 000 W/m²",
-        "label": "puissance du soleil au sol par beau temps",
-        "dit": "environ mille watts par mètre carré",
-        "concret": "Un mètre carré en plein soleil, la surface d'une serviette de plage, reçoit à peu près la puissance d'un petit radiateur électrique d'appoint."
-      }
-    ],
     "realite": {
       "verdict": "vrai",
-      "explication": "Une bouteille bien transparente et bien ronde concentre réellement assez de lumière pour faire fumer du papier sombre ou de l'amadou, et des départs de feu accidentels ont été attribués à des objets en verre. Il faut toutefois un soleil haut et franc, une cible sombre et de la patience, bien plus qu'à l'écran : par temps couvert ou en fin de journée, cela ne marche pas."
+      "nuance": "Avec un soleil fort, une bouteille bien ronde et plusieurs minutes de patience",
+      "explication": "Une bouteille bien ronde pleine d'eau concentre réellement assez de lumière pour faire naître une braise dans une matière très sèche. Mais il faut un soleil franc et plusieurs minutes de visée précise, bien plus qu'à l'écran."
     },
     "securite": {
       "niveau": "orange",
@@ -930,6 +900,17 @@
     },
     "quiz": [
       {
+        "question": "Que fait une lentille convergente avec des rayons de soleil parallèles ?",
+        "choix": [
+          "Elle les dévie tous vers un même point, le foyer",
+          "Elle les disperse dans toutes les directions",
+          "Elle les arrête",
+          "Elle les rend plus froids"
+        ],
+        "reponse": 0,
+        "explication": "Au foyer, l'énergie de tous les rayons s'additionne sur une toute petite surface : ça chauffe."
+      },
+      {
         "question": "Comment appelle-t-on le changement de direction de la lumière quand elle passe de l'air à l'eau ?",
         "choix": [
           "La réflexion",
@@ -949,6 +930,28 @@
         ],
         "reponse": 1,
         "explication": "Un cylindre n'est courbé que dans un sens : il rabat les rayons en une ligne. Seule une forme sphérique les concentre en un point."
+      },
+      {
+        "question": "Pourquoi une bouteille plate concentre-t-elle mal la lumière ?",
+        "choix": [
+          "Elle n'est pas assez courbée pour dévier les rayons vers un même point",
+          "Le plastique plat est opaque",
+          "L'eau y est trop chaude",
+          "Elle reflète toute la lumière"
+        ],
+        "reponse": 0,
+        "explication": "C'est la courbure qui rabat les rayons : sans courbure, pas de foyer."
+      },
+      {
+        "question": "Que faut-il, en réalité, pour obtenir une braise avec une bouteille d'eau ?",
+        "choix": [
+          "Un soleil fort, une bouteille bien ronde, une matière très sèche et plusieurs minutes de patience",
+          "Quelques secondes, même par temps couvert",
+          "Une bouteille vide",
+          "De l'eau très froide"
+        ],
+        "reponse": 0,
+        "explication": "Ça marche vraiment, mais lentement : il faut viser précisément et attendre."
       }
     ],
     "motsCles": [
@@ -961,7 +964,18 @@
       "réfraction",
       "concentrer",
       "verre",
-      "eau"
+      "eau",
+      "survie",
+      "braise",
+      "copeaux",
+      "glace",
+      "lunettes"
+    ],
+    "texte": [
+      "**Une [[lentille-convergente|lentille convergente]] concentre toute la lumière qui la traverse en un seul point.** La lumière du soleil arrive en rayons presque parallèles. Une surface courbée, comme du verre ou de l'eau dans un contenant rond, dévie chacun de ces rayons vers un même point, appelé le [[foyer|foyer]]. À cet endroit précis, l'énergie de tous les rayons s'additionne sur une toute petite surface.",
+      "**Si tu remplis une bouteille ronde et transparente d'eau, elle se comporte comme une vraie lentille convergente**, car l'eau courbe la lumière différemment de l'air (un phénomène appelé [[refraction|réfraction]]). En orientant le point de concentration sur une matière très sèche et facilement inflammable, comme du petit bois réduit en copeaux, la chaleur accumulée peut suffire à déclencher une combustion.",
+      "**Dans la série**, une bouteille d'eau allume un feu de camp en quelques secondes. **Dans la réalité**, ça fonctionne vraiment, c'est une technique de survie reconnue, mais ça demande un soleil assez fort, une bouteille bien ronde (une bouteille plate ou ovale concentre mal la lumière), et surtout de la patience : plusieurs minutes de concentration précise sont souvent nécessaires avant l'apparition d'une braise.",
+      "**À retenir :** n'importe quel objet transparent et courbé peut agir comme une lentille, y compris de l'eau, de la glace claire, ou le fond épais d'un verre. C'est le même principe qui, à l'envers, permet à tes lunettes de corriger ta vue."
     ]
   },
   {

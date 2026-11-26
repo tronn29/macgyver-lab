@@ -828,5 +828,391 @@
       "dépannage",
       "ceinture"
     ]
+  },
+  {
+    "id": "contact-demarrage",
+    "titre": "Démarrer une voiture en pontant le circuit sans la clé",
+    "sousTitre": "Une clé de contact est un interrupteur, et les voitures récentes vérifient en plus un code",
+    "categories": [
+      "electricite"
+    ],
+    "niveau": 2,
+    "schema": {
+      "fichier": "contact-demarrage.svg",
+      "alt": "Deux vues. 1 : une voiture ancienne ; la clé de contact est un simple interrupteur qui relie la batterie à trois circuits : allumage, démarreur et accessoires. 2 : une voiture récente ; une puce dans la clé envoie un code au calculateur, qui n'autorise l'allumage que si le code est reconnu. Sans code, relier les fils ne fait rien : le moteur refuse de démarrer.",
+      "legende": "Avant : un simple interrupteur. Depuis les années 2000 : un code électronique vérifié en plus."
+    },
+    "texte": [
+      "**Une clé de contact, ce n'est qu'un interrupteur qui ferme plusieurs circuits électriques en même temps.** Tourner la clé relie la batterie à trois circuits distincts : l'allumage (qui alimente les bougies et l'électronique), le démarreur (le petit moteur électrique qui lance le moteur principal), et les accessoires. Sans la clé, ces circuits restent ouverts, et rien ne se passe.",
+      "**Peu de gens savent qu'une voiture ancienne ne vérifie rien d'autre que ce contact électrique.** Sur les véhicules fabriqués avant les années 2000 environ, relier directement les bons fils entre eux reproduit exactement ce que fait la clé, sans aucune autre vérification. C'est le principe que la série montre.",
+      "**Dans la série**, deux fils dénudés suffisent à démarrer n'importe quel véhicule en quelques secondes. **Dans la réalité**, c'est de plus en plus faux : depuis les années 2000, la quasi-totalité des voitures utilisent une [[antidemarrage|puce électronique dans la clé]], qui doit envoyer un code reconnu par le calculateur du véhicule avant même d'autoriser l'allumage. Sans ce code, ponter les fils ne fait rien du tout, le moteur refuse de démarrer.",
+      "**À retenir :** un système de sécurité évolue toujours pour combler la faille précédente. Le pontage de fils a marché tant que la seule protection était mécanique, puis les constructeurs ont ajouté une vérification électronique invisible, rendant la vieille méthode obsolète sur tout véhicule récent."
+    ],
+    "enfant": "La clé d'une voiture, c'est un peu comme l'interrupteur de ta chambre : en tournant, elle allume plusieurs lumières à la fois, mais ici ce sont les circuits du moteur. Les vieilles voitures ne demandaient rien d'autre. Les voitures d'aujourd'hui ont en plus un mot de passe secret caché dans la clé : sans lui, la voiture refuse de démarrer, même si on bricole les fils.",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Possible sur une voiture d'avant les années 2000, plus sur une voiture récente",
+      "explication": "Sur une voiture ancienne, relier les bons fils reproduit le contact de la clé. Depuis les années 2000, une puce dans la clé doit envoyer un code reconnu par le calculateur : sans lui, le moteur ne démarre pas."
+    },
+    "securite": {
+      "niveau": "orange",
+      "note": "Démarrer un véhicule qui n'est pas le tien est un vol. Toucher aux fils d'une voiture peut provoquer un court-circuit et un incendie : seul un garagiste intervient sur ce circuit."
+    },
+    "liens": {
+      "fiches": [
+        "conducteurs-isolants",
+        "serrure-goupilles"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Que fait une clé de contact quand on la tourne ?",
+        "choix": [
+          "Elle relie la batterie à plusieurs circuits : allumage, démarreur et accessoires",
+          "Elle remplit le réservoir",
+          "Elle chauffe le moteur",
+          "Elle ouvre les portes"
+        ],
+        "reponse": 0,
+        "explication": "C'est d'abord un interrupteur qui ferme plusieurs circuits à la fois."
+      },
+      {
+        "question": "À quoi sert le démarreur ?",
+        "choix": [
+          "C'est un petit moteur électrique qui lance le moteur principal",
+          "Il recharge la batterie",
+          "Il allume les phares",
+          "Il freine la voiture"
+        ],
+        "reponse": 0,
+        "explication": "Le moteur à essence ne démarre pas seul : le démarreur le fait tourner au début."
+      },
+      {
+        "question": "Pourquoi relier des fils ne suffit-il plus sur une voiture récente ?",
+        "choix": [
+          "Une puce dans la clé doit envoyer un code reconnu par le calculateur",
+          "Les fils sont devenus invisibles",
+          "Les voitures n'ont plus de batterie",
+          "Le moteur est plus lourd"
+        ],
+        "reponse": 0,
+        "explication": "Sans ce code, le calculateur n'autorise pas l'allumage, quel que soit le câblage."
+      },
+      {
+        "question": "Quelle leçon générale illustre cette fiche ?",
+        "choix": [
+          "Un système de sécurité évolue pour combler la faille précédente",
+          "Les anciennes voitures étaient plus sûres",
+          "L'électricité est inutile dans une voiture",
+          "Une clé ne sert à rien"
+        ],
+        "reponse": 0,
+        "explication": "La protection mécanique a été complétée par une vérification électronique invisible."
+      }
+    ],
+    "motsCles": [
+      "voiture",
+      "démarrer",
+      "clé de contact",
+      "ponter",
+      "fils",
+      "démarreur",
+      "allumage",
+      "antidémarrage",
+      "puce",
+      "calculateur",
+      "batterie",
+      "circuit"
+    ]
+  },
+  {
+    "id": "fil-detecteur",
+    "titre": "Fabriquer un détecteur de mouvement avec une pile et du fil de cuivre",
+    "sousTitre": "Un circuit qui change d'état quand on touche un fil tendu",
+    "categories": [
+      "electricite"
+    ],
+    "niveau": 1,
+    "schema": {
+      "fichier": "fil-detecteur.svg",
+      "alt": "Un fil de cuivre fin tendu en travers d'un passage fait partie d'une boucle avec une pile et un buzzer. Tant que le fil est intact, le circuit est fermé et le courant circule. Quand quelqu'un passe et casse le fil, le circuit s'ouvre : ce changement d'état déclenche l'alerte.",
+      "legende": "Un événement physique devient un changement d'état du circuit : c'est la base de tout capteur."
+    },
+    "texte": [
+      "**Un circuit électrique simple n'a que deux états : ouvert ou fermé.** Tant que le circuit est ouvert, aucun [[courant|courant]] ne circule. Dès qu'il se ferme, le courant passe instantanément, ce qui peut déclencher n'importe quoi de branché derrière, une sonnette, une lumière, une alarme.",
+      "**Si tu tends un fil de cuivre fin en travers d'un passage, relié à une pile et à une petite ampoule ou un buzzer, le circuit reste fermé tant que rien ne le touche.** Dès qu'une personne ou un objet heurte le fil et le casse ou le déplace assez pour rompre le contact, le circuit s'ouvre : ce changement d'état déclenche l'alerte.",
+      "**Dans la série**, un fil tendu dans un couloir sert de système d'alarme de fortune. **Dans la réalité**, ça fonctionne très bien et c'est un montage électronique de base, enseigné aux débutants : le principe exact d'un interrupteur à fil cassant, utilisé aussi dans certains systèmes de sécurité professionnels avant l'arrivée des capteurs infrarouges.",
+      "**À retenir :** la détection, dans son principe le plus simple, revient toujours à transformer un événement physique (un mouvement, une présence) en une rupture ou une fermeture de circuit. C'est la base de presque tous les capteurs, des plus simples aux plus sophistiqués."
+    ],
+    "enfant": "Imagine une ficelle tendue devant ta porte, reliée à une clochette : si quelqu'un passe et tire la ficelle, ça sonne. Ici, la ficelle est un fil électrique : tant qu'il est entier, l'électricité fait le tour. Si quelqu'un le casse en passant, l'électricité s'arrête, et ce changement fait réagir l'alarme.",
+    "realite": {
+      "verdict": "vrai",
+      "nuance": "C'est un montage de base, enseigné aux débutants",
+      "explication": "Un fil fin tendu dans un circuit avec une pile détecte bien un passage : quand on le casse, le circuit change d'état. C'est le principe des interrupteurs à fil cassant, utilisés avant les capteurs infrarouges."
+    },
+    "securite": {
+      "niveau": "vert",
+      "note": "Sans danger avec une pile de basse tension. Ne tends jamais un fil à hauteur de cheville ou de cou dans un passage : on peut trébucher ou se blesser. Ne branche jamais ce montage sur le secteur."
+    },
+    "liens": {
+      "fiches": [
+        "conducteurs-isolants",
+        "pile-citron"
+      ],
+      "equivalences": [
+        "conduire-electricite"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Quels sont les deux états d'un circuit électrique simple ?",
+        "choix": [
+          "Ouvert ou fermé",
+          "Chaud ou froid",
+          "Plein ou vide",
+          "Haut ou bas"
+        ],
+        "reponse": 0,
+        "explication": "Ouvert, aucun courant ne passe ; fermé, le courant circule."
+      },
+      {
+        "question": "Dans ce montage, que se passe-t-il quand quelqu'un casse le fil tendu ?",
+        "choix": [
+          "Le circuit s'ouvre, et ce changement d'état déclenche l'alerte",
+          "Le courant devient plus fort",
+          "La pile se recharge",
+          "Rien ne change"
+        ],
+        "reponse": 0,
+        "explication": "Tant que le fil est entier, le courant circule ; le casser ouvre le circuit."
+      },
+      {
+        "question": "Pourquoi utilise-t-on du fil de cuivre ?",
+        "choix": [
+          "Le cuivre conduit très bien l'électricité",
+          "Le cuivre est magnétique",
+          "Le cuivre isole le courant",
+          "Le cuivre brille dans le noir"
+        ],
+        "reponse": 0,
+        "explication": "C'est l'un des meilleurs conducteurs, d'où son usage dans tous les câbles électriques."
+      },
+      {
+        "question": "Quel est le principe de presque tous les capteurs ?",
+        "choix": [
+          "Transformer un événement physique en changement d'état d'un circuit",
+          "Produire de la lumière",
+          "Stocker de l'énergie",
+          "Chauffer un fil"
+        ],
+        "reponse": 0,
+        "explication": "Du simple fil cassant au capteur le plus sophistiqué, l'idée de base est la même."
+      }
+    ],
+    "motsCles": [
+      "détecteur",
+      "mouvement",
+      "alarme",
+      "fil",
+      "cuivre",
+      "pile",
+      "buzzer",
+      "circuit",
+      "ouvert",
+      "fermé",
+      "capteur",
+      "interrupteur"
+    ]
+  },
+  {
+    "id": "pile-recharge",
+    "titre": "Recharger une pile à plat avec une autre source improvisée",
+    "sousTitre": "Piles jetables et rechargeables : ce qui se recharge vraiment, et ce qui ne se recharge pas",
+    "categories": [
+      "electricite",
+      "chimie"
+    ],
+    "niveau": 2,
+    "schema": {
+      "fichier": "pile-recharge.svg",
+      "alt": "Deux piles côte à côte. 1 : une pile rechargeable ; un courant envoyé en sens inverse remet les substances chimiques dans leur état de départ : la réaction est réversible. 2 : une pile jetable ; les réactifs restants sont mal répartis ; la réchauffer légèrement les redistribue un peu, ce qui redonne quelques minutes, mais forcer un courant de charge la fait chauffer, gonfler, voire s'ouvrir.",
+      "legende": "Une pile rechargeable inverse sa réaction ; une pile jetable ne fait que réorganiser ce qu'il lui reste."
+    },
+    "texte": [
+      "**Une pile se décharge quand sa réaction chimique interne a consommé ses réactifs disponibles.** Une pile rechargeable peut inverser cette réaction si on y fait circuler un courant en sens inverse, ce qui remet les éléments chimiques dans leur état initial. Une pile non rechargeable, elle, ne peut normalement pas être restaurée de cette façon, sa réaction n'est pas réversible proprement.",
+      "**Peu de gens savent qu'on peut parfois redonner une petite charge temporaire à une pile non rechargeable**, en la réchauffant légèrement ou en la tapotant, ce qui redistribue les substances chimiques encore présentes mais mal réparties à l'intérieur. Ce n'est pas une vraie recharge, juste une réorganisation de ce qu'il reste.",
+      "**Dans la série**, une pile de lampe torche à plat repart après un bricolage improvisé. **Dans la réalité**, ça peut effectivement redonner quelques minutes d'autonomie à une pile presque morte, mais ce n'est jamais une vraie recharge : tenter de forcer un vrai courant de charge sur une pile non prévue pour ça peut la faire chauffer dangereusement, voire gonfler ou s'ouvrir.",
+      "**À retenir :** toute pile repose sur une réaction chimique, et toutes les réactions chimiques ne sont pas réversibles de la même façon. C'est pour ça qu'il existe deux grandes familles de piles, rechargeables et jetables, qui ne se comportent jamais pareil face à une tentative de recharge."
+    ],
+    "enfant": "Une pile, c'est comme une petite cuisine où deux ingrédients se mélangent pour fabriquer de l'électricité. Quand les ingrédients sont épuisés, la pile est à plat. Une pile rechargeable sait défaire la recette pour recommencer ; une pile jetable, non. La remuer un peu peut rapprocher les derniers ingrédients et la faire marcher encore quelques minutes, mais elle ne se remplit jamais vraiment.",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Quelques minutes de plus, jamais une vraie recharge",
+      "explication": "Réchauffer légèrement une pile presque vide peut lui redonner quelques minutes, car ses derniers réactifs se redistribuent. Mais une pile jetable ne se recharge pas : lui imposer un courant de charge peut la faire chauffer, gonfler ou s'ouvrir."
+    },
+    "securite": {
+      "niveau": "orange",
+      "note": "Ne recharge jamais une pile marquée non rechargeable, et ne chauffe jamais une batterie au lithium : elle peut gonfler, fuir ou prendre feu. Une pile qui a gonflé ou coulé va au point de collecte, sans la manipuler à mains nues."
+    },
+    "liens": {
+      "fiches": [
+        "pile-citron"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Pourquoi une pile se décharge-t-elle ?",
+        "choix": [
+          "Sa réaction chimique a consommé ses réactifs disponibles",
+          "Son électricité s'évapore",
+          "Elle refroidit",
+          "Elle perd son aimant"
+        ],
+        "reponse": 0,
+        "explication": "Une pile fabrique du courant par une réaction chimique ; quand les réactifs sont épuisés, elle est à plat."
+      },
+      {
+        "question": "Comment recharge-t-on une pile rechargeable ?",
+        "choix": [
+          "En faisant circuler un courant en sens inverse, qui inverse la réaction",
+          "En la mettant au congélateur",
+          "En la secouant fort",
+          "En la laissant au soleil"
+        ],
+        "reponse": 0,
+        "explication": "Le courant inverse remet les substances chimiques dans leur état de départ."
+      },
+      {
+        "question": "Que fait vraiment le fait de réchauffer légèrement une pile jetable presque vide ?",
+        "choix": [
+          "Il redistribue les substances encore présentes, pour quelques minutes de plus",
+          "Il la recharge complètement",
+          "Il la rend rechargeable",
+          "Il augmente sa tension pour toujours"
+        ],
+        "reponse": 0,
+        "explication": "Ce n'est qu'une réorganisation de ce qu'il reste, pas une recharge."
+      },
+      {
+        "question": "Que risque une pile non rechargeable qu'on force à recharger ?",
+        "choix": [
+          "Chauffer dangereusement, gonfler ou s'ouvrir",
+          "Rien du tout",
+          "Devenir plus puissante",
+          "Changer de couleur"
+        ],
+        "reponse": 0,
+        "explication": "Sa réaction n'est pas prévue pour être inversée : l'énergie part en chaleur et en gaz."
+      }
+    ],
+    "motsCles": [
+      "pile",
+      "batterie",
+      "recharger",
+      "à plat",
+      "rechargeable",
+      "jetable",
+      "lampe torche",
+      "réaction chimique",
+      "lithium",
+      "alcaline"
+    ]
+  },
+  {
+    "id": "onde-radio-metal",
+    "titre": "Brouiller un signal radio avec un objet métallique",
+    "sousTitre": "Bloquer une onde avec du métal, ou la brouiller : deux phénomènes différents",
+    "categories": [
+      "electricite",
+      "magnetisme"
+    ],
+    "niveau": 2,
+    "schema": {
+      "fichier": "onde-radio-metal.svg",
+      "alt": "Deux vues. 1 : une onde radio arrive sur une paroi métallique ; des courants naissent dans le métal et renvoient l'onde : derrière la paroi, le récepteur ne reçoit presque plus rien, comme dans un ascenseur. 2 : un brouilleur émet un signal plus fort sur la même fréquence, qui noie le signal légitime ; c'est interdit par la loi.",
+      "legende": "Bloquer : un obstacle renvoie l'onde. Brouiller : un signal plus fort la noie, et c'est interdit."
+    },
+    "texte": [
+      "**Une onde radio, c'est un champ électromagnétique qui se propage dans l'air, et le métal lui résiste naturellement.** Quand une onde radio rencontre une surface métallique conductrice, elle génère un courant électrique à l'intérieur de ce métal, qui lui-même renvoie une onde dans une autre direction. L'onde d'origine est donc réfléchie ou absorbée, plutôt que de continuer son chemin vers le récepteur, exactement le principe d'une [[cage-faraday|cage de Faraday]].",
+      "**Si un objet métallique suffisamment grand entoure une source ou un récepteur radio, il peut bloquer une grande partie du signal**, un peu comme ton téléphone qui perd du réseau dans un ascenseur ou un parking souterrain en béton armé.",
+      "**Dans la série**, un simple objet métallique bien placé coupe une communication radio entière. **Dans la réalité**, bloquer passivement un signal avec du métal fonctionne, mais c'est très différent de le brouiller activement : un vrai brouilleur radio émet volontairement un signal plus fort sur la même fréquence pour noyer le signal légitime, ce qui est une méthode totalement différente, et strictement interdite par la loi dans la plupart des pays, car elle peut couper des communications d'urgence.",
+      "**À retenir :** bloquer une onde (un obstacle physique) et brouiller un signal (une interférence active) sont deux phénomènes différents qui produisent le même résultat apparent, plus de réception, mais pas du tout par le même mécanisme."
+    ],
+    "enfant": "Une onde radio, c'est comme une voix qui voyage dans l'air. Une boîte en métal autour d'un téléphone, c'est comme se boucher les oreilles : la voix rebondit dessus et n'entre plus. Brouiller, c'est autre chose : c'est crier plus fort que la personne qui parle pour qu'on ne l'entende plus. Ça, c'est interdit, car ça pourrait empêcher quelqu'un d'appeler les secours.",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Le métal bloque bien une onde, mais ce n'est pas un brouillage",
+      "explication": "Un objet métallique assez grand autour d'un émetteur ou d'un récepteur bloque une grande partie du signal. Mais un vrai brouillage consiste à émettre un signal plus fort sur la même fréquence, ce qui est un tout autre mécanisme, et interdit par la loi."
+    },
+    "securite": {
+      "niveau": "vert",
+      "note": "Envelopper son propre téléphone de métal est sans danger. Utiliser ou vendre un brouilleur est interdit par la loi : il peut couper les appels d'urgence."
+    },
+    "liens": {
+      "fiches": [
+        "conducteurs-isolants",
+        "electroaimant"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Que se passe-t-il quand une onde radio rencontre une surface métallique ?",
+        "choix": [
+          "Elle crée des courants dans le métal, qui renvoient une onde : le signal est réfléchi ou absorbé",
+          "Elle traverse le métal sans changement",
+          "Elle accélère",
+          "Elle se transforme en son"
+        ],
+        "reponse": 0,
+        "explication": "C'est le principe de la cage de Faraday : le métal conducteur fait écran."
+      },
+      {
+        "question": "Pourquoi un téléphone perd-il du réseau dans un ascenseur ?",
+        "choix": [
+          "Les parois métalliques bloquent une grande partie des ondes",
+          "L'ascenseur consomme tout le réseau",
+          "Il fait trop sombre",
+          "Le téléphone s'éteint en montant"
+        ],
+        "reponse": 0,
+        "explication": "La cabine métallique agit comme une cage de Faraday imparfaite."
+      },
+      {
+        "question": "Quelle est la différence entre bloquer et brouiller un signal ?",
+        "choix": [
+          "Bloquer : un obstacle arrête l'onde ; brouiller : un signal plus fort la noie",
+          "C'est exactement la même chose",
+          "Bloquer utilise du bois, brouiller du métal",
+          "Brouiller rend le signal plus clair"
+        ],
+        "reponse": 0,
+        "explication": "Le résultat apparent est le même, plus de réception, mais le mécanisme n'a rien à voir."
+      },
+      {
+        "question": "Pourquoi les brouilleurs sont-ils interdits ?",
+        "choix": [
+          "Ils peuvent couper des communications d'urgence",
+          "Ils sont trop lourds",
+          "Ils consomment trop d'électricité",
+          "Ils abîment les antennes"
+        ],
+        "reponse": 0,
+        "explication": "Noyer une fréquence empêche aussi les appels de secours."
+      }
+    ],
+    "motsCles": [
+      "radio",
+      "onde",
+      "signal",
+      "brouiller",
+      "brouilleur",
+      "métal",
+      "cage de Faraday",
+      "réseau",
+      "téléphone",
+      "ascenseur",
+      "antenne",
+      "aluminium"
+    ]
   }
 ]

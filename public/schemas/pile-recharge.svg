@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Pile rechargeable (réaction réversible) et pile jetable (réactifs restants redistribués) -->
+  <g>
+    <circle class="s-badge" cx="24" cy="20" r="9"/>
+    <text class="s-badge-text" x="24" y="20">1</text>
+    <text class="s-label" x="38" y="24">Rechargeable</text>
+    <rect class="s-solid" x="40" y="52" width="70" height="110" rx="8"/>
+    <rect class="s-solid" x="65" y="44" width="20" height="8" rx="2"/>
+    <text class="s-small" x="75" y="70" text-anchor="middle">+</text>
+    <text class="s-small" x="75" y="154" text-anchor="middle">−</text>
+    <circle class="s-fill-cold" cx="62" cy="96" r="6"/><circle class="s-fill-cold" cx="88" cy="96" r="6"/>
+    <circle class="s-fill-accent" cx="62" cy="122" r="6"/><circle class="s-fill-accent" cx="88" cy="122" r="6"/>
+    <path class="s-accent s-flow" d="M126 136 C150 120, 150 96, 126 80" marker-end="url(#mg-arrow-accent)"/>
+    <text class="s-tiny s-text-accent" x="138" y="176" text-anchor="middle">courant inversé :</text>
+    <text class="s-tiny s-text-accent" x="138" y="190" text-anchor="middle">la réaction s'inverse</text>
+  </g>
+  <g>
+    <circle class="s-badge-hot" cx="208" cy="20" r="9"/>
+    <text class="s-badge-text" x="208" y="20">2</text>
+    <text class="s-label" x="222" y="24">Jetable</text>
+    <rect class="s-solid" x="232" y="52" width="70" height="110" rx="8"/>
+    <rect class="s-solid" x="257" y="44" width="20" height="8" rx="2"/>
+    <text class="s-small" x="267" y="70" text-anchor="middle">+</text>
+    <text class="s-small" x="267" y="154" text-anchor="middle">−</text>
+    <circle class="s-fill-muted" cx="252" cy="88" r="5"/><circle class="s-fill-hot" cx="278" cy="132" r="5"/>
+    <circle class="s-fill-muted" cx="282" cy="104" r="5"/><circle class="s-fill-muted" cx="258" cy="140" r="5"/>
+    <path class="s-hot s-pulse" d="M318 70 C326 80, 314 90, 322 100 M330 70 C338 80, 326 90, 334 100"/>
+    <text class="s-tiny s-text-hot" x="282" y="176" text-anchor="middle">forcer une charge :</text>
+    <text class="s-tiny s-text-hot" x="282" y="190" text-anchor="middle">chauffe, gonfle</text>
+  </g>
+  <g>
+    <rect class="s-callout" x="14" y="200" width="332" height="28" rx="4"/>
+    <text class="s-tiny" x="180" y="218" text-anchor="middle">Réchauffer une jetable : pas une vraie recharge</text>
+  </g>
+</svg>

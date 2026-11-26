@@ -179,7 +179,8 @@
     "fiches": [
       "pile-citron",
       "conducteurs-isolants",
-      "fusible-alarme"
+      "fusible-alarme",
+      "fil-detecteur"
     ]
   },
   {
@@ -583,6 +584,22 @@
     "definition": "Résistance d'un matériau à la rayure. Un matériau raye tous ceux qui sont moins durs que lui : le calcaire est tendre, l'acier trempé est dur, et le diamant, le plus dur des matériaux naturels, raye tous les métaux.",
     "fiches": [
       "sciage-abrasif"
+    ]
+  },
+  {
+    "id": "antidemarrage",
+    "terme": "Antidémarrage électronique",
+    "definition": "Système qui empêche une voiture de démarrer si la clé ne présente pas le bon code. Une puce dans la clé répond au calculateur du véhicule ; sans cette réponse, l'allumage reste bloqué. Généralisé sur les voitures neuves vers la fin des années 1990.",
+    "fiches": [
+      "contact-demarrage"
+    ]
+  },
+  {
+    "id": "cage-faraday",
+    "terme": "Cage de Faraday",
+    "definition": "Enveloppe en matière conductrice (métal, grillage fin) qui empêche les ondes électromagnétiques d'entrer ou de sortir : elles créent des courants dans le métal, qui les renvoient. C'est pour ça qu'un téléphone capte mal dans un ascenseur.",
+    "fiches": [
+      "onde-radio-metal"
     ]
   }
 ]

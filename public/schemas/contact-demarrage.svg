@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Clé de contact = interrupteur vers 3 circuits ; voiture récente : code de la puce vérifié par le calculateur -->
+  <g>
+    <circle class="s-badge" cx="24" cy="20" r="9"/>
+    <text class="s-badge-text" x="24" y="20">1</text>
+    <text class="s-label" x="38" y="24">Voiture ancienne</text>
+    <rect class="s-solid" x="14" y="56" width="40" height="56" rx="4"/>
+    <rect class="s-solid" x="22" y="50" width="8" height="6"/>
+    <rect class="s-solid" x="38" y="50" width="8" height="6"/>
+    <text class="s-tiny" x="34" y="128" text-anchor="middle">batterie</text>
+    <path class="s-line" d="M54 84 H76"/>
+    <circle class="s-solid" cx="80" cy="84" r="4"/>
+    <path class="s-accent" d="M84 84 L112 70"/>
+    <text class="s-tiny s-text-accent" x="96" y="56" text-anchor="middle">clé</text>
+    <path class="s-line" d="M116 62 V108 M116 62 H130 M116 84 H130 M116 108 H130"/>
+    <text class="s-tiny" x="134" y="66">allumage</text>
+    <text class="s-tiny" x="134" y="88">démarreur</text>
+    <text class="s-tiny" x="134" y="112">accessoires</text>
+  </g>
+  <path class="s-thin" d="M200 40 V176"/>
+  <g>
+    <circle class="s-badge" cx="218" cy="20" r="9"/>
+    <text class="s-badge-text" x="218" y="20">2</text>
+    <text class="s-label" x="232" y="24">Voiture récente</text>
+    <rect class="s-solid" x="212" y="64" width="44" height="28" rx="6"/>
+    <rect class="s-fill-accent" x="226" y="72" width="16" height="12" rx="2"/>
+    <text class="s-tiny" x="234" y="108" text-anchor="middle">puce</text>
+    <path class="s-accent s-flow" d="M260 78 H280" marker-end="url(#mg-arrow-accent)"/>
+    <text class="s-tiny s-text-accent" x="272" y="68" text-anchor="middle">code</text>
+    <rect class="s-solid" x="284" y="60" width="74" height="36" rx="4"/>
+    <text class="s-tiny" x="321" y="82" text-anchor="middle">calculateur</text>
+    <text class="s-tiny" x="300" y="118" text-anchor="middle">code reconnu ?</text>
+    <text class="s-tiny s-text-cold" x="232" y="146">oui : allumage</text>
+    <text class="s-tiny s-text-hot" x="232" y="162">non : rien ne démarre</text>
+  </g>
+  <g>
+    <rect class="s-callout" x="14" y="190" width="332" height="38" rx="4"/>
+    <text class="s-tiny" x="180" y="205" text-anchor="middle">Avant les années 2000 : la clé n'est qu'un interrupteur</text>
+    <text class="s-tiny s-text-accent" x="180" y="220" text-anchor="middle">Depuis : sans le code de la puce, ponter ne fait rien</text>
+  </g>
+</svg>

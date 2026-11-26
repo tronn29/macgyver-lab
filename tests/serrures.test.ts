@@ -124,3 +124,41 @@ describe('fiches dépannage et mécanique (6 à 10)', () => {
     expect(c.parcours.some((p) => p.etapes.some((e) => e.id === 'levier'))).toBe(true);
   });
 });
+
+/* ---------- Fiches 11 à 15 : électricité, ondes et optique ---------- */
+const IDS3 = ['contact-demarrage', 'fil-detecteur', 'pile-recharge', 'onde-radio-metal', 'lentille-bouteille'];
+const CORRECTIONS3: [string, string][] = [
+  ['le circuit reste ouvert tant que rien ne le touche', 'le circuit reste fermé tant que rien ne le touche'],
+  ["le circuit change d'état et déclenche l'alerte", "le circuit s'ouvre : ce changement d'état déclenche l'alerte"],
+];
+
+describe('fiches électricité, ondes et optique (11 à 15)', () => {
+  const fourni3 = lireFourni('electricite-et-optique.md');
+
+  it('reprennent le texte fourni mot pour mot, hors corrections listées', () => {
+    expect(fourni3).toHaveLength(5);
+    let utilisees = 0;
+    IDS3.forEach((id, i) => {
+      const f = c.byId.fiche.get(id)!;
+      expect(f.titre).toBe(fourni3[i].titre);
+      expect(isLongFormat(f)).toBe(true);
+      expect(f.texte!.some(isSerieRealite)).toBe(true);
+      expect(isRetenir(f.texte!.at(-1)!)).toBe(true);
+      let attendu = fourni3[i].texte;
+      for (const [avant, apres] of CORRECTIONS3)
+        if (attendu.includes(avant)) {
+          attendu = attendu.replace(avant, apres);
+          utilisees++;
+        }
+      expect(affiche(id)).toBe(attendu);
+    });
+    expect(utilisees).toBe(CORRECTIONS3.length);
+  });
+
+  it('la lentille passe au format long sans changer d’identifiant ni perdre son expérience', () => {
+    const f = c.byId.fiche.get('lentille-bouteille')!;
+    expect(f.principe).toBeUndefined();
+    expect(f.liens.pratique).toContain('loupe-goutte-eau');
+    expect(f.quiz.length).toBeGreaterThanOrEqual(4);
+  });
+});

@@ -136,3 +136,10 @@ Tests : 54 (7 nouveaux : case « Lu », score enregistré, quiz cliqué dans un 
 - Tests : 91 (texte fourni mot pour mot hors des 7 corrections listées ; levier et poulie au format long sans changement d'identifiant, toujours cités par les parcours).
 - Schémas mesurés avec la police réelle : corrigés une légende hors cadre et deux étiquettes serrées (chewing-gum) ; retirés une coche qui empiétait sur l'échelle de température et une animation de rotation trompeuse sur les flèches des poulies.
 - Téléphone en portrait et en paysage : aucun débordement ; contraste : 0 échec en thème sombre et clair ; liens symétriques vérifiés (le frottement renvoie vers levier, poulie et courroie) ; parcours intacts.
+
+## Fiches 11 à 15 : vérifications
+
+- Validateur : 34 fiches, 73 termes, contenu valide, 8 avertissements d'accroche (textes fournis).
+- Tests : 93 (texte fourni mot pour mot hors de la correction listée ; lentille au format long avec son expérience liée).
+- Schémas mesurés avec la police réelle : corrigés deux étiquettes hors cadre et une flèche qui traversait « calculateur » (voiture), une étiquette sur la flèche (détecteur), une légende plus large que son encadré et deux paires d'étiquettes serrées (pile, radio).
+- Téléphone en portrait et en paysage : aucun débordement ; contraste : 0 échec en thème sombre et clair.
