@@ -129,3 +129,10 @@ Tests : 54 (7 nouveaux : case « Lu », score enregistré, quiz cliqué dans un 
 - Tests : 89 (nouveaux : texte fourni mot pour mot hors des 4 corrections listées, structure du format long, schéma, quiz et nuance de chaque fiche).
 - Schémas mesurés avec la police réelle : aucun texte hors cadre ni chevauchement (corrigés : 3 paires d'étiquettes trop serrées, une légende qui coupait le cercle du zoom, un arc en pointillés qui traversait les étiquettes de la porte).
 - Téléphone en portrait (375 × 812) et en paysage (812 × 375) : aucun débordement ; contraste : 0 échec en thème sombre et clair ; la recherche trouve chaque fiche (« serrure », « cadenas », « fusible », « scier barreau », « bloquer porte ») et les liens sont symétriques (la fiche du levier renvoie vers la porte).
+
+## Fiches 6 à 10 : vérifications
+
+- Validateur : 30 fiches, contenu valide, 5 avertissements d'accroche (textes fournis). Un ordre de grandeur non prononcé dans un nouveau quiz du levier (« 2 m », « 0,2 m ») a été corrigé.
+- Tests : 91 (texte fourni mot pour mot hors des 7 corrections listées ; levier et poulie au format long sans changement d'identifiant, toujours cités par les parcours).
+- Schémas mesurés avec la police réelle : corrigés une légende hors cadre et deux étiquettes serrées (chewing-gum) ; retirés une coche qui empiétait sur l'échelle de température et une animation de rotation trompeuse sur les flèches des poulies.
+- Téléphone en portrait et en paysage : aucun débordement ; contraste : 0 échec en thème sombre et clair ; liens symétriques vérifiés (le frottement renvoie vers levier, poulie et courroie) ; parcours intacts.

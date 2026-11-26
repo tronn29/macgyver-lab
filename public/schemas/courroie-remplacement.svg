@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Deux poulies reliées par un lien tendu : la courroie, ou un collant noué en dépannage -->
+  <g>
+    <circle class="s-badge" cx="24" cy="20" r="9"/>
+    <text class="s-badge-text" x="24" y="20">1</text>
+    <text class="s-label" x="38" y="24">Transmettre une rotation</text>
+  </g>
+  <g>
+    <path class="s-accent" d="M80 62 L262 82 M80 158 L262 138"/>
+    <path class="s-accent" d="M80 62 A48 48 0 0 0 80 158"/>
+    <path class="s-accent" d="M262 82 A28 28 0 0 1 262 138"/>
+    <circle class="s-solid" cx="80" cy="110" r="44"/>
+    <circle class="s-fill-muted" cx="80" cy="110" r="36"/>
+    <circle class="s-solid" cx="80" cy="110" r="7"/>
+    <circle class="s-solid" cx="262" cy="110" r="24"/>
+    <circle class="s-fill-muted" cx="262" cy="110" r="18"/>
+    <circle class="s-solid" cx="262" cy="110" r="5"/>
+    <path class="s-hot" d="M80 84 A26 26 0 0 1 106 110" marker-end="url(#mg-arrow-hot)"/>
+    <path class="s-hot" d="M262 96 A14 14 0 0 1 276 110" marker-end="url(#mg-arrow-hot)"/>
+    <circle class="s-fill-hot" cx="171" cy="72" r="5"/>
+    <circle class="s-hot" cx="171" cy="72" r="5"/>
+  </g>
+  <g>
+    <text class="s-tiny" x="80" y="174" text-anchor="middle">poulie du moteur</text>
+    <text class="s-tiny" x="262" y="160" text-anchor="middle">poulie entraînée</text>
+    <text class="s-small s-text-accent" x="171" y="52" text-anchor="middle">lien tendu</text>
+    <text class="s-tiny s-text-hot" x="171" y="98" text-anchor="middle">nœud du collant</text>
+    <path class="s-leader" d="M171 90 L171 79" marker-end="url(#mg-dot)"/>
+  </g>
+  <g>
+    <rect class="s-callout" x="14" y="186" width="332" height="42" rx="4"/>
+    <text class="s-tiny" x="180" y="203" text-anchor="middle">Fonction : transmettre la rotation sans glisser</text>
+    <text class="s-tiny s-text-hot" x="180" y="219" text-anchor="middle">Le collant chauffe, s'étire et cède vite</text>
+  </g>
+</svg>

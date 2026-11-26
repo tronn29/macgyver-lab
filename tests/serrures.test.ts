@@ -25,14 +25,15 @@ const CORRECTIONS: [string, string][] = [
   ],
 ];
 
-const fourni = readFileSync(join(__dirname, 'fixtures', 'serrures-et-securite.md'), 'utf8')
+const lireFourni = (fichier: string) => readFileSync(join(__dirname, 'fixtures', fichier), 'utf8')
   .trim()
-  .split(/^\d\. /m)
+  .split(/^\d+\. /m)
   .filter(Boolean)
   .map((bloc) => {
     const [titre, ...paras] = bloc.trim().split(/\n\n+/);
     return { titre: titre.trim(), texte: paras.join('\n\n') };
   });
+const fourni = lireFourni('serrures-et-securite.md');
 
 const affiche = (id: string) =>
   c.byId.fiche
@@ -74,5 +75,52 @@ describe('fiches serrures et sécurité', () => {
       expect(f.realite.nuance!.length).toBeLessThanOrEqual(90);
     }
     expect(c.byId.fiche.get('fusible-alarme')!.realite.verdict).toBe('faux');
+  });
+});
+
+/* ---------- Fiches 6 à 10 : dépannage et mécanique ---------- */
+const IDS2 = ['poivre-fuite', 'levier', 'poulie-palan', 'chewing-gum-durite', 'courroie-remplacement'];
+const CORRECTIONS2: [string, string][] = [
+  ['le poivre flotte et cherche le courant', 'le poivre flotte et suit le courant'],
+  ['si le courant qui la porte ralentit brutalement à cet endroit', "si le courant qui la porte la plaque contre une ouverture plus étroite qu'elle"],
+  ['"donnez-moi un point d\'appui et je soulèverai le monde"', "« Donnez-moi un point d'appui et je soulèverai le monde »"],
+  ["l'effort en magie", "l'effort par magie"],
+  ['chacune moins fort', 'chacune moins chargée'],
+  ['(plusieurs dizaines de degrés sur une durite)', "(près de quatre-vingt-dix degrés dans une durite, presque la température de l'eau qui bout)"],
+  ["avant l'invention des pièces de rechange faciles d'accès", "à l'époque où une pièce de rechange était difficile à trouver"],
+];
+
+describe('fiches dépannage et mécanique (6 à 10)', () => {
+  const fourni2 = lireFourni('depannage-et-mecanique.md');
+
+  it('reprennent le texte fourni mot pour mot, hors corrections listées', () => {
+    expect(fourni2).toHaveLength(5);
+    let utilisees = 0;
+    IDS2.forEach((id, i) => {
+      const f = c.byId.fiche.get(id)!;
+      expect(f.titre).toBe(fourni2[i].titre);
+      expect(isLongFormat(f)).toBe(true);
+      expect(f.texte!.some(isSerieRealite)).toBe(true);
+      expect(isRetenir(f.texte!.at(-1)!)).toBe(true);
+      let attendu = fourni2[i].texte;
+      for (const [avant, apres] of CORRECTIONS2)
+        if (attendu.includes(avant)) {
+          attendu = attendu.replace(avant, apres);
+          utilisees++;
+        }
+      expect(affiche(id)).toBe(attendu);
+    });
+    expect(utilisees).toBe(CORRECTIONS2.length);
+  });
+
+  it('levier et poulie passent au format long sans changer d’identifiant', () => {
+    for (const id of ['levier', 'poulie-palan']) {
+      const f = c.byId.fiche.get(id)!;
+      expect(f.principe).toBeUndefined();
+      expect(f.pourquoi).toBeUndefined();
+      expect(f.quiz.length).toBeGreaterThanOrEqual(4);
+    }
+    // toujours cités par les parcours et les missions
+    expect(c.parcours.some((p) => p.etapes.some((e) => e.id === 'levier'))).toBe(true);
   });
 });

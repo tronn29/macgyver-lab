@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Coupe d'un tuyau : l'eau emporte des grains de poivre qui se coincent à l'entrée d'un petit trou -->
+  <g>
+    <circle class="s-badge" cx="24" cy="20" r="9"/>
+    <text class="s-badge-text" x="24" y="20">1</text>
+    <text class="s-label" x="38" y="24">Le poivre bouche le trou</text>
+  </g>
+  <g>
+    <rect class="s-fill-cold" x="16" y="72" width="328" height="66"/>
+    <path class="s-line" d="M16 70 H344"/>
+    <path class="s-line" d="M16 140 H168 M180 140 H344"/>
+    <rect class="s-solid" x="16" y="62" width="328" height="8"/>
+    <rect class="s-solid" x="16" y="140" width="152" height="8"/>
+    <rect class="s-solid" x="180" y="140" width="164" height="8"/>
+    <path class="s-cold s-flow" d="M24 104 H300" marker-end="url(#mg-arrow-cold)"/>
+    <circle class="s-fill-hot" cx="40" cy="98" r="3.2"/><circle class="s-fill-hot" cx="62" cy="110" r="3.2"/><circle class="s-fill-hot" cx="84" cy="86" r="3.2"/><circle class="s-fill-hot" cx="106" cy="122" r="3.2"/><circle class="s-fill-hot" cx="128" cy="122" r="3.2"/><circle class="s-fill-hot" cx="150" cy="98" r="3.2"/><circle class="s-fill-hot" cx="172" cy="86" r="3.2"/><circle class="s-fill-hot" cx="194" cy="86" r="3.2"/><circle class="s-fill-hot" cx="216" cy="86" r="3.2"/><circle class="s-fill-hot" cx="238" cy="122" r="3.2"/>
+    <circle class="s-fill-hot" cx="166" cy="134" r="3.6"/><circle class="s-hot" cx="166" cy="134" r="3.6"/><circle class="s-fill-hot" cx="174" cy="134" r="3.6"/><circle class="s-hot" cx="174" cy="134" r="3.6"/><circle class="s-fill-hot" cx="182" cy="134" r="3.6"/><circle class="s-hot" cx="182" cy="134" r="3.6"/><circle class="s-fill-hot" cx="170" cy="128" r="3.6"/><circle class="s-hot" cx="170" cy="128" r="3.6"/><circle class="s-fill-hot" cx="178" cy="128" r="3.6"/><circle class="s-hot" cx="178" cy="128" r="3.6"/><circle class="s-fill-hot" cx="162" cy="128" r="3.6"/><circle class="s-hot" cx="162" cy="128" r="3.6"/><circle class="s-fill-hot" cx="186" cy="128" r="3.6"/><circle class="s-hot" cx="186" cy="128" r="3.6"/><circle class="s-fill-hot" cx="174" cy="122" r="3.6"/><circle class="s-hot" cx="174" cy="122" r="3.6"/>
+    <path class="s-cold s-flow" d="M174 150 V186" marker-end="url(#mg-arrow-cold)"/>
+  </g>
+  <g>
+    <text class="s-tiny s-text-cold" x="310" y="58" text-anchor="middle">courant</text>
+    <text class="s-tiny s-text-hot" x="60" y="58" text-anchor="middle">grains de poivre</text>
+    <text class="s-small s-text-hot" x="200" y="124">bouchon</text>
+    <text class="s-tiny" x="188" y="166">petit trou</text>
+    <text class="s-tiny s-text-cold" x="188" y="180">le jet accélère</text>
+  </g>
+  <g>
+    <rect class="s-callout" x="14" y="198" width="332" height="30" rx="4"/>
+    <text class="s-small" x="180" y="217" text-anchor="middle">Trop gros pour passer, les grains se coincent</text>
+  </g>
+</svg>
