@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Boulon plein qui coule, coque creuse qui flotte, œuf qui remonte dans l'eau salée -->
+  <circle class="s-badge" cx="24" cy="20" r="9"/>
+  <text class="s-badge-text" x="24" y="20">1</text>
+  <text class="s-small" x="38" y="24">Boulon</text>
+  <circle class="s-badge" cx="138" cy="20" r="9"/>
+  <text class="s-badge-text" x="138" y="20">2</text>
+  <text class="s-small" x="152" y="24">Coque</text>
+  <circle class="s-badge" cx="252" cy="20" r="9"/>
+  <text class="s-badge-text" x="252" y="20">3</text>
+  <text class="s-small" x="266" y="24">Eau salée</text>
+  <rect class="s-fill-cold" x="16" y="96" width="96" height="70"/>
+  <path class="s-cold" d="M16 96 H112"/>
+  <rect class="s-solid" x="54" y="140" width="20" height="22" rx="2"/>
+  <path class="s-line" d="M64 108 V132" marker-end="url(#mg-arrow)"/>
+  <text class="s-tiny" x="64" y="64" text-anchor="middle">acier plein :</text>
+  <text class="s-tiny s-text-hot" x="64" y="78" text-anchor="middle">coule</text>
+  <rect class="s-fill-cold" x="132" y="96" width="96" height="70"/>
+  <path class="s-cold" d="M132 96 H228"/>
+  <path class="s-solid" d="M146 84 H214 L204 110 H156 Z"/>
+  <text class="s-tiny" x="180" y="100" text-anchor="middle">air</text>
+  <path class="s-accent" d="M180 150 V118" marker-end="url(#mg-arrow-accent)"/>
+  <text class="s-tiny" x="180" y="64" text-anchor="middle">acier creux :</text>
+  <text class="s-tiny s-text-cold" x="180" y="78" text-anchor="middle">flotte</text>
+  <rect class="s-fill-cold" x="248" y="96" width="96" height="70"/>
+  <path class="s-cold" d="M248 96 H344"/>
+  <rect class="s-fill-muted" x="248" y="96" width="96" height="70"/>
+  <ellipse class="s-solid" cx="296" cy="104" rx="11" ry="14"/>
+  <text class="s-tiny" x="296" y="64" text-anchor="middle">œuf :</text>
+  <text class="s-tiny s-text-cold" x="296" y="78" text-anchor="middle">il remonte</text>
+  <rect class="s-callout" x="14" y="196" width="332" height="28" rx="4"/>
+  <text class="s-tiny" x="180" y="214" text-anchor="middle">Ce qui compte : la densité moyenne, air compris</text>
+</svg>

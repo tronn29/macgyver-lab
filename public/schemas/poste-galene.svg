@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Antenne, bobine, cristal et écouteur : une radio sans pile -->
+  <circle class="s-badge" cx="24" cy="20" r="9"/>
+  <text class="s-badge-text" x="24" y="20">1</text>
+  <text class="s-label" x="38" y="24">Poste à galène, sans pile</text>
+  <path class="s-line" d="M40 150 V56 M28 56 H52"/>
+  <path class="s-accent s-flow" d="M60 48 q6 -8 12 0 q6 8 12 0 q6 -8 12 0"/>
+  <text class="s-tiny s-text-accent" x="78" y="38" text-anchor="middle">onde radio</text>
+  <text class="s-tiny" x="40" y="166" text-anchor="middle">antenne</text>
+  <path class="s-line" d="M40 100 H96"/>
+  <path class="s-line" d="M96 84 q8 0 8 8 q0 8 -8 8 q8 0 8 8 q0 8 -8 8 q8 0 8 8 q0 8 -8 8"/>
+  <text class="s-tiny" x="104" y="166" text-anchor="middle">bobine</text>
+  <path class="s-line" d="M104 100 H160"/>
+  <polygon class="s-solid" points="160,90 160,110 178,100"/>
+  <path class="s-line" d="M178 90 V110 M178 100 H236"/>
+  <text class="s-tiny" x="170" y="130" text-anchor="middle">cristal</text>
+  <text class="s-tiny" x="170" y="144" text-anchor="middle">ou diode</text>
+  <circle class="s-solid" cx="262" cy="100" r="22"/>
+  <circle class="s-fill-accent s-pulse" cx="262" cy="100" r="10"/>
+  <text class="s-tiny" x="262" y="140" text-anchor="middle">écouteur</text>
+  <path class="s-ghost" d="M292 86 q8 14 0 28 M302 80 q12 20 0 40"/>
+  <rect class="s-callout" x="14" y="186" width="332" height="38" rx="4"/>
+  <text class="s-tiny" x="180" y="201" text-anchor="middle">Bobine : choisit la station. Cristal : extrait le son</text>
+  <text class="s-tiny s-text-accent" x="180" y="216" text-anchor="middle">son très faible, sans aucune pile</text>
+</svg>

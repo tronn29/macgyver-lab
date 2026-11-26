@@ -162,3 +162,57 @@ describe('fiches électricité, ondes et optique (11 à 15)', () => {
     expect(f.quiz.length).toBeGreaterThanOrEqual(4);
   });
 });
+
+/* ---------- Fiches 16 à 27 : survie et sciences (18 et 23 absents du texte fourni) ---------- */
+const IDS4 = ['fumee-signal', 'fuite-gaz', 'attelle-fracture', 'suture-plaie', 'poste-galene', 'encre-citron', 'canette-pile', 'densite-flottaison', 'eau-solaire', 'boussole-improvisee'];
+const CORRECTIONS4: [string, string][] = [
+  [
+    'Peu de gens savent que ce principe fonctionne vraiment sur un petit raccord, c\'est d\'ailleurs une astuce de dépannage reconnue sur certains équipements de camping.',
+    "Peu de gens savent que, sur un petit raccord, le savon sert surtout à repérer une fuite : de l'eau savonneuse forme des bulles exactement là où le gaz s'échappe, c'est la vérification reconnue sur les équipements de camping.",
+  ],
+  [
+    "Si tu découpes deux morceaux d'une canette en aluminium et que tu les sépares",
+    "Si tu découpes un morceau d'une canette en aluminium, que tu le poses face à un fil de cuivre et que tu les sépares",
+  ],
+  ["de l'ordre d'un volt par cellule", "de l'ordre d'un demi-volt par cellule"],
+  [
+    'exactement comme dans une vraie pile rechargeable au lithium, qui empile elle aussi plusieurs cellules.',
+    "exactement comme une batterie d'ordinateur portable, qui empile elle aussi plusieurs cellules au lithium.",
+  ],
+];
+
+describe('fiches survie et sciences (16 à 27)', () => {
+  const fourni4 = lireFourni('survie-et-sciences.md');
+
+  it('reprennent le texte fourni mot pour mot, hors corrections listées', () => {
+    expect(fourni4).toHaveLength(10);
+    let utilisees = 0;
+    IDS4.forEach((id, i) => {
+      const f = c.byId.fiche.get(id)!;
+      expect(f.titre).toBe(fourni4[i].titre);
+      expect(isLongFormat(f)).toBe(true);
+      expect(f.texte!.some(isSerieRealite)).toBe(true);
+      expect(isRetenir(f.texte!.at(-1)!)).toBe(true);
+      let attendu = fourni4[i].texte;
+      for (const [avant, apres] of CORRECTIONS4)
+        if (attendu.includes(avant)) {
+          attendu = attendu.replace(avant, apres);
+          utilisees++;
+        }
+      expect(affiche(id)).toBe(attendu);
+    });
+    expect(utilisees).toBe(CORRECTIONS4.length);
+  });
+
+  it('les sujets à risque sont classés rouge, et la fuite de gaz reste au niveau du principe', () => {
+    expect(c.byId.fiche.get('fuite-gaz')!.securite.niveau).toBe('rouge');
+    expect(c.byId.fiche.get('fuite-gaz')!.principeSeul).toBe(true);
+    expect(c.byId.fiche.get('suture-plaie')!.securite.niveau).toBe('rouge');
+  });
+
+  it('eau solaire et boussole passent au format long en gardant leurs expériences', () => {
+    expect(c.byId.fiche.get('eau-solaire')!.liens.pratique).toContain('distillateur-solaire');
+    expect(c.byId.fiche.get('boussole-improvisee')!.liens.pratique).toContain('boussole-aiguille');
+    for (const id of ['eau-solaire', 'boussole-improvisee']) expect(c.byId.fiche.get(id)!.principe).toBeUndefined();
+  });
+});

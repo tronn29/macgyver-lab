@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Une planche le long de la jambe dépasse le genou et la cheville -->
+  <circle class="s-badge" cx="24" cy="20" r="9"/>
+  <text class="s-badge-text" x="24" y="20">1</text>
+  <text class="s-label" x="38" y="24">Attelle sur une jambe</text>
+  <rect class="s-solid" x="40" y="96" width="280" height="30" rx="14"/>
+  <circle class="s-solid" cx="96" cy="111" r="17"/>
+  <circle class="s-solid" cx="272" cy="111" r="13"/>
+  <path class="s-hot" d="M176 96 L184 106 L176 116 L186 126"/>
+  <rect class="s-fill-accent" x="60" y="80" width="248" height="12" rx="3"/>
+  <rect class="s-solid" x="60" y="80" width="248" height="12" rx="3"/>
+  <path class="s-accent" d="M76 78 V130 M140 78 V130 M224 78 V130 M296 78 V130"/>
+  <text class="s-tiny" x="96" y="150" text-anchor="middle">genou</text>
+  <text class="s-tiny" x="272" y="150" text-anchor="middle">cheville</text>
+  <text class="s-tiny s-text-hot" x="182" y="150" text-anchor="middle">fracture</text>
+  <text class="s-tiny s-text-accent" x="184" y="70" text-anchor="middle">planche rigide</text>
+  <text class="s-tiny" x="184" y="168" text-anchor="middle">liens fermes, jamais sur la fracture</text>
+  <rect class="s-callout" x="14" y="186" width="332" height="38" rx="4"/>
+  <text class="s-tiny" x="180" y="201" text-anchor="middle">Dépasser l'articulation au-dessus</text>
+  <text class="s-tiny s-text-accent" x="180" y="216" text-anchor="middle">et celle en dessous</text>
+</svg>

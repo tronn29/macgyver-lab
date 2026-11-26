@@ -980,52 +980,22 @@
   },
   {
     "id": "boussole-improvisee",
-    "titre": "Boussole improvisée",
-    "sousTitre": "Une aiguille aimantée qui flotte s'aligne sur le champ magnétique terrestre",
+    "titre": "Faire une boussole avec une aiguille, un aimant et de l'eau",
+    "sousTitre": "Une aiguille aimantée qui flotte s'aligne sur le champ magnétique de la Terre",
     "categories": [
       "magnetisme"
     ],
-    "duree": 2,
     "niveau": 1,
     "schema": {
       "fichier": "boussole-improvisee.svg",
       "alt": "Schéma : à gauche, un aimant frotté dans un seul sens le long d'une aiguille ; les petits domaines magnétiques de l'acier, d'abord orientés au hasard, s'alignent. À droite, en perspective, un bol d'eau sur lequel flotte une feuille portant l'aiguille, qui pivote pour s'aligner sur la flèche du champ magnétique terrestre, pointe N vers le nord. Une légende avertit qu'un objet en fer proche fausse le nord.",
       "legende": "Aimanter, faire flotter, laisser s'aligner nord-sud."
     },
-    "principe": [
-      "Frotter une aiguille d'acier avec un aimant, toujours dans le même sens, l'aimante.",
-      "Posée sur un support flottant, elle tourne librement, presque sans frottement.",
-      "Elle s'aligne sur le champ magnétique terrestre : l'axe nord-sud apparaît."
-    ],
-    "pourquoi": [
-      "L'acier est [[ferromagnetique]] : il contient de minuscules zones, les domaines magnétiques, orientées au hasard. En passant un aimant toujours dans le même sens le long de l'aiguille, on aligne une partie de ces domaines : c'est l'[[aimantation]]. L'aiguille devient un petit aimant, avec un pôle nord et un pôle sud.",
-      "La Terre se comporte comme un énorme aimant. Son [[champ-magnetique|champ magnétique]] est faible, mais il suffit à faire pivoter une aiguille si rien ne la freine. Posée sur une feuille, un morceau de bouchon ou de papier flottant sur l'eau, elle ne subit presque aucun [[frottement]] et tourne jusqu'à s'aligner nord-sud.",
-      "L'aiguille indique le nord magnétique, qui diffère de quelques degrés du nord géographique en France. Elle ne dit pas quel bout pointe vers le nord : il faut le vérifier une fois avec le soleil ou les étoiles. Un objet en fer ou un appareil électrique trop proche fausse l'indication."
-    ],
     "enfant": "Notre planète est comme un aimant géant caché sous nos pieds. Si tu transformes une aiguille en petit aimant en la frottant avec un aimant de frigo, puis que tu la poses sur une feuille qui flotte dans un bol d'eau, elle tourne toute seule et se place nord-sud, comme une flèche qui cherche son chemin.",
-    "chiffres": [
-      {
-        "valeur": "≈ 47 µT",
-        "label": "intensité du champ magnétique terrestre en France",
-        "dit": "environ quarante-sept microteslas",
-        "concret": "Environ cent fois plus faible qu'un aimant de frigo à son contact : assez pour faire tourner une aiguille qui flotte, beaucoup trop peu pour soulever un trombone."
-      },
-      {
-        "valeur": "≈ 100 ×",
-        "label": "un aimant de frigo est environ cent fois plus intense à son contact",
-        "dit": "environ cent fois",
-        "concret": "C'est pour cela qu'un aimant de frigo posé juste à côté de ton aiguille l'attire aussitôt et lui fait oublier le nord : de près, le champ de la Terre ne fait pas le poids."
-      },
-      {
-        "valeur": "< 4°",
-        "label": "écart actuel entre nord magnétique et nord géographique en France métropolitaine",
-        "dit": "moins de quatre degrés",
-        "concret": "Sur un kilomètre de marche, un écart de quatre degrés ne te décale que d'environ soixante-dix mètres sur le côté : à pied, c'est presque négligeable."
-      }
-    ],
     "realite": {
       "verdict": "vrai",
-      "explication": "L'aiguille aimantée flottante fonctionne vraiment : c'est une technique de survie reconnue. À l'écran, elle indique le nord en une seconde ; en réalité, elle met un moment à se stabiliser, réagit au vent et aux remous, et une aiguille mal aimantée reste paresseuse. Elle donne un axe nord-sud fiable, mais il faut savoir quelle pointe est le nord."
+      "nuance": "Elle indique le nord magnétique, pas le nord géographique exact",
+      "explication": "Une aiguille aimantée qui flotte s'aligne vraiment sur le champ magnétique terrestre. Mais elle indique le nord magnétique, décalé du nord géographique selon l'endroit, et un objet métallique proche la dévie."
     },
     "securite": {
       "niveau": "vert",
@@ -1045,6 +1015,50 @@
       ]
     },
     "quiz": [
+      {
+        "question": "Pourquoi une aiguille aimantée libre de tourner s'oriente-t-elle ?",
+        "choix": [
+          "Elle s'aligne sur le champ magnétique de la Terre, qui se comporte comme un immense aimant",
+          "Elle suit le soleil",
+          "Elle est attirée par l'eau",
+          "Elle tourne au hasard"
+        ],
+        "reponse": 0,
+        "explication": "Comme deux aimants qui s'attirent ou se repoussent, l'aiguille s'aligne sur le champ terrestre."
+      },
+      {
+        "question": "Que se passe-t-il dans l'acier quand on frotte l'aiguille dans le même sens contre un aimant ?",
+        "choix": [
+          "Ses domaines magnétiques s'alignent dans la même direction",
+          "Il chauffe et fond",
+          "Il perd ses électrons",
+          "Il devient plus lourd"
+        ],
+        "reponse": 0,
+        "explication": "Une fois alignés, ces minuscules domaines font de l'aiguille un petit aimant."
+      },
+      {
+        "question": "Pourquoi poser l'aiguille sur un bout de liège flottant ?",
+        "choix": [
+          "Pour qu'elle tourne librement, presque sans frottement",
+          "Pour qu'elle reste sèche",
+          "Pour l'aimanter davantage",
+          "Pour qu'elle coule lentement"
+        ],
+        "reponse": 0,
+        "explication": "Sur l'eau, rien ne la retient : elle peut s'orienter même sous une force très faible."
+      },
+      {
+        "question": "Qu'est-ce que la déclinaison magnétique ?",
+        "choix": [
+          "L'écart entre le nord magnétique et le nord géographique",
+          "La vitesse de l'aiguille",
+          "La force de l'aimant",
+          "L'angle du soleil"
+        ],
+        "reponse": 0,
+        "explication": "Cet écart varie selon l'endroit sur Terre : une boussole n'indique jamais exactement le nord géographique."
+      },
       {
         "question": "Pourquoi pose-t-on l'aiguille sur un support qui flotte ?",
         "choix": [
@@ -1078,58 +1092,40 @@
       "bouchon",
       "feuille",
       "survie",
-      "champ magnétique"
+      "champ magnétique",
+      "aiguille",
+      "liège",
+      "nord magnétique",
+      "déclinaison",
+      "survie",
+      "orientation"
+    ],
+    "texte": [
+      "**La Terre entière se comporte comme un immense aimant, avec un pôle nord et un pôle sud magnétiques, légèrement décalés des pôles géographiques.** N'importe quel objet aimanté, libre de tourner sans frottement, s'aligne naturellement avec ce [[champ-magnetique|champ magnétique]] terrestre, exactement comme deux aimants s'attirent ou se repoussent selon leurs pôles.",
+      "**Si tu frottes une aiguille en acier plusieurs fois dans le même sens contre un aimant, les minuscules domaines magnétiques à l'intérieur du métal s'alignent tous dans la même direction, transformant l'aiguille elle-même en petit aimant.** Posée délicatement sur un bout de liège flottant à la surface de l'eau, elle peut alors tourner librement, sans aucun frottement avec un support solide, et s'orienter selon le champ magnétique terrestre.",
+      "**Dans la série**, une aiguille aimantée pointe instantanément et précisément le nord. **Dans la réalité**, cette méthode fonctionne, c'est une vraie technique de survie, mais elle pointe le nord magnétique, pas le nord géographique exact (l'écart entre les deux, appelé [[declinaison-magnetique|déclinaison magnétique]], varie selon l'endroit sur Terre), et elle reste sensible à tout objet métallique proche qui perturberait le champ.",
+      "**À retenir :** [[aimantation|aimanter]] un objet, c'est simplement forcer ses particules internes à s'aligner dans la même direction. Une fois alignées, elles restent orientées ainsi un certain temps, même loin de l'aimant d'origine qui les a mises en ordre."
     ]
   },
   {
     "id": "eau-solaire",
-    "titre": "Purifier l'eau avec le soleil",
-    "sousTitre": "La méthode SODIS : UV-A et chaleur dans une bouteille transparente",
+    "titre": "Purifier de l'eau avec un sac plastique et le soleil",
+    "sousTitre": "La désinfection solaire : chaleur et ultraviolets contre les microbes",
     "categories": [
       "lumiere",
       "fluides"
     ],
-    "duree": 2,
     "niveau": 2,
     "schema": {
       "fichier": "eau-solaire.svg",
       "alt": "Schéma : le soleil envoie des rayons UV-A (320 à 400 nm) sur une bouteille en plastique transparent couchée sur une tôle sombre ; les microbes dans l'eau sont barrés ; un thermomètre indique 50 °C, seuil où la chaleur accélère la désinfection ; une durée de 6 heures de plein soleil est indiquée, et un encadré rappelle que la méthode ne retire ni produits chimiques, ni métaux, ni sel.",
       "legende": "UV-A et chaleur inactivent les microbes ; la chimie de l'eau ne change pas."
     },
-    "principe": [
-      "Les UV-A du soleil traversent le plastique PET et détruisent les microbes.",
-      "Au-delà de 50 °C (cinquante degrés Celsius), plus chaud qu'un bain, la chaleur s'ajoute aux UV : la désinfection va trois fois plus vite.",
-      "Il faut une eau claire et 6 h (six heures, une journée d'école) de plein soleil, ou 2 jours (deux jours) si le ciel est très couvert."
-    ],
-    "pourquoi": [
-      "Le [[rayonnement]] solaire contient des [[uv]] de type A, de longueur d'onde 320 à 400 nm (trois cent vingt à quatre cents nanomètres), juste un peu plus courte que celle du violet, la dernière couleur que tes yeux voient. Le plastique PET les laisse passer, contrairement aux bouteilles colorées ou au verre épais. Ces rayons abîment l'ADN et les protéines des bactéries et des virus, et forment dans l'eau des molécules d'oxygène très réactives qui achèvent les microbes.",
-      "Une bouteille posée au soleil, idéalement sur une tôle ou une surface sombre, chauffe aussi. Au-dessus d'environ 50 °C (cinquante degrés Celsius), une eau trop chaude pour y laisser la main longtemps, chaleur et UV agissent ensemble et la désinfection est trois fois plus rapide. Inutile d'atteindre l'ébullition : c'est une sorte de [[pasteurisation]] douce, renforcée par la lumière.",
-      "La méthode a des limites. Une eau trouble arrête les UV : il faut d'abord la laisser décanter ou la filtrer. Les bouteilles doivent être petites, 2 L (deux litres) au plus, la taille d'une grande bouteille de soda, pour que la lumière traverse toute l'eau. Surtout, le soleil ne retire ni les produits chimiques, ni les métaux, ni le sel."
-    ],
     "enfant": "Les microbes qui peuvent rendre malade n'aiment pas du tout le soleil. Si on remplit une bouteille transparente d'eau bien claire et qu'on la laisse toute une journée au grand soleil, une lumière invisible, les ultraviolets, abîme les microbes, un peu comme un énorme coup de soleil. Mais attention : le soleil n'enlève ni la boue ni les produits chimiques.",
-    "chiffres": [
-      {
-        "valeur": "6 h",
-        "label": "de plein soleil, ou 2 jours (deux jours) de suite si le ciel est très nuageux",
-        "dit": "six heures",
-        "concret": "De neuf heures du matin à trois heures de l'après-midi, à peu près la durée d'une journée d'école : pose la bouteille le matin, elle est prête dans l'après-midi."
-      },
-      {
-        "valeur": "320 à 400 nm",
-        "label": "longueur d'onde des UV-A qui traversent le plastique PET",
-        "dit": "trois cent vingt à quatre cents nanomètres",
-        "concret": "Des rayons un peu plus courts que la lumière violette, donc invisibles, mais assez énergétiques pour abîmer la peau : c'est pour cela qu'une crème solaire doit aussi protéger des UV-A."
-      },
-      {
-        "valeur": "≥ 50 °C",
-        "label": "température à partir de laquelle la désinfection va trois fois plus vite",
-        "dit": "au moins cinquante degrés Celsius",
-        "concret": "Plus chaud que l'eau d'un bain, vers trente-huit degrés : une bouteille posée au soleil sur une tôle sombre l'atteint facilement, et tu ne pourrais pas y laisser ta main longtemps."
-      }
-    ],
     "realite": {
-      "verdict": "vrai",
-      "explication": "La méthode SODIS est validée et recommandée dans de nombreux pays pour traiter l'eau de boisson à domicile : elle réduit fortement les bactéries, les virus et la plupart des parasites. Mais elle n'a rien d'instantané comme à l'écran : il faut des heures, une eau claire et un vrai soleil. Elle n'élimine aucun polluant chimique et ne rend pas l'eau de mer potable : pour cela, il faut distiller."
+      "verdict": "partiel",
+      "nuance": "Contre les microbes, oui ; contre les produits chimiques et l'eau trouble, non",
+      "explication": "La désinfection solaire réduit fortement les microbes d'une eau claire, après plusieurs heures au soleil. Elle n'enlève ni les produits chimiques, ni les métaux lourds, et une eau trouble doit d'abord être filtrée."
     },
     "securite": {
       "niveau": "orange",
@@ -1149,6 +1145,50 @@
       ]
     },
     "quiz": [
+      {
+        "question": "Comment la chaleur tue-t-elle les microbes de l'eau ?",
+        "choix": [
+          "Elle abîme leurs structures internes et les empêche de se multiplier",
+          "Elle les fait s'évaporer",
+          "Elle les rend plus lourds",
+          "Elle les colore"
+        ],
+        "reponse": 0,
+        "explication": "Il n'est pas nécessaire d'atteindre l'ébullition : une température élevée maintenue assez longtemps suffit."
+      },
+      {
+        "question": "Pourquoi faut-il filtrer une eau trouble avant de l'exposer au soleil ?",
+        "choix": [
+          "Les particules en suspension protègent les microbes des rayons du soleil",
+          "L'eau trouble chauffe trop",
+          "Le soleil rend la boue toxique",
+          "Ce n'est pas nécessaire"
+        ],
+        "reponse": 0,
+        "explication": "Les ultraviolets ne traversent pas bien une eau trouble : les microbes cachés derrière les particules survivent."
+      },
+      {
+        "question": "Que n'enlève pas la désinfection solaire ?",
+        "choix": [
+          "Les produits chimiques et les métaux lourds",
+          "Les bactéries",
+          "Les virus",
+          "Rien, elle enlève tout"
+        ],
+        "reponse": 0,
+        "explication": "Elle agit sur le vivant ; une pollution chimique reste dans l'eau."
+      },
+      {
+        "question": "Pourquoi poser le contenant sur une surface sombre ?",
+        "choix": [
+          "Une surface sombre absorbe la lumière et chauffe davantage l'eau",
+          "Pour cacher l'eau",
+          "Pour que les UV rebondissent",
+          "Pour refroidir l'eau"
+        ],
+        "reponse": 0,
+        "explication": "Plus l'eau chauffe, plus la chaleur s'ajoute à l'effet des ultraviolets."
+      },
       {
         "question": "Pourquoi utilise-t-on une bouteille en plastique PET transparente ?",
         "choix": [
@@ -1182,7 +1222,18 @@
       "UV",
       "microbes",
       "survie",
-      "plastique PET"
+      "plastique PET",
+      "désinfection solaire",
+      "sac plastique",
+      "ultraviolets",
+      "microbes",
+      "eau potable"
+    ],
+    "texte": [
+      "**La plupart des microbes responsables de maladies dans l'eau meurent à partir d'une certaine température, maintenue assez longtemps.** La chaleur abîme les structures internes des bactéries et des virus, les empêchant de se multiplier, bien avant d'atteindre la température d'ébullition.",
+      "**Si tu places de l'eau dans un contenant transparent exposé en plein soleil, comme une bouteille ou un sac plastique clair, posé sur une surface sombre pendant plusieurs heures, la combinaison de la chaleur et des rayons [[uv|ultraviolets]] du soleil élimine une grande partie des microbes présents.** C'est une méthode validée et utilisée dans l'aide humanitaire sous le nom de désinfection solaire.",
+      "**Dans la série**, cette méthode rend n'importe quelle eau immédiatement potable. **Dans la réalité**, elle réduit fortement les microbes biologiques, mais elle n'enlève ni les produits chimiques, ni les métaux lourds, ni la turbidité (l'eau trouble doit d'abord être filtrée, car les particules en suspension protègent les microbes du soleil). Ce n'est pas un substitut à une vraie purification quand elle est disponible.",
+      "**À retenir :** la chaleur et la lumière ultraviolette attaquent la vie microscopique de deux façons différentes et complémentaires. C'est pour ça que l'eau doit rester exposée plusieurs heures, et pas seulement être tiède quelques minutes."
     ]
   }
 ]

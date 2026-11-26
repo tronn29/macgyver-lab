@@ -143,3 +143,10 @@ Tests : 54 (7 nouveaux : case « Lu », score enregistré, quiz cliqué dans un 
 - Tests : 93 (texte fourni mot pour mot hors de la correction listée ; lentille au format long avec son expérience liée).
 - Schémas mesurés avec la police réelle : corrigés deux étiquettes hors cadre et une flèche qui traversait « calculateur » (voiture), une étiquette sur la flèche (détecteur), une légende plus large que son encadré et deux paires d'étiquettes serrées (pile, radio).
 - Téléphone en portrait et en paysage : aucun débordement ; contraste : 0 échec en thème sombre et clair.
+
+## Fiches 16 à 27 : vérifications
+
+- Validateur : 42 fiches, 75 termes, contenu valide, 16 avertissements d'accroche (textes fournis).
+- Tests : 96 (texte fourni mot pour mot hors des 4 corrections listées ; fuite de gaz et suture classées rouge, fuite de gaz en principe seul ; eau solaire et boussole au format long avec leurs expériences).
+- Schémas mesurés avec la police réelle : corrigés une étiquette hors cadre et une collision (pile), un titre trop long qui touchait la pastille voisine et une étiquette sur l'encadré (gaz), une étiquette sur le séparateur (pile), deux en-têtes trop proches (citron).
+- Téléphone en portrait et en paysage : aucun débordement ; contraste : 0 échec en thème sombre et clair.

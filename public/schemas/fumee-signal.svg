@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+  <!-- Feu bien aéré (peu de fumée) et feu avec branches vertes (épaisse fumée blanche) -->
+  <circle class="s-badge" cx="24" cy="20" r="9"/>
+  <text class="s-badge-text" x="24" y="20">1</text>
+  <text class="s-label" x="38" y="24">Bien aéré</text>
+  <path class="s-solid" d="M60 150 L120 140 M60 140 L120 150"/>
+  <path class="s-fill-hot s-pulse" d="M90 104 C110 126, 108 144, 90 144 C72 144, 70 126, 90 104 Z"/>
+  <path class="s-hot" d="M90 104 C110 126, 108 144, 90 144 C72 144, 70 126, 90 104 Z"/>
+  <path class="s-ghost s-float" d="M84 96 C78 84, 96 78, 90 66"/>
+  <text class="s-tiny" x="90" y="52" text-anchor="middle">CO₂ et vapeur</text>
+  <text class="s-tiny" x="90" y="168" text-anchor="middle">peu de fumée</text>
+  <circle class="s-badge-hot" cx="196" cy="20" r="9"/>
+  <text class="s-badge-text" x="196" y="20">2</text>
+  <text class="s-label" x="210" y="24">Branches vertes</text>
+  <path class="s-solid" d="M240 150 L300 140 M240 140 L300 150"/>
+  <path class="s-fill-hot s-pulse" d="M270 104 C290 126, 288 144, 270 144 C252 144, 250 126, 270 104 Z"/>
+  <path class="s-hot" d="M270 104 C290 126, 288 144, 270 144 C252 144, 250 126, 270 104 Z"/>
+  <path class="s-line" d="M246 140 L294 132" />
+  <path class="s-line" d="M250 132 L290 142" />
+  <circle class="s-fill-muted s-float" cx="262" cy="90" r="16"/>
+  <circle class="s-fill-muted s-float s-delay-1" cx="282" cy="74" r="20"/>
+  <circle class="s-fill-muted s-float s-delay-2" cx="262" cy="56" r="18"/>
+  <text class="s-tiny" x="270" y="168" text-anchor="middle">fumée épaisse</text>
+  <text class="s-tiny s-text-hot" x="326" y="110" text-anchor="middle">non</text>
+  <text class="s-tiny s-text-hot" x="326" y="124" text-anchor="middle">brûlé</text>
+  <rect class="s-callout" x="14" y="186" width="332" height="38" rx="4"/>
+  <text class="s-tiny" x="180" y="201" text-anchor="middle">Fumée épaisse : combustion incomplète</text>
+  <text class="s-tiny s-text-accent" x="180" y="216" text-anchor="middle">pas un feu plus puissant</text>
+</svg>

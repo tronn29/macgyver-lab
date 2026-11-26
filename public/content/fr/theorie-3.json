@@ -1214,5 +1214,781 @@
       "antenne",
       "aluminium"
     ]
+  },
+  {
+    "id": "fumee-signal",
+    "titre": "Faire de la fumée épaisse pour masquer ou signaler",
+    "sousTitre": "Combustion complète ou incomplète : d'où vient une fumée épaisse",
+    "categories": [
+      "chimie",
+      "thermique"
+    ],
+    "niveau": 1,
+    "schema": {
+      "fichier": "fumee-signal.svg",
+      "alt": "Deux feux côte à côte. 1 : un feu bien alimenté en air brûle presque complètement son combustible et ne rejette surtout que du dioxyde de carbone et de la vapeur d'eau, invisibles. 2 : sur un feu déjà établi, des branches vertes et humides ajoutées font une épaisse fumée blanche, faite de particules non brûlées et de vapeur, visible de loin.",
+      "legende": "Fumée épaisse = combustion incomplète, pas feu plus puissant."
+    },
+    "texte": [
+      "**La fumée, ce sont de minuscules particules solides ou liquides en suspension dans l'air, assez petites pour y flotter longtemps.** Une [[combustion|combustion]] parfaite ne produit presque que du dioxyde de carbone et de la vapeur d'eau, invisibles. Une combustion incomplète, elle, laisse échapper des particules de carbone non brûlées, qui donnent une fumée noire et épaisse, visible de loin.",
+      "**Si tu ajoutes des matériaux humides ou verts sur un feu déjà bien établi, la chaleur ne suffit plus à brûler complètement le combustible**, l'humidité se transforme aussi en vapeur, et le résultat est une épaisse fumée blanche, utilisée depuis des siècles comme signal visible à des kilomètres.",
+      "**Dans la série**, un simple feu improvisé produit un rideau de fumée instantané pour masquer une fuite. **Dans la réalité**, obtenir une vraie fumée épaisse et durable demande un feu déjà bien alimenté, pas juste une allumette, et le vent la disperse souvent plus vite qu'à l'écran.",
+      "**À retenir :** la quantité de fumée dépend directement de ce que la combustion n'a pas réussi à transformer complètement. C'est pour ça qu'un feu qui fume beaucoup est souvent un feu mal alimenté en air, pas un feu plus puissant."
+    ],
+    "enfant": "Un feu, c'est comme un estomac qui mange du bois. Quand il a assez d'air et du bois bien sec, il digère presque tout, et on voit peu de fumée. Si on lui donne des feuilles mouillées, il n'arrive pas à tout avaler : il recrache plein de petits morceaux et de la vapeur, et ça fait un gros nuage blanc qu'on voit de très loin.",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Une fumée de signal, oui ; un rideau instantané, non",
+      "explication": "Des végétaux verts ou humides jetés sur un feu bien établi font une épaisse fumée blanche, un signal connu depuis des siècles. Mais il faut d'abord un vrai feu, et le vent disperse vite la fumée."
+    },
+    "securite": {
+      "niveau": "orange",
+      "note": "Ne respire jamais la fumée : elle contient du monoxyde de carbone, invisible et toxique. Fais un feu seulement là où c'est autorisé, sur un sol dégagé, et garde de l'eau à portée de main."
+    },
+    "liens": {
+      "fiches": [
+        "lentille-bouteille",
+        "combustion-poussieres"
+      ],
+      "equivalences": [
+        "signaler"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Que produit surtout une combustion parfaite ?",
+        "choix": [
+          "Du dioxyde de carbone et de la vapeur d'eau, invisibles",
+          "Une fumée noire épaisse",
+          "De la suie",
+          "De la fumée blanche"
+        ],
+        "reponse": 0,
+        "explication": "Quand tout le combustible brûle, presque rien ne reste à voir."
+      },
+      {
+        "question": "D'où vient une fumée noire et épaisse ?",
+        "choix": [
+          "De particules de carbone non brûlées, dues à une combustion incomplète",
+          "D'un feu trop puissant",
+          "De l'oxygène",
+          "De la pluie"
+        ],
+        "reponse": 0,
+        "explication": "Le carbone qui n'a pas brûlé part en fines particules noires."
+      },
+      {
+        "question": "Pourquoi des branches vertes donnent-elles une fumée blanche ?",
+        "choix": [
+          "La chaleur ne suffit plus à tout brûler, et leur eau se transforme en vapeur",
+          "Elles contiennent de la peinture",
+          "Elles brûlent mieux que le bois sec",
+          "Elles absorbent la fumée"
+        ],
+        "reponse": 0,
+        "explication": "Particules non brûlées et vapeur d'eau forment ensemble un nuage blanc très visible."
+      },
+      {
+        "question": "Un feu qui fume beaucoup est souvent…",
+        "choix": [
+          "Un feu mal alimenté en air",
+          "Un feu plus puissant",
+          "Un feu éteint",
+          "Un feu électrique"
+        ],
+        "reponse": 0,
+        "explication": "La fumée mesure ce que la combustion n'a pas réussi à transformer."
+      }
+    ],
+    "motsCles": [
+      "fumée",
+      "feu",
+      "signal",
+      "signaler",
+      "combustion",
+      "branches vertes",
+      "survie",
+      "secours",
+      "monoxyde de carbone"
+    ]
+  },
+  {
+    "id": "fuite-gaz",
+    "titre": "Neutraliser une fuite de gaz avec un bouchon improvisé",
+    "sousTitre": "Pourquoi une fuite de gaz ne se colmate pas comme une fuite d'eau",
+    "principeSeul": true,
+    "categories": [
+      "chimie",
+      "pression"
+    ],
+    "niveau": 1,
+    "schema": {
+      "fichier": "fuite-gaz.svg",
+      "alt": "Un raccord de bouteille de gaz qui fuit. 1 : de l'eau savonneuse appliquée sur le raccord forme des bulles exactement là où le gaz s'échappe : c'est ainsi qu'on repère une fuite. 2 : les bons réflexes face à une vraie fuite : couper l'arrivée, aucune flamme ni interrupteur, aérer, sortir, appeler les secours depuis l'extérieur.",
+      "legende": "Le savon sert à repérer une fuite ; une vraie fuite de gaz, on sort et on appelle."
+    },
+    "texte": [
+      "**Un bouchon ne sert qu'à combler l'espace par lequel le gaz s'échappe.** N'importe quel matériau assez souple pour épouser la forme d'une fissure et assez stable pour y rester, comme du savon dur ou de la cire, peut temporairement réduire le débit d'une fuite en obstruant ce passage.",
+      "**Peu de gens savent que, sur un petit raccord, le savon sert surtout à repérer une fuite** : de l'eau savonneuse forme des bulles exactement là où le gaz s'échappe, c'est la vérification reconnue sur les équipements de camping.",
+      "**Dans la série**, un bouchon de fortune arrête une fuite de gaz en quelques secondes, sans autre précaution. **Dans la réalité**, un vrai gaz de ville ou de bouteille (butane, propane, gaz naturel) est explosif dès qu'il se mélange à l'air en quantité suffisante, et aucun bouchon improvisé ne doit remplacer la bonne réaction face à une fuite réelle : couper l'arrivée si possible, ne jamais allumer de flamme ni d'interrupteur électrique, aérer immédiatement et sortir du bâtiment, puis appeler les secours ou le fournisseur de gaz depuis l'extérieur.",
+      "**À retenir :** colmater une fuite ne traite que le symptôme, jamais la cause. Une vraie fuite de gaz, contrairement à une fuite d'eau, doit toujours être traitée par des professionnels, car le risque n'est pas juste une perte de matière mais une explosion."
+    ],
+    "enfant": "Une fuite d'eau, ça mouille. Une fuite de gaz, c'est beaucoup plus dangereux : le gaz ne se voit pas, et une seule étincelle peut le faire exploser. Si ça sent le gaz, on ne touche à rien, on n'allume aucune lumière, on ouvre les fenêtres, on sort, et un adulte appelle les pompiers depuis dehors.",
+    "realite": {
+      "verdict": "faux",
+      "nuance": "Un bouchon de fortune ne règle jamais une vraie fuite de gaz",
+      "explication": "Un matériau souple peut réduire le débit d'une petite fuite, mais une fuite de gaz reste un risque d'explosion : on coupe l'arrivée, on aère, on sort et on appelle les secours depuis l'extérieur."
+    },
+    "securite": {
+      "niveau": "rouge",
+      "note": "Odeur de gaz : ne touche à aucun interrupteur ni appareil électrique, n'allume aucune flamme, coupe l'arrivée si tu peux, ouvre les fenêtres, sors et appelle les pompiers (18 ou 112) depuis l'extérieur."
+    },
+    "liens": {
+      "fiches": [
+        "poivre-fuite",
+        "chewing-gum-durite"
+      ],
+      "equivalences": [
+        "colmater"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "À quoi sert de l'eau savonneuse sur un raccord de gaz ?",
+        "choix": [
+          "À repérer une fuite : elle fait des bulles là où le gaz s'échappe",
+          "À boucher définitivement la fuite",
+          "À rendre le gaz moins explosif",
+          "À graisser le raccord"
+        ],
+        "reponse": 0,
+        "explication": "C'est la vérification classique des équipements de camping."
+      },
+      {
+        "question": "Pourquoi une fuite de gaz est-elle plus dangereuse qu'une fuite d'eau ?",
+        "choix": [
+          "Mélangé à l'air, le gaz peut exploser",
+          "Le gaz coûte plus cher",
+          "Le gaz mouille les murs",
+          "Le gaz est trop froid"
+        ],
+        "reponse": 0,
+        "explication": "Le risque n'est pas une perte de matière, mais une explosion."
+      },
+      {
+        "question": "Que ne faut-il jamais faire en cas d'odeur de gaz ?",
+        "choix": [
+          "Allumer une flamme ou un interrupteur électrique",
+          "Ouvrir les fenêtres",
+          "Sortir du bâtiment",
+          "Appeler les secours depuis dehors"
+        ],
+        "reponse": 0,
+        "explication": "Une étincelle d'interrupteur suffit à enflammer un mélange de gaz et d'air."
+      },
+      {
+        "question": "Où appeler les secours en cas de fuite de gaz ?",
+        "choix": [
+          "Depuis l'extérieur, une fois sorti",
+          "Depuis la cuisine, près de la fuite",
+          "Depuis la cave",
+          "On n'appelle personne"
+        ],
+        "reponse": 0,
+        "explication": "Un téléphone peut produire une étincelle : on s'éloigne d'abord."
+      }
+    ],
+    "motsCles": [
+      "fuite de gaz",
+      "gaz",
+      "butane",
+      "propane",
+      "gaz naturel",
+      "explosion",
+      "savon",
+      "bulles",
+      "raccord",
+      "camping",
+      "urgence",
+      "pompiers"
+    ]
+  },
+  {
+    "id": "attelle-fracture",
+    "titre": "Immobiliser une fracture avec une planche et du tissu",
+    "sousTitre": "Une attelle ne répare rien : elle empêche le mouvement",
+    "categories": [
+      "mecanique"
+    ],
+    "niveau": 1,
+    "schema": {
+      "fichier": "attelle-fracture.svg",
+      "alt": "Une jambe avec une fracture entre le genou et la cheville. Une planche rigide est placée le long du membre et dépasse les deux articulations, le genou au-dessus et la cheville en dessous. Plusieurs liens en tissu la maintiennent, fermement mais sans serrer au point de couper la circulation, et aucun ne passe sur la fracture.",
+      "legende": "Immobiliser l'articulation au-dessus et celle en dessous, pas seulement l'endroit qui fait mal."
+    },
+    "texte": [
+      "**Une attelle ne répare rien, elle empêche juste le mouvement.** Un os cassé guérit en se ressoudant tout seul, à condition que les deux morceaux restent immobiles l'un contre l'autre. Le moindre mouvement rouvre la fracture et peut aggraver les lésions autour, notamment les vaisseaux sanguins et les nerfs.",
+      "**Si tu places un objet rigide (planche, branche solide, magazine enroulé) le long du membre blessé, en dépassant les deux articulations autour de la fracture, et que tu l'attaches fermement sans couper la circulation, tu bloques tout mouvement sans avoir besoin de toucher directement l'os.**",
+      "**Dans la série**, une attelle improvisée permet de continuer à marcher normalement juste après la pose. **Dans la réalité**, une attelle réduit la douleur et le risque d'aggravation, mais elle ne remplace jamais un avis médical : une vraie fracture nécessite une radiographie et souvent un plâtre professionnel pour guérir correctement.",
+      "**À retenir :** immobiliser toujours deux articulations, celle au-dessus et celle en dessous de la zone blessée, pas seulement l'endroit qui fait mal. C'est ce qui empêche vraiment le mouvement de se propager jusqu'à la fracture."
+    ],
+    "enfant": "Quand un os se casse, il sait se recoller tout seul, comme deux morceaux de pâte à sel qu'on laisse sécher l'un contre l'autre. Mais il ne faut surtout pas qu'ils bougent. Une attelle, c'est une règle qu'on attache le long du bras ou de la jambe pour que rien ne bouge, en attendant le médecin.",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Elle soulage et protège, mais on ne marche pas normalement avec",
+      "explication": "Une attelle improvisée qui dépasse les deux articulations réduit la douleur et le risque d'aggravation. Elle ne remplace pas une radiographie ni un plâtre, et ne permet pas de marcher normalement."
+    },
+    "securite": {
+      "niveau": "orange",
+      "note": "Appelle les secours (15 ou 112). N'essaie jamais de remettre un os en place. Vérifie que les doigts ou les orteils restent chauds et roses : sinon, desserre les liens."
+    },
+    "liens": {
+      "fiches": [
+        "levier"
+      ],
+      "equivalences": [
+        "attacher"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "À quoi sert une attelle ?",
+        "choix": [
+          "À empêcher le mouvement pour que l'os puisse se ressouder",
+          "À remettre l'os en place",
+          "À réparer l'os",
+          "À réchauffer le membre"
+        ],
+        "reponse": 0,
+        "explication": "L'os guérit tout seul si les deux morceaux restent immobiles."
+      },
+      {
+        "question": "Jusqu'où l'attelle doit-elle aller ?",
+        "choix": [
+          "Au-delà des deux articulations autour de la fracture",
+          "Seulement sur l'endroit qui fait mal",
+          "Sur tout le corps",
+          "Juste sous la fracture"
+        ],
+        "reponse": 0,
+        "explication": "Bloquer l'articulation au-dessus et celle en dessous empêche le mouvement d'atteindre la fracture."
+      },
+      {
+        "question": "Comment attacher l'attelle ?",
+        "choix": [
+          "Fermement, sans couper la circulation",
+          "Le plus serré possible",
+          "Lâchement, pour ne pas faire mal",
+          "Directement sur la fracture"
+        ],
+        "reponse": 0,
+        "explication": "Trop serré, le lien coupe le sang ; trop lâche, il n'immobilise rien."
+      },
+      {
+        "question": "Que faut-il après la pose d'une attelle ?",
+        "choix": [
+          "Un avis médical, une radiographie et souvent un plâtre",
+          "Recommencer à marcher normalement",
+          "Masser la fracture",
+          "Rien de plus"
+        ],
+        "reponse": 0,
+        "explication": "L'attelle est un geste d'attente, pas un soin complet."
+      }
+    ],
+    "motsCles": [
+      "fracture",
+      "attelle",
+      "os cassé",
+      "premiers secours",
+      "immobiliser",
+      "planche",
+      "branche",
+      "tissu",
+      "jambe",
+      "bras",
+      "secourisme"
+    ]
+  },
+  {
+    "id": "suture-plaie",
+    "titre": "Faire un point de suture improvisé",
+    "sousTitre": "Rapprocher les bords d'une plaie est simple ; le vrai danger, c'est l'infection",
+    "categories": [
+      "mecanique",
+      "chimie"
+    ],
+    "niveau": 1,
+    "schema": {
+      "fichier": "suture-plaie.svg",
+      "alt": "Coupe de la peau autour d'une plaie. 1 : un point de suture rapproche les deux bords, comme une agrafe tient deux feuilles ensemble, pour que le corps les ressoude. 2 : une aiguille ou un fil non stérile fait entrer des bactéries sous la peau, à l'abri, où elles se multiplient : c'est l'infection, le vrai danger.",
+      "legende": "Fermer une plaie est mécanique ; la vraie difficulté est microbienne."
+    },
+    "texte": [
+      "**Un point de suture ne fait que rapprocher les deux bords d'une plaie, pour que le corps puisse les ressouder par lui-même pendant la cicatrisation.** Un fil passé et noué à travers la peau de chaque côté de la coupure maintient cette proximité, exactement comme une agrafe maintient deux feuilles de papier ensemble.",
+      "**Peu de gens savent que le plus grand danger d'une suture improvisée n'est pas la douleur, mais l'infection.** Une aiguille ou un fil non stérile introduit des bactéries directement sous la peau, un environnement idéal pour qu'elles se développent, loin de l'air et du système immunitaire de surface.",
+      "**Dans la série**, une suture de fortune se fait en quelques minutes avec une aiguille chauffée à la flamme et du fil quelconque. **Dans la réalité**, chauffer une aiguille au feu ne la stérilise que partiellement, et une vraie plaie profonde nécessite des soins médicaux rapides. Une suture improvisée reste un geste de tout dernier recours, uniquement en situation d'isolement total sans aucun accès aux secours.",
+      "**À retenir :** rapprocher les bords d'une plaie est un principe mécanique simple, mais la vraie difficulté d'une blessure n'est presque jamais mécanique, elle est microbienne. C'est pour ça que la désinfection compte souvent plus que la fermeture elle-même."
+    ],
+    "enfant": "Une coupure, c'est comme une déchirure dans un tissu : si on rapproche bien les deux bords, la peau se recolle toute seule. Mais le plus dangereux, ce sont les microbes, ces minuscules bêtes invisibles qui peuvent entrer par la coupure et la rendre malade. C'est pour ça qu'on lave toujours bien une blessure, et qu'un docteur s'occupe des grandes coupures.",
+    "realite": {
+      "verdict": "faux",
+      "nuance": "Dernier recours en isolement total ; sinon, soins médicaux",
+      "explication": "Une suture rapproche bien les bords d'une plaie, mais une aiguille chauffée à la flamme n'est que partiellement stérile : le risque d'infection est grand. Une plaie profonde demande des soins médicaux rapides."
+    },
+    "securite": {
+      "niveau": "rouge",
+      "note": "Ne recouds jamais une plaie toi-même. Appuie avec un linge propre pour arrêter le saignement, nettoie à l'eau, couvre, et appelle les secours (15 ou 112) pour une plaie profonde ou qui saigne beaucoup."
+    },
+    "liens": {
+      "fiches": [
+        "attelle-fracture"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Que fait un point de suture ?",
+        "choix": [
+          "Il rapproche les deux bords de la plaie pour que le corps les ressoude",
+          "Il fabrique de la nouvelle peau",
+          "Il désinfecte la plaie",
+          "Il arrête la douleur"
+        ],
+        "reponse": 0,
+        "explication": "Comme une agrafe, il maintient les bords ensemble ; c'est le corps qui cicatrise."
+      },
+      {
+        "question": "Quel est le plus grand danger d'une suture improvisée ?",
+        "choix": [
+          "L'infection",
+          "La douleur",
+          "La cicatrice",
+          "Le fil trop long"
+        ],
+        "reponse": 0,
+        "explication": "Un fil ou une aiguille non stérile fait entrer des bactéries sous la peau."
+      },
+      {
+        "question": "Chauffer une aiguille à la flamme la rend-elle stérile ?",
+        "choix": [
+          "Seulement en partie",
+          "Oui, totalement",
+          "Non, elle la rend plus sale",
+          "Oui, si on la refroidit à l'eau"
+        ],
+        "reponse": 0,
+        "explication": "Le fil reste non stérile, et la stérilisation à la flamme est incomplète."
+      },
+      {
+        "question": "Qu'est-ce qui compte souvent le plus pour une blessure ?",
+        "choix": [
+          "La désinfection",
+          "La vitesse de fermeture",
+          "La couleur du fil",
+          "Le nombre de points"
+        ],
+        "reponse": 0,
+        "explication": "La difficulté d'une blessure est presque toujours microbienne, pas mécanique."
+      }
+    ],
+    "motsCles": [
+      "suture",
+      "point de suture",
+      "plaie",
+      "coupure",
+      "infection",
+      "désinfecter",
+      "aiguille",
+      "cicatrisation",
+      "premiers secours",
+      "secourisme",
+      "stérile"
+    ]
+  },
+  {
+    "id": "poste-galene",
+    "titre": "Fabriquer une radio de fortune avec des objets du quotidien",
+    "sousTitre": "Le poste à galène : capter une émission sans aucune pile",
+    "categories": [
+      "electricite",
+      "magnetisme"
+    ],
+    "niveau": 2,
+    "schema": {
+      "fichier": "poste-galene.svg",
+      "alt": "Un poste à galène : une antenne, simple fil métallique, capte l'onde radio ; une bobine de fil sélectionne la fréquence ; un cristal ou une diode ne laisse passer le courant que dans un sens et extrait le son ; un écouteur très sensible le rend audible. Aucune pile : toute l'énergie vient de l'onde captée.",
+      "legende": "Antenne, bobine, cristal, écouteur : une radio sans pile."
+    },
+    "texte": [
+      "**Une onde radio porte un signal sans avoir besoin d'électricité pour exister.** Une antenne, simple fil métallique, capte cette énergie électromagnétique ambiante et la transforme en un minuscule courant électrique, bien trop faible pour alimenter quoi que ce soit, mais suffisant pour transporter une information.",
+      "**Si tu associes cette antenne à une bobine de fil et à un cristal ou une [[diode|diode]] (un composant qui ne laisse passer le courant que dans un seul sens), tu obtiens ce qu'on appelle un poste à galène**, une radio qui fonctionne sans aucune pile : la bobine sélectionne la fréquence voulue, et le cristal extrait le son du signal, assez fort pour être entendu dans un petit écouteur collé à l'oreille.",
+      "**Dans la série**, un poste de radio improvisé capte une conversation ou une émission en quelques minutes d'assemblage. **Dans la réalité**, c'est un vrai projet d'électronique amateur, enseigné depuis un siècle, mais le son produit est extrêmement faible, audible uniquement dans un écouteur très sensible, pas dans un haut-parleur.",
+      "**À retenir :** capter une onde radio ne demande aucune électricité, seulement une antenne et un moyen de trier et transformer le signal. C'est l'électricité qui sert ensuite uniquement à amplifier ce signal pour qu'on l'entende plus fort."
+    ],
+    "enfant": "Les ondes radio, c'est comme des vagues invisibles qui passent partout autour de toi. Un long fil, l'antenne, les attrape comme un filet. Une petite pierre spéciale, le cristal, trie ces vagues pour en sortir la musique, si doucement qu'il faut coller l'écouteur à l'oreille. Et tout ça, sans aucune pile !",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Ça marche, mais le son est très faible et l'assemblage prend du temps",
+      "explication": "Un poste à galène capte vraiment les émissions sans pile : c'est un montage classique depuis un siècle. Mais le son est très faible, audible seulement dans un écouteur très sensible."
+    },
+    "securite": {
+      "niveau": "vert",
+      "note": "Sans danger. Ne tends jamais d'antenne près d'une ligne électrique, et rentre-la par temps d'orage."
+    },
+    "liens": {
+      "fiches": [
+        "onde-radio-metal",
+        "bobine-pic-tension"
+      ],
+      "equivalences": [
+        "conduire-electricite"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "D'où vient l'énergie d'un poste à galène ?",
+        "choix": [
+          "De l'onde radio captée par l'antenne",
+          "D'une pile cachée",
+          "De la chaleur de la main",
+          "Du soleil"
+        ],
+        "reponse": 0,
+        "explication": "L'antenne transforme l'énergie de l'onde en un minuscule courant, suffisant pour l'écouteur."
+      },
+      {
+        "question": "Que fait la bobine de fil ?",
+        "choix": [
+          "Elle sélectionne la fréquence voulue",
+          "Elle amplifie le son",
+          "Elle stocke l'électricité",
+          "Elle remplace l'antenne"
+        ],
+        "reponse": 0,
+        "explication": "Elle trie, parmi toutes les ondes captées, celle de la station choisie."
+      },
+      {
+        "question": "Quel est le rôle du cristal ou de la diode ?",
+        "choix": [
+          "Ne laisser passer le courant que dans un sens, pour extraire le son du signal",
+          "Chauffer le fil",
+          "Produire de la lumière",
+          "Couper l'antenne"
+        ],
+        "reponse": 0,
+        "explication": "C'est ce tri dans un seul sens qui fait apparaître le son transporté par l'onde."
+      },
+      {
+        "question": "Pourquoi faut-il un écouteur très sensible ?",
+        "choix": [
+          "Le son produit est extrêmement faible",
+          "Le cristal est bruyant",
+          "Les haut-parleurs sont interdits",
+          "Pour économiser la pile"
+        ],
+        "reponse": 0,
+        "explication": "Sans amplification électrique, seul un écouteur très sensible rend le son audible."
+      }
+    ],
+    "motsCles": [
+      "radio",
+      "poste à galène",
+      "antenne",
+      "bobine",
+      "diode",
+      "cristal",
+      "écouteur",
+      "onde",
+      "sans pile",
+      "électronique"
+    ]
+  },
+  {
+    "id": "encre-citron",
+    "titre": "Écrire un message codé ou invisible avec du jus de citron",
+    "sousTitre": "Une encre qui brunit à la chaleur avant le papier",
+    "categories": [
+      "chimie",
+      "thermique"
+    ],
+    "niveau": 1,
+    "schema": {
+      "fichier": "encre-citron.svg",
+      "alt": "Une feuille avec un message écrit au jus de citron. 1 : une fois sec, le message est invisible. 2 : chauffée doucement par une ampoule, la feuille laisse apparaître le message en brun, car les composés du citron se décomposent avant le papier. 3 : une flamme trop proche brûle directement le papier.",
+      "legende": "Chaleur douce : le citron brunit avant le papier."
+    },
+    "texte": [
+      "**Le jus de citron contient des composés organiques incolores à température ambiante, mais qui brûlent à une température plus basse que le papier lui-même.** Une fois séché, le jus devient invisible à l'œil nu, car la fine couche qu'il laisse ne réfléchit pas la lumière différemment du papier autour.",
+      "**Si tu chauffes doucement ce papier, avec une ampoule ou un fer à repasser, les composés du citron commencent à se décomposer et brunissent avant que le papier environnant ne soit lui-même affecté**, révélant le message exactement là où le jus avait été appliqué.",
+      "**Dans la série**, un message secret apparaît d'un coup sous une flamme. **Dans la réalité**, ça fonctionne vraiment, et c'est une expérience classique enseignée aux enfants, mais ça demande une chaleur douce et progressive : une flamme trop proche brûle directement le papier avant même de révéler le message.",
+      "**À retenir :** beaucoup de liquides organiques (citron, lait, oignon) partagent cette propriété de brunir à la chaleur avant le papier qui les porte. C'est le même principe chimique que le pain qui dore au grille-pain, une réaction qui transforme les sucres sous l'effet de la chaleur."
+    ],
+    "enfant": "Écris un mot avec du jus de citron : en séchant, il disparaît, comme par magie. Mais si un adulte chauffe doucement la feuille, le citron devient marron avant le papier, un peu comme une tartine qui dore dans le grille-pain, et ton message réapparaît.",
+    "realite": {
+      "verdict": "vrai",
+      "nuance": "Avec une chaleur douce ; une flamme brûle le papier avant",
+      "explication": "Le jus de citron séché brunit à la chaleur avant le papier : le message apparaît. Mais il faut une chaleur douce et progressive ; une flamme trop proche brûle la feuille."
+    },
+    "securite": {
+      "niveau": "orange",
+      "note": "Chauffe avec une ampoule ou un fer à repasser, avec un adulte, jamais avec une flamme : le papier s'enflamme vite. Ne touche pas une ampoule allumée, elle brûle."
+    },
+    "liens": {
+      "fiches": [
+        "lentille-bouteille"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Pourquoi le message au citron est-il invisible une fois sec ?",
+        "choix": [
+          "La fine couche ne réfléchit pas la lumière différemment du papier",
+          "Le citron s'évapore entièrement",
+          "Le papier absorbe la couleur",
+          "Le citron devient blanc"
+        ],
+        "reponse": 0,
+        "explication": "Les composés restent sur le papier, mais on ne les distingue pas."
+      },
+      {
+        "question": "Pourquoi le message apparaît-il à la chaleur ?",
+        "choix": [
+          "Les composés du citron brunissent à une température plus basse que le papier",
+          "Le papier devient transparent",
+          "Le citron devient phosphorescent",
+          "La chaleur fait couler l'encre"
+        ],
+        "reponse": 0,
+        "explication": "Ils se décomposent et brunissent avant que le papier autour ne soit touché."
+      },
+      {
+        "question": "Avec quoi chauffer le papier ?",
+        "choix": [
+          "Une chaleur douce : une ampoule ou un fer à repasser",
+          "Une flamme très proche",
+          "Un glaçon",
+          "De l'eau"
+        ],
+        "reponse": 0,
+        "explication": "Une flamme brûle le papier avant de révéler le message."
+      },
+      {
+        "question": "Quel phénomène du quotidien repose sur le même principe ?",
+        "choix": [
+          "Le pain qui dore au grille-pain",
+          "La glace qui fond",
+          "Le sel qui se dissout",
+          "L'aimant qui attire le fer"
+        ],
+        "reponse": 0,
+        "explication": "La chaleur transforme les sucres, qui brunissent."
+      }
+    ],
+    "motsCles": [
+      "encre invisible",
+      "message secret",
+      "citron",
+      "jus de citron",
+      "message codé",
+      "lait",
+      "chaleur",
+      "papier",
+      "expérience"
+    ]
+  },
+  {
+    "id": "canette-pile",
+    "titre": "Utiliser une canette comme pile improvisée",
+    "sousTitre": "Deux métaux différents et un liquide conducteur : le principe de toutes les piles",
+    "categories": [
+      "electricite",
+      "chimie"
+    ],
+    "niveau": 2,
+    "schema": {
+      "fichier": "canette-pile.svg",
+      "alt": "Une cellule de pile improvisée : un morceau d'aluminium découpé dans une canette et un fil de cuivre, séparés par un tissu imbibé de vinaigre. L'aluminium cède ses électrons plus facilement que le cuivre : en reliant les deux par un circuit extérieur, un courant circule. Une seule cellule donne environ un demi-volt ; plusieurs cellules empilées en série additionnent leurs tensions.",
+      "legende": "Deux métaux différents + un liquide conducteur = une cellule ; on les empile pour plus de tension."
+    },
+    "texte": [
+      "**Une pile, c'est une réaction chimique entre deux métaux différents qui génère un courant électrique.** Quand deux métaux de nature différente (comme l'aluminium d'une canette et le cuivre d'un fil électrique) sont plongés dans un liquide conducteur, l'un des deux perd des électrons plus facilement que l'autre. Cette différence crée un flux d'électrons, c'est-à-dire un [[courant|courant]], si les deux métaux sont reliés par un circuit extérieur.",
+      "**Si tu découpes un morceau d'une canette en aluminium, que tu le poses face à un fil de cuivre et que tu les sépares par un tissu imbibé de liquide salé ou acide, comme du vinaigre, tu reproduis exactement le principe d'une pile électrochimique**, même si la tension produite reste très faible, de l'ordre d'un demi-volt par cellule.",
+      "**Dans la série**, une canette coupée alimente directement un petit appareil électronique. **Dans la réalité**, une seule cellule de ce type produit beaucoup trop peu de courant pour alimenter grand-chose : il faut empiler plusieurs cellules en [[montage-serie|série]] pour obtenir une tension utilisable, exactement comme une batterie d'ordinateur portable, qui empile elle aussi plusieurs cellules au lithium.",
+      "**À retenir :** n'importe quels deux métaux différents, plongés dans un liquide conducteur, produisent un peu d'électricité. C'est exactement le principe découvert par Volta avec des disques de zinc et de cuivre empilés, l'ancêtre de toutes les piles modernes."
+    ],
+    "enfant": "Deux métaux différents, c'est comme deux enfants qui ne tiennent pas pareil à leurs billes : l'un les lâche plus facilement. Si on les relie par un fil, les billes, qui sont ici de minuscules grains d'électricité, passent de l'un à l'autre : c'est le courant. Avec une seule paire, il y en a très peu ; il faut en empiler plusieurs, comme dans la première pile inventée il y a plus de deux cents ans.",
+    "realite": {
+      "verdict": "partiel",
+      "nuance": "Une seule cellule donne trop peu ; il faut en empiler plusieurs",
+      "explication": "Aluminium et cuivre séparés par un tissu imbibé de vinaigre forment bien une pile, mais une cellule ne donne qu'environ un demi-volt et très peu de courant. Il faut empiler plusieurs cellules pour alimenter un petit appareil."
+    },
+    "securite": {
+      "niveau": "vert",
+      "note": "Sans danger avec du vinaigre ou de l'eau salée. Les bords d'une canette découpée coupent comme une lame : un adulte découpe, avec des gants."
+    },
+    "liens": {
+      "fiches": [
+        "pile-citron",
+        "pile-recharge"
+      ],
+      "equivalences": [
+        "conduire-electricite"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "Que faut-il pour fabriquer une pile ?",
+        "choix": [
+          "Deux métaux différents dans un liquide conducteur, reliés par un circuit",
+          "Deux morceaux du même métal",
+          "Un seul métal et de l'huile",
+          "De l'eau pure seulement"
+        ],
+        "reponse": 0,
+        "explication": "C'est la différence entre les deux métaux qui crée le courant."
+      },
+      {
+        "question": "Deux morceaux d'aluminium de la même canette font-ils une pile ?",
+        "choix": [
+          "Non, il faut deux métaux de nature différente",
+          "Oui, très puissante",
+          "Oui, si on les chauffe",
+          "Oui, avec du sucre"
+        ],
+        "reponse": 0,
+        "explication": "Deux métaux identiques cèdent leurs électrons de la même façon : aucune différence, aucun courant."
+      },
+      {
+        "question": "Pourquoi empiler plusieurs cellules ?",
+        "choix": [
+          "Leurs tensions s'additionnent quand elles sont en série",
+          "Pour faire plus joli",
+          "Pour réduire la tension",
+          "Pour éviter la rouille"
+        ],
+        "reponse": 0,
+        "explication": "Une cellule donne environ un demi-volt ; il en faut plusieurs pour un appareil."
+      },
+      {
+        "question": "Qui a empilé des disques de zinc et de cuivre pour faire la première pile ?",
+        "choix": [
+          "Volta",
+          "Archimède",
+          "Newton",
+          "Faraday"
+        ],
+        "reponse": 0,
+        "explication": "Sa pile, empilement de disques séparés par du tissu imbibé, est l'ancêtre des piles modernes."
+      }
+    ],
+    "motsCles": [
+      "pile",
+      "canette",
+      "aluminium",
+      "cuivre",
+      "vinaigre",
+      "eau salée",
+      "Volta",
+      "électricité",
+      "tension",
+      "cellule",
+      "électrochimie"
+    ]
+  },
+  {
+    "id": "densite-flottaison",
+    "titre": "Faire flotter ou couler un objet en jouant sur la densité",
+    "sousTitre": "Pourquoi un navire en acier flotte et un boulon coule",
+    "categories": [
+      "fluides",
+      "materiaux"
+    ],
+    "niveau": 1,
+    "schema": {
+      "fichier": "densite-flottaison.svg",
+      "alt": "Trois objets dans l'eau. 1 : un boulon en acier plein coule, car il est plus dense que l'eau. 2 : une coque en acier creuse, qui enferme surtout de l'air, flotte : sa densité moyenne est plus faible que celle de l'eau, et la poussée de l'eau déplacée la soutient. 3 : un œuf coule dans l'eau douce et flotte dans l'eau très salée, plus dense.",
+      "legende": "Ce n'est pas le matériau qui compte, mais la densité moyenne, air compris."
+    },
+    "texte": [
+      "**Un objet flotte ou coule selon sa [[densite|densité]] comparée à celle du liquide qui l'entoure, jamais selon son poids seul.** La densité mesure combien de matière est comprimée dans un volume donné. Un objet moins dense que l'eau flotte, car il déplace un volume d'eau plus lourd que lui-même, qui le repousse vers le haut avec une force plus grande que son propre poids.",
+      "**Si tu changes la densité moyenne d'un objet, en le creusant (comme la coque d'un bateau en métal, qui contient surtout de l'air) ou en modifiant le liquide autour de lui (de l'eau très salée est plus dense que de l'eau douce), tu peux faire flotter quelque chose qui coulerait normalement, ou l'inverse.**",
+      "**Dans la série**, un objet en métal flotte soudainement après une petite modification. **Dans la réalité**, c'est exactement comme ça qu'un énorme navire en acier flotte alors qu'un seul boulon en acier coule instantanément : ce n'est jamais le matériau qui compte, mais la forme qui détermine combien d'air il enferme.",
+      "**À retenir :** la densité moyenne d'un objet dépend de tout ce qu'il contient, matière pleine et espaces vides compris. C'est pour ça qu'un sous-marin peut couler ou remonter volontairement, juste en changeant la quantité d'eau ou d'air dans ses réservoirs."
+    ],
+    "enfant": "Une boule de pâte à modeler coule dans l'eau. Mais si tu l'aplatis en forme de petit bateau creux, elle flotte ! Elle pèse pareil, mais elle prend plus de place et enferme de l'air. C'est pour ça que d'immenses bateaux en métal flottent, alors qu'un simple clou coule.",
+    "realite": {
+      "verdict": "vrai",
+      "nuance": "C'est la forme, et l'air enfermé, qui fait flotter le métal",
+      "explication": "Un objet en métal creusé pour enfermer de l'air flotte, car sa densité moyenne devient plus faible que celle de l'eau : c'est pour ça qu'un navire en acier flotte et qu'un boulon coule."
+    },
+    "securite": {
+      "niveau": "vert",
+      "note": "Sans danger. Près de l'eau, un adulte surveille toujours les enfants."
+    },
+    "liens": {
+      "fiches": [
+        "pression-atmospherique",
+        "siphon"
+      ]
+    },
+    "quiz": [
+      {
+        "question": "De quoi dépend le fait qu'un objet flotte ?",
+        "choix": [
+          "De sa densité comparée à celle du liquide",
+          "De son poids seul",
+          "De sa couleur",
+          "De sa température"
+        ],
+        "reponse": 0,
+        "explication": "Un objet lourd peut flotter s'il est moins dense que le liquide."
+      },
+      {
+        "question": "Pourquoi un navire en acier flotte-t-il ?",
+        "choix": [
+          "Sa coque creuse enferme beaucoup d'air : sa densité moyenne est plus faible que l'eau",
+          "L'acier des navires est spécial",
+          "Le moteur le soulève",
+          "L'eau de mer le colle en surface"
+        ],
+        "reponse": 0,
+        "explication": "Le même acier, en boulon plein, coule instantanément."
+      },
+      {
+        "question": "Pourquoi un œuf peut-il flotter dans de l'eau très salée ?",
+        "choix": [
+          "L'eau salée est plus dense que l'eau douce",
+          "Le sel rend l'œuf plus léger",
+          "Le sel chauffe l'eau",
+          "L'œuf absorbe le sel"
+        ],
+        "reponse": 0,
+        "explication": "En changeant le liquide, on change la comparaison des densités."
+      },
+      {
+        "question": "Comment un sous-marin plonge-t-il ou remonte-t-il ?",
+        "choix": [
+          "En changeant la quantité d'eau ou d'air dans ses réservoirs",
+          "En changeant de couleur",
+          "En tournant sur lui-même",
+          "En chauffant sa coque"
+        ],
+        "reponse": 0,
+        "explication": "Il modifie ainsi sa densité moyenne."
+      }
+    ],
+    "motsCles": [
+      "flotter",
+      "couler",
+      "densité",
+      "flottaison",
+      "bateau",
+      "navire",
+      "sous-marin",
+      "eau salée",
+      "Archimède",
+      "poussée",
+      "œuf"
+    ]
   }
 ]

@@ -180,7 +180,8 @@
       "pile-citron",
       "conducteurs-isolants",
       "fusible-alarme",
-      "fil-detecteur"
+      "fil-detecteur",
+      "canette-pile"
     ]
   },
   {
@@ -366,7 +367,8 @@
     "terme": "Combustion",
     "definition": "Réaction chimique rapide entre un combustible et un comburant, le plus souvent l'oxygène de l'air, qui dégage de la chaleur et souvent de la lumière. Elle exige trois éléments réunis : combustible, comburant et source de chaleur, le « triangle du feu ».",
     "fiches": [
-      "combustion-poussieres"
+      "combustion-poussieres",
+      "fumee-signal"
     ]
   },
   {
@@ -499,7 +501,8 @@
     "terme": "Montage en série",
     "definition": "Branchement où les éléments sont reliés les uns à la suite des autres, en une seule boucle. Des piles en série additionnent leurs tensions : trois piles de 1,5 V donnent 4,5 V.",
     "fiches": [
-      "pile-citron"
+      "pile-citron",
+      "canette-pile"
     ]
   },
   {
@@ -600,6 +603,22 @@
     "definition": "Enveloppe en matière conductrice (métal, grillage fin) qui empêche les ondes électromagnétiques d'entrer ou de sortir : elles créent des courants dans le métal, qui les renvoient. C'est pour ça qu'un téléphone capte mal dans un ascenseur.",
     "fiches": [
       "onde-radio-metal"
+    ]
+  },
+  {
+    "id": "diode",
+    "terme": "Diode",
+    "definition": "Composant électronique qui ne laisse passer le courant que dans un seul sens, comme un clapet anti-retour pour l'électricité. Dans un poste à galène, c'est ce tri qui extrait le son du signal radio.",
+    "fiches": [
+      "poste-galene"
+    ]
+  },
+  {
+    "id": "declinaison-magnetique",
+    "terme": "Déclinaison magnétique",
+    "definition": "Écart, en un lieu donné, entre la direction du nord magnétique (que montre une boussole) et celle du nord géographique. Il varie selon l'endroit sur Terre et change lentement avec les années.",
+    "fiches": [
+      "boussole-improvisee"
     ]
   }
 ]
