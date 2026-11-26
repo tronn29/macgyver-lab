@@ -3,7 +3,7 @@ import { content } from '../core/content';
 import { h, nextId } from '../core/dom';
 import { t } from '../core/i18n';
 import { navigate } from '../core/router';
-import { deletePerso, demandeOfficielle, exportFiche, exportFonction } from '../core/perso';
+import { deletePerso, estRangeeOfficielle, exportFiche, exportFonction, rangerOfficielle } from '../core/perso';
 import type { Fiche, Fonction } from '../core/types';
 import { btn, confirmDialog, linkBtn, openDialog, toast } from '../ui/components';
 import { icon } from '../ui/icons';
@@ -46,56 +46,34 @@ export function openExport(nomFichier: string, texte: string): void {
   });
 }
 
-/** Fenêtre « Rendre officielle » : la demande à copier, puis à coller dans Claude Code. */
-export function openOfficialiser(type: 'fiche' | 'fonction', item: Fiche | Fonction): void {
-  const id = nextId('officiel');
-  const texte = demandeOfficielle(content(), type, item);
-  const area = h('textarea', { id, class: 'input textarea export__code', readonly: true, rows: 8, spellcheck: 'false' });
-  area.value = texte;
-  const copier = async () => {
-    try {
-      await navigator.clipboard.writeText(texte);
-      toast(t('perso.officielCopie'), { icon: 'check', tone: 'success', duration: 8000 });
-    } catch {
-      area.focus();
-      area.select();
-      toast(t('perso.copieManuelle'), { icon: 'info' });
-    }
-  };
-  openDialog({
-    title: t(type === 'fiche' ? 'perso.officielTitreFiche' : 'perso.officielTitreFonction'),
-    wide: true,
-    body: h(
-      'div',
-      { class: 'export' },
-      h('p', { class: 'panel__text' }, t('perso.officielIntro')),
-      h(
-        'ol',
-        { class: 'bullets officiel__etapes' },
-        h('li', null, t('perso.officielEtape1')),
-        h('li', null, t('perso.officielEtape2')),
-        h('li', null, t(type === 'fiche' ? 'perso.officielEtape3Fiche' : 'perso.officielEtape3Fonction'))
-      ),
-      h('label', { for: id, class: 'field__label' }, t('perso.officielLabel')),
-      area
-    ),
-    actions: [btn(t('perso.officielCopier'), { variant: 'primary', icon: 'check', onClick: () => void copier() })],
-  });
-}
-
 /** Barre affichée en haut d'une fiche ou d'une fonction personnelle. */
 export function persoBar(type: 'fiche' | 'fonction', item: Fiche | Fonction): HTMLElement {
   const fiche = type === 'fiche';
   const nom = `${item.id.replace(/^perso-/, '')}.json`;
+  const rangee = estRangeeOfficielle(item.id);
+  const liste = fiche ? '/archives' : '/arsenal';
+  const ranger = () => {
+    try {
+      rangerOfficielle(content(), item.id, !rangee);
+    } catch {
+      toast(t('perso.erreurRanger'), { icon: 'alert', tone: 'danger' });
+      return;
+    }
+    resetSearchIndex();
+    toast(t(rangee ? (fiche ? 'perso.ficheRemise' : 'perso.fonctionRemise') : fiche ? 'perso.ficheRangee' : 'perso.fonctionRangee'), { icon: 'check', tone: 'success' });
+    navigate(liste);
+  };
   return h(
     'section',
     { class: 'perso-bar', 'aria-label': t(fiche ? 'perso.barFiche' : 'perso.barFonction') },
-    h('p', { class: 'perso-bar__text' }, icon('pen', 18), h('span', null, t(fiche ? 'perso.barFicheTexte' : 'perso.barFonctionTexte'))),
+    h('p', { class: 'perso-bar__text' }, icon('pen', 18), h('span', null, t(rangee ? (fiche ? 'perso.barFicheRangee' : 'perso.barFonctionRangee') : fiche ? 'perso.barFicheTexte' : 'perso.barFonctionTexte'))),
     h(
       'div',
       { class: 'perso-bar__actions' },
       linkBtn(t('perso.modifier'), fiche ? `#/archives/editer/${item.id}` : `#/arsenal/editer/${item.id}`, { variant: 'ghost', small: true, icon: 'pen' }),
-      btn(t('perso.rendreOfficielle'), { variant: 'primary', small: true, icon: 'upload', onClick: () => openOfficialiser(type, item) }),
+      rangee
+        ? btn(t(fiche ? 'perso.remettreFiche' : 'perso.remettreFonction'), { variant: 'ghost', small: true, icon: 'arrow-left', onClick: ranger })
+        : btn(t('perso.rendreOfficielle'), { variant: 'primary', small: true, icon: 'upload', onClick: ranger }),
       btn(t('perso.exporter'), { variant: 'ghost', small: true, icon: 'download', onClick: () => openExport(nom, fiche ? exportFiche(item as Fiche) : exportFonction(content(), item as Fonction)) }),
       btn(t('perso.supprimer'), {
         variant: 'danger',

@@ -9,7 +9,10 @@ import { chip, difficultyBadge, label, safetyBadge, toast, verdictBadge } from '
 import { icon } from '../ui/icons';
 import { play } from '../core/sound';
 import { readingMinutes } from '../core/fiche';
-import { isPerso } from '../core/perso';
+import { estRangeeOfficielle, isPerso } from '../core/perso';
+
+/** Une fiche ou fonction perso rangée avec les officielles n'a plus la marque « Ma fiche ». */
+const marquePerso = (id: string): boolean => isPerso(id) && !estRangeeOfficielle(id);
 
 export function catName(id: string): string {
   return content().byId.categorie.get(id)?.nom ?? id;
@@ -76,14 +79,14 @@ export function ficheCard(f: Fiche, opts: { compact?: boolean } = {}): HTMLEleme
   const lu = Boolean(getProgress().lus[f.id]);
   return h(
     'a',
-    { class: ['card', 'card--fiche', opts.compact && 'card--compact', lu && 'is-read', isPerso(f.id) && 'card--perso'], href: `#/archives/${f.id}` },
+    { class: ['card', 'card--fiche', opts.compact && 'card--compact', lu && 'is-read', marquePerso(f.id) && 'card--perso'], href: `#/archives/${f.id}` },
     h(
       'div',
       { class: 'card__top' },
       h('span', { class: 'card__cat' }, icon(catIcon(f.categories[0]), 16), catName(f.categories[0])),
       lu ? h('span', { class: 'card__status card__status--done' }, icon('check', 14), t('commun.lu')) : h('span', { class: 'card__status' }, t('commun.nonLu'))
     ),
-    isPerso(f.id) ? h('span', { class: 'card__perso' }, icon('pen', 14), t('perso.maFiche')) : null,
+    marquePerso(f.id) ? h('span', { class: 'card__perso' }, icon('pen', 14), t('perso.maFiche')) : null,
     h('h3', { class: 'card__title' }, f.titre),
     !opts.compact && f.sousTitre ? h('p', { class: 'card__text' }, f.sousTitre) : null,
     h(
@@ -100,9 +103,9 @@ export function fonctionCard(fn: Fonction): HTMLElement {
   const vue = Boolean(getProgress().vuesFonctions[fn.id]);
   return h(
     'a',
-    { class: ['card', 'card--fonction', vue && 'is-read', isPerso(fn.id) && 'card--perso'], href: `#/arsenal/f/${fn.id}` },
+    { class: ['card', 'card--fonction', vue && 'is-read', marquePerso(fn.id) && 'card--perso'], href: `#/arsenal/f/${fn.id}` },
     h('div', { class: 'card__icon', 'aria-hidden': 'true' }, icon(fn.icone, 26)),
-    isPerso(fn.id) ? h('span', { class: 'card__perso card__perso--corner' }, icon('pen', 14), t('perso.maFonction')) : null,
+    marquePerso(fn.id) ? h('span', { class: 'card__perso card__perso--corner' }, icon('pen', 14), t('perso.maFonction')) : null,
     h('h3', { class: 'card__title' }, fn.titre),
     fn.resume ? h('p', { class: 'card__text' }, fn.resume) : null,
     h(

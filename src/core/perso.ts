@@ -30,6 +30,8 @@ export interface PersoData {
   fiches: Fiche[];
   fonctions: Fonction[];
   objets: Objet[];
+  /** Fiches et fonctions perso rangées avec les officielles (sur cet appareil). */
+  officielles: string[];
 }
 
 export const isPerso = (id: string): boolean => id.startsWith(PREFIXE);
@@ -103,6 +105,7 @@ export function loadPerso(): PersoData {
     fiches: arr(d.fiches).map(normFiche).filter((x): x is Fiche => Boolean(x)),
     fonctions: arr(d.fonctions).map(normFonction).filter((x): x is Fonction => Boolean(x)),
     objets: arr(d.objets).map(normObjet).filter((x): x is Objet => Boolean(x)),
+    officielles: [...new Set(arr<string>(d.officielles).filter((id) => typeof id === 'string' && isPerso(id)))],
   };
 }
 
@@ -245,12 +248,33 @@ export function applyPerso(c: Content, d: PersoData = loadPerso()): void {
     }
   });
   applied = { fiches: fiches.map((f) => f.id), fonctions: fonctions.map((f) => f.id), objets: objets.map((o) => o.id) };
-  persoCache = { fiches, fonctions, objets };
+  persoCache = { fiches, fonctions, objets, officielles: new Set(d.officielles) };
 }
 
-let persoCache: { fiches: Fiche[]; fonctions: Fonction[]; objets: Objet[] } = { fiches: [], fonctions: [], objets: [] };
+let persoCache: { fiches: Fiche[]; fonctions: Fonction[]; objets: Objet[]; officielles: Set<string> } = { fiches: [], fonctions: [], objets: [], officielles: new Set() };
+/** Toutes les fiches et fonctions écrites dans l'appli (rangées ou non avec les officielles). */
 export const persoFiches = (): Fiche[] => persoCache.fiches;
 export const persoFonctions = (): Fonction[] => persoCache.fonctions;
+/** Vrai si cette fiche ou fonction perso est rangée avec les officielles. */
+export const estRangeeOfficielle = (id: string): boolean => persoCache.officielles.has(id);
+/** Section « Mes fiches » / « Mes fonctions » : celles qui ne sont pas rangées avec les officielles. */
+export const mesFiches = (): Fiche[] => persoCache.fiches.filter((f) => !persoCache.officielles.has(f.id));
+export const mesFonctions = (): Fonction[] => persoCache.fonctions.filter((f) => !persoCache.officielles.has(f.id));
+/** Fiches et fonctions perso rangées avec les officielles, affichées dans la même liste. */
+export const fichesRangees = (): Fiche[] => persoCache.fiches.filter((f) => persoCache.officielles.has(f.id));
+export const fonctionsRangees = (): Fonction[] => persoCache.fonctions.filter((f) => persoCache.officielles.has(f.id));
+
+/** Range une fiche ou fonction perso avec les officielles, ou la remet dans « Mes fiches ». */
+export function rangerOfficielle(c: Content, id: string, officielle: boolean): void {
+  if (!isPerso(id)) return;
+  const d = loadPerso();
+  const set = new Set(d.officielles);
+  if (officielle) set.add(id);
+  else set.delete(id);
+  d.officielles = [...set];
+  if (!savePerso(d)) throw new Error('stockage');
+  applyPerso(c, d);
+}
 
 /** Toutes les fiches (officielles puis perso) : statistiques et totaux. */
 export const toutesFiches = (c: Content): Fiche[] => [...c.fiches, ...persoCache.fiches];
@@ -296,6 +320,7 @@ export function deletePerso(c: Content, type: 'fiche' | 'fonction', id: string):
     const utilises = new Set(d.fonctions.flatMap((fn) => fn.objets.map((o) => o.objet)));
     d.objets = d.objets.filter((o) => utilises.has(o.id));
   }
+  d.officielles = d.officielles.filter((x) => x !== id);
   savePerso(d);
   update((p) => {
     delete p.favoris[`${type}:${id}`];
@@ -315,7 +340,7 @@ export function deleteAllPerso(c: Content): void {
   const d = loadPerso();
   for (const f of d.fiches) deletePerso(c, 'fiche', f.id);
   for (const f of d.fonctions) deletePerso(c, 'fonction', f.id);
-  writeKey(PERSO_KEY, JSON.stringify({ version: 1, fiches: [], fonctions: [], objets: [] }));
+  writeKey(PERSO_KEY, JSON.stringify({ version: 1, fiches: [], fonctions: [], objets: [], officielles: [] }));
   writeKey('mgl:perso-brouillon', '{}');
   applyPerso(c);
 }
@@ -384,16 +409,4 @@ export function exportFonction(c: Content, f: Fonction): string {
   };
   const objets = perso.map((o) => ({ id: sansPrefixe(o.id), nom: o.nom, alias: [], lieux: ['[Où le trouver : cuisine, garage, salle-de-bain, bureau, exterieur, voiture, chambre, atelier ou sac]'], icone: o.icone, proprietes: ['[Propriété utile, ex. : isolant]'] }));
   return `${JSON.stringify({ modele: 'equivalence', aide: "[Fonction exportée depuis l'appli. Dépose ce fichier dans public/content/fr/_modeles/, remplace les textes entre crochets restants (une fonction officielle demande au moins 3 objets), puis : npm run modele:verifier -- <fichier>. Voir MODELES.md.]", equivalences: [fonction], ...(objets.length ? { objets } : {}) }, null, 2)}\n`;
-}
-
-/**
- * Demande prête à coller dans Claude Code pour faire d'une fiche (ou fonction) personnelle
- * une fiche officielle : l'appli publiée ne peut pas modifier son propre contenu.
- */
-export function demandeOfficielle(c: Content, type: 'fiche' | 'fonction', item: Fiche | Fonction): string {
-  const fiche = type === 'fiche';
-  const consigne = fiche
-    ? `Rends officielle ma fiche personnelle « ${item.titre} » de MacGyver Lab. Ajoute-la aux fiches officielles au format long, garde mon texte, complète ce qui manque (schéma, quiz, version enfant, liens) et applique la règle de contenu.`
-    : `Rends officielle ma fonction personnelle « ${item.titre} » de MacGyver Lab. Ajoute-la à l'Arsenal, garde mon texte, complète ce qui manque et applique la règle de contenu.`;
-  return `${consigne}\n\n${fiche ? exportFiche(item as Fiche) : exportFonction(c, item as Fonction)}`;
 }

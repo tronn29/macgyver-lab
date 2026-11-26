@@ -159,5 +159,5 @@ Tests : 54 (7 nouveaux : case « Lu », score enregistré, quiz cliqué dans un 
 
 ## Bouton « Rendre officielle » : vérifications
 
-- Tests : 105 (la demande commence par la consigne et contient une fiche au format des modèles valide).
-- Téléphone en portrait et en paysage : bouton visible dans la barre de la fiche personnelle, fenêtre lisible, bouton « Copier la demande » visible sans défilement de la page, aucun débordement.
+- Tests : 106 (rangée puis remise, modification sans perte du rangement, fiche officielle jamais touchée, fiche supprimée oubliée, contenu publié inchangé).
+- Téléphone en portrait : un appui range la fiche, la liste passe de 42 à 43 fiches, la section « Mes fiches » disparaît quand elle est vide, la carte n'a plus la marque « Ma fiche » ; « Remettre dans Mes fiches » la remet. En paysage : boutons de la barre visibles, aucun débordement.

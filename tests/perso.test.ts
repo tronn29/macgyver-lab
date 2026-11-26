@@ -129,7 +129,7 @@ describe('stockage et superposition au contenu officiel', () => {
 
   it('ignore un stockage abîmé ou des identifiants non perso', () => {
     localStorage.setItem(PERSO_KEY, '{pas du json');
-    expect(loadPerso()).toEqual({ version: 1, fiches: [], fonctions: [], objets: [] });
+    expect(loadPerso()).toEqual({ version: 1, fiches: [], fonctions: [], objets: [], officielles: [] });
     localStorage.setItem(PERSO_KEY, JSON.stringify({ fiches: [{ ...ficheTest('siphon') }, { ...ficheTest(), texte: [] }] }));
     expect(loadPerso().fiches).toEqual([]);
   });
@@ -253,16 +253,32 @@ describe('schémas dessinés pour les fiches personnelles', () => {
   });
 });
 
-describe('rendre une fiche personnelle officielle', () => {
-  it('prépare une demande avec la consigne puis la fiche au format des modèles', async () => {
-    const { demandeOfficielle } = await import('../src/core/perso');
-    const texte = demandeOfficielle(c, 'fiche', ficheTest());
-    const [consigne, ...reste] = texte.split('\n\n');
-    expect(consigne).toMatch(/^Rends officielle ma fiche personnelle « .+ » de MacGyver Lab\./);
-    expect(consigne).toMatch(/règle de contenu/);
-    const modele = JSON.parse(reste.join('\n\n'));
-    expect(modele.modele).toBe('fiche-theorie');
-    expect(modele.theorie[0].id).toBe('test');
-    expect(modele.theorie[0].securite).toEqual({ niveau: 'vert' });
+describe('ranger une fiche personnelle avec les officielles', () => {
+  it('la déplace de « Mes fiches » vers la liste officielle, puis la remet', async () => {
+    const { rangerOfficielle, mesFiches, fichesRangees, estRangeeOfficielle } = await import('../src/core/perso');
+    const f = saveFiche(c, ficheTest('perso-rangee'));
+    expect(mesFiches().map((x) => x.id)).toContain(f.id);
+    rangerOfficielle(c, f.id, true);
+    expect(estRangeeOfficielle(f.id)).toBe(true);
+    expect(mesFiches().map((x) => x.id)).not.toContain(f.id);
+    expect(fichesRangees().map((x) => x.id)).toEqual([f.id]);
+    // Modifier la fiche ne la sort pas de la liste officielle
+    saveFiche(c, { ...f, titre: 'Titre modifié' });
+    expect(estRangeeOfficielle(f.id)).toBe(true);
+    // Les fiches officielles livrées avec l'appli ne changent pas
+    expect(c.fiches.map((x) => JSON.stringify(x))).toEqual(officielles);
+    rangerOfficielle(c, f.id, false);
+    expect(mesFiches().map((x) => x.id)).toContain(f.id);
+    expect(fichesRangees()).toEqual([]);
+  });
+
+  it('ne touche jamais une fiche officielle et oublie une fiche supprimée', async () => {
+    const { rangerOfficielle, loadPerso } = await import('../src/core/perso');
+    rangerOfficielle(c, 'levier', true);
+    expect(loadPerso().officielles).not.toContain('levier');
+    const f = saveFiche(c, ficheTest('perso-a-supprimer'));
+    rangerOfficielle(c, f.id, true);
+    deletePerso(c, 'fiche', f.id);
+    expect(loadPerso().officielles).not.toContain(f.id);
   });
 });

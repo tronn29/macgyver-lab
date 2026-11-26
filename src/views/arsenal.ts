@@ -8,7 +8,7 @@ import { setQuery } from '../core/router';
 import { tokenize } from '../core/search';
 import type { Fonction, Objet } from '../core/types';
 import { emptyState, linkBtn, panel, safetyBadge, segmented } from '../ui/components';
-import { estPerso, isPerso, persoFonctions } from '../core/perso';
+import { estPerso, estRangeeOfficielle, fonctionsRangees, isPerso, mesFonctions } from '../core/perso';
 import { persoBar } from './perso-ui';
 import { icon } from '../ui/icons';
 import { catIcon, catName, favButton, fonctionCard, notFoundView, pageHeader, relatedLinks } from './common';
@@ -53,12 +53,12 @@ export function arsenalList(ctx: RouteContext): View {
   const render = () => {
     const tokens = tokenize(q);
     if (vue === 'fonctions') {
-      const items = c.fonctions.filter((f) => !tokens.length || fonctionMatches(f, tokens));
-      const perso = persoFonctions().filter((f) => !tokens.length || fonctionMatches(f, tokens));
+      const items = [...c.fonctions, ...fonctionsRangees()].filter((f) => !tokens.length || fonctionMatches(f, tokens));
+      const perso = mesFonctions().filter((f) => !tokens.length || fonctionMatches(f, tokens));
       countEl.textContent = t('arsenal.fonctions', { n: items.length });
       results.replaceChildren(
         // Mes fonctions (écrites dans l'appli) : section à part, au-dessus des fonctions officielles
-        ...(persoFonctions().length
+        ...(mesFonctions().length
           ? [
               h(
                 'section',
@@ -163,7 +163,7 @@ export function fonctionDetail(ctx: RouteContext): View {
       'article',
       { class: 'page fonction' },
       pageHeader({
-        kicker: `${estPerso(fn.id) ? t('perso.maFonction') : t('arsenal.kicker')} · ${catName(fn.categorie)}`,
+        kicker: `${estPerso(fn.id) && !estRangeeOfficielle(fn.id) ? t('perso.maFonction') : t('arsenal.kicker')} · ${catName(fn.categorie)}`,
         title: fn.titre,
         icon: fn.icone,
         back: { href: '#/arsenal', label: t('arsenal.titre') },

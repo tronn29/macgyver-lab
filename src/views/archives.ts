@@ -19,7 +19,7 @@ import { listenButton, stopSpeech } from '../ui/speech';
 import { navigate } from '../core/router';
 import { play } from '../core/sound';
 import { catIcon, catName, categoryFilter, countByCategory, favButton, ficheCard, notFoundView, pageHeader, relatedLinks } from './common';
-import { estPerso, isPerso, persoFiches, toutesFiches } from '../core/perso';
+import { estPerso, estRangeeOfficielle, fichesRangees, isPerso, mesFiches, toutesFiches } from '../core/perso';
 import { persoBar } from './perso-ui';
 import { linkBtn } from '../ui/components';
 import { openGlossaryForFiche } from './glossaire';
@@ -55,14 +55,15 @@ export function archivesList(ctx: RouteContext): View {
       if (statut === 'favoris' && !p.favoris[`fiche:${f.id}`]) return false;
       return true;
     };
-    const items = c.fiches.filter(garde);
-    const perso = persoFiches().filter(garde);
-    persoSection.hidden = !persoFiches().length;
+    // Les fiches perso rangées avec les officielles apparaissent dans la même liste
+    const items = [...c.fiches, ...fichesRangees()].filter(garde);
+    const perso = mesFiches().filter(garde);
+    persoSection.hidden = !mesFiches().length;
     persoCount.textContent = t('commun.fiches', { n: perso.length });
     persoGrid.replaceChildren(...(perso.length ? perso.map((f) => ficheCard(f)) : [h('p', { class: 'muted' }, t('perso.aucuneFiltre'))]));
     // Titre visible seulement quand les deux sections coexistent
-    officiellesTitre.className = persoFiches().length ? 'block-title block-title--spaced' : 'sr-only';
-    officiellesTitre.textContent = persoFiches().length ? t('perso.fichesOfficielles') : t('commun.listeTitre');
+    officiellesTitre.className = mesFiches().length ? 'block-title block-title--spaced' : 'sr-only';
+    officiellesTitre.textContent = mesFiches().length ? t('perso.fichesOfficielles') : t('commun.listeTitre');
     countEl.textContent = t('commun.fiches', { n: items.length });
     grid.replaceChildren(
       ...(items.length
@@ -315,7 +316,7 @@ export function ficheDetail(ctx: RouteContext): View {
     'article',
     { class: 'page fiche' },
     pageHeader({
-      kicker: `${perso ? t('perso.maFiche') : t('archives.fiche')} · ${f.categories.map(catName).join(' · ')}`,
+      kicker: `${perso && !estRangeeOfficielle(f.id) ? t('perso.maFiche') : t('archives.fiche')} · ${f.categories.map(catName).join(' · ')}`,
       title: f.titre,
       back: { href: '#/archives', label: t('archives.titre') },
       actions: [favButton('fiche', f.id, f.titre), iconBtn('share', t('commun.partager'), () => void shareFiche(f))],
