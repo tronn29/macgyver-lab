@@ -1,5 +1,7 @@
 # Ordres de grandeur : prononciation et équivalent concret
 
+> **Règle mise à jour le 26 novembre 2026** (voir CONTENU.md) : la parenthèse de prononciation est retirée pour les unités courantes (kg, m, cm, °C, L, V, W, %…) et pour les nombres qui se lisent naturellement. Elle reste pour les unités et symboles peu courants (bar, hPa, µm, nm, kJ, Ω, μ…), les unités composées et les puissances de dix. Les tableaux ci-dessous sont l'inventaire d'origine : la colonne « Prononciation » ne s'affiche plus dans l'appli pour les unités courantes.
+
 Règle appliquée aux 22 fiches Théorie (voir CONTENU.md) : chaque valeur avec unité ou symbole est suivie de sa prononciation entre parenthèses et d'un équivalent dans la vie réelle. Le validateur affiche **0 avertissement**.
 
 **170 ordres de grandeur** au total, dont 9 dans la fiche CO₂ (texte fourni) et 5 dans l'échelle de frottement du cabestan.

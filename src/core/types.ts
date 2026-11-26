@@ -56,12 +56,13 @@ export interface Fiche {
   principe?: string[];
   pourquoi?: string[];
   enfant: string;
-  /** Données clés : valeur, sa prononciation (dit) et son équivalent concret. */
+  /** Données clés : valeur, sa prononciation (dit, seulement pour une unité peu courante) et son équivalent concret. */
   chiffres?: { valeur: string; label: string; dit?: string; concret?: string }[];
   /** Échelle de repères graduée (ex. : coefficient de frottement). */
-  echelle?: { titre?: string; intro: string; niveaux: { valeur: string; dit: string; description: string }[] };
+  echelle?: { titre?: string; intro: string; niveaux: { valeur: string; dit?: string; description: string }[] };
   realite: { verdict: Verdict; explication: string; /** Précision courte affichée avec l'étiquette. */ nuance?: string };
-  securite: Securite;
+  /** Niveau seul : une fiche n'affiche pas de phrase de commentaire à côté. */
+  securite: { niveau: NiveauSecurite };
   liens: { fiches?: string[]; equivalences?: string[]; pratique?: string[] };
   quiz: Quiz[];
   motsCles?: string[];

@@ -244,7 +244,6 @@ interface FicheEtat {
   sousTitre: string;
   categorie: CategorieId | '';
   securite: NiveauSecurite;
-  note: string;
   verdict: Verdict;
   nuance: string;
   enfant: string;
@@ -260,7 +259,6 @@ const ficheVide = (): FicheEtat => ({
   sousTitre: '',
   categorie: '',
   securite: 'vert',
-  note: '',
   verdict: 'partiel',
   nuance: '',
   enfant: '',
@@ -275,7 +273,6 @@ function etatDepuisFiche(f: Fiche): FicheEtat {
     sousTitre: f.sousTitre ?? '',
     categorie: f.categories[0] ?? '',
     securite: f.securite.niveau,
-    note: f.securite.note,
     verdict: f.realite.verdict,
     nuance: f.realite.nuance ?? '',
     enfant: f.enfant,
@@ -296,7 +293,6 @@ function etatFicheDepuis(raw: unknown): FicheEtat | null {
     sousTitre: s(d.sousTitre, ''),
     categorie: CATEGORIES.includes(d.categorie as CategorieId) ? (d.categorie as CategorieId) : '',
     securite: (['vert', 'orange', 'rouge'] as const).includes(d.securite as NiveauSecurite) ? (d.securite as NiveauSecurite) : 'vert',
-    note: s(d.note, ''),
     verdict: (['vrai', 'partiel', 'faux'] as const).includes(d.verdict as Verdict) ? (d.verdict as Verdict) : 'partiel',
     nuance: s(d.nuance, '').slice(0, MAX_NUANCE),
     enfant: s(d.enfant, ''),
@@ -331,7 +327,7 @@ function buildFiche(s: FicheEtat, id: string, apercu = false): Fiche {
     texte,
     enfant: clean(s.enfant),
     realite: { verdict: s.verdict, nuance: clean(s.nuance) || undefined, explication: explicationDepuis(s.paragraphes) },
-    securite: { niveau: s.securite, note: clean(s.note) },
+    securite: { niveau: s.securite },
     liens: {},
     quiz,
     motsCles: [],
@@ -346,7 +342,6 @@ function validateFiche(s: FicheEtat): Erreur[] {
   regle(errs, 'f-titre', s.titre);
   regle(errs, 'f-soustitre', s.sousTitre);
   regle(errs, 'f-nuance', s.nuance);
-  regle(errs, 'f-note', s.note);
   regle(errs, 'f-enfant', s.enfant);
 
   if (!assembleTexte(s.paragraphes).length) errs.push({ id: `${cle(s.paragraphes[0] ?? {})}-texte`, message: t('perso.erreurTexte') });
@@ -646,8 +641,7 @@ export function ficheEditor(ctx: RouteContext): View {
         'section',
         { class: 'panel editor__section', 'aria-labelledby': 'sec-securite' },
         h('h2', { class: 'block-title', id: 'sec-securite' }, icon('shield', 20), t('securite.titre')),
-        segmented<NiveauSecurite>(t('perso.niveau'), (['vert', 'orange', 'rouge'] as const).map((v) => ({ value: v, label: t(`securite.${v}.court`) })), s.securite, (v) => { s.securite = v; saveDraft(); }),
-        field({ id: 'f-note', label: t('perso.note'), optional: true, help: t('perso.noteAide'), control: textarea('f-note', s.note, (v) => { s.note = v; saveDraftSoon(); }, 2) })
+        segmented<NiveauSecurite>(t('perso.niveau'), (['vert', 'orange', 'rouge'] as const).map((v) => ({ value: v, label: t(`securite.${v}.court`) })), s.securite, (v) => { s.securite = v; saveDraft(); })
       ),
       h(
         'section',

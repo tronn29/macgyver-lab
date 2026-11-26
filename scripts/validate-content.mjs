@@ -12,7 +12,7 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import Ajv from 'ajv';
-import { ficheTextFields, findMagnitudes } from './magnitudes.mjs';
+import { ficheTextFields, findMagnitudes, valeurCourante } from './magnitudes.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -295,21 +295,27 @@ for (const f of data.theorie.filter((x) => x.principeSeul))
     if (QUANTITE.test(text) || MONTAGE.test(text))
       err(`${f.__file} [${f.id}] ${path}`, `sujet sensible : quantité ou montage interdit (« ${(text.match(QUANTITE) ?? text.match(MONTAGE))[0]} »)`);
 
-/* ---------- 6 ter. Ordres de grandeur : prononciation et équivalent concret (avertissements) ----------
- * Règle (CONTENU.md) : chaque valeur avec unité ou symbole est suivie de sa prononciation entre
- * parenthèses et d'un équivalent concret. Ne bloque pas la construction. */
-let sansPrononciation = 0;
+/* ---------- 6 ter. Ordres de grandeur : prononciation seulement si nécessaire (avertissements) ----------
+ * Règle (CONTENU.md) : pas de parenthèse de prononciation pour les unités courantes (kg, m, °C, L, V, W, %…) ;
+ * une parenthèse de prononciation pour les unités et symboles peu courants (μ, bar, Hz, Ω, µm…)
+ * et les puissances de dix. Chaque donnée clé garde son équivalent concret. Ne bloque pas la construction. */
 for (const f of data.theorie) {
   for (const [path, text] of ficheTextFields(f))
-    for (const m of findMagnitudes(text))
-      if (!m.prononcee) {
-        sansPrononciation += 1;
-        warn(`${f.__file} [${f.id}] ${path}`, `« ${m.valeur} » sans prononciation entre parenthèses`);
-      }
+    for (const m of findMagnitudes(text)) {
+      if (m.superflue) warn(`${f.__file} [${f.id}] ${path}`, `« ${m.valeur} » : unité courante, retire la parenthèse de prononciation`);
+      else if (!m.prononcee && !m.courante) warn(`${f.__file} [${f.id}] ${path}`, `« ${m.valeur} » : unité ou symbole peu courant, ajoute sa prononciation entre parenthèses`);
+    }
+  const niveaux = [...(f.chiffres ?? []).map((c, i) => [`chiffres[${i}]`, c]), ...(f.echelle?.niveaux ?? []).map((n, i) => [`echelle.niveaux[${i}]`, n])];
+  for (const [path, c] of niveaux) {
+    const courante = valeurCourante(c.valeur);
+    if (courante && c.dit) warn(`${f.__file} [${f.id}] ${path}`, `« ${c.valeur} » se lit sans aide : retire "dit"`);
+    if (!courante && !c.dit) warn(`${f.__file} [${f.id}] ${path}`, `« ${c.valeur} » : ajoute "dit" (prononciation)`);
+  }
   (f.chiffres ?? []).forEach((c, i) => {
-    if (!c.dit) warn(`${f.__file} [${f.id}] chiffres[${i}]`, `« ${c.valeur} » : ajoute "dit" (prononciation)`);
     if (!c.concret) warn(`${f.__file} [${f.id}] chiffres[${i}]`, `« ${c.valeur} » : ajoute "concret" (équivalent dans la vie réelle)`);
   });
+  // Le niveau de sécurité s'affiche seul, sans phrase de commentaire
+  if (f.securite && 'note' in f.securite) err(`${f.__file} [${f.id}] securite.note`, 'le niveau de sécurité suffit : retire la note');
 }
 
 /* ---------- 7. SVG orphelins ---------- */

@@ -48,7 +48,7 @@ const ficheTest = (id = 'perso-test'): Fiche => ({
   ]),
   enfant: 'Comme des enfants qui se tiennent par la main en cercle : ils prennent plus de place.',
   realite: { verdict: 'partiel', explication: 'Dans la série, le tuyau éclate. Dans la réalité, il faut du temps.' },
-  securite: { niveau: 'vert', note: 'Aucun danger particulier.' },
+  securite: { niveau: 'vert' },
   liens: {},
   quiz: [{ question: 'De combien le volume augmente-t-il ?', choix: ['Environ 9 %', 'Environ 50 %'], reponse: 0, explication: 'Environ un dixième.' }],
   motsCles: [],

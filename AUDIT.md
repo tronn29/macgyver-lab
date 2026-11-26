@@ -150,3 +150,9 @@ Tests : 54 (7 nouveaux : case « Lu », score enregistré, quiz cliqué dans un 
 - Tests : 96 (texte fourni mot pour mot hors des 4 corrections listées ; fuite de gaz et suture classées rouge, fuite de gaz en principe seul ; eau solaire et boussole au format long avec leurs expériences).
 - Schémas mesurés avec la police réelle : corrigés une étiquette hors cadre et une collision (pile), un titre trop long qui touchait la pastille voisine et une étiquette sur l'encadré (gaz), une étiquette sur le séparateur (pile), deux en-têtes trop proches (citron).
 - Téléphone en portrait et en paysage : aucun débordement ; contraste : 0 échec en thème sombre et clair.
+
+## Ordres de grandeur et niveau de sécurité : vérifications
+
+- Validateur : 42 fiches, contenu valide, 0 avertissement d'unité, 16 avertissements d'accroche (textes fournis, inchangés).
+- Tests : 103 (aucune parenthèse superflue ni prononciation manquante sur toutes les fiches, `dit` seulement pour les valeurs difficiles, niveau de sécurité seul, validateur qui bloque une note de sécurité).
+- Téléphone en portrait et en paysage : encadré Sécurité réduit au niveau, données clés et échelle de frottement correctes, éditeur sans champ « Précaution », aucun débordement.

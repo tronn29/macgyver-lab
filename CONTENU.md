@@ -48,7 +48,7 @@ Une fiche se lit comme un texte qui coule, de A à Z, et non plus comme une list
   ],
   "enfant": "…",
   "realite": { "verdict": "partiel", "explication": "…" },
-  "securite": { "niveau": "orange", "note": "…" },
+  "securite": { "niveau": "orange" },
   "liens": { "fiches": ["choc-thermique"] },
   "quiz": [ … ]
 }
@@ -69,27 +69,42 @@ Chaque fiche part de zéro et explique de A à Z, **sans être trop longue** (vi
 3. **Dire où on trouve les objets dans la vie réelle** : « on le trouve près des tableaux électriques, dans les salles informatiques ».
 4. **Utiliser des comparaisons du quotidien** (un couvercle sur une casserole, une foule dans un métro bondé, la bombe aérosol qui glace la main) et des accroches de terrain : « Peu de gens savent que… », « Si tu mets ça et ça… », « Pour faire ça, il faut… ».
 5. **Voix MacGyver** : tu tutoies le lecteur ; français correct, sans argot ; **pas de tiret cadratin (—) ni demi-cadratin (–)**.
-6. **Donner chaque ordre de grandeur avec sa prononciation entre parenthèses et son équivalent concret** (voir la règle ci-dessous).
+6. **Donner chaque ordre de grandeur avec son équivalent concret**, et sa prononciation entre parenthèses **seulement** pour une unité ou un symbole peu courant (voir la règle ci-dessous).
 7. **Un paragraphe « Dans la série / Dans la réalité »** avec un **cas concret où ça marcherait vraiment**.
 8. **Finir par « À retenir »**, qui résume en mots simples, avec des exemples du quotidien.
 9. **Infobulles** : balise 3 à 8 termes du glossaire avec `[[id|texte affiché]]`, pour ne pas changer la phrase.
 
 ### Règle des ordres de grandeur (toutes les fiches)
 
-Chaque valeur chiffrée avec unité, chaque valeur de symbole et chaque formule est **suivie de sa prononciation entre parenthèses**, puis d'une **explication de ce qu'elle représente dans la vie réelle** :
+Chaque valeur chiffrée est suivie d'une **explication de ce qu'elle représente dans la vie réelle**. La **prononciation entre parenthèses** n'est ajoutée que lorsque le lecteur en a besoin.
+
+**Pas de parenthèse** pour les unités courantes que tout le monde sait lire, ni pour un nombre qui se lit naturellement :
+
+> Le CO₂ sort à -78,5 °C, presque aussi froid que le record de froid sur Terre.
+
+> Ta main est à 2 m du pivot, l'objet à 20 cm : ta force est multipliée par 10.
+
+- **Unités courantes** : kg, g, mg, t, km, m, cm, mm, m², cm², m³, L, mL, cl, °C, V, A, W, kW, kWh, s, min, h, km/h, m/s et %.
+- **Nombres et facteurs simples** : 10, 0,3, 2 à 3, × 12, une année (1831).
+
+**Une parenthèse de prononciation** pour une unité ou un symbole peu courant, une unité composée, une formule ou un nombre qui ne se lit pas naturellement :
 
 > Dans la bouteille, il est à environ 57 bar (cinquante-sept bars), soit presque soixante fois la pression de l'air autour de toi.
 
 > μ = 0,3 (mu égale zéro virgule trois) : une valeur facile à avoir sur un tronc moyen.
 
-- **Nombres** en toutes lettres ; décimales avec « virgule » ; négatifs avec « moins » ; `≈` se dit « environ » ; `×7` « fois sept » ; `10⁻⁸` « dix puissance moins huit » ; intervalle `0,4 à 0,6` « zéro virgule quatre à zéro virgule six ».
-- **Unités** en toutes lettres et accordées : degrés Celsius, bars, mètres, volts, ampères, watts, newtons, ohms, pour cent, mètres par seconde…
-- **Symboles** : μ (mu), Δ (delta), Ω (ohm), ω (oméga), F₁ (F un), v² (v au carré), ½ (un demi).
-- **Données clés** (`chiffres`) : remplis `dit` (la prononciation) et `concret` (l'équivalent concret).
-- **Échelle de repères** (`echelle`) : pour graduer une grandeur (ex. : coefficient de frottement), chaque niveau a `valeur`, `dit` et `description`.
-- **Exceptions** : les étiquettes des schémas SVG restent courtes (pas de prononciation dans le dessin) ; dans les choix de quiz, la prononciation suffit, l'équivalent concret va dans l'explication.
+- **Unités peu courantes** : bar, Pa, hPa, atm, K, Hz, kHz, MHz, N, J, kJ, Wh, mA, mV, kV, Ω, kΩ, µm, nm, lux, dB, ppm, cal ; et toute unité composée (W/m², kV/mm, kJ/kg).
+- **Symboles et formules** : μ (mu), Δ (delta), Ω (ohm), ω (oméga), F₁ (F un), v² (v au carré), 2² = 4 (deux au carré égale quatre).
+- **Puissances de dix** : 10⁻⁸ (dix puissance moins huit), 1,7 × 10⁻⁸ Ω·m.
+- **Comment prononcer** : nombres en toutes lettres ; décimales avec « virgule » ; négatifs avec « moins » ; `≈` se dit « environ » ; unités en toutes lettres et accordées (bars, hectopascals, micromètres).
+- **Données clés** (`chiffres`) : `concret` (l'équivalent concret) est toujours rempli ; `dit` (la prononciation) seulement pour une valeur peu courante. Même règle pour `dit` dans l'**échelle de repères** (`echelle`).
+- **Exceptions** : les étiquettes des schémas SVG restent courtes (pas de prononciation dans le dessin) ; dans les choix de quiz, l'équivalent concret va dans l'explication.
 
-Le validateur affiche un **avertissement** (sans bloquer la construction) pour chaque valeur détectée sans parenthèse de prononciation, et pour chaque donnée clé sans `dit` ou `concret`.
+Le validateur affiche un **avertissement** (sans bloquer la construction) pour une unité peu courante sans prononciation, pour une parenthèse de prononciation après une unité courante (« 20 °C (vingt degrés Celsius) »), pour un `dit` manquant ou superflu, et pour une donnée clé sans `concret`.
+
+### Niveau de sécurité (toutes les fiches)
+
+Une fiche indique seulement son niveau : `"securite": { "niveau": "vert" }` (sans danger), `"orange"` (prudence) ou `"rouge"` (principe seulement). Le niveau s'affiche seul, **sans phrase de commentaire** à côté. Les vrais risques et les bons réflexes, quand ils comptent, sont expliqués dans le texte de la fiche. Le validateur **bloque** une fiche qui contient encore `securite.note`. Les expériences du Labo et les fonctions de l'Arsenal gardent leur champ `note`, qui alimente leurs précautions.
 
 ### Règle de contenu (inchangée)
 

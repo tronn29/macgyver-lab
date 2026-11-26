@@ -739,8 +739,6 @@
     "nuance": "Nuance de l'étiquette",
     "nuanceAide": "Une précision courte affichée avec l'étiquette, ex. : Oui, mais seulement sur une petite surface",
     "niveau": "Niveau de sécurité",
-    "note": "Précaution",
-    "noteAide": "Le risque réel et la précaution à prendre, affichés dans l'encadré Sécurité.",
     "texte": "Le texte",
     "texteAide": "Ajoute tes paragraphes un par un et choisis le type de chacun. Le gras est mis automatiquement : tu n'as rien à taper de spécial.",
     "paragraphes": "Paragraphes",

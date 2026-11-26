@@ -37,7 +37,7 @@ Garde ta copie dans `_modeles/` pendant que tu la remplis : elle n'apparaîtra p
 - **Valeurs imposées** : les catégories (`thermique`, `mecanique`…), le verdict (`vrai`, `partiel`, `faux`) et la sécurité (`vert`, `orange`, `rouge`) s'écrivent en un seul mot, comme indiqué.
 - **Lignes facultatives** : supprime celles dont tu n'as pas besoin, sans oublier la virgule qui les précède ou les suit.
 - **Schéma** : duplique `public/schemas/modele-exemple.svg` sous ton nom (ex. : `public/schemas/ma-fiche.svg`), remplace ses textes entre crochets, puis indique ce nom dans `schema.fichier`. Les règles de dessin sont dans `CONTENU.md`.
-- **Style** : suis le guide de style de `CONTENU.md`. Tutoiement, accroches en gras, comptes annoncés, pourquoi physique, ordres de grandeur prononcés, paragraphe « Dans la série / Dans la réalité », et « À retenir » à la fin.
+- **Style** : suis le guide de style de `CONTENU.md`. Tutoiement, accroches en gras, comptes annoncés, pourquoi physique, ordres de grandeur avec leur équivalent concret (prononciation seulement pour les unités peu courantes), paragraphe « Dans la série / Dans la réalité », et « À retenir » à la fin.
 - **Mission** : il faut 20 à 30 objets dans la pièce ; duplique les lignes d'objets. Les objets doivent exister dans `objets.json`, ou être décrits dans la section `objets` du modèle.
 
 ## 3. Vérifier qu'il ne manque rien

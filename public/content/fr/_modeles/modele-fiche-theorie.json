@@ -13,13 +13,13 @@
       "niveau": "[Facultatif : 1, 2 ou 3, la difficulté de compréhension, écrit sans guillemets, ex. : 2 ; supprime la ligne sinon]",
       "schema": {
         "fichier": "[Nom du dessin déposé dans public/schemas/, ex. : extincteur-co2.svg ; pars de public/schemas/modele-exemple.svg]",
-        "alt": "[Description complète de ce que montre le schéma, pour les personnes qui ne le voient pas (au moins 20 caractères), avec les valeurs prononcées, ex. : 57 bar (cinquante-sept bars)]",
+        "alt": "[Description complète de ce que montre le schéma, pour les personnes qui ne le voient pas (au moins 20 caractères), avec les valeurs, ex. : 57 bar (cinquante-sept bars) et 20 °C]",
         "legende": "[Une phrase sous le schéma, ex. : Le triangle du feu et la détente du CO₂.]"
       },
       "texte": [
         "**[Accroche en gras : l'idée principale en une phrase, ex. : Un extincteur n'éteint pas un feu, il lui retire ce dont il a besoin.]** [Pars de zéro : ce que c'est et comment ça marche. Annonce les comptes, ex. : « Un feu a besoin de trois choses ». Tutoie le lecteur, sans tiret cadratin.]",
         "**[Accroche en gras sur les types ou variantes, ex. : Il existe quatre grands types d'extincteurs]** [Pour chacun : ce qu'il fait, pourquoi, et où on le trouve dans la vie réelle, ex. : « On le trouve près des tableaux électriques ».]",
-        "**Peu de gens savent que [le fait surprenant de la fiche].** [Le pourquoi physique, avec une comparaison du quotidien, ex. : « comme une foule dans un métro bondé ». Chaque valeur suivie de sa prononciation et de son équivalent concret, ex. : 57 bar (cinquante-sept bars), soit presque soixante fois la pression de l'air. Terme du glossaire avec infobulle, ex. : le gaz [[detente|se détend]].]",
+        "**Peu de gens savent que [le fait surprenant de la fiche].** [Le pourquoi physique, avec une comparaison du quotidien, ex. : « comme une foule dans un métro bondé ». Chaque valeur suivie de son équivalent concret, ex. : 20 °C, la température d'une pièce ; prononciation entre parenthèses seulement pour une unité peu courante, ex. : 57 bar (cinquante-sept bars), soit presque soixante fois la pression de l'air. Terme du glossaire avec infobulle, ex. : le gaz [[detente|se détend]].]",
         "**[Accroche en gras qui pose une question, ex. : Pourquoi il sort glacé.]** [Explique le pourquoi, pas seulement le quoi : pourquoi ça se refroidit, pourquoi la température s'arrête à une valeur précise.]",
         "**Dans la série**, [ce que fait MacGyver, en une ou deux phrases]. **Dans la réalité**, [ce qui se passe vraiment, et pourquoi]. [Un cas concret où ça marcherait vraiment, ex. : « Ça marche en revanche sur un tuyau en plastique rigide ».]",
         "**À retenir :** [le principe en mots simples, en deux ou trois phrases, avec un exemple du quotidien que le lecteur a déjà vécu, ex. : la bombe aérosol qui devient glacée dans ta main.]"
@@ -31,8 +31,7 @@
         "explication": "[Deux phrases : ce que montre la série, ce qui est vrai, et le cas où ça marche (sert à l'image de partage)]"
       },
       "securite": {
-        "niveau": "[Un seul mot : vert (sans danger), orange (prudence) ou rouge (principe seulement, ne jamais reproduire)]",
-        "note": "[Le risque réel et la précaution à prendre, ex. : Le jet provoque des brûlures par le froid.]"
+        "niveau": "[Un seul mot : vert (sans danger), orange (prudence) ou rouge (principe seulement, ne jamais reproduire) ; il s'affiche seul, sans phrase de commentaire]"
       },
       "liens": {
         "fiches": ["[Identifiant d'une fiche liée, ex. : choc-thermique]"],

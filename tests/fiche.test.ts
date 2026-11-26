@@ -6,6 +6,8 @@ import { spawnSync } from 'node:child_process';
 import { countWords, ficheBody, isLongFormat, isRetenir, isSerieRealite, readingMinutes, splitBold, stripMarkup } from '../src/core/fiche';
 import { buildIndex, search } from '../src/core/search';
 import { loadAll } from './helpers';
+// @ts-expect-error module JavaScript partagé avec le validateur
+import { retirerPrononciationsCourantes } from '../scripts/magnitudes.mjs';
 
 const ROOT = join(__dirname, '..');
 const c = loadAll();
@@ -13,7 +15,8 @@ const co2 = c.byId.fiche.get('detente-co2-froid')!;
 
 describe('format long des fiches', () => {
   it('la fiche CO₂ affiche le texte fourni, mot pour mot', () => {
-    const attendu = readFileSync(join(__dirname, 'fixtures', 'fiche-co2.md'), 'utf8').trim();
+    // Règle de style : pas de prononciation entre parenthèses pour les unités courantes (°C, kg…)
+    const attendu = retirerPrononciationsCourantes(readFileSync(join(__dirname, 'fixtures', 'fiche-co2.md'), 'utf8').trim());
     expect(isLongFormat(co2)).toBe(true);
     // Les infobulles [[id|texte]] ne changent pas le texte affiché
     const affiche = co2.texte!.map((p) => p.replace(/\[\[[a-z0-9-]+\|([^\]]+)\]\]/g, '$1')).join('\n\n');
@@ -111,6 +114,12 @@ describe('validateur de contenu', () => {
     const r = mutate((fs) => (sensible(fs).pourquoi[0] += ' Il suffit de 50 g de matière.'));
     expect(r.status).toBe(1);
     expect(r.stderr).toMatch(/sujet sensible/);
+  });
+
+  it('bloque une phrase de commentaire à côté du niveau de sécurité', () => {
+    const r = mutate((fs) => (fs[0].securite.note = 'Un adulte surveille toujours.'));
+    expect(r.status).toBe(1);
+    expect(r.stderr).toMatch(/niveau de sécurité suffit/);
   });
 
   it('bloque un sujet sensible relié à une expérience', () => {

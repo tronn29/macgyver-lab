@@ -73,7 +73,7 @@ function demoFiche(m: Obj): Fiche {
     texte: arr<string>(f.texte).map((p) => str(p)),
     enfant: str(f.enfant, '[Explication pour un enfant]'),
     realite: { verdict: pick(realite.verdict, ['vrai', 'partiel', 'faux'] as const, 'partiel'), nuance: str(realite.nuance) || undefined, explication: str(realite.explication) },
-    securite: { niveau: pick(securite.niveau, ['vert', 'orange', 'rouge'] as const, 'orange'), note: str(securite.note, '[Note de sécurité]') },
+    securite: { niveau: pick(securite.niveau, ['vert', 'orange', 'rouge'] as const, 'orange') },
     liens: {
       fiches: realIds('fiche', liens.fiches, ['choc-thermique', 'glace-seche']),
       equivalences: realIds('fonction', liens.equivalences, ['isoler-chaleur']),

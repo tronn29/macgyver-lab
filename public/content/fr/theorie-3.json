@@ -26,8 +26,7 @@
       "explication": "Le crochetage repose sur un vrai défaut de toutes les serrures mécaniques : un jeu de fabrication minuscule. Mais un trombone est trop mou et trop imprécis, il faut des heures d'entraînement même avec de vrais outils, et les serrures modernes ajoutent des goupilles de sécurité ou des disques."
     },
     "securite": {
-      "niveau": "vert",
-      "note": "Aucun danger physique. Crocheter une serrure qui ne t'appartient pas est illégal : pour une porte bloquée, on appelle un serrurier."
+      "niveau": "vert"
     },
     "liens": {
       "fiches": [
@@ -134,8 +133,7 @@
       "explication": "Un objet rigide coincé côté charnières bloque bien une porte ordinaire : la poussée y est multipliée par l'effet de levier. Les portes blindées et les charnières invisibles sont justement conçues pour qu'on n'accède pas à ce point faible."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "Garde les doigts loin du côté des charnières : la force y est énorme et peut écraser un doigt ou arracher une charnière. Ne bloque jamais une issue de secours."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -243,8 +241,7 @@
       "explication": "Un cadenas à combinaison bon marché peut avoir assez de jeu pour qu'on sente un disque approcher de son chiffre. Mais c'est très subtil, il faut des dizaines d'essais méthodiques, et les cadenas de sécurité sont conçus pour supprimer ce jeu."
     },
     "securite": {
-      "niveau": "vert",
-      "note": "Aucun danger. N'essaie que sur ton propre cadenas : ouvrir celui de quelqu'un d'autre est illégal."
+      "niveau": "vert"
     },
     "liens": {
       "fiches": [
@@ -337,8 +334,7 @@
       "explication": "Couper le courant arrête un appareil branché directement sur le réseau. Mais les systèmes de sécurité sérieux ont une batterie de secours, et beaucoup envoient une alerte dès que l'alimentation principale disparaît."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "Ne touche jamais l'intérieur d'un tableau électrique. Un fusible grillé se remplace, courant coupé, par un fusible du même calibre : jamais par un fil ni par un fusible plus fort, qui laisseraient le circuit chauffer jusqu'à l'incendie."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -435,8 +431,7 @@
       "explication": "Un fil enduit d'abrasif use bien un métal tendre comme l'aluminium. Sur l'acier dur d'un vrai barreau, les grains d'un dentifrice sont trop tendres : il faudrait des heures, voire ça ne marcherait pas du tout."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "Un fil tiré vite chauffe et peut couper la peau : protège tes mains. Les poussières de métal irritent les yeux et les poumons : porte des lunettes et travaille dans un endroit aéré."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -545,8 +540,7 @@
       "explication": "Le poivre moulu versé dans le circuit va se coincer dans un petit trou et le boucher : c'est une astuce de dépannage reconnue. Mais le bouchon est fragile et ne tient que quelques dizaines de kilomètres."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "N'ouvre jamais le bouchon d'un radiateur moteur chaud : le liquide est sous pression et peut jaillir brûlant. Attends que le moteur ait refroidi, et fais réparer la fuite au garage."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -656,8 +650,7 @@
       "explication": "Le chewing-gum bouche vraiment une petite fissure : il est collant, malléable et ne craint pas l'eau. Mais la chaleur d'un moteur en marche le ramollit, et la réparation ne tient que quelques kilomètres."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "Ne touche jamais une durite moteur chaud : le liquide est brûlant et sous pression. Attends que le moteur ait refroidi, et fais remplacer la durite au plus vite."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -756,8 +749,7 @@
       "explication": "Un collant en nylon bien tendu peut remplacer une courroie cassée et transmettre la rotation un moment. Mais il chauffe, s'étire et cède bien plus vite qu'une vraie courroie en caoutchouc renforcé."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "Ne touche jamais une courroie ni une poulie moteur en marche : elles happent les doigts, les cheveux et les vêtements. Coupe le moteur, retire la clé et attends qu'il refroidisse avant toute intervention."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -855,8 +847,7 @@
       "explication": "Sur une voiture ancienne, relier les bons fils reproduit le contact de la clé. Depuis les années 2000, une puce dans la clé doit envoyer un code reconnu par le calculateur : sans lui, le moteur ne démarre pas."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "Démarrer un véhicule qui n'est pas le tien est un vol. Toucher aux fils d'une voiture peut provoquer un court-circuit et un incendie : seul un garagiste intervient sur ce circuit."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -951,8 +942,7 @@
       "explication": "Un fil fin tendu dans un circuit avec une pile détecte bien un passage : quand on le casse, le circuit change d'état. C'est le principe des interrupteurs à fil cassant, utilisés avant les capteurs infrarouges."
     },
     "securite": {
-      "niveau": "vert",
-      "note": "Sans danger avec une pile de basse tension. Ne tends jamais un fil à hauteur de cheville ou de cou dans un passage : on peut trébucher ou se blesser. Ne branche jamais ce montage sur le secteur."
+      "niveau": "vert"
     },
     "liens": {
       "fiches": [
@@ -1051,8 +1041,7 @@
       "explication": "Réchauffer légèrement une pile presque vide peut lui redonner quelques minutes, car ses derniers réactifs se redistribuent. Mais une pile jetable ne se recharge pas : lui imposer un courant de charge peut la faire chauffer, gonfler ou s'ouvrir."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "Ne recharge jamais une pile marquée non rechargeable, et ne chauffe jamais une batterie au lithium : elle peut gonfler, fuir ou prendre feu. Une pile qui a gonflé ou coulé va au point de collecte, sans la manipuler à mains nues."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -1145,8 +1134,7 @@
       "explication": "Un objet métallique assez grand autour d'un émetteur ou d'un récepteur bloque une grande partie du signal. Mais un vrai brouillage consiste à émettre un signal plus fort sur la même fréquence, ce qui est un tout autre mécanisme, et interdit par la loi."
     },
     "securite": {
-      "niveau": "vert",
-      "note": "Envelopper son propre téléphone de métal est sans danger. Utiliser ou vendre un brouilleur est interdit par la loi : il peut couper les appels d'urgence."
+      "niveau": "vert"
     },
     "liens": {
       "fiches": [
@@ -1242,8 +1230,7 @@
       "explication": "Des végétaux verts ou humides jetés sur un feu bien établi font une épaisse fumée blanche, un signal connu depuis des siècles. Mais il faut d'abord un vrai feu, et le vent disperse vite la fumée."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "Ne respire jamais la fumée : elle contient du monoxyde de carbone, invisible et toxique. Fais un feu seulement là où c'est autorisé, sur un sol dégagé, et garde de l'eau à portée de main."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -1340,8 +1327,7 @@
       "explication": "Un matériau souple peut réduire le débit d'une petite fuite, mais une fuite de gaz reste un risque d'explosion : on coupe l'arrivée, on aère, on sort et on appelle les secours depuis l'extérieur."
     },
     "securite": {
-      "niveau": "rouge",
-      "note": "Odeur de gaz : ne touche à aucun interrupteur ni appareil électrique, n'allume aucune flamme, coupe l'arrivée si tu peux, ouvre les fenêtres, sors et appelle les pompiers (18 ou 112) depuis l'extérieur."
+      "niveau": "rouge"
     },
     "liens": {
       "fiches": [
@@ -1439,8 +1425,7 @@
       "explication": "Une attelle improvisée qui dépasse les deux articulations réduit la douleur et le risque d'aggravation. Elle ne remplace pas une radiographie ni un plâtre, et ne permet pas de marcher normalement."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "Appelle les secours (15 ou 112). N'essaie jamais de remettre un os en place. Vérifie que les doigts ou les orteils restent chauds et roses : sinon, desserre les liens."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -1537,8 +1522,7 @@
       "explication": "Une suture rapproche bien les bords d'une plaie, mais une aiguille chauffée à la flamme n'est que partiellement stérile : le risque d'infection est grand. Une plaie profonde demande des soins médicaux rapides."
     },
     "securite": {
-      "niveau": "rouge",
-      "note": "Ne recouds jamais une plaie toi-même. Appuie avec un linge propre pour arrêter le saignement, nettoie à l'eau, couvre, et appelle les secours (15 ou 112) pour une plaie profonde ou qui saigne beaucoup."
+      "niveau": "rouge"
     },
     "liens": {
       "fiches": [
@@ -1632,8 +1616,7 @@
       "explication": "Un poste à galène capte vraiment les émissions sans pile : c'est un montage classique depuis un siècle. Mais le son est très faible, audible seulement dans un écouteur très sensible."
     },
     "securite": {
-      "niveau": "vert",
-      "note": "Sans danger. Ne tends jamais d'antenne près d'une ligne électrique, et rentre-la par temps d'orage."
+      "niveau": "vert"
     },
     "liens": {
       "fiches": [
@@ -1730,8 +1713,7 @@
       "explication": "Le jus de citron séché brunit à la chaleur avant le papier : le message apparaît. Mais il faut une chaleur douce et progressive ; une flamme trop proche brûle la feuille."
     },
     "securite": {
-      "niveau": "orange",
-      "note": "Chauffe avec une ampoule ou un fer à repasser, avec un adulte, jamais avec une flamme : le papier s'enflamme vite. Ne touche pas une ampoule allumée, elle brûle."
+      "niveau": "orange"
     },
     "liens": {
       "fiches": [
@@ -1823,8 +1805,7 @@
       "explication": "Aluminium et cuivre séparés par un tissu imbibé de vinaigre forment bien une pile, mais une cellule ne donne qu'environ un demi-volt et très peu de courant. Il faut empiler plusieurs cellules pour alimenter un petit appareil."
     },
     "securite": {
-      "niveau": "vert",
-      "note": "Sans danger avec du vinaigre ou de l'eau salée. Les bords d'une canette découpée coupent comme une lame : un adulte découpe, avec des gants."
+      "niveau": "vert"
     },
     "liens": {
       "fiches": [
@@ -1922,8 +1903,7 @@
       "explication": "Un objet en métal creusé pour enfermer de l'air flotte, car sa densité moyenne devient plus faible que celle de l'eau : c'est pour ça qu'un navire en acier flotte et qu'un boulon coule."
     },
     "securite": {
-      "niveau": "vert",
-      "note": "Sans danger. Près de l'eau, un adulte surveille toujours les enfants."
+      "niveau": "vert"
     },
     "liens": {
       "fiches": [

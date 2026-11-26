@@ -388,7 +388,7 @@ function longBody(f: Fiche & { texte: string[] }): HTMLElement[] {
   return [
     h('section', { class: 'longread', 'aria-labelledby': 'lr-t' }, h('h2', { class: 'sr-only', id: 'lr-t' }, t('archives.texte')), ...paras),
     panel(
-      [h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau), f.securite.note ? h('p', { class: 'panel__text' }, f.securite.note) : null],
+      [h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau)],
       { class: `safety-panel safety-panel--${f.securite.niveau}` }
     ),
   ];
@@ -415,7 +415,7 @@ function shortBody(f: Fiche): HTMLElement[] {
         ],
         { class: `reality reality--${f.realite.verdict}` }
       ),
-      panel([h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau), h('p', { class: 'panel__text' }, f.securite.note)], { class: `safety-panel safety-panel--${f.securite.niveau}` })
+      panel([h('h2', { class: 'block-title' }, t('securite.titre')), safetyBadge(f.securite.niveau)], { class: `safety-panel safety-panel--${f.securite.niveau}` })
     ),
     h('section', { class: 'why', 'aria-labelledby': 'why-t' }, h('h2', { class: 'block-title', id: 'why-t' }, t('archives.pourquoi')), ...(f.pourquoi ?? []).map((p) => rich(p, 'p'))),
   ];
@@ -464,7 +464,7 @@ function echelleBlock(e: NonNullable<Fiche['echelle']>): HTMLElement {
           'li',
           { class: 'echelle__item', style: `--niveau: ${(i / Math.max(1, e.niveaux.length - 1)).toFixed(2)}` },
           h('span', { class: 'echelle__val' }, n.valeur),
-          h('span', { class: 'echelle__body' }, h('span', { class: 'echelle__dit' }, `(${n.dit})`), rich(n.description, 'span', 'echelle__desc'))
+          h('span', { class: 'echelle__body' }, n.dit ? h('span', { class: 'echelle__dit' }, `(${n.dit})`) : null, rich(n.description, 'span', 'echelle__desc'))
         )
       )
     )

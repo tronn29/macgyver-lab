@@ -231,7 +231,7 @@
               "dit": {
                 "type": "string",
                 "minLength": 2,
-                "description": "Prononciation de la valeur, en toutes lettres (ex. : « cinquante-sept bars »)."
+                "description": "Prononciation, seulement pour une unité ou un symbole peu courant (ex. : « cinquante-sept bars ») ; à omettre pour kg, m, °C, L, V, W, %…"
               },
               "concret": {
                 "type": "string",
@@ -268,7 +268,7 @@
           }
         },
         "securite": {
-          "$ref": "#/definitions/securite"
+          "$ref": "#/definitions/niveauSecurite"
         },
         "liens": {
           "type": "object",
@@ -323,7 +323,6 @@
                 "type": "object",
                 "required": [
                   "valeur",
-                  "dit",
                   "description"
                 ],
                 "additionalProperties": false,
@@ -950,6 +949,23 @@
             "type": "string"
           },
           "minItems": 1
+        }
+      }
+    },
+    "niveauSecurite": {
+      "type": "object",
+      "required": [
+        "niveau"
+      ],
+      "additionalProperties": false,
+      "description": "Niveau de sécurité d'une fiche : affiché seul, sans phrase de commentaire.",
+      "properties": {
+        "niveau": {
+          "enum": [
+            "vert",
+            "orange",
+            "rouge"
+          ]
         }
       }
     }
